@@ -23,10 +23,10 @@ jobs:
             git pull origin main
             
             # 3. Shut down any old containers gracefully
-            docker compose down || true
+            docker-compose down || true
             
             # 4. Build and start both new containers in the background
-            docker compose up --build -d
+            docker-compose up --build -d
             
             # 5. Clean up old dangling images to save your 20GB disk space!
             docker image prune -f
