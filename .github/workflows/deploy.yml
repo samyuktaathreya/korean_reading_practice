@@ -28,5 +28,5 @@ jobs:
             # 4. Build and start both new containers in the background
             docker-compose up --build -d
             
-            # 5. Clean up old dangling images to save your 20GB disk space!
+            # 5. Clean up old dangling images
             docker image prune -f
