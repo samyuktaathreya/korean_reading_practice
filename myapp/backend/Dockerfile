@@ -17,4 +17,4 @@ RUN pip install fastapi uvicorn edge-tts pydantic konlpy httpx deep-translator
 COPY . .
 
 # 7. Run the app
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--root-path", "/api"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
