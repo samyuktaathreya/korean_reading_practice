@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+edge-tts
+konlpy
+httpx
+deep-translator
