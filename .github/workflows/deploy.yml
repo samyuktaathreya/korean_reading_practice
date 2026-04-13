@@ -16,6 +16,7 @@ jobs:
           host: ${{ secrets.DROPLET_IP }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             # 1. Go to your project folder (adjust if your repo root is different)
             cd ~/korean_reading_practice
