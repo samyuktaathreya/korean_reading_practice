@@ -1,6 +1,6 @@
 name: Deploy FastAPI to Droplet
 
-# This tells the robot to wake up whenever you push to the 'main' branch 
+# This tells the robot to wake up whenever you push to the 'main' branch
 on:
   push:
     branches:
