@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./myapp/backend
+    container_name: fast-api-backend
+    # The backend is NOT exposed to the internet anymore. 
+    # It only talks to Nginx on the internal Docker network.
+    expose:
+      - "8000"
+      
+  frontend:
+    build: ./myapp/frontend  # This must point to the folder containing the Frontend Dockerfile
+    container_name: react-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend

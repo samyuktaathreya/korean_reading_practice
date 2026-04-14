@@ -1,7 +1,12 @@
 fastapi
 uvicorn
+<<<<<<< HEAD
 edge-tts
 pydantic
+=======
+pydantic
+edge-tts
+>>>>>>> 598dc03c664c745291ad447d60866dd031051223
 konlpy
 httpx
 deep-translator
