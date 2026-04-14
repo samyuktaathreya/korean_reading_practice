@@ -1,3 +1,4 @@
+# run : uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 from fastapi import FastAPI, BackgroundTasks
 from fastapi.responses import FileResponse
 import edge_tts
@@ -30,11 +31,14 @@ class WordInput(BaseModel):
 class StoryInput(BaseModel):
     text: str
 
-# --- HELPER FUNCTION FOR DICTIONARY ---
 async def fetch_and_cache_word(raw_word: str):
+    # check if translation is already in the dictionary
     if raw_word in word_cache:
         return word_cache[raw_word]
         
+    # analyzed chunks = [("word1", "pos1"), ("word2", "pos2")...] for every word in sentence 
+    # (raw_word is a string that could be a sentence)
+    # stem=True autoconverts the word to the stem
     analyzed_chunks = okt.pos(raw_word, stem=True)
     base_word = raw_word
     part_of_speech = "Unknown"
@@ -63,6 +67,18 @@ async def fetch_and_cache_word(raw_word: str):
                     translation = trans_word_node.text.strip()
         except Exception as e:
             print(f"Failed to fetch from dictionary: {e}")
+
+    if translation == "Translation not found":
+        try:
+            # Run the synchronous translator in a separate thread so it doesn't block FastAPI
+            translation = await asyncio.to_thread(
+                GoogleTranslator(source='ko', target='en').translate, raw_word
+            )
+        except Exception as e:
+            print(f"Fallback translation failed: {e}")
+            
+        if translation == raw_word:
+            translation = "Translation not found"
 
     result = {
         "is_sentence": False,
@@ -99,21 +115,18 @@ async def translate_and_cache_sentence(sentence: str):
     sentence_cache[sentence] = result
     return result
 
-# --- NEW: HELPER FUNCTION FOR AUDIO ---
 async def generate_and_cache_audio(text: str):
-    # Return instantly if we've already generated it
     if text in audio_cache:
         return audio_cache[text]
 
     filename = hashlib.md5(text.encode("utf-8")).hexdigest() + ".mp3"
     filepath = os.path.join(CACHE_DIR, filename)
 
-    # Check if the file physically exists on disk from a previous server run
     if not os.path.exists(filepath):
-        voices = await edge_tts.VoicesManager.create()
-        voice = voices.find(Language="ko")
-        selected_voice = voice[0]["Name"]
-
+        # Hardcode the voice to instantly skip the slow network fetch!
+        # Use "ko-KR-SunHiNeural" for female, or "ko-KR-InJoonNeural" for male.
+        selected_voice = "ko-KR-SunHiNeural" 
+        
         communicate = edge_tts.Communicate(text, selected_voice)
         await communicate.save(filepath)
 
