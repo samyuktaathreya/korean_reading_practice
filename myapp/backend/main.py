@@ -11,7 +11,7 @@ import httpx
 import xml.etree.ElementTree as ET
 from deep_translator import GoogleTranslator
 
-app = FastAPI()
+app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 okt = Okt()
 
 # --- CACHES ---
