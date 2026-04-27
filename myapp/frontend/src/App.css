@@ -241,3 +241,45 @@
   display: flex;
   gap: 8px;
 }
+
+.interactive-textbook-container {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  overflow:hidden;
+}
+
+.textbook-pdf-container {
+  display:flex;
+  flex-direction:column;
+  border: 2px solid black;
+  overflow-x: auto;
+  overflow-y: auto;
+  min-width:0;
+  flex:1 0 0;
+  background-color: #525659;
+}
+
+.textbook-interactive-container {
+  border: 2px solid black;
+  min-width:0;
+  flex:1 0 0;
+}
+
+.page-layout {
+  display:flex;
+  flex-direction:column;
+  overflow-y:hidden;
+  height: 100vh;
+}
+
+.header-container {
+  height:50px;  
+  width: 100vw;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding: 5px;
+}
