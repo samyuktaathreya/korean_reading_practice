@@ -1,5 +1,6 @@
 # run : uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 from fastapi import FastAPI, BackgroundTasks
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 import edge_tts
 import hashlib
@@ -12,13 +13,36 @@ import httpx
 import xml.etree.ElementTree as ET
 from deep_translator import GoogleTranslator
 
+import fitz  # PyMuPDF
+import pytesseract
+from PIL import Image
+import io
+from fastapi.staticfiles import StaticFiles
+
+import easyocr
+import numpy as np
+
+
+reader = easyocr.Reader(['ko', 'en'], gpu=False)
+
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 okt = Okt()
+
+app.mount("/api/static", StaticFiles(directory="../frontend/public"), name="static")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # In production, replace "*" with your specific GitHub URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # --- CACHES ---
 audio_cache = {}
 word_cache = {}
 sentence_cache = {}
+ocr_cache = {}
 
 CACHE_DIR = "audio_cache"
 os.makedirs(CACHE_DIR, exist_ok=True)
@@ -30,6 +54,55 @@ class WordInput(BaseModel):
 
 class StoryInput(BaseModel):
     text: str
+
+class OCRRequest(BaseModel):
+    page_number: int
+    pdf_filename: str = "SejongKorean1.pdf"
+
+async def extract_and_ocr_page(page_number: int, pdf_filename: str):
+    pdf_filename = os.path.basename(pdf_filename)
+    cache_key = f"{pdf_filename}_page_{page_number}"
+    
+    # Cache hit? Return instantly.
+    if cache_key in ocr_cache:
+        return ocr_cache[cache_key]
+
+    try:
+        # Step 1: Same as before — convert the PDF page to an image
+        doc = fitz.open(pdf_filename)
+        if page_number < 1 or page_number > len(doc):
+            return []
+            
+        page = doc[page_number - 1]
+        pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
+        img_bytes = pix.tobytes("png")  # EasyOCR can read raw bytes directly
+        doc.close()
+
+        # Step 2: Run EasyOCR in a background thread (same idea as before, just different library)
+        # reader.readtext() returns a list of: (bounding_box, text, confidence_score)
+        # bounding_box = where on the page the text was found (we don't need this)
+        # text = the actual string it read
+        # confidence = 0.0 to 1.0, how sure it is. 0.5 = 50% confident
+        def run_ocr():
+            return reader.readtext(img_bytes, detail=1)
+
+        results = await asyncio.to_thread(run_ocr)
+
+        # Step 3: Filter the results
+        extracted_lines = [
+            text for (bbox, text, confidence) in results
+            if confidence > 0.5                          # throw out uncertain reads
+            and re.search(r'[\uAC00-\uD7A3]', text)     # must contain Korean
+            and len(text) >= 6                           # skip very short fragments
+        ]
+
+        # Cache and return
+        ocr_cache[cache_key] = extracted_lines
+        return extracted_lines
+
+    except Exception as e:
+        print(f"EasyOCR Pipeline failed: {e}")
+        return []  # return empty list, not a dict, so frontend .map() never breaks
 
 async def fetch_and_cache_word(raw_word: str):
     # check if translation is already in the dictionary
@@ -134,6 +207,14 @@ async def generate_and_cache_audio(text: str):
     return filepath
 
 # --- ENDPOINTS ---
+@app.on_event("startup")
+async def startup_event():
+    print("Warming up EasyOCR model...")
+    # Create a tiny 1x1 black pixel dummy image
+    dummy_img = np.zeros((1, 1, 3), dtype=np.uint8)
+    reader.readtext(dummy_img, detail=1) 
+    print("EasyOCR ready!")
+
 @app.post("/api/audio")
 async def audio(payload: dict):
     # Now this endpoint is beautifully clean and just calls the helper
@@ -147,6 +228,11 @@ async def parse_word(user_input: WordInput):
 @app.post("/api/translate-sentence")
 async def translate_sentence(payload: WordInput):
     return await translate_and_cache_sentence(payload.text)
+
+@app.post("/api/ocr-page")
+async def ocr_page(payload: OCRRequest):
+    lines = await extract_and_ocr_page(payload.page_number, payload.pdf_filename)
+    return {"lines": lines}
 
 # --- BACKGROUND TASK ---
 async def background_preload(text: str):
