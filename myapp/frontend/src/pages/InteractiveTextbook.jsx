@@ -34,16 +34,18 @@ function InteractiveTextbook() {
         setInputPage(pageNumber);
     }, [pageNumber]);
 
-    // --- BACKEND OCR FETCH ---
+    // --- BACKEND TEXT FETCH ---
     const fetchPageText = async (page) => {
         setIsLoadingText(true);
         try {
+            // Note: The endpoint remains /api/ocr-page to match the backend,
+            // even though it now uses native PDF extraction instead of OCR.
             const response = await fetch('/api/ocr-page', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
                     page_number: page,
-                    pdf_filename: fileUrl // Sending the filename dynamically
+                    pdf_filename: fileUrl 
                 }),
                 signal: AbortSignal.timeout(120000)
             });
@@ -55,14 +57,14 @@ function InteractiveTextbook() {
                 setExtractedLines([]);
             }
         } catch (error) {
-            console.error("OCR Fetch failed:", error);
+            console.error("Text extraction failed:", error);
             setExtractedLines([]);
         } finally {
             setIsLoadingText(false);
         }
     };
 
-    // Trigger OCR whenever pageNumber changes
+    // Trigger text extraction whenever pageNumber changes
     useEffect(() => {
         fetchPageText(pageNumber);
     }, [pageNumber]);
@@ -119,12 +121,12 @@ function InteractiveTextbook() {
                     </Document>
                 </div>
 
-                {/* RIGHT SIDE: INTERACTIVE OCR LINES */}
+                {/* RIGHT SIDE: INTERACTIVE TEXT LINES */}
                 <div className="textbook-interactive-container" style={{ padding: '20px', overflowY: 'auto', background: '#f9f9f9' }}>
                     <h2>Practice Lines</h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '20px' }}>
                         {isLoadingText ? (
-                            <p>Reading page with OCR... (This takes a moment the first time)</p>
+                            <p>Extracting text from page...</p>
                         ) : extractedLines.length === 0 ? (
                             <p>No Korean text found on this page.</p>
                         ) : (

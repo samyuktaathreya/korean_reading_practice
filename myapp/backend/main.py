@@ -14,16 +14,7 @@ import xml.etree.ElementTree as ET
 from deep_translator import GoogleTranslator
 
 import fitz  # PyMuPDF
-import pytesseract
-from PIL import Image
-import io
 from fastapi.staticfiles import StaticFiles
-
-import easyocr
-import numpy as np
-
-
-reader = easyocr.Reader(['ko', 'en'], gpu=False)
 
 app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 okt = Okt()
@@ -42,7 +33,7 @@ app.add_middleware(
 audio_cache = {}
 word_cache = {}
 sentence_cache = {}
-ocr_cache = {}
+text_cache = {}  # Replaced ocr_cache
 
 CACHE_DIR = "audio_cache"
 os.makedirs(CACHE_DIR, exist_ok=True)
@@ -55,63 +46,54 @@ class WordInput(BaseModel):
 class StoryInput(BaseModel):
     text: str
 
-class OCRRequest(BaseModel):
+class PageRequest(BaseModel):
     page_number: int
     pdf_filename: str = "SejongKorean1.pdf"
 
-async def extract_and_ocr_page(page_number: int, pdf_filename: str):
+async def extract_text_from_page(page_number: int, pdf_filename: str):
     pdf_filename = os.path.basename(pdf_filename)
     cache_key = f"{pdf_filename}_page_{page_number}"
     
     # Cache hit? Return instantly.
-    if cache_key in ocr_cache:
-        return ocr_cache[cache_key]
+    if cache_key in text_cache:
+        return text_cache[cache_key]
 
     try:
-        # Step 1: Same as before — convert the PDF page to an image
-        doc = fitz.open(pdf_filename)
-        if page_number < 1 or page_number > len(doc):
-            return []
-            
-        page = doc[page_number - 1]
-        pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
-        img_bytes = pix.tobytes("png")  # EasyOCR can read raw bytes directly
-        doc.close()
+        def read_pdf_text():
+            doc = fitz.open(pdf_filename)
+            if page_number < 1 or page_number > len(doc):
+                doc.close()
+                return ""
+                
+            page = doc[page_number - 1]
+            text = page.get_text("text") # Instantly grabs embedded text
+            console.log(text)
+            doc.close()
+            return text
 
-        # Step 2: Run EasyOCR in a background thread (same idea as before, just different library)
-        # reader.readtext() returns a list of: (bounding_box, text, confidence_score)
-        # bounding_box = where on the page the text was found (we don't need this)
-        # text = the actual string it read
-        # confidence = 0.0 to 1.0, how sure it is. 0.5 = 50% confident
-        def run_ocr():
-            return reader.readtext(img_bytes, detail=1)
+        raw_text = await asyncio.to_thread(read_pdf_text)
 
-        results = await asyncio.to_thread(run_ocr)
-
-        # Step 3: Filter the results
+        # Split into lines and apply your original filters
+        lines = raw_text.split('\n')
         extracted_lines = [
-            text for (bbox, text, confidence) in results
-            if confidence > 0.5                          # throw out uncertain reads
-            and re.search(r'[\uAC00-\uD7A3]', text)     # must contain Korean
-            and len(text) >= 6                           # skip very short fragments
+            line.strip() for line in lines
+            if re.search(r'[\uAC00-\uD7A3]', line)      # must contain Korean
+            and len(line.strip()) >= 6                 # skip very short fragments
         ]
 
         # Cache and return
-        ocr_cache[cache_key] = extracted_lines
+        text_cache[cache_key] = extracted_lines
         return extracted_lines
 
     except Exception as e:
-        print(f"EasyOCR Pipeline failed: {e}")
-        return []  # return empty list, not a dict, so frontend .map() never breaks
+        print(f"Text Extraction failed: {e}")
+        return []  # return empty list so frontend .map() never breaks
 
 async def fetch_and_cache_word(raw_word: str):
     # check if translation is already in the dictionary
     if raw_word in word_cache:
         return word_cache[raw_word]
         
-    # analyzed chunks = [("word1", "pos1"), ("word2", "pos2")...] for every word in sentence 
-    # (raw_word is a string that could be a sentence)
-    # stem=True autoconverts the word to the stem
     analyzed_chunks = okt.pos(raw_word, stem=True)
     base_word = raw_word
     part_of_speech = "Unknown"
@@ -143,7 +125,6 @@ async def fetch_and_cache_word(raw_word: str):
 
     if translation == "Translation not found":
         try:
-            # Run the synchronous translator in a separate thread so it doesn't block FastAPI
             translation = await asyncio.to_thread(
                 GoogleTranslator(source='ko', target='en').translate, raw_word
             )
@@ -168,7 +149,6 @@ async def translate_and_cache_sentence(sentence: str):
         return sentence_cache[sentence]
     
     try:
-        # deep_translator is synchronous, so we run it in a thread to keep FastAPI fast
         translated_text = await asyncio.to_thread(
             GoogleTranslator(source='ko', target='en').translate, sentence
         )
@@ -176,11 +156,10 @@ async def translate_and_cache_sentence(sentence: str):
         print(f"Sentence translation failed: {e}")
         translated_text = "Translation failed."
 
-    # We return the exact same dictionary structure as a word so the React popup doesn't break!
     result = {
         "is_sentence": True,
         "original_input": sentence,
-        "base_word": sentence, # Put the full sentence in the title spot
+        "base_word": sentence,
         "part_of_speech": "Full Sentence",
         "translation": translated_text
     }
@@ -196,10 +175,7 @@ async def generate_and_cache_audio(text: str):
     filepath = os.path.join(CACHE_DIR, filename)
 
     if not os.path.exists(filepath):
-        # Hardcode the voice to instantly skip the slow network fetch!
-        # Use "ko-KR-SunHiNeural" for female, or "ko-KR-InJoonNeural" for male.
         selected_voice = "ko-KR-SunHiNeural" 
-        
         communicate = edge_tts.Communicate(text, selected_voice)
         await communicate.save(filepath)
 
@@ -207,17 +183,8 @@ async def generate_and_cache_audio(text: str):
     return filepath
 
 # --- ENDPOINTS ---
-@app.on_event("startup")
-async def startup_event():
-    print("Warming up EasyOCR model...")
-    # Create a tiny 1x1 black pixel dummy image
-    dummy_img = np.zeros((1, 1, 3), dtype=np.uint8)
-    reader.readtext(dummy_img, detail=1) 
-    print("EasyOCR ready!")
-
 @app.post("/api/audio")
 async def audio(payload: dict):
-    # Now this endpoint is beautifully clean and just calls the helper
     filepath = await generate_and_cache_audio(payload["text"])
     return FileResponse(filepath, media_type="audio/mpeg")
 
@@ -229,36 +196,31 @@ async def parse_word(user_input: WordInput):
 async def translate_sentence(payload: WordInput):
     return await translate_and_cache_sentence(payload.text)
 
+# Note: Endpoint name remains identical to prevent frontend breakage
 @app.post("/api/ocr-page")
-async def ocr_page(payload: OCRRequest):
-    lines = await extract_and_ocr_page(payload.page_number, payload.pdf_filename)
+async def ocr_page(payload: PageRequest):
+    lines = await extract_text_from_page(payload.page_number, payload.pdf_filename)
     return {"lines": lines}
 
 # --- BACKGROUND TASK ---
 async def background_preload(text: str):
-    # 1. Preload audio for the full sentences
-    # This regex mimics your React frontend's splitting logic
     sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', text) if s.strip()]
     for sentence in sentences:
         if sentence not in audio_cache:
             await generate_and_cache_audio(sentence)
-            await asyncio.sleep(0.1) # Be polite to the Microsoft Edge servers
+            await asyncio.sleep(0.1)
 
-    # 2. Preload dictionary definitions AND word audio
     clean_text = re.sub(r'[.!?,"\'\n]', ' ', text)
     unique_words = set(word for word in clean_text.split() if word)
     
     for word in unique_words:
         if word not in word_cache:
-            # Cache the dictionary definition
             dict_result = await fetch_and_cache_word(word)
             
-            # Cache the audio for the dictionary's base word (for the popup)
             base_word = dict_result["base_word"]
             if base_word not in audio_cache:
                 await generate_and_cache_audio(base_word)
                 
-            # Be polite to both servers
             await asyncio.sleep(0.2) 
 
 @app.post("/api/preload-story")
