@@ -20,7 +20,8 @@ jobs:
             cd ~/korean_reading_practice
             
             # 2. Pull the latest code (both frontend and backend)
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
             
             # 3. Shut down any old containers gracefully
             docker-compose down || true
