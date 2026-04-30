@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom"
+import Header from '../Components/Header'
 import '../App.css'
 
 function Input() {
@@ -7,19 +8,23 @@ function Input() {
   const navigate = useNavigate()
 
   return (
-    <div className="input-page-container">
-        <textarea
-        className="input-text-box"
-        value={data}
-        onChange={(e) => setData(e.target.value)}
-        />
+    <div>
+      <Header />
+      <div className="input-page-container">
 
-        <button 
-            className="input-submit-btn"
-            onClick={() => navigate("/story", { state: { text: data } })}
-        >
-            Go!
-        </button>
+          <textarea
+          className="input-text-box"
+          value={data}
+          onChange={(e) => setData(e.target.value)}
+          />
+
+          <button 
+              className="input-submit-btn"
+              onClick={() => navigate("/story", { state: { text: data } })}
+          >
+              Go!
+          </button>
+      </div>
     </div>
   )
 }

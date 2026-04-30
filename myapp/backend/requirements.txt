@@ -5,9 +5,4 @@ edge-tts
 konlpy
 httpx
 deep-translator
-google-cloud-vision
-pytesseract 
-PyMuPDF 
-Pillow
-easyocr
-numpy
+PyMuPDF
