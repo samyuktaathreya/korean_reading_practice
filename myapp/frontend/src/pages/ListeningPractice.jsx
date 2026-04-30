@@ -4,10 +4,14 @@ import Header from '../Components/Header'
 // Data pools for the randomizer. 
 const KOREAN_DATA = {
   syllable: {
+    consonant: [
+    '가','까','나','다','따','라','마','바','빠',
+    '사','싸','아','자','짜','차','카','타','파','하'
+    ],
     hard: [
     '가','개','갸','거','게','겨','고','과','괘','괴','교','구','궈','궤','귀','규','그','긔','기',
     '까','깨','꺄','꺼','께','껴','꼬','꽈','꽤','꾀','꾜','꾸','꿔','꿰','뀌','뀨','끄','끼',
-    '카','캐','캬','커','케','켜','코','콰','쾌','쾨','쿄','쿠','쿼','퀘','퀴','큐','크','키',
+    '카','캐','캬','커','케','켜','코','콰','쾌','쾨','쿄','쿠','쿼','퀘','퀴','큐','크','키', '표',
 
     '다','대','댜','더','데','뎌','도','돠','돼','되','됴','두','둬','뒈','뒤','듀','드','디',
     '따','때','땨','떠','떼','뗘','또','똬','뙈','뙤','뚀','뚜','뚸','뛔','뛰','뜌','뜨','띠',
@@ -92,15 +96,39 @@ export default function ListeningPractice() {
   const [difficulty, setDifficulty] = useState('hard');
   const [currentText, setCurrentText] = useState('');
   const [userInput, setUserInput] = useState('');
-  const [lastGuess, setLastGuess] = useState(''); // Tracks the exact guess they submitted
+  const [lastGuess, setLastGuess] = useState(''); 
   const [feedback, setFeedback] = useState(null); 
   const [isLoading, setIsLoading] = useState(false);
+  
+  // NEW: State for tracking score
+  const [correctCount, setCorrectCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
 
+  // Added safety wrapper to prevent KOREAN_DATA from throwing an error if state is mid-transition
   useEffect(() => {
-    loadNewSound();
+    if (KOREAN_DATA[unit] && KOREAN_DATA[unit][difficulty]) {
+      loadNewSound();
+    }
   }, [unit, difficulty]);
 
+  // Handle unit switching and provide a fallback if they had 'consonant' selected
+  const handleUnitChange = (e) => {
+    const newUnit = e.target.value;
+    setUnit(newUnit);
+    
+    // NEW: Reset counters when unit changes
+    setCorrectCount(0);
+    setTotalCount(0);
+    
+    // If they switch away from syllable while consonant is selected, fallback to 'any'
+    if (newUnit !== 'syllable' && difficulty === 'consonant') {
+      setDifficulty('any');
+    }
+  };
+
   const loadNewSound = () => {
+    if (!KOREAN_DATA[unit] || !KOREAN_DATA[unit][difficulty]) return;
+
     const options = KOREAN_DATA[unit][difficulty];
     const randomIndex = Math.floor(Math.random() * options.length);
     const newText = options[randomIndex];
@@ -140,9 +168,15 @@ export default function ListeningPractice() {
     const guess = userInput.trim();
     if (!guess) return;
 
-    setLastGuess(guess); // Save the guess so they can play it back
+    setLastGuess(guess); 
+    
+    // NEW: Increment the total attempts counter
+    setTotalCount(prev => prev + 1);
 
     if (guess === currentText) {
+      // NEW: Increment correct guesses
+      setCorrectCount(prev => prev + 1);
+      
       setFeedback('correct');
       setTimeout(() => {
         loadNewSound();
@@ -155,20 +189,27 @@ export default function ListeningPractice() {
   return (
     <div style={{ maxWidth: '500px', margin: '0 auto', padding: '20px', fontFamily: 'sans-serif' }}>
       <Header />
-      <h2>Korean Listening Practice</h2>
+      
+      {/* NEW: Score Display next to the Title */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h2>Korean Listening Practice</h2>
+        <div style={{ background: '#e0e0e0', padding: '5px 12px', borderRadius: '15px', fontWeight: 'bold' }}>
+          Score: {correctCount} / {totalCount}
+        </div>
+      </div>
 
       {/* --- TOGGLES --- */}
       <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', padding: '15px', background: '#f5f5f5', borderRadius: '8px' }}>
         <div>
           <strong>Unit:</strong>
           <label style={{ display: 'block' }}>
-            <input type="radio" value="syllable" checked={unit === 'syllable'} onChange={(e) => setUnit(e.target.value)} /> Syllable
+            <input type="radio" value="syllable" checked={unit === 'syllable'} onChange={handleUnitChange} /> Syllable
           </label>
           <label style={{ display: 'block' }}>
-            <input type="radio" value="word" checked={unit === 'word'} onChange={(e) => setUnit(e.target.value)} /> Word
+            <input type="radio" value="word" checked={unit === 'word'} onChange={handleUnitChange} /> Word
           </label>
           <label style={{ display: 'block' }}>
-            <input type="radio" value="sentence" checked={unit === 'sentence'} onChange={(e) => setUnit(e.target.value)} /> Sentence
+            <input type="radio" value="sentence" checked={unit === 'sentence'} onChange={handleUnitChange} /> Sentence
           </label>
         </div>
 
@@ -179,6 +220,17 @@ export default function ListeningPractice() {
           </label>
           <label style={{ display: 'block' }}>
             <input type="radio" value="any" checked={difficulty === 'any'} onChange={(e) => setDifficulty(e.target.value)} /> Any Sound
+          </label>
+          {/* New Consonant Toggle */}
+          <label style={{ display: 'block', color: unit !== 'syllable' ? '#aaa' : '#000' }}>
+            <input 
+              type="radio" 
+              value="consonant" 
+              checked={difficulty === 'consonant'} 
+              onChange={(e) => setDifficulty(e.target.value)} 
+              disabled={unit !== 'syllable'} 
+            /> 
+            Consonants (Syllables only)
           </label>
         </div>
       </div>
