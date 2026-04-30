@@ -52,6 +52,7 @@ class PageRequest(BaseModel):
 
 async def extract_text_from_page(page_number: int, pdf_filename: str):
     pdf_filename = os.path.basename(pdf_filename)
+    print("pdf filename: ", pdf_filename)
     cache_key = f"{pdf_filename}_page_{page_number}"
     
     # Cache hit? Return instantly.
@@ -66,20 +67,47 @@ async def extract_text_from_page(page_number: int, pdf_filename: str):
                 return ""
                 
             page = doc[page_number - 1]
-            text = page.get_text("text") # Instantly grabs embedded text
-            console.log(text)
+            text = page.get_text("text") 
             doc.close()
             return text
 
         raw_text = await asyncio.to_thread(read_pdf_text)
-
-        # Split into lines and apply your original filters
         lines = raw_text.split('\n')
-        extracted_lines = [
-            line.strip() for line in lines
-            if re.search(r'[\uAC00-\uD7A3]', line)      # must contain Korean
-            and len(line.strip()) >= 6                 # skip very short fragments
-        ]
+        extracted_lines = []
+
+        for line in lines:
+            line = line.strip()
+            
+            # 1. Skip very short fragments
+            if len(line) < 6:
+                continue
+                
+            # 2. Must contain at least some Hangul
+            if not re.search(r'[\uAC00-\uD7A3]', line):
+                continue
+
+            # Calculate character ratios to detect OCR/PDF text layer garbage
+            total_chars = len(line.replace(" ", "")) # Ignore spaces for math
+            if total_chars == 0:
+                continue
+                
+            num_chars = len(re.findall(r'\d', line))
+            hangul_chars = len(re.findall(r'[\uAC00-\uD7A3]', line))
+            
+            # 3. Filter out lines that are predominantly numbers (e.g., > 30% numbers)
+            # This catches the "English words converted to numbers" issue
+            if (num_chars / total_chars) > 0.3:
+                continue
+                
+            # 4. Ensure the line is primarily Korean (e.g., > 40% Hangul)
+            # This filters out lines that are mostly punctuation or weird symbols
+            if (hangul_chars / total_chars) < 0.4:
+                continue
+                
+            # 5. (Optional) Clean up stray numbers if they are still mixed in
+            # line = re.sub(r'\d+', '', line).strip() 
+
+            extracted_lines.append(line)
 
         # Cache and return
         text_cache[cache_key] = extracted_lines
@@ -87,7 +115,7 @@ async def extract_text_from_page(page_number: int, pdf_filename: str):
 
     except Exception as e:
         print(f"Text Extraction failed: {e}")
-        return []  # return empty list so frontend .map() never breaks
+        return []
 
 async def fetch_and_cache_word(raw_word: str):
     # check if translation is already in the dictionary

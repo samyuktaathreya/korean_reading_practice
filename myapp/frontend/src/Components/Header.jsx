@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // 1. Import the hook
 
 function Header() {
   const [count, setCount] = useState(0);
+  const navigate = useNavigate(); // 2. Initialize the navigate function
 
   return (
     <div className="header-container">
@@ -15,6 +17,10 @@ function Header() {
 
         <button onClick={() => navigate("/interactive-textbook")}>
             Interactive Textbook
+        </button>
+
+        <button onClick={() => navigate("/listening-practice")}>
+            Listening Practice
         </button>
     </div>
   );

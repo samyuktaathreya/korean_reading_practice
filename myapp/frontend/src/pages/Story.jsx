@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect, useRef } from 'react'
 import { useLocation, useNavigate } from "react-router-dom"
+import Header from '../Components/Header'
 import '../App.css'
 
 function Story() {
@@ -88,6 +89,7 @@ function Story() {
 
     return (
     <div className="story-page-container">
+        <Header />
         {dictResult && (
             <div className="dictionary-popup" style={{ border: '1px solid black', padding: '10px', marginBottom: '20px', backgroundColor: '#f9f9f9' }}>
                 <h3 style={{ margin: '0 0 5px 0', display: 'flex', alignItems: 'center', gap: '10px' }}>
