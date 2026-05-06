@@ -1,0 +1,130 @@
+[
+  {
+    "category": "grammar_particles",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "question": "저___ 학생이에요.",
+            "hint": "I am a student. (topic particle)",
+            "answer": "는"
+          },
+          {
+            "question": "선생님___ 한국 사람이에요.",
+            "hint": "The teacher is Korean. (topic particle)",
+            "answer": "은"
+          },
+          {
+            "question": "마크 씨___ 호주 사람이에요?",
+            "hint": "Is Mark Australian? (topic particle)",
+            "answer": "는"
+          },
+          {
+            "question": "치엔 씨___ 중국 사람이에요.",
+            "hint": "Chien is Chinese. (topic particle)",
+            "answer": "는"
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "question": "저는 미국 사람이에요.",
+            "answer": "I am an American."
+          },
+          {
+            "question": "수진 씨는 의사예요.",
+            "answer": "Sujin is a doctor."
+          },
+          {
+            "question": "토야 씨는 몽골 사람이에요.",
+            "answer": "Toya is Mongolian."
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "question": "I am a police officer.",
+            "answer": "저는 경찰이에요."
+          },
+          {
+            "question": "Minsoo is a student.",
+            "answer": "민수 씨는 학생이에요."
+          },
+          {
+            "question": "Yuki is Japanese.",
+            "answer": "유키 씨는 일본 사람이에요."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "verb_conjugations",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "question": "저는 회사원___.",
+            "hint": "I am a company employee. (to be)",
+            "answer": "이에요"
+          },
+          {
+            "question": "저는 의사___.",
+            "hint": "I am a doctor. (to be)",
+            "answer": "예요"
+          },
+          {
+            "question": "타완 씨는 태국 사람___.",
+            "hint": "Tawan is Thai. (to be)",
+            "answer": "이에요"
+          },
+          {
+            "question": "학생___?",
+            "hint": "Are you a student? (to be)",
+            "answer": "이에요"
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "question": "경찰이에요?",
+            "answer": "Are you a police officer?"
+          },
+          {
+            "question": "네, 태국 사람이에요.",
+            "answer": "Yes, I am Thai."
+          },
+          {
+            "question": "아니요, 저는 선생님이에요.",
+            "answer": "No, I am a teacher."
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "question": "Are you a civil servant?",
+            "answer": "공무원이에요?"
+          },
+          {
+            "question": "Yes, I am a company employee.",
+            "answer": "네, 저는 회사원이에요."
+          },
+          {
+            "question": "Are you Vietnamese?",
+            "answer": "베트남 사람이에요?"
+          }
+        ]
+      }
+    ]
+  }
+]

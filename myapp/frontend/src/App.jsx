@@ -3,6 +3,7 @@ import Input from "./pages/Input"
 import Story from "./pages/Story"
 import InteractiveTextbook from "./pages/InteractiveTextbook"
 import ListeningPractice from "./pages/ListeningPractice"
+import DuolingoStyleQuestions from "./pages/DuolingoStylePractice"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/story" element={<Story />} />
         <Route path="/interactive-textbook" element={<InteractiveTextbook />} />
         <Route path="/listening-practice" element={<ListeningPractice />} />
+        <Route path="/duolingo-style-practice" element={<DuolingoStyleQuestions />} />
       </Routes>
     </BrowserRouter>
   )
