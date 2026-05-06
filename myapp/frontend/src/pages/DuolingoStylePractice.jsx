@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-
+import Header from '../Components/Header'
 const questions = 'DuolingoStyleQuestions.json';
 
 // frontend: 
@@ -10,7 +10,23 @@ const randInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const clean = (str) => str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").trim().toLowerCase();
+const clean = (str) => {
+    return str
+        .toLowerCase()
+        // 1. Remove punctuation (including apostrophes)
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+        // 2. Fix common contractions
+        // \b means "word boundary" - it ensures we only target the whole word
+        .replace(/\bim\b/g, "i am")
+        .replace(/\byoure\b/g, "you are")
+        .replace(/\bhes\b/g, "he is")
+        .replace(/\bshes\b/g, "she is")
+        // 3. Remove articles "a", "an", and "the"
+        .replace(/\ba\b|\ban\b|\bthe\b/g, "")
+        // 4. Clean up extra spaces left behind
+        .replace(/\s+/g, " ") 
+        .trim();
+};
 
 // completely random questions for now
 // returns question, category, and level
@@ -52,6 +68,7 @@ export default function DuolingoStyleQuestions() {
     const [questions, setQuestions] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState("");
     const [currentLevel, setCurrentLevel] = useState("");
+    const [currentCategory, setCurrentCategory] = useState("");
     const [userAnswer, setUserAnswer] = useState("");
     const [correctAnswer, setCorrectAnswer] = useState("");
     const [isWrong, setIsWrong] = useState(false);
@@ -66,6 +83,7 @@ export default function DuolingoStyleQuestions() {
                 setCurrentQuestion(randomQuestionObject.question);
                 setCurrentLevel(randomQuestionObject.level);
                 setCorrectAnswer(randomQuestionObject.answer);
+                setCurrentCategory(randomQuestionObject.category);
                 console.log("question object : ", randomQuestionObject);
             }
         })
@@ -78,10 +96,12 @@ export default function DuolingoStyleQuestions() {
         const newQuestion = newQuestionObject.question;
         const newLevel = newQuestionObject.level;
         const newAnswer = newQuestionObject.answer;
+        const newCategory = newQuestionObject.category;
 
         setCurrentQuestion(newQuestion);
         setCurrentLevel(newLevel);
         setCorrectAnswer(newAnswer);
+        setCurrentCategory(newCategory);
 
         console.log("question object : ", newQuestionObject);
         setUserAnswer("");
@@ -102,7 +122,8 @@ export default function DuolingoStyleQuestions() {
         }
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if (clean(userAnswer) === clean(correctAnswer)) {
             handleNewQuestion();
         }
@@ -111,24 +132,37 @@ export default function DuolingoStyleQuestions() {
         }
     }
 
+    const handleSkip = () => {
+        handleNewQuestion();
+    }
+
     return (
         <div className="website-page">
+            <Header/>
             <h1>{levelToInstruction(currentLevel)}</h1>
             <h1>{currentQuestion}</h1>
 
-            <input 
-                value={userAnswer}
-                onChange={(e) => {
-                    setUserAnswer(e.target.value)
-                    setIsWrong(false)
-                }}
-            />
+            <h2>Category : {currentCategory} </h2>
 
-            <button onClick={handleSubmit}>
-                Submit
-            </button>
+            <form onSubmit={handleSubmit}>
+                <input 
+                    value={userAnswer}
+                    onChange={(e) => {
+                        setUserAnswer(e.target.value)
+                        setIsWrong(false)
+                    }}
+                />
+
+                <button onClick={handleSubmit}>
+                    Submit
+                </button>
+            </form>
 
             {isWrong && <h1 style={{ color: 'red' }}>Wrong Answer! Try again.</h1>}
+
+            <button onClick={handleSkip}>
+                Skip
+            </button>
         </div>
     );
 }

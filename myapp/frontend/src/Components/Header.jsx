@@ -11,16 +11,16 @@ function Header() {
             Home
         </button>
 
-        <button onClick={() => navigate("/story")}>
-            Custom Story
-        </button>
-
         <button onClick={() => navigate("/interactive-textbook")}>
             Interactive Textbook
         </button>
 
         <button onClick={() => navigate("/listening-practice")}>
             Listening Practice
+        </button>
+
+        <button onClick={() => navigate("/duolingo-style-practice")}>
+            Duolingo Style Questions
         </button>
     </div>
   );
