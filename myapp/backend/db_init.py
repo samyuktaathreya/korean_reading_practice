@@ -66,6 +66,7 @@ cursor = conn.cursor()
 # Create table
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS strength_table (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
         tag TEXT, 
         user_id INTEGER, 
         stability REAL, 
@@ -79,7 +80,7 @@ for tag in unique_tags:
     # INSERT OR IGNORE ensures that if a tag already exists for this user, 
     # it won't overwrite their current strength progress. It only adds new ones.
     cursor.execute('''
-        INSERT OR IGNORE INTO strength_table (tag, user_id, strength, last_practice)
+        INSERT OR IGNORE INTO strength_table (tag, user_id, stability, last_practice)
         VALUES (?, ?, ?, ?)
     ''', (tag, user_id, initial_strength, today))
 

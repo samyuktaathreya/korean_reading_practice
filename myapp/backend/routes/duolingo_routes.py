@@ -1,10 +1,9 @@
 # routers/practice.py
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Body
 from sqlalchemy.orm import Session
-from ..database import SessionLocal # This is your sessionmaker
-from .. import crud
+from database import SessionLocal, INVERTED_INDEX
+import crud
 from datetime import datetime
-from .. import INVERTED_INDEX
 import random
 
 router = APIRouter()
@@ -17,10 +16,10 @@ def get_db():
     finally:
         db.close()
 
-@router.get("/initialize/{user_id}")
+@router.get("/api/initialize/{user_id}")
 def initialize_db(user_id: int, db: Session = Depends(get_db)):
     # 1. Look up the user's progress records
-    progress_records = crud.get_user_progress(db, user_id)
+    progress_records = crud.get_progress_table_by_user_id(db, user_id)
 
     # store strengths in memory
     calculated_stats = []
@@ -53,11 +52,14 @@ def initialize_db(user_id: int, db: Session = Depends(get_db)):
     # 5. Take the bottom 10
     weakest_10_tags = calculated_stats[:10]
 
+    print("weakest 10 tags : ", weakest_10_tags)
+
     question_set = []
     used_ids = set()
 
     for item in weakest_10_tags:
         tag = item["tag"]
+
         questions = INVERTED_INDEX.get(tag, [])
 
         # Filter out questions we already used in this specific session
@@ -78,4 +80,24 @@ def initialize_db(user_id: int, db: Session = Depends(get_db)):
     return {
         "user_id": user_id,
         "question_set": question_set
+    }
+
+@router.patch("/api/practice/submit/{user_id}")
+def update_stability_score(user_id: int, 
+    question_data: dict = Body(...), # Tells FastAPI to look in the Request Body
+    is_correct: bool = Body(...), 
+    db: Session = Depends(get_db)
+    ):
+    tags_to_update = question_data.get("tags", [])
+
+    print("tags to update : ", tags_to_update)
+
+    results = []
+
+    for tag in tags_to_update:
+        results.append(crud.update_stability_score(db, user_id, tag, is_correct))
+
+    return {
+        "message": "progress updated",
+        "results": results
     }

@@ -6,3 +6,4 @@ konlpy
 httpx
 deep-translator
 PyMuPDF
+sqlalchemy

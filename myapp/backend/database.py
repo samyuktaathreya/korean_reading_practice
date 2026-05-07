@@ -13,17 +13,49 @@ Base = declarative_base()
 
 QUESTIONS_DATA = []
 INVERTED_INDEX = {}
+QUESTIONS_FILEPATH = 'DuolingoStyleQuestions.json'
 
 def load_questions():
     global QUESTIONS_DATA, INVERTED_INDEX
-    with open("questions.json", "r", encoding="utf-8") as f:
-        QUESTIONS_DATA = json.load(f)
+    try:
+        with open(QUESTIONS_FILEPATH, "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: {QUESTIONS_FILEPATH} not found.")
+        return
+
+    # Clear existing data to avoid duplicates on reload
+    QUESTIONS_DATA = []
+    INVERTED_INDEX = {}
     
-    # Build the Inverted Index
-    for q in QUESTIONS_DATA:
-        for tag in q.get("tags", []):
-            if tag not in INVERTED_INDEX:
-                INVERTED_INDEX[tag] = []
-            INVERTED_INDEX[tag].append(q)
+    # Nested loop to flatten the JSON structure
+    for category_item in raw_data:
+        category_name = category_item.get("category")
+        
+        for level in category_item.get("levels", []):
+            difficulty_level = level.get("difficulty")
+            
+            for q in level.get("questions", []):
+                # --- ENRICH THE DATA ---
+                # We inject metadata so the frontend knows the context
+                q["category"] = category_name
+                q["difficulty"] = difficulty_level
+                
+                # --- DEFINE TAGS ---
+                # 1. The answer itself (e.g., "는", "은")
+                # 2. The category name
+                tags = [q["answer"], category_name]
+                q["tags"] = tags # Store it in the object for easy reference later
+                
+                # Save to our flat list
+                QUESTIONS_DATA.append(q)
+                
+                # --- BUILD INVERTED INDEX ---
+                for tag in tags:
+                    if tag not in INVERTED_INDEX:
+                        INVERTED_INDEX[tag] = []
+                    INVERTED_INDEX[tag].append(q)
+
+    print(f"Index built! Found {len(INVERTED_INDEX.keys())} unique tags.")
 
 load_questions()
