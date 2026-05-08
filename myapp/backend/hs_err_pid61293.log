@@ -1,0 +1,1305 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000785b11f1f4f3, pid=61293, tid=61293
+#
+# JRE version: OpenJDK Runtime Environment Microsoft-12574222 (25.0.1+8) (build 25.0.1+8-LTS)
+# Java VM: OpenJDK 64-Bit Server VM Microsoft-12574222 (25.0.1+8-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [_jpype.cpython-312-x86_64-linux-gnu.so+0x424f3]  JPypeException::toJava() [clone .cold]+0x5d
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -F%F -- %E" (or dumping to /workspaces/korean_reading_practice/myapp/backend/core.61293)
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/microsoft/openjdk/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+
+Host: AMD EPYC 9V74 80-Core Processor, 2 cores, 7G, Ubuntu 24.04.3 LTS
+Time: Fri May  8 01:42:54 2026 UTC elapsed time: 0.318106 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000064a1cf8c36b0):  JavaThread "main"             [_thread_in_native, id=61293, stack(0x00007ffd7eaea000,0x00007ffd7ebea000) (1024K)]
+
+Stack: [0x00007ffd7eaea000,0x00007ffd7ebea000],  sp=0x00007ffd7ebe4320,  free space=1000k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-312-x86_64-linux-gnu.so+0x424f3]  JPypeException::toJava() [clone .cold]+0x5d
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.jpype.manager.TypeFactoryNative.newWrapper(JJ)V+0
+j  org.jpype.JPypeContext.newWrapper(J)V+16
+v  ~StubRoutines::call_stub 0x0000785afb538fa6
+j  org.jpype.manager.TypeFactoryNative.newWrapper(JJ)V+0
+j  org.jpype.JPypeContext.newWrapper(J)V+16
+v  ~StubRoutines::call_stub 0x0000785afb538fa6
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000785b134737d8, RBX=0x000064a1d03ee970, RCX=0x0000785b1346a8d0, RDX=0x000000064a1cf8a4
+RSP=0x00007ffd7ebe4320, RBP=0x0000000000000000, RSI=0x0000000000000000, RDI=0x00007ffd7ebe42a8
+R8 =0x000064a1cdfed010, R9 =0x0000000000000007, R10=0x000064a1cf8a4e80, R11=0xc7c6cf15773aa5a5
+R12=0x00007ffd7ebe4330, R13=0x000064a1d03ee848, R14=0x00007ffd7ebe4328, R15=0x000064a1cf8c36b0
+RIP=0x0000785b11f1f4f3, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+XMM[0]=0x0000000000000000 0x0000785b15a70563
+XMM[1]=0x0000785b15a70563 0x0000785b15a70563
+XMM[2]=0xffffffffffffffff 0xffffffffffffffff
+XMM[3]=0xffffffffffffffff 0xffffffffffffffff
+XMM[4]=0xffffffffffffffff 0xffffffffffffffff
+XMM[5]=0xffffffffffffffff 0xffffffffffffffff
+XMM[6]=0xffffffffffffffff 0xffffffffffffffff
+XMM[7]=0xffffffffffffffff 0xffffffffffffffff
+XMM[8]=0x0000000000f700f3 0x0000000000f600f2
+XMM[9]=0x00000000000000f3 0x00000000000000f2
+XMM[10]=0x000000000000000c 0x000000000000000c
+XMM[11]=0x000000000000000a 0x000000000000000a
+XMM[12]=0x0000000000000008 0x0000000000000008
+XMM[13]=0x0000000000000006 0x0000000000000006
+XMM[14]=0x0000000000000004 0x0000000000000004
+XMM[15]=0x0000000000000002 0x0000000000000002
+  MXCSR=0x00001fa2
+
+
+Register to memory mapping:
+
+RAX=0x0000785b134737d8: <offset 0x000000000027a7d8> in /lib/x86_64-linux-gnu/libstdc++.so.6 at 0x0000785b131f9000
+RBX=0x000064a1d03ee970 points into unknown readable memory: 0x0000785b11f95a38 | 38 5a f9 11 5b 78 00 00
+RCX=0x0000785b1346a8d0: <offset 0x00000000002718d0> in /lib/x86_64-linux-gnu/libstdc++.so.6 at 0x0000785b131f9000
+RDX=0x000000064a1cf8a4 is an unknown value
+RSP=0x00007ffd7ebe4320 is pointing into the stack for thread: 0x000064a1cf8c36b0
+RBP=0x0 is null
+RSI=0x0 is null
+RDI=0x00007ffd7ebe42a8 is pointing into the stack for thread: 0x000064a1cf8c36b0
+R8 =0x000064a1cdfed010 points into unknown readable memory: 0x0001000000010000 | 00 00 01 00 00 00 01 00
+R9 =0x0000000000000007 is an unknown value
+R10=0x000064a1cf8a4e80 points into unknown readable memory: 0x000000064a1cf8a4 | a4 f8 1c 4a 06 00 00 00
+R11=0xc7c6cf15773aa5a5 is an unknown value
+R12=0x00007ffd7ebe4330 is pointing into the stack for thread: 0x000064a1cf8c36b0
+R13=0x000064a1d03ee848 points into unknown readable memory: 0x726956206176614a | 4a 61 76 61 20 56 69 72
+R14=0x00007ffd7ebe4328 is pointing into the stack for thread: 0x000064a1cf8c36b0
+R15=0x000064a1cf8c36b0 is a thread
+
+Top of Stack: (sp=0x00007ffd7ebe4320)
+0x00007ffd7ebe4320:   0000003100000001 0000785b11f6e7a0   ....1.......[x..
+0x00007ffd7ebe4330:   0000785b11f6e763 00007ffd7ebe0000   c...[x.....~....
+0x00007ffd7ebe4340:   00007ffd7ebe4488 0000785b132b30f4   .D.~.....0+.[x..
+0x00007ffd7ebe4350:   0000785ad040ac08 00007ffd7ebe43a0   ..@.Zx...C.~....
+0x00007ffd7ebe4360:   000064a1d03ee7c0 00007ffd7ebe4398   ..>..d...C.~....
+0x00007ffd7ebe4370:   00007ffd7ebe4488 0000785b11f229e8   .D.~.....)..[x..
+0x00007ffd7ebe4380:   00007ffd7ebe43a0 0000785b11f22a4b   .C.~....K*..[x..
+0x00007ffd7ebe4390:   000000002f3e80a0 0000000000000001   ..>/............
+0x00007ffd7ebe43a0:   000064a1cf8c3b50 00007ffd7ebe0000   P;...d.....~....
+0x00007ffd7ebe43b0:   00007ffd7ebe4448 0000000000000000   HD.~............
+0x00007ffd7ebe43c0:   0000785ad040ac08 0000785afb544f85   ..@.Zx...OT.Zx..
+0x00007ffd7ebe43d0:   0000000000000000 00000000c0062088   ......... ......
+0x00007ffd7ebe43e0:   0000785ad040ae88 0000000000000000   ..@.Zx..........
+0x00007ffd7ebe43f0:   00007ffd7ebe4418 00007ffd7ebe44a8   .D.~.....D.~....
+0x00007ffd7ebe4400:   fffffffffffffff7 0000000000000000   ................
+0x00007ffd7ebe4410:   0000000000000008 0000785ad040b288   ..........@.Zx..
+0x00007ffd7ebe4420:   0000000000000000 00000000c0062088   ......... ......
+0x00007ffd7ebe4430:   0000785ad040ac08 0000000000000000   ..@.Zx..........
+0x00007ffd7ebe4440:   00007ffd7ebe4468 00007ffd7ebe44e8   hD.~.....D.~....
+0x00007ffd7ebe4450:   0000785afb540936 0000000000000000   6.T.Zx..........
+0x00007ffd7ebe4460:   0000785afb542437 000064a1d0329900   7$T.Zx....2..d..
+0x00007ffd7ebe4470:   0000000000000000 000064a1cf3a9660   ........`.:..d..
+0x00007ffd7ebe4480:   0000000000000000 00000000c0062150   ........P!......
+0x00007ffd7ebe4490:   00000000c0062150 00000000c0062150   P!......P!......
+0x00007ffd7ebe44a0:   fffffffffffffff5 0000785ad040eaa0   ..........@.Zx..
+0x00007ffd7ebe44b0:   0000000000000006 0000785ad040a968   ........h.@.Zx..
+0x00007ffd7ebe44c0:   0000000000000000 00000000c00612f0   ................
+0x00007ffd7ebe44d0:   0000785ad040eac8 fffffffffffffff0   ..@.Zx..........
+0x00007ffd7ebe44e0:   00007ffd7ebe4508 00007ffd7ebe4580   .E.~.....E.~....
+0x00007ffd7ebe44f0:   0000785afb538fa6 0000000000000000   ..S.Zx..........
+0x00007ffd7ebe4500:   00000000c0062150 000064a1d0329900   P!........2..d..
+0x00007ffd7ebe4510:   000064a1cf8e3438 00000000c0061958   84...d..X.......
+
+Instructions: (pc=0x0000785b11f1f4f3)
+  0x0000785b11f1f3f3:   ff ff 48 8b 54 24 30 48 8b 4c 24 38 49 89 c7 48
+  0x0000785b11f1f403:   89 94 24 90 00 00 00 48 8b 52 e8 48 89 8c 14 90
+  0x0000785b11f1f413:   00 00 00 48 c7 84 24 98 00 00 00 00 00 00 00 e9
+  0x0000785b11f1f423:   56 fe ff ff 4c 89 ff e8 21 9c ff ff e9 46 fd ff
+  0x0000785b11f1f433:   ff 4c 89 f7 48 89 c3 48 89 d5 e8 fe a6 ff ff eb
+  0x0000785b11f1f443:   a1 ff d0 48 8d 3d 65 ee 04 00 48 89 c6 e8 fb 90
+  0x0000785b11f1f453:   ff ff e9 27 ff ff ff 48 89 c7 48 89 d0 e9 ab fe
+  0x0000785b11f1f463:   ff ff 48 8b 7c 24 60 e8 71 00 02 00 49 8d 74 24
+  0x0000785b11f1f473:   08 4c 89 f7 e8 94 af ff ff e9 fc fd ff ff e8 ca
+  0x0000785b11f1f483:   b8 ff ff 48 89 c5 e8 f2 b3 ff ff 48 89 ef e8 ba
+  0x0000785b11f1f493:   b8 ff ff 4c 89 f7 e8 f2 a1 ff ff 4c 89 e7 e8 4a
+  0x0000785b11f1f4a3:   a7 ff ff 48 89 df 48 83 ed 01 75 59 e8 2c b6 ff
+  0x0000785b11f1f4b3:   ff 48 8d 3d 9d ee 04 00 48 89 c3 e8 5d 98 ff ff
+  0x0000785b11f1f4c3:   48 8b 43 20 48 8d 74 24 10 48 8d 7c 24 08 48 8b
+  0x0000785b11f1f4d3:   50 08 48 8b 08 8b 40 10 48 89 54 24 08 48 8d 54
+  0x0000785b11f1f4e3:   24 04 89 44 24 04 48 89 4c 24 10 e8 ed 98 ff ff
+=>0x0000785b11f1f4f3:   c7 04 25 00 00 00 00 00 00 00 00 e8 7d b3 ff ff
+  0x0000785b11f1f503:   e9 b9 fe 01 00 e8 d3 b5 ff ff 48 8d 3d 44 ee 04
+  0x0000785b11f1f513:   00 e8 07 98 ff ff c7 04 25 00 00 00 00 00 00 00
+  0x0000785b11f1f523:   00 e8 57 b3 ff ff e9 93 fe 01 00 4c 89 f7 e8 5a
+  0x0000785b11f1f533:   a1 ff ff e9 63 ff ff ff 48 89 c3 48 89 d5 e8 3a
+  0x0000785b11f1f543:   b3 ff ff 48 89 df 48 89 e8 48 83 e8 01 75 52 e8
+  0x0000785b11f1f553:   89 b5 ff ff 48 8d 74 24 10 c7 44 24 20 b8 01 00
+  0x0000785b11f1f563:   00 48 89 c7 48 8d 05 75 ed 04 00 48 89 44 24 10
+  0x0000785b11f1f573:   48 8d 05 be ed 04 00 48 89 44 24 18 e8 5c 94 ff
+  0x0000785b11f1f583:   ff e8 17 93 ff ff 48 89 c7 48 89 d0 eb bb 48 89
+  0x0000785b11f1f593:   c3 48 89 d5 e8 e4 b2 ff ff 48 89 df 48 89 e8 eb
+  0x0000785b11f1f5a3:   a8 e8 a7 b7 ff ff 48 89 c5 e8 cf b2 ff ff 48 89
+  0x0000785b11f1f5b3:   ef e8 97 b7 ff ff 90 48 8b 73 18 48 85 f6 74 0f
+  0x0000785b11f1f5c3:   48 8b 05 ee 98 07 00 48 8b 38 e8 0e 93 ff ff 4c
+  0x0000785b11f1f5d3:   89 f7 e8 76 9a ff ff 48 89 ef e8 6e b7 ff ff 48
+  0x0000785b11f1f5e3:   89 ef e8 06 a6 ff ff 48 89 df 4c 89 e0 48 83 e8
+
+
+Stack slot to memory mapping:
+
+stack at sp + 0 slots: 0x0000003100000001 is an unknown value
+stack at sp + 1 slots: 0x0000785b11f6e7a0: <offset 0x00000000000917a0> in /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so at 0x0000785b11edd000
+stack at sp + 2 slots: 0x0000785b11f6e763: <offset 0x0000000000091763> in /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so at 0x0000785b11edd000
+stack at sp + 3 slots: 0x00007ffd7ebe0000 is pointing into the stack for thread: 0x000064a1cf8c36b0
+stack at sp + 4 slots: 0x00007ffd7ebe4488 is pointing into the stack for thread: 0x000064a1cf8c36b0
+stack at sp + 5 slots: 0x0000785b132b30f4: __cxa_get_globals+0x0000000000000014 in /lib/x86_64-linux-gnu/libstdc++.so.6 at 0x0000785b131f9000
+stack at sp + 6 slots: {method} {0x0000785ad040ac08} 'newWrapper' '(JJ)V' in 'org/jpype/manager/TypeFactoryNative'
+stack at sp + 7 slots: 0x00007ffd7ebe43a0 is pointing into the stack for thread: 0x000064a1cf8c36b0
+
+Lock stack of current Java thread (top to bottom):
+LockStack[1]: org.jpype.manager.TypeFactoryNative 
+{0x00000000c0062150} - klass: 'org/jpype/manager/TypeFactoryNative' - flags: 
+
+ - ---- fields (total size 3 words):
+ - public 'context' 'J' @16  0 (0x0000000000000000)
+LockStack[0]: org.jpype.manager.TypeFactoryNative 
+{0x00000000c0062150} - klass: 'org/jpype/manager/TypeFactoryNative' - flags: 
+
+ - ---- fields (total size 3 words):
+ - public 'context' 'J' @16  0 (0x0000000000000000)
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000785ad8615730, length=11, elements={
+0x000064a1cf8c36b0, 0x000064a1d0191990, 0x000064a1d0193240, 0x000064a1d0194d10,
+0x000064a1d01966b0, 0x000064a1d0197fb0, 0x000064a1d0199d80, 0x000064a1d019b7f0,
+0x000064a1d01b7970, 0x000064a1d01b9ab0, 0x0000785ac0001030
+}
+
+Java Threads: ( => current thread )
+=>0x000064a1cf8c36b0 JavaThread "main"                              [_thread_in_native, id=61293, stack(0x00007ffd7eaea000,0x00007ffd7ebea000) (1024K)]
+  0x000064a1d0191990 JavaThread "Reference Handler"          daemon [_thread_blocked, id=61372, stack(0x0000785af01fd000,0x0000785af02fd000) (1024K)]
+  0x000064a1d0193240 JavaThread "Finalizer"                  daemon [_thread_blocked, id=61373, stack(0x0000785af00fc000,0x0000785af01fc000) (1024K)]
+  0x000064a1d0194d10 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=61374, stack(0x0000785ac7f00000,0x0000785ac8000000) (1024K)]
+  0x000064a1d01966b0 JavaThread "Service Thread"             daemon [_thread_blocked, id=61375, stack(0x0000785ac7dff000,0x0000785ac7eff000) (1024K)]
+  0x000064a1d0197fb0 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=61376, stack(0x0000785ac7cfe000,0x0000785ac7dfe000) (1024K)]
+  0x000064a1d0199d80 JavaThread "C2 CompilerThread0"         daemon [_thread_blocked, id=61377, stack(0x0000785ac7bfd000,0x0000785ac7cfd000) (1024K)]
+  0x000064a1d019b7f0 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=61378, stack(0x0000785ac7afc000,0x0000785ac7bfc000) (1024K)]
+  0x000064a1d01b7970 JavaThread "Notification Thread"        daemon [_thread_blocked, id=61379, stack(0x0000785ac79fb000,0x0000785ac7afb000) (1024K)]
+  0x000064a1d01b9ab0 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=61380, stack(0x0000785ac78fa000,0x0000785ac79fa000) (1024K)]
+  0x0000785ac0001030 JavaThread "SIGTERM handler"            daemon [_thread_blocked, id=61384, stack(0x0000785ac75f7000,0x0000785ac76f7000) (1024K)]
+Total: 11
+
+Other Threads:
+  0x000064a1d0186c40 VMThread "VM Thread"                           [id=61371, stack(0x0000785af02fe000,0x0000785af03fe000) (1024K)]
+  0x000064a1d0177ca0 WatcherThread "VM Periodic Task Thread"        [id=61370, stack(0x0000785af03ff000,0x0000785af04ff000) (1024K)]
+  0x000064a1cf9161c0 WorkerThread "GC Thread#0"                     [id=61364, stack(0x0000785af3e15000,0x0000785af3f15000) (1024K)]
+  0x0000785ad8000fc0 WorkerThread "GC Thread#1"                     [id=61383, stack(0x0000785ac76f8000,0x0000785ac77f8000) (1024K)]
+  0x000064a1cf99f550 ConcurrentGCThread "G1 Main Marker"            [id=61365, stack(0x0000785af2900000,0x0000785af2a00000) (1024K)]
+  0x000064a1cf99f9f0 WorkerThread "G1 Conc#0"                       [id=61366, stack(0x0000785af27ff000,0x0000785af28ff000) (1024K)]
+  0x000064a1d0048970 ConcurrentGCThread "G1 Refine#0"               [id=61367, stack(0x0000785af26fe000,0x0000785af27fe000) (1024K)]
+  0x000064a1d0049b10 ConcurrentGCThread "G1 Service"                [id=61368, stack(0x0000785af0500000,0x0000785af0600000) (1024K)]
+Total: 8
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x000000002f000000-0x000000002fd8c000-0x000000002fd8c000), size 14204928, SharedBaseAddress: 0x000000002f000000, ArchiveRelocationMode: 1.
+Compressed class space mapped at: 0x0000000030000000-0x0000000070000000, reserved size: 1073741824
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0x000000002f000000, Narrow klass shift: 0
+Encoding Range: [0x000000002f000000 - 0x000000012f000000), (4294967296 bytes)
+Klass Range:    [0x000000002f001000 - 0x0000000070000000), (1090514944 bytes)
+Klass ID Range:  [4096 - 1090519033) (1090514937)
+Protection zone: [0x000000002f000000 - 0x000000002f001000), (4096 bytes)
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 10 size 36 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+ CPUs: 2 total, 2 available
+ Memory: 7944M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 8M
+ Heap Initial Capacity: 126M
+ Heap Max Capacity: 1G
+ Pre-touch: Disabled
+ Parallel Workers: 2
+ Concurrent Workers: 1
+ Concurrent Refinement Workers: 2
+ Periodic GC: Disabled
+ G1 Time-Based Heap Sizing enabled (uncommit-only)
+ Evaluation Interval: 60s, Uncommit Delay: 300s, Min Regions To Uncommit: 10
+
+Heap:
+ garbage-first heap   total reserved 1048576K, committed 10240K, used 2113K [0x00000000c0000000, 0x0000000100000000)
+  region size 1024K, 1 young (1024K), 0 survivors (0K)
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+|   0|0x00000000c0000000, 0x00000000c0084258, 0x00000000c0100000| 51%| O|  |TAMS 0x00000000c0000000| PB 0x00000000c0000000| Untracked |  0
+|   1|0x00000000c0100000, 0x00000000c018c1a8, 0x00000000c0200000| 54%| O|  |TAMS 0x00000000c0100000| PB 0x00000000c0100000| Untracked |  0
+|   2|0x00000000c0200000, 0x00000000c0200000, 0x00000000c0300000|  0%| F|  |TAMS 0x00000000c0200000| PB 0x00000000c0200000| Untracked |  0
+|   3|0x00000000c0300000, 0x00000000c0300000, 0x00000000c0400000|  0%| F|  |TAMS 0x00000000c0300000| PB 0x00000000c0300000| Untracked |  0
+|   4|0x00000000c0400000, 0x00000000c0400000, 0x00000000c0500000|  0%| F|  |TAMS 0x00000000c0400000| PB 0x00000000c0400000| Untracked |  0
+|   5|0x00000000c0500000, 0x00000000c0500000, 0x00000000c0600000|  0%| F|  |TAMS 0x00000000c0500000| PB 0x00000000c0500000| Untracked |  0
+|   6|0x00000000c0600000, 0x00000000c0600000, 0x00000000c0700000|  0%| F|  |TAMS 0x00000000c0600000| PB 0x00000000c0600000| Untracked |  0
+|   7|0x00000000c0700000, 0x00000000c0700000, 0x00000000c0800000|  0%| F|  |TAMS 0x00000000c0700000| PB 0x00000000c0700000| Untracked |  0
+|   8|0x00000000c0800000, 0x00000000c08e6820, 0x00000000c0900000| 90%| E|  |TAMS 0x00000000c0800000| PB 0x00000000c0800000| Complete |  0
+|1022|0x00000000ffe00000, 0x00000000fff00000, 0x00000000fff00000|100%| O|  |TAMS 0x00000000ffe00000| PB 0x00000000ffe00000| Untracked |  0
+
+Card table byte_map: [0x0000785af3a00000,0x0000785af3c00000] _byte_map_base: 0x0000785af3400000
+
+Marking Bits: (CMBitMap*) 0x000064a1cf86a400
+ Bits: [0x0000785af2a00000, 0x0000785af3a00000)
+
+Polling page: 0x0000785b14fd6000
+
+Metaspace:
+Metaspace        used 1854K, committed 1984K, reserved 1114112K
+ class space     used 134K, committed 192K, reserved 1048576K
+
+Usage:
+  Non-class:      1.68 MB used.
+      Class:    134.28 KB used.
+       Both:      1.81 MB used.
+
+Virtual space:
+  Non-class space:       64.00 MB reserved,       1.75 MB (  3%) committed,  1 nodes.
+      Class space:        1.00 GB reserved,     192.00 KB ( <1%) committed,  1 nodes.
+             Both:        1.06 GB reserved,       1.94 MB ( <1%) committed. 
+
+Chunk freelists:
+   Non-Class:  11.83 MB
+       Class:  15.70 MB
+        Both:  27.53 MB
+
+MaxMetaspaceSize: unlimited
+CompressedClassSpaceSize: 1.00 GB
+Initial GC threshold: 21.00 MB
+Current GC threshold: 21.00 MB
+CDS: on
+ - commit_granule_bytes: 65536.
+ - commit_granule_words: 8192.
+ - virtual_space_node_default_size: 8388608.
+ - enlarge_chunks_in_place: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0x000000002f000000, Narrow klass shift: 0
+Encoding Range: [0x000000002f000000 - 0x000000012f000000), (4294967296 bytes)
+Klass Range:    [0x000000002f001000 - 0x0000000070000000), (1090514944 bytes)
+Klass ID Range:  [4096 - 1090519033) (1090514937)
+Protection zone: [0x000000002f000000 - 0x000000002f001000), (4096 bytes)
+
+
+Internal statistics:
+
+num_allocs_failed_limit: 0.
+num_arena_births: 46.
+num_arena_deaths: 0.
+num_vsnodes_births: 2.
+num_vsnodes_deaths: 0.
+num_space_committed: 31.
+num_space_uncommitted: 0.
+num_chunks_returned_to_freelist: 0.
+num_chunks_taken_from_freelist: 69.
+num_chunk_merges: 0.
+num_chunk_splits: 41.
+num_chunks_enlarged: 17.
+num_inconsistent_stats: 0.
+
+CodeHeap 'non-profiled nmethods': size=120040Kb used=141Kb max_used=141Kb free=119898Kb
+ bounds [0x0000785afbac6000, 0x0000785afbd36000, 0x0000785b03000000]
+CodeHeap 'profiled nmethods': size=120032Kb used=945Kb max_used=945Kb free=119086Kb
+ bounds [0x0000785af4000000, 0x0000785af4270000, 0x0000785afb538000]
+CodeHeap 'non-nmethods': size=5688Kb used=1327Kb max_used=1340Kb free=4361Kb
+ bounds [0x0000785afb538000, 0x0000785afb7a8000, 0x0000785afbac6000]
+CodeCache: size=245760Kb, used=2413Kb, max_used=2426Kb, free=243345Kb
+ total_blobs=1120, nmethods=710, adapters=315, full_count=0
+Compilation: enabled, stopped_count=0, restarted_count=0
+
+Compilation events (20 events):
+Event: 0.311 Thread 0x000064a1d019b7f0 nmethod 757 0x0000785af40d6a88 code [0x0000785af40d6b80, 0x0000785af40d6e08]
+Event: 0.311 Thread 0x000064a1d019b7f0  429   !   3       java.util.jar.JarFile::checkForSpecialAttributes (163 bytes)
+Event: 0.311 Thread 0x000064a1d019b7f0 nmethod 429 0x0000785af40d6e88 code [0x0000785af40d6f80, 0x0000785af40d80d0]
+Event: 0.311 Thread 0x000064a1d019b7f0  514       3       java.net.URL::isBuiltinStreamHandler (32 bytes)
+Event: 0.312 Thread 0x000064a1d019b7f0 nmethod 514 0x0000785af40d8108 code [0x0000785af40d8200, 0x0000785af40d8a18]
+Event: 0.312 Thread 0x000064a1d019b7f0  515       3       java.net.URL::isBuiltinStreamHandler (8 bytes)
+Event: 0.312 Thread 0x000064a1d019b7f0 nmethod 515 0x0000785af40d8a88 code [0x0000785af40d8b80, 0x0000785af40d8e28]
+Event: 0.312 Thread 0x000064a1d019b7f0  516       3       sun.net.util.IPAddressUtil::checkHostString (65 bytes)
+Event: 0.312 Thread 0x000064a1d019b7f0 nmethod 516 0x0000785af40d8e88 code [0x0000785af40d8f80, 0x0000785af40d9180]
+Event: 0.312 Thread 0x000064a1d019b7f0  517       3       sun.net.util.IPAddressUtil::checkHost (159 bytes)
+Event: 0.313 Thread 0x000064a1d019b7f0 nmethod 517 0x0000785af40d9188 code [0x0000785af40d9280, 0x0000785af40db8a8]
+Event: 0.313 Thread 0x000064a1d019b7f0  518       3       sun.net.util.IPAddressUtil::scan (92 bytes)
+Event: 0.314 Thread 0x000064a1d019b7f0 nmethod 518 0x0000785af40db908 code [0x0000785af40dba00, 0x0000785af40dc4f0]
+Event: 0.314 Thread 0x000064a1d019b7f0  247       1       java.lang.classfile.Opcode::bytecode (5 bytes)
+Event: 0.314 Thread 0x000064a1d019b7f0 nmethod 247 0x0000785afbae4e88 code [0x0000785afbae4f80, 0x0000785afbae5040]
+Event: 0.314 Thread 0x000064a1d019b7f0  534   !   3       java.util.jar.JarFile::isMultiRelease (33 bytes)
+Event: 0.314 Thread 0x000064a1d019b7f0 nmethod 534 0x0000785af40dc508 code [0x0000785af40dc600, 0x0000785af40dc7f8]
+Event: 0.314 Thread 0x000064a1d019b7f0  446   !   3       java.lang.invoke.MemberName::clone (14 bytes)
+Event: 0.314 Thread 0x000064a1d019b7f0 nmethod 446 0x0000785af40dc808 code [0x0000785af40dc900, 0x0000785af40dcc40]
+Event: 0.314 Thread 0x000064a1d019b7f0  533       3       jdk.internal.loader.URLClassPath$JarLoader::ensureOpen (57 bytes)
+
+GC Heap Usage History (2 events):
+Event: 0.225 {heap Before GC invocations=0 (full 0):
+ garbage-first heap   total reserved 1048576K, committed 131072K, used 6275K [0x00000000c0000000, 0x0000000100000000)
+  region size 1024K, 6 young (6144K), 0 survivors (0K)
+}
+Event: 0.241 {heap After GC invocations=1 (full 1):
+ garbage-first heap   total reserved 1048576K, committed 10240K, used 2113K [0x00000000c0000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+}
+
+Metaspace Usage History (2 events):
+Event: 0.225 {metaspace Before GC invocations=0 (full 0):
+ Metaspace       used 1616K, committed 1792K, reserved 1114112K
+  class space    used 120K, committed 192K, reserved 1048576K
+}
+Event: 0.241 {metaspace After GC invocations=1 (full 1):
+ Metaspace       used 1616K, committed 1792K, reserved 1114112K
+  class space    used 120K, committed 192K, reserved 1048576K
+}
+
+Dll operation events (6 events):
+Event: 0.004 Loaded shared library /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjava.so
+Event: 0.020 Loaded shared library /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libsimdsort.so
+Event: 0.030 Loaded shared library /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnio.so
+Event: 0.036 Loaded shared library /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libzip.so
+Event: 0.091 Loaded shared library /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+Event: 0.130 Loaded shared library /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjimage.so
+
+Deoptimization events (8 events):
+Event: 0.059 Thread 0x000064a1cf8c36b0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000785afbac92f8 relative=0x0000000000000078
+Event: 0.059 Thread 0x000064a1cf8c36b0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000785afbac92f8 method=jdk.internal.misc.Unsafe.convEndian(ZS)S @ 4 c2
+Event: 0.059 Thread 0x000064a1cf8c36b0 DEOPT PACKING pc=0x0000785afbac92f8 sp=0x00007ffd7ebe3ea0
+Event: 0.059 Thread 0x000064a1cf8c36b0 DEOPT UNPACKING pc=0x0000785afb654479 sp=0x00007ffd7ebe3df0 mode 2
+Event: 0.086 Thread 0x000064a1cf8c36b0 Uncommon trap: trap_request=0xffffff45 fr.pc=0x0000785afbac8ff8 relative=0x0000000000000078
+Event: 0.086 Thread 0x000064a1cf8c36b0 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000785afbac8ff8 method=jdk.internal.misc.Unsafe.convEndian(ZI)I @ 4 c2
+Event: 0.086 Thread 0x000064a1cf8c36b0 DEOPT PACKING pc=0x0000785afbac8ff8 sp=0x00007ffd7ebe3800
+Event: 0.086 Thread 0x000064a1cf8c36b0 DEOPT UNPACKING pc=0x0000785afb654479 sp=0x00007ffd7ebe3750 mode 2
+
+Classes loaded (20 events):
+Event: 0.268 Loading class jdk/internal/logger/LazyLoggers$LazyLoggerAccessor
+Event: 0.268 Loading class jdk/internal/logger/LazyLoggers$LoggerAccessor
+Event: 0.268 Loading class jdk/internal/logger/LazyLoggers$LoggerAccessor done
+Event: 0.268 Loading class jdk/internal/logger/LazyLoggers$LazyLoggerAccessor done
+Event: 0.268 Loading class java/lang/System$Logger$Level
+Event: 0.268 Loading class java/lang/System$Logger$Level done
+Event: 0.268 Loading class jdk/internal/logger/SurrogateLogger
+Event: 0.269 Loading class jdk/internal/logger/SimpleConsoleLogger
+Event: 0.269 Loading class sun/util/logging/PlatformLogger$ConfigurableBridge$LoggerConfiguration
+Event: 0.269 Loading class sun/util/logging/PlatformLogger$ConfigurableBridge$LoggerConfiguration done
+Event: 0.269 Loading class jdk/internal/logger/SimpleConsoleLogger done
+Event: 0.269 Loading class jdk/internal/logger/SurrogateLogger done
+Event: 0.271 Loading class sun/util/logging/PlatformLogger
+Event: 0.271 Loading class sun/util/logging/PlatformLogger done
+Event: 0.271 Loading class sun/util/logging/PlatformLogger$Level
+Event: 0.271 Loading class sun/util/logging/PlatformLogger$Level done
+Event: 0.272 Loading class jdk/internal/event/ThreadSleepEvent
+Event: 0.272 Loading class jdk/internal/event/Event
+Event: 0.272 Loading class jdk/internal/event/Event done
+Event: 0.272 Loading class jdk/internal/event/ThreadSleepEvent done
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (13 events):
+Event: 0.075 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7c83670}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c7c83670) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.095 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7b06850}: 'int java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, java.lang.Object)'> (0x00000000c7b06850) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.096 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7b163f0}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object, int)'> (0x00000000c7b163f0) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.100 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7b3cb30}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c7b3cb30) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.100 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7b94458}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c7b94458) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.102 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7bada68}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c7bada68) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.107 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7bd7708}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeInterface(java.lang.Object, java.lang.Object)'> (0x00000000c7bd7708) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.108 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/IncompatibleClassChangeError'{0x00000000c7bdfb88}: Found class java.lang.Object, but interface was expected> (0x00000000c7bdfb88) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 871]
+Event: 0.108 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7be7d80}: 'void java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.lang.Object, java.lang.Object)'> (0x00000000c7be7d80) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.112 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7bfb7d0}: 'java.lang.Object java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c7bfb7d0) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.115 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7a17a38}: 'int java.lang.invoke.Invokers$Holder.invokeExact_MT(java.lang.Object, java.lang.Object, java.lang.Object)'> (0x00000000c7a17a38) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.135 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/NoSuchMethodError'{0x00000000c7a8dbd8}: 'java.lang.Object java.lang.invoke.DirectMethodHandle$Holder.invokeStaticInit(java.lang.Object)'> (0x00000000c7a8dbd8) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 803]
+Event: 0.176 Thread 0x000064a1cf8c36b0 Exception <a 'java/lang/IncompatibleClassChangeError'{0x00000000c7914170}: Found class java.lang.Object, but interface was expected> (0x00000000c7914170) 
+thrown [src/hotspot/share/interpreter/linkResolver.cpp, line 871]
+
+VM Operations (4 events):
+Event: 0.225 Executing safepoint VM operation: G1CollectFull (System.gc())
+Event: 0.242 Executing safepoint VM operation: G1CollectFull (System.gc()) done
+Event: 0.278 Executing safepoint VM operation: ThreadDump
+Event: 0.280 Executing safepoint VM operation: ThreadDump done
+
+Memory protections (15 events):
+Event: 0.003 Protecting memory [0x00007ffd7eaea000,0x00007ffd7eaee000] with protection modes 0
+Event: 0.011 Protecting memory [0x000000002f000000,0x000000002f001000] with protection modes 0
+Event: 0.018 Protecting memory [0x0000785af01fd000,0x0000785af0201000] with protection modes 0
+Event: 0.018 Protecting memory [0x0000785af00fc000,0x0000785af0100000] with protection modes 0
+Event: 0.018 Protecting memory [0x0000785ac7f00000,0x0000785ac7f04000] with protection modes 0
+Event: 0.019 Protecting memory [0x0000785ac7dff000,0x0000785ac7e03000] with protection modes 0
+Event: 0.019 Protecting memory [0x0000785ac7cfe000,0x0000785ac7d02000] with protection modes 0
+Event: 0.019 Protecting memory [0x0000785ac7bfd000,0x0000785ac7c01000] with protection modes 0
+Event: 0.020 Protecting memory [0x0000785ac7afc000,0x0000785ac7b00000] with protection modes 0
+Event: 0.027 Protecting memory [0x0000785ac79fb000,0x0000785ac79ff000] with protection modes 0
+Event: 0.029 Protecting memory [0x0000785ac78fa000,0x0000785ac78fe000] with protection modes 0
+Event: 0.113 Protecting memory [0x0000785b1308e000,0x0000785b1308f000] with protection modes 1
+Event: 0.124 Protecting memory [0x0000785ac77f9000,0x0000785ac77fd000] with protection modes 0
+Event: 0.264 Protecting memory [0x0000785ac75f7000,0x0000785ac75fb000] with protection modes 0
+Event: 0.272 Protecting memory [0x0000785ac74f6000,0x0000785ac74fa000] with protection modes 0
+
+Nmethod flushes (0 events):
+No events
+
+Events (13 events):
+Event: 0.012 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1cf8c36b0
+Event: 0.018 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d0191990
+Event: 0.018 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d0193240
+Event: 0.018 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d0194d10
+Event: 0.019 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d01966b0
+Event: 0.019 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d0197fb0
+Event: 0.019 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d0199d80
+Event: 0.019 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d019b7f0
+Event: 0.027 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d01b7970
+Event: 0.029 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d01b9ab0
+Event: 0.124 Thread 0x000064a1cf8c36b0 Thread added: 0x000064a1d0391820
+Event: 0.264 Thread 0x000064a1d0194d10 Thread added: 0x0000785ac0001030
+Event: 0.272 Thread 0x0000785ac0001030 Thread added: 0x0000785ab01ace10
+
+
+Dynamic libraries:
+2f000000-2f001000 ---p 00000000 00:00 0 
+2f001000-2f4ab000 rw-p 00001000 00:2d 681584                             /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/classes.jsa
+2f4ab000-2fd8c000 rw-p 004ab000 00:2d 681584                             /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/classes.jsa
+2fd8c000-30000000 ---p 00000000 00:00 0 
+30000000-30020000 rw-p 00000000 00:00 0 
+30020000-30040000 ---p 00000000 00:00 0 
+30040000-30050000 rw-p 00000000 00:00 0 
+30050000-70000000 ---p 00000000 00:00 0 
+c0000000-c0900000 rw-p 00000000 00:00 0 
+c0900000-ffe00000 ---p 00000000 00:00 0 
+ffe00000-fff00000 rw-p 00dbf000 00:2d 681584                             /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/classes.jsa
+fff00000-100000000 ---p 00000000 00:00 0 
+64a1c46f5000-64a1c47f3000 r--p 00000000 00:2d 828064                     /usr/local/python/3.12.1/bin/python3.12
+64a1c47f3000-64a1c4a90000 r-xp 000fe000 00:2d 828064                     /usr/local/python/3.12.1/bin/python3.12
+64a1c4a90000-64a1c4be2000 r--p 0039b000 00:2d 828064                     /usr/local/python/3.12.1/bin/python3.12
+64a1c4be2000-64a1c4c59000 r--p 004ed000 00:2d 828064                     /usr/local/python/3.12.1/bin/python3.12
+64a1c4c59000-64a1c4dc6000 rw-p 00564000 00:2d 828064                     /usr/local/python/3.12.1/bin/python3.12
+64a1c4dc6000-64a1c4dc8000 rw-p 00000000 00:00 0 
+64a1cdfed000-64a1d046b000 rw-p 00000000 00:00 0                          [heap]
+785aa8000000-785aa8021000 rw-p 00000000 00:00 0 
+785aa8021000-785aac000000 ---p 00000000 00:00 0 
+785ab0000000-785ab02fa000 rw-p 00000000 00:00 0 
+785ab02fa000-785ab4000000 ---p 00000000 00:00 0 
+785ab4000000-785ab44e2000 rw-p 00000000 00:00 0 
+785ab44e2000-785ab8000000 ---p 00000000 00:00 0 
+785ab8000000-785ab8021000 rw-p 00000000 00:00 0 
+785ab8021000-785abc000000 ---p 00000000 00:00 0 
+785abc000000-785abc021000 rw-p 00000000 00:00 0 
+785abc021000-785ac0000000 ---p 00000000 00:00 0 
+785ac0000000-785ac0021000 rw-p 00000000 00:00 0 
+785ac0021000-785ac4000000 ---p 00000000 00:00 0 
+785ac74f5000-785ac74f6000 ---p 00000000 00:00 0 
+785ac74f6000-785ac74fa000 ---p 00000000 00:00 0 
+785ac74fa000-785ac75f6000 rw-p 00000000 00:00 0 
+785ac75f6000-785ac75f7000 ---p 00000000 00:00 0 
+785ac75f7000-785ac75fb000 ---p 00000000 00:00 0 
+785ac75fb000-785ac76f7000 rw-p 00000000 00:00 0 
+785ac76f7000-785ac76f8000 ---p 00000000 00:00 0 
+785ac76f8000-785ac77f8000 rw-p 00000000 00:00 0 
+785ac77f8000-785ac77f9000 ---p 00000000 00:00 0 
+785ac77f9000-785ac77fd000 ---p 00000000 00:00 0 
+785ac77fd000-785ac78f9000 rw-p 00000000 00:00 0 
+785ac78f9000-785ac78fa000 ---p 00000000 00:00 0 
+785ac78fa000-785ac78fe000 ---p 00000000 00:00 0 
+785ac78fe000-785ac79fa000 rw-p 00000000 00:00 0 
+785ac79fa000-785ac79fb000 ---p 00000000 00:00 0 
+785ac79fb000-785ac79ff000 ---p 00000000 00:00 0 
+785ac79ff000-785ac7afb000 rw-p 00000000 00:00 0 
+785ac7afb000-785ac7afc000 ---p 00000000 00:00 0 
+785ac7afc000-785ac7b00000 ---p 00000000 00:00 0 
+785ac7b00000-785ac7bfc000 rw-p 00000000 00:00 0 
+785ac7bfc000-785ac7bfd000 ---p 00000000 00:00 0 
+785ac7bfd000-785ac7c01000 ---p 00000000 00:00 0 
+785ac7c01000-785ac7cfd000 rw-p 00000000 00:00 0 
+785ac7cfd000-785ac7cfe000 ---p 00000000 00:00 0 
+785ac7cfe000-785ac7d02000 ---p 00000000 00:00 0 
+785ac7d02000-785ac7dfe000 rw-p 00000000 00:00 0 
+785ac7dfe000-785ac7dff000 ---p 00000000 00:00 0 
+785ac7dff000-785ac7e03000 ---p 00000000 00:00 0 
+785ac7e03000-785ac7eff000 rw-p 00000000 00:00 0 
+785ac7eff000-785ac7f00000 ---p 00000000 00:00 0 
+785ac7f00000-785ac7f04000 ---p 00000000 00:00 0 
+785ac7f04000-785ac8000000 rw-p 00000000 00:00 0 
+785ac8000000-785ac8021000 rw-p 00000000 00:00 0 
+785ac8021000-785acc000000 ---p 00000000 00:00 0 
+785acc000000-785acc021000 rw-p 00000000 00:00 0 
+785acc021000-785ad0000000 ---p 00000000 00:00 0 
+785ad0000000-785ad0190000 rw-p 00000000 00:00 0 
+785ad0190000-785ad0400000 ---p 00000000 00:00 0 
+785ad0400000-785ad0430000 rw-p 00000000 00:00 0 
+785ad0430000-785ad4000000 ---p 00000000 00:00 0 
+785ad4000000-785ad4021000 rw-p 00000000 00:00 0 
+785ad4021000-785ad8000000 ---p 00000000 00:00 0 
+785ad8000000-785ad8618000 rw-p 00000000 00:00 0 
+785ad8618000-785adc000000 ---p 00000000 00:00 0 
+785adc000000-785adc021000 rw-p 00000000 00:00 0 
+785adc021000-785ae0000000 ---p 00000000 00:00 0 
+785ae0000000-785ae0021000 rw-p 00000000 00:00 0 
+785ae0021000-785ae4000000 ---p 00000000 00:00 0 
+785ae4000000-785ae4021000 rw-p 00000000 00:00 0 
+785ae4021000-785ae8000000 ---p 00000000 00:00 0 
+785ae8000000-785ae8021000 rw-p 00000000 00:00 0 
+785ae8021000-785aec000000 ---p 00000000 00:00 0 
+785aec000000-785aec021000 rw-p 00000000 00:00 0 
+785aec021000-785af0000000 ---p 00000000 00:00 0 
+785af00fb000-785af00fc000 ---p 00000000 00:00 0 
+785af00fc000-785af0100000 ---p 00000000 00:00 0 
+785af0100000-785af01fc000 rw-p 00000000 00:00 0 
+785af01fc000-785af01fd000 ---p 00000000 00:00 0 
+785af01fd000-785af0201000 ---p 00000000 00:00 0 
+785af0201000-785af02fd000 rw-p 00000000 00:00 0 
+785af02fd000-785af02fe000 ---p 00000000 00:00 0 
+785af02fe000-785af03fe000 rw-p 00000000 00:00 0 
+785af03fe000-785af03ff000 ---p 00000000 00:00 0 
+785af03ff000-785af04ff000 rw-p 00000000 00:00 0 
+785af04ff000-785af0500000 ---p 00000000 00:00 0 
+785af0500000-785af0600000 rw-p 00000000 00:00 0 
+785af0600000-785af2600000 rw-p 00000000 00:00 0 
+785af26bd000-785af26fa000 r-xp 00000000 00:2d 681571                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libsimdsort.so
+785af26fa000-785af26fb000 ---p 0003d000 00:2d 681571                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libsimdsort.so
+785af26fb000-785af26fc000 r--p 0003d000 00:2d 681571                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libsimdsort.so
+785af26fc000-785af26fd000 rw-p 0003e000 00:2d 681571                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libsimdsort.so
+785af26fd000-785af26fe000 ---p 00000000 00:00 0 
+785af26fe000-785af27fe000 rw-p 00000000 00:00 0 
+785af27fe000-785af27ff000 ---p 00000000 00:00 0 
+785af27ff000-785af28ff000 rw-p 00000000 00:00 0 
+785af28ff000-785af2900000 ---p 00000000 00:00 0 
+785af2900000-785af2a00000 rw-p 00000000 00:00 0 
+785af2a00000-785af2a24000 rw-p 00000000 00:00 0 
+785af2a24000-785af39f8000 ---p 00000000 00:00 0 
+785af39f8000-785af39fc000 rw-p 00000000 00:00 0 
+785af39fc000-785af3a00000 ---p 00000000 00:00 0 
+785af3a00000-785af3a05000 rw-p 00000000 00:00 0 
+785af3a05000-785af3bff000 ---p 00000000 00:00 0 
+785af3bff000-785af3c05000 rw-p 00000000 00:00 0 
+785af3c05000-785af3dff000 ---p 00000000 00:00 0 
+785af3dff000-785af3e00000 rw-p 00000000 00:00 0 
+785af3e14000-785af3e15000 ---p 00000000 00:00 0 
+785af3e15000-785af3f15000 rw-p 00000000 00:00 0 
+785af3f15000-785af3f1a000 rw-p 00000000 00:00 0 
+785af3f1a000-785af4000000 ---p 00000000 00:00 0 
+785af4000000-785af4270000 rwxp 00000000 00:00 0 
+785af4270000-785afb538000 ---p 00000000 00:00 0 
+785afb538000-785afb7a8000 rwxp 00000000 00:00 0 
+785afb7a8000-785afbac6000 ---p 00000000 00:00 0 
+785afbac6000-785afbd36000 rwxp 00000000 00:00 0 
+785afbd36000-785b03000000 ---p 00000000 00:00 0 
+785b03035000-785b0303a000 rw-p 00000000 00:00 0 
+785b0303a000-785b03120000 ---p 00000000 00:00 0 
+785b03120000-785b0bc13000 r--s 00000000 00:2d 681576                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/modules
+785b0bc13000-785b0d1b6000 r-xp 00000000 00:2d 681589                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/libjvm.so
+785b0d1b6000-785b0d1b7000 ---p 015a3000 00:2d 681589                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/libjvm.so
+785b0d1b7000-785b0d2a0000 r--p 015a3000 00:2d 681589                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/libjvm.so
+785b0d2a0000-785b0d2cb000 rw-p 0168c000 00:2d 681589                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/server/libjvm.so
+785b0d2cb000-785b0d347000 rw-p 00000000 00:00 0 
+785b0d347000-785b0d51a000 r--p 00000000 00:2d 1078548                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_mupdf.so
+785b0d51a000-785b0d9c5000 r-xp 001d3000 00:2d 1078548                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_mupdf.so
+785b0d9c5000-785b0de9f000 r--p 0067e000 00:2d 1078548                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_mupdf.so
+785b0de9f000-785b0dea3000 r--p 00b57000 00:2d 1078548                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_mupdf.so
+785b0dea3000-785b0df37000 rw-p 00b5b000 00:2d 1078548                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_mupdf.so
+785b0df37000-785b0e539000 rw-p 00000000 00:00 0 
+785b0e55a000-785b0e566000 r-xp 00000000 00:2d 681565                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnet.so
+785b0e566000-785b0e567000 r--p 0000b000 00:2d 681565                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnet.so
+785b0e567000-785b0e568000 rw-p 0000c000 00:2d 681565                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnet.so
+785b0e568000-785b0e88b000 rw-p 00000000 00:00 0 
+785b0e88b000-785b0e983000 r--p 00000000 00:2d 1078549                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so.27.2
+785b0e983000-785b0ea2e000 r-xp 000f8000 00:2d 1078549                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so.27.2
+785b0ea2e000-785b0ea84000 r--p 001a3000 00:2d 1078549                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so.27.2
+785b0ea84000-785b0ea86000 r--p 001f8000 00:2d 1078549                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so.27.2
+785b0ea86000-785b0ea93000 rw-p 001fa000 00:2d 1078549                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdfcpp.so.27.2
+785b0ea93000-785b0ebd6000 r--p 00000000 00:2d 1078550                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdf.so.27.2
+785b0ebd6000-785b0f572000 r-xp 00143000 00:2d 1078550                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdf.so.27.2
+785b0f572000-785b0fa39000 r--p 00adf000 00:2d 1078550                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdf.so.27.2
+785b0fa39000-785b0fa58000 r--p 00fa6000 00:2d 1078550                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdf.so.27.2
+785b0fa58000-785b10bfa000 rw-p 00fc5000 00:2d 1078550                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/libmupdf.so.27.2
+785b10bfa000-785b10e07000 rw-p 00000000 00:00 0 
+785b10e0e000-785b110e4000 rw-p 00000000 00:00 0 
+785b110e4000-785b11132000 r--p 00000000 00:2d 1065088                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/etree.cpython-312-x86_64-linux-gnu.so
+785b11132000-785b11457000 r-xp 0004e000 00:2d 1065088                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/etree.cpython-312-x86_64-linux-gnu.so
+785b11457000-785b115de000 r--p 00373000 00:2d 1065088                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/etree.cpython-312-x86_64-linux-gnu.so
+785b115de000-785b115ed000 r--p 004fa000 00:2d 1065088                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/etree.cpython-312-x86_64-linux-gnu.so
+785b115ed000-785b11609000 rw-p 00509000 00:2d 1065088                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/etree.cpython-312-x86_64-linux-gnu.so
+785b11609000-785b11812000 rw-p 00000000 00:00 0 
+785b11812000-785b11815000 r--p 00000000 00:2d 830487                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so
+785b11815000-785b1181b000 r-xp 00003000 00:2d 830487                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so
+785b1181b000-785b1181d000 r--p 00009000 00:2d 830487                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so
+785b1181d000-785b1181e000 r--p 0000a000 00:2d 830487                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so
+785b1181e000-785b1181f000 rw-p 0000b000 00:2d 830487                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so
+785b1181f000-785b1182d000 r--p 00000000 00:2d 795733                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md__mypyc.cpython-312-x86_64-linux-gnu.so
+785b1182d000-785b1184d000 r-xp 0000e000 00:2d 795733                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md__mypyc.cpython-312-x86_64-linux-gnu.so
+785b1184d000-785b11857000 r--p 0002e000 00:2d 795733                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md__mypyc.cpython-312-x86_64-linux-gnu.so
+785b11857000-785b11858000 r--p 00037000 00:2d 795733                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md__mypyc.cpython-312-x86_64-linux-gnu.so
+785b11858000-785b1185c000 rw-p 00038000 00:2d 795733                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md__mypyc.cpython-312-x86_64-linux-gnu.so
+785b1185c000-785b1195d000 rw-p 00000000 00:00 0 
+785b1195d000-785b11963000 r--p 00000000 00:2d 830525                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so
+785b11963000-785b11988000 r-xp 00006000 00:2d 830525                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so
+785b11988000-785b11993000 r--p 0002b000 00:2d 830525                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so
+785b11993000-785b11996000 r--p 00035000 00:2d 830525                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so
+785b11996000-785b11998000 rw-p 00038000 00:2d 830525                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so
+785b11998000-785b1199c000 r--p 00000000 00:2d 830479                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_elementtree.cpython-312-x86_64-linux-gnu.so
+785b1199c000-785b119a8000 r-xp 00004000 00:2d 830479                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_elementtree.cpython-312-x86_64-linux-gnu.so
+785b119a8000-785b119ab000 r--p 00010000 00:2d 830479                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_elementtree.cpython-312-x86_64-linux-gnu.so
+785b119ab000-785b119ac000 r--p 00012000 00:2d 830479                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_elementtree.cpython-312-x86_64-linux-gnu.so
+785b119ac000-785b119ae000 rw-p 00013000 00:2d 830479                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_elementtree.cpython-312-x86_64-linux-gnu.so
+785b119ae000-785b11dae000 rw-p 00000000 00:00 0 
+785b11dae000-785b11db0000 r--p 00000000 00:2d 394126                     /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+785b11db0000-785b11db7000 r-xp 00002000 00:2d 394126                     /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+785b11db7000-785b11db8000 r--p 00009000 00:2d 394126                     /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+785b11db8000-785b11db9000 r--p 0000a000 00:2d 394126                     /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+785b11db9000-785b11dba000 rw-p 0000b000 00:2d 394126                     /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4
+785b11dba000-785b11dc0000 r--p 00000000 00:2d 830473                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+785b11dc0000-785b11dd2000 r-xp 00006000 00:2d 830473                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+785b11dd2000-785b11dd8000 r--p 00018000 00:2d 830473                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+785b11dd8000-785b11dd9000 r--p 0001d000 00:2d 830473                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+785b11dd9000-785b11ddd000 rw-p 0001e000 00:2d 830473                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so
+785b11ddd000-785b11edd000 rw-p 00000000 00:00 0 
+785b11edd000-785b11f18000 r--p 00000000 00:2d 1065257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+785b11f18000-785b11f6c000 r-xp 0003b000 00:2d 1065257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+785b11f6c000-785b11f94000 r--p 0008f000 00:2d 1065257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+785b11f94000-785b11f95000 ---p 000b7000 00:2d 1065257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+785b11f95000-785b11f99000 r--p 000b7000 00:2d 1065257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+785b11f99000-785b11f9d000 rw-p 000bb000 00:2d 1065257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/_jpype.cpython-312-x86_64-linux-gnu.so
+785b11f9d000-785b1209d000 rw-p 00000000 00:00 0 
+785b1209d000-785b120a2000 r--p 00000000 00:2d 1062218                    /usr/local/python/3.12.1/lib/python3.12/site-packages/frozenlist/_frozenlist.cpython-312-x86_64-linux-gnu.so
+785b120a2000-785b120af000 r-xp 00005000 00:2d 1062218                    /usr/local/python/3.12.1/lib/python3.12/site-packages/frozenlist/_frozenlist.cpython-312-x86_64-linux-gnu.so
+785b120af000-785b120b3000 r--p 00012000 00:2d 1062218                    /usr/local/python/3.12.1/lib/python3.12/site-packages/frozenlist/_frozenlist.cpython-312-x86_64-linux-gnu.so
+785b120b3000-785b120b4000 r--p 00015000 00:2d 1062218                    /usr/local/python/3.12.1/lib/python3.12/site-packages/frozenlist/_frozenlist.cpython-312-x86_64-linux-gnu.so
+785b120b4000-785b120b6000 rw-p 00016000 00:2d 1062218                    /usr/local/python/3.12.1/lib/python3.12/site-packages/frozenlist/_frozenlist.cpython-312-x86_64-linux-gnu.so
+785b120b6000-785b121b6000 rw-p 00000000 00:00 0 
+785b121b6000-785b121bc000 r--p 00000000 00:2d 1062364                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/reader_c.cpython-312-x86_64-linux-gnu.so
+785b121bc000-785b121df000 r-xp 00006000 00:2d 1062364                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/reader_c.cpython-312-x86_64-linux-gnu.so
+785b121df000-785b121e6000 r--p 00029000 00:2d 1062364                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/reader_c.cpython-312-x86_64-linux-gnu.so
+785b121e6000-785b121e8000 r--p 0002f000 00:2d 1062364                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/reader_c.cpython-312-x86_64-linux-gnu.so
+785b121e8000-785b121ea000 rw-p 00031000 00:2d 1062364                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/reader_c.cpython-312-x86_64-linux-gnu.so
+785b121ea000-785b121eb000 rw-p 00000000 00:00 0 
+785b121eb000-785b121ee000 r--p 00000000 00:2d 1062359                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/mask.cpython-312-x86_64-linux-gnu.so
+785b121ee000-785b121f3000 r-xp 00003000 00:2d 1062359                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/mask.cpython-312-x86_64-linux-gnu.so
+785b121f3000-785b121f5000 r--p 00008000 00:2d 1062359                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/mask.cpython-312-x86_64-linux-gnu.so
+785b121f5000-785b121f6000 r--p 00009000 00:2d 1062359                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/mask.cpython-312-x86_64-linux-gnu.so
+785b121f6000-785b121f7000 rw-p 0000a000 00:2d 1062359                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_websocket/mask.cpython-312-x86_64-linux-gnu.so
+785b121f7000-785b12201000 r--p 00000000 00:2d 1062299                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_parser.cpython-312-x86_64-linux-gnu.so
+785b12201000-785b12257000 r-xp 0000a000 00:2d 1062299                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_parser.cpython-312-x86_64-linux-gnu.so
+785b12257000-785b12263000 r--p 00060000 00:2d 1062299                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_parser.cpython-312-x86_64-linux-gnu.so
+785b12263000-785b12265000 r--p 0006c000 00:2d 1062299                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_parser.cpython-312-x86_64-linux-gnu.so
+785b12265000-785b12268000 rw-p 0006e000 00:2d 1062299                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_parser.cpython-312-x86_64-linux-gnu.so
+785b12268000-785b1226a000 rw-p 00000000 00:00 0 
+785b1226a000-785b1226d000 r--p 00000000 00:2d 1062301                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_writer.cpython-312-x86_64-linux-gnu.so
+785b1226d000-785b12275000 r-xp 00003000 00:2d 1062301                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_writer.cpython-312-x86_64-linux-gnu.so
+785b12275000-785b12277000 r--p 0000b000 00:2d 1062301                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_writer.cpython-312-x86_64-linux-gnu.so
+785b12277000-785b12278000 r--p 0000c000 00:2d 1062301                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_writer.cpython-312-x86_64-linux-gnu.so
+785b12278000-785b12279000 rw-p 0000d000 00:2d 1062301                    /usr/local/python/3.12.1/lib/python3.12/site-packages/aiohttp/_http_writer.cpython-312-x86_64-linux-gnu.so
+785b12279000-785b12379000 rw-p 00000000 00:00 0 
+785b12379000-785b1237d000 r--p 00000000 00:2d 1062176                    /usr/local/python/3.12.1/lib/python3.12/site-packages/propcache/_helpers_c.cpython-312-x86_64-linux-gnu.so
+785b1237d000-785b12389000 r-xp 00004000 00:2d 1062176                    /usr/local/python/3.12.1/lib/python3.12/site-packages/propcache/_helpers_c.cpython-312-x86_64-linux-gnu.so
+785b12389000-785b1238d000 r--p 00010000 00:2d 1062176                    /usr/local/python/3.12.1/lib/python3.12/site-packages/propcache/_helpers_c.cpython-312-x86_64-linux-gnu.so
+785b1238d000-785b1238e000 r--p 00013000 00:2d 1062176                    /usr/local/python/3.12.1/lib/python3.12/site-packages/propcache/_helpers_c.cpython-312-x86_64-linux-gnu.so
+785b1238e000-785b1238f000 rw-p 00014000 00:2d 1062176                    /usr/local/python/3.12.1/lib/python3.12/site-packages/propcache/_helpers_c.cpython-312-x86_64-linux-gnu.so
+785b1238f000-785b12390000 rw-p 00000000 00:00 0 
+785b12390000-785b12393000 r--p 00000000 00:2d 830532                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/unicodedata.cpython-312-x86_64-linux-gnu.so
+785b12393000-785b12398000 r-xp 00003000 00:2d 830532                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/unicodedata.cpython-312-x86_64-linux-gnu.so
+785b12398000-785b124a4000 r--p 00008000 00:2d 830532                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/unicodedata.cpython-312-x86_64-linux-gnu.so
+785b124a4000-785b124a5000 r--p 00113000 00:2d 830532                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/unicodedata.cpython-312-x86_64-linux-gnu.so
+785b124a5000-785b124a6000 rw-p 00114000 00:2d 830532                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/unicodedata.cpython-312-x86_64-linux-gnu.so
+785b124a6000-785b125a6000 rw-p 00000000 00:00 0 
+785b125a6000-785b125c6000 r--p 00000000 00:2d 412047                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+785b125c6000-785b126d1000 r-xp 00020000 00:2d 412047                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+785b126d1000-785b12705000 r--p 0012b000 00:2d 412047                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+785b12705000-785b12709000 r--p 0015e000 00:2d 412047                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+785b12709000-785b1270d000 rw-p 00162000 00:2d 412047                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+785b1270d000-785b1300e000 rw-p 00000000 00:00 0 
+785b1300e000-785b13015000 r-xp 00000000 00:2d 681575                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libzip.so
+785b13015000-785b13016000 ---p 00007000 00:2d 681575                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libzip.so
+785b13016000-785b13017000 r--p 00007000 00:2d 681575                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libzip.so
+785b13017000-785b13018000 rw-p 00008000 00:2d 681575                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libzip.so
+785b13018000-785b1302c000 r-xp 00000000 00:2d 681566                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnio.so
+785b1302c000-785b1302d000 r--p 00013000 00:2d 681566                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnio.so
+785b1302d000-785b1302e000 rw-p 00014000 00:2d 681566                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libnio.so
+785b1302e000-785b13033000 rw-p 00000000 00:00 0 
+785b13033000-785b1303a000 ---p 00000000 00:00 0 
+785b1303a000-785b1305a000 r-xp 00000000 00:2d 681551                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjava.so
+785b1305a000-785b1305b000 r--p 0001f000 00:2d 681551                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjava.so
+785b1305b000-785b1305c000 rw-p 00020000 00:2d 681551                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjava.so
+785b1305c000-785b1305d000 rw-p 00000000 00:00 0 
+785b1305d000-785b13065000 rw-s 00000000 08:11 1180253                    /tmp/hsperfdata_codespace/61293
+785b13065000-785b13080000 r-xp 00000000 00:2d 681555                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjimage.so
+785b13080000-785b13081000 ---p 0001b000 00:2d 681555                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjimage.so
+785b13081000-785b13083000 r--p 0001b000 00:2d 681555                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjimage.so
+785b13083000-785b13084000 rw-p 0001d000 00:2d 681555                     /usr/local/sdkman/candidates/java/25.0.1-ms/lib/libjimage.so
+785b13084000-785b13085000 r--p 00000000 00:2d 394211                     /usr/lib/x86_64-linux-gnu/libutil.so.1
+785b13085000-785b13086000 r-xp 00001000 00:2d 394211                     /usr/lib/x86_64-linux-gnu/libutil.so.1
+785b13086000-785b13087000 r--p 00002000 00:2d 394211                     /usr/lib/x86_64-linux-gnu/libutil.so.1
+785b13087000-785b13088000 r--p 00002000 00:2d 394211                     /usr/lib/x86_64-linux-gnu/libutil.so.1
+785b13088000-785b13089000 rw-p 00003000 00:2d 394211                     /usr/lib/x86_64-linux-gnu/libutil.so.1
+785b1308e000-785b1308f000 r--p 00000000 00:00 0 
+785b1308f000-785b13090000 r--p 00000000 00:2d 393777                     /usr/lib/locale/C.utf8/LC_NUMERIC
+785b13090000-785b1309b000 r--p 00000000 00:2d 1078542                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_extra.so
+785b1309b000-785b130b4000 r-xp 0000b000 00:2d 1078542                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_extra.so
+785b130b4000-785b130bf000 r--p 00024000 00:2d 1078542                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_extra.so
+785b130bf000-785b130c0000 r--p 0002e000 00:2d 1078542                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_extra.so
+785b130c0000-785b130c3000 rw-p 0002f000 00:2d 1078542                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pymupdf/_extra.so
+785b130c3000-785b130c9000 r--p 00000000 00:2d 1065076                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/_elementpath.cpython-312-x86_64-linux-gnu.so
+785b130c9000-785b130ed000 r-xp 00006000 00:2d 1065076                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/_elementpath.cpython-312-x86_64-linux-gnu.so
+785b130ed000-785b130f4000 r--p 0002a000 00:2d 1065076                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/_elementpath.cpython-312-x86_64-linux-gnu.so
+785b130f4000-785b130f5000 r--p 00031000 00:2d 1065076                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/_elementpath.cpython-312-x86_64-linux-gnu.so
+785b130f5000-785b130f8000 rw-p 00032000 00:2d 1065076                    /usr/local/python/3.12.1/lib/python3.12/site-packages/lxml/_elementpath.cpython-312-x86_64-linux-gnu.so
+785b130f8000-785b131f9000 rw-p 00000000 00:00 0 
+785b131f9000-785b13296000 r--p 00000000 00:2d 394197                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+785b13296000-785b133de000 r-xp 0009d000 00:2d 394197                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+785b133de000-785b13465000 r--p 001e5000 00:2d 394197                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+785b13465000-785b13470000 r--p 0026b000 00:2d 394197                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+785b13470000-785b13473000 rw-p 00276000 00:2d 394197                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33
+785b13473000-785b13477000 rw-p 00000000 00:00 0 
+785b13477000-785b13480000 r--p 00000000 00:2d 1062870                    /usr/local/python/3.12.1/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-x86_64-linux-gnu.so
+785b13480000-785b13490000 r-xp 00009000 00:2d 1062870                    /usr/local/python/3.12.1/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-x86_64-linux-gnu.so
+785b13490000-785b13496000 r--p 00019000 00:2d 1062870                    /usr/local/python/3.12.1/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-x86_64-linux-gnu.so
+785b13496000-785b13497000 r--p 0001f000 00:2d 1062870                    /usr/local/python/3.12.1/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-x86_64-linux-gnu.so
+785b13497000-785b13498000 rw-p 00020000 00:2d 1062870                    /usr/local/python/3.12.1/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-x86_64-linux-gnu.so
+785b13498000-785b1349c000 r--p 00000000 00:2d 1065900                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-x86_64-linux-gnu.so
+785b1349c000-785b134ac000 r-xp 00004000 00:2d 1065900                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-x86_64-linux-gnu.so
+785b134ac000-785b134af000 r--p 00014000 00:2d 1065900                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-x86_64-linux-gnu.so
+785b134af000-785b134b0000 r--p 00017000 00:2d 1065900                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-x86_64-linux-gnu.so
+785b134b0000-785b134b1000 rw-p 00018000 00:2d 1065900                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-x86_64-linux-gnu.so
+785b134b1000-785b134b2000 rw-p 00000000 00:00 0 
+785b134b2000-785b134b6000 r--p 00000000 00:2d 1065898                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-x86_64-linux-gnu.so
+785b134b6000-785b134c1000 r-xp 00004000 00:2d 1065898                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-x86_64-linux-gnu.so
+785b134c1000-785b134c4000 r--p 0000f000 00:2d 1065898                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-x86_64-linux-gnu.so
+785b134c4000-785b134c5000 r--p 00011000 00:2d 1065898                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-x86_64-linux-gnu.so
+785b134c5000-785b134c6000 rw-p 00012000 00:2d 1065898                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-x86_64-linux-gnu.so
+785b134c6000-785b134c7000 rw-p 00000000 00:00 0 
+785b134c7000-785b134cb000 r--p 00000000 00:2d 1065896                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-x86_64-linux-gnu.so
+785b134cb000-785b134d6000 r-xp 00004000 00:2d 1065896                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-x86_64-linux-gnu.so
+785b134d6000-785b134d9000 r--p 0000f000 00:2d 1065896                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-x86_64-linux-gnu.so
+785b134d9000-785b134da000 r--p 00011000 00:2d 1065896                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-x86_64-linux-gnu.so
+785b134da000-785b134db000 rw-p 00012000 00:2d 1065896                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-x86_64-linux-gnu.so
+785b134db000-785b134dc000 rw-p 00000000 00:00 0 
+785b134dc000-785b134e0000 r--p 00000000 00:2d 1065893                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-x86_64-linux-gnu.so
+785b134e0000-785b134ef000 r-xp 00004000 00:2d 1065893                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-x86_64-linux-gnu.so
+785b134ef000-785b134f2000 r--p 00013000 00:2d 1065893                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-x86_64-linux-gnu.so
+785b134f2000-785b134f3000 r--p 00015000 00:2d 1065893                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-x86_64-linux-gnu.so
+785b134f3000-785b134f5000 rw-p 00016000 00:2d 1065893                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-x86_64-linux-gnu.so
+785b134f5000-785b134fb000 r--p 00000000 00:2d 1065891                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-x86_64-linux-gnu.so
+785b134fb000-785b13521000 r-xp 00006000 00:2d 1065891                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-x86_64-linux-gnu.so
+785b13521000-785b13529000 r--p 0002c000 00:2d 1065891                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-x86_64-linux-gnu.so
+785b13529000-785b1352a000 r--p 00033000 00:2d 1065891                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-x86_64-linux-gnu.so
+785b1352a000-785b1352d000 rw-p 00034000 00:2d 1065891                    /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-x86_64-linux-gnu.so
+785b1352d000-785b1372d000 rw-p 00000000 00:00 0 
+785b1372d000-785b1372f000 r--p 00000000 00:2d 830462                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_blake2.cpython-312-x86_64-linux-gnu.so
+785b1372f000-785b13736000 r-xp 00002000 00:2d 830462                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_blake2.cpython-312-x86_64-linux-gnu.so
+785b13736000-785b13738000 r--p 00009000 00:2d 830462                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_blake2.cpython-312-x86_64-linux-gnu.so
+785b13738000-785b13739000 r--p 0000a000 00:2d 830462                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_blake2.cpython-312-x86_64-linux-gnu.so
+785b13739000-785b1373a000 rw-p 0000b000 00:2d 830462                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_blake2.cpython-312-x86_64-linux-gnu.so
+785b1373a000-785b1373e000 r--p 00000000 00:2d 830481                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+785b1373e000-785b13744000 r-xp 00004000 00:2d 830481                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+785b13744000-785b13748000 r--p 0000a000 00:2d 830481                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+785b13748000-785b13749000 r--p 0000d000 00:2d 830481                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+785b13749000-785b1374b000 rw-p 0000e000 00:2d 830481                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so
+785b1374b000-785b1394b000 rw-p 00000000 00:00 0 
+785b1394b000-785b1394d000 r--p 00000000 00:2d 830472                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_csv.cpython-312-x86_64-linux-gnu.so
+785b1394d000-785b13951000 r-xp 00002000 00:2d 830472                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_csv.cpython-312-x86_64-linux-gnu.so
+785b13951000-785b13954000 r--p 00006000 00:2d 830472                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_csv.cpython-312-x86_64-linux-gnu.so
+785b13954000-785b13955000 r--p 00008000 00:2d 830472                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_csv.cpython-312-x86_64-linux-gnu.so
+785b13955000-785b13956000 rw-p 00009000 00:2d 830472                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_csv.cpython-312-x86_64-linux-gnu.so
+785b13956000-785b13a56000 rw-p 00000000 00:00 0 
+785b13a56000-785b13a58000 r--p 00000000 00:2d 830515                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so
+785b13a58000-785b13a5d000 r-xp 00002000 00:2d 830515                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so
+785b13a5d000-785b13a5f000 r--p 00007000 00:2d 830515                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so
+785b13a5f000-785b13a60000 r--p 00008000 00:2d 830515                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so
+785b13a60000-785b13a61000 rw-p 00009000 00:2d 830515                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so
+785b13a61000-785b13a63000 r--p 00000000 00:2d 394213                     /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+785b13a63000-785b13a68000 r-xp 00002000 00:2d 394213                     /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+785b13a68000-785b13a69000 r--p 00007000 00:2d 394213                     /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+785b13a69000-785b13a6a000 r--p 00007000 00:2d 394213                     /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+785b13a6a000-785b13a6b000 rw-p 00008000 00:2d 394213                     /usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0
+785b13a6b000-785b13a6c000 r--p 00000000 00:2d 393780                     /usr/lib/locale/C.utf8/LC_TIME
+785b13a6c000-785b13a6d000 r--p 00000000 00:2d 393769                     /usr/lib/locale/C.utf8/LC_COLLATE
+785b13a6d000-785b13a6e000 r--p 00000000 00:2d 795731                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-x86_64-linux-gnu.so
+785b13a6e000-785b13a6f000 r-xp 00001000 00:2d 795731                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-x86_64-linux-gnu.so
+785b13a6f000-785b13a70000 r--p 00002000 00:2d 795731                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-x86_64-linux-gnu.so
+785b13a70000-785b13a71000 r--p 00002000 00:2d 795731                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-x86_64-linux-gnu.so
+785b13a71000-785b13a72000 rw-p 00003000 00:2d 795731                     /home/codespace/.local/lib/python3.12/site-packages/charset_normalizer/md.cpython-312-x86_64-linux-gnu.so
+785b13a72000-785b13c72000 rw-p 00000000 00:00 0 
+785b13c72000-785b13c79000 r--p 00000000 00:2d 830478                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so
+785b13c79000-785b13cc1000 r-xp 00007000 00:2d 830478                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so
+785b13cc1000-785b13cd1000 r--p 0004f000 00:2d 830478                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so
+785b13cd1000-785b13cd2000 r--p 0005f000 00:2d 830478                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so
+785b13cd2000-785b13cd5000 rw-p 00060000 00:2d 830478                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so
+785b13cd5000-785b13cd6000 r--p 00000000 00:2d 394118                     /usr/lib/x86_64-linux-gnu/libdl.so.2
+785b13cd6000-785b13cd7000 r-xp 00001000 00:2d 394118                     /usr/lib/x86_64-linux-gnu/libdl.so.2
+785b13cd7000-785b13cd8000 r--p 00002000 00:2d 394118                     /usr/lib/x86_64-linux-gnu/libdl.so.2
+785b13cd8000-785b13cd9000 r--p 00002000 00:2d 394118                     /usr/lib/x86_64-linux-gnu/libdl.so.2
+785b13cd9000-785b13cda000 rw-p 00003000 00:2d 394118                     /usr/lib/x86_64-linux-gnu/libdl.so.2
+785b13cda000-785b13cdb000 r--p 00000000 00:2d 394183                     /usr/lib/x86_64-linux-gnu/libpthread.so.0
+785b13cdb000-785b13cdc000 r-xp 00001000 00:2d 394183                     /usr/lib/x86_64-linux-gnu/libpthread.so.0
+785b13cdc000-785b13cdd000 r--p 00002000 00:2d 394183                     /usr/lib/x86_64-linux-gnu/libpthread.so.0
+785b13cdd000-785b13cde000 r--p 00002000 00:2d 394183                     /usr/lib/x86_64-linux-gnu/libpthread.so.0
+785b13cde000-785b13cdf000 rw-p 00003000 00:2d 394183                     /usr/lib/x86_64-linux-gnu/libpthread.so.0
+785b13cdf000-785b13ce0000 r--p 00000000 00:2d 394185                     /usr/lib/x86_64-linux-gnu/librt.so.1
+785b13ce0000-785b13ce1000 r-xp 00001000 00:2d 394185                     /usr/lib/x86_64-linux-gnu/librt.so.1
+785b13ce1000-785b13ce2000 r--p 00002000 00:2d 394185                     /usr/lib/x86_64-linux-gnu/librt.so.1
+785b13ce2000-785b13ce3000 r--p 00002000 00:2d 394185                     /usr/lib/x86_64-linux-gnu/librt.so.1
+785b13ce3000-785b13ce4000 rw-p 00003000 00:2d 394185                     /usr/lib/x86_64-linux-gnu/librt.so.1
+785b13ce4000-785b13ce8000 r--p 00000000 00:2d 394129                     /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+785b13ce8000-785b13d0c000 r-xp 00004000 00:2d 394129                     /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+785b13d0c000-785b13d10000 r--p 00028000 00:2d 394129                     /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+785b13d10000-785b13d11000 r--p 0002b000 00:2d 394129                     /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+785b13d11000-785b13d12000 rw-p 0002c000 00:2d 394129                     /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+785b13d12000-785b13e49000 r--p 00000000 00:2d 1063037                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pydantic_core/_pydantic_core.cpython-312-x86_64-linux-gnu.so
+785b13e49000-785b14183000 r-xp 00136000 00:2d 1063037                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pydantic_core/_pydantic_core.cpython-312-x86_64-linux-gnu.so
+785b14183000-785b141b7000 r--p 0046f000 00:2d 1063037                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pydantic_core/_pydantic_core.cpython-312-x86_64-linux-gnu.so
+785b141b7000-785b141bd000 rw-p 004a2000 00:2d 1063037                    /usr/local/python/3.12.1/lib/python3.12/site-packages/pydantic_core/_pydantic_core.cpython-312-x86_64-linux-gnu.so
+785b141bd000-785b143bd000 rw-p 00000000 00:00 0 
+785b143bd000-785b143c0000 r--p 00000000 00:2d 394145                     /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+785b143c0000-785b143e2000 r-xp 00003000 00:2d 394145                     /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+785b143e2000-785b143ed000 r--p 00025000 00:2d 394145                     /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+785b143ed000-785b143ee000 r--p 00030000 00:2d 394145                     /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+785b143ee000-785b143ef000 rw-p 00031000 00:2d 394145                     /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5
+785b143ef000-785b143f2000 r--p 00000000 00:2d 830485                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+785b143f2000-785b143f6000 r-xp 00003000 00:2d 830485                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+785b143f6000-785b143f9000 r--p 00007000 00:2d 830485                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+785b143f9000-785b143fa000 r--p 00009000 00:2d 830485                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+785b143fa000-785b143fb000 rw-p 0000a000 00:2d 830485                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so
+785b143fb000-785b143fd000 r--p 00000000 00:2d 394103                     /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+785b143fd000-785b1440b000 r-xp 00002000 00:2d 394103                     /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+785b1440b000-785b1440d000 r--p 00010000 00:2d 394103                     /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+785b1440d000-785b1440e000 r--p 00011000 00:2d 394103                     /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+785b1440e000-785b1440f000 rw-p 00012000 00:2d 394103                     /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+785b1440f000-785b14410000 r--p 00000000 00:2d 393775                     /usr/lib/locale/C.utf8/LC_MONETARY
+785b14410000-785b14411000 r--p 00000000 00:2d 393774                     /usr/lib/locale/C.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+785b14411000-785b14412000 r--p 00000000 00:2d 830511                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_uuid.cpython-312-x86_64-linux-gnu.so
+785b14412000-785b14413000 r-xp 00001000 00:2d 830511                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_uuid.cpython-312-x86_64-linux-gnu.so
+785b14413000-785b14414000 r--p 00002000 00:2d 830511                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_uuid.cpython-312-x86_64-linux-gnu.so
+785b14414000-785b14415000 r--p 00002000 00:2d 830511                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_uuid.cpython-312-x86_64-linux-gnu.so
+785b14415000-785b14416000 rw-p 00003000 00:2d 830511                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_uuid.cpython-312-x86_64-linux-gnu.so
+785b14416000-785b14418000 r--p 00000000 00:2d 830463                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+785b14418000-785b1441a000 r-xp 00002000 00:2d 830463                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+785b1441a000-785b1441b000 r--p 00004000 00:2d 830463                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+785b1441b000-785b1441c000 r--p 00005000 00:2d 830463                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+785b1441c000-785b1441d000 rw-p 00006000 00:2d 830463                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so
+785b1441d000-785b1451d000 rw-p 00000000 00:00 0 
+785b1451d000-785b1451e000 r--p 00000000 00:2d 393778                     /usr/lib/locale/C.utf8/LC_PAPER
+785b1451e000-785b1451f000 r--p 00000000 00:2d 393776                     /usr/lib/locale/C.utf8/LC_NAME
+785b1451f000-785b14520000 r--p 00000000 00:2d 393768                     /usr/lib/locale/C.utf8/LC_ADDRESS
+785b14520000-785b14521000 r--p 00000000 00:2d 393779                     /usr/lib/locale/C.utf8/LC_TELEPHONE
+785b14521000-785b14523000 r--p 00000000 00:2d 830521                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/grp.cpython-312-x86_64-linux-gnu.so
+785b14523000-785b14524000 r-xp 00002000 00:2d 830521                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/grp.cpython-312-x86_64-linux-gnu.so
+785b14524000-785b14525000 r--p 00003000 00:2d 830521                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/grp.cpython-312-x86_64-linux-gnu.so
+785b14525000-785b14526000 r--p 00003000 00:2d 830521                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/grp.cpython-312-x86_64-linux-gnu.so
+785b14526000-785b14527000 rw-p 00004000 00:2d 830521                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/grp.cpython-312-x86_64-linux-gnu.so
+785b14527000-785b1452b000 r--p 00000000 00:2d 1062257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/yarl/_quoting_c.cpython-312-x86_64-linux-gnu.so
+785b1452b000-785b14540000 r-xp 00004000 00:2d 1062257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/yarl/_quoting_c.cpython-312-x86_64-linux-gnu.so
+785b14540000-785b14544000 r--p 00019000 00:2d 1062257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/yarl/_quoting_c.cpython-312-x86_64-linux-gnu.so
+785b14544000-785b14545000 r--p 0001c000 00:2d 1062257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/yarl/_quoting_c.cpython-312-x86_64-linux-gnu.so
+785b14545000-785b14546000 rw-p 0001d000 00:2d 1062257                    /usr/local/python/3.12.1/lib/python3.12/site-packages/yarl/_quoting_c.cpython-312-x86_64-linux-gnu.so
+785b14546000-785b14547000 rw-p 00000000 00:00 0 
+785b14547000-785b1454b000 r--p 00000000 00:2d 1062199                    /usr/local/python/3.12.1/lib/python3.12/site-packages/multidict/_multidict.cpython-312-x86_64-linux-gnu.so
+785b1454b000-785b1455c000 r-xp 00004000 00:2d 1062199                    /usr/local/python/3.12.1/lib/python3.12/site-packages/multidict/_multidict.cpython-312-x86_64-linux-gnu.so
+785b1455c000-785b1455f000 r--p 00015000 00:2d 1062199                    /usr/local/python/3.12.1/lib/python3.12/site-packages/multidict/_multidict.cpython-312-x86_64-linux-gnu.so
+785b1455f000-785b14560000 r--p 00018000 00:2d 1062199                    /usr/local/python/3.12.1/lib/python3.12/site-packages/multidict/_multidict.cpython-312-x86_64-linux-gnu.so
+785b14560000-785b14562000 rw-p 00019000 00:2d 1062199                    /usr/local/python/3.12.1/lib/python3.12/site-packages/multidict/_multidict.cpython-312-x86_64-linux-gnu.so
+785b14562000-785b14569000 r--p 00000000 00:2d 830499                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so
+785b14569000-785b14579000 r-xp 00007000 00:2d 830499                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so
+785b14579000-785b14580000 r--p 00017000 00:2d 830499                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so
+785b14580000-785b14581000 r--p 0001e000 00:2d 830499                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so
+785b14581000-785b14583000 rw-p 0001f000 00:2d 830499                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so
+785b14583000-785b14588000 r--p 00000000 00:2d 830477                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_datetime.cpython-312-x86_64-linux-gnu.so
+785b14588000-785b14599000 r-xp 00005000 00:2d 830477                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_datetime.cpython-312-x86_64-linux-gnu.so
+785b14599000-785b1459e000 r--p 00016000 00:2d 830477                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_datetime.cpython-312-x86_64-linux-gnu.so
+785b1459e000-785b1459f000 r--p 0001b000 00:2d 830477                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_datetime.cpython-312-x86_64-linux-gnu.so
+785b1459f000-785b145a2000 rw-p 0001c000 00:2d 830477                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_datetime.cpython-312-x86_64-linux-gnu.so
+785b145a2000-785b147a2000 rw-p 00000000 00:00 0 
+785b147a2000-785b147a4000 r--p 00000000 00:2d 830483                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+785b147a4000-785b147aa000 r-xp 00002000 00:2d 830483                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+785b147aa000-785b147ac000 r--p 00008000 00:2d 830483                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+785b147ac000-785b147ad000 r--p 00009000 00:2d 830483                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+785b147ad000-785b147ae000 rw-p 0000a000 00:2d 830483                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so
+785b147ae000-785b147b2000 r--p 00000000 00:2d 830460                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+785b147b2000-785b147bb000 r-xp 00004000 00:2d 830460                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+785b147bb000-785b147bf000 r--p 0000d000 00:2d 830460                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+785b147bf000-785b147c0000 r--p 00011000 00:2d 830460                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+785b147c0000-785b147c2000 rw-p 00012000 00:2d 830460                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so
+785b147c2000-785b148c2000 rw-p 00000000 00:00 0 
+785b148c2000-785b148c4000 r--p 00000000 00:2d 394217                     /usr/lib/x86_64-linux-gnu/libz.so.1.3
+785b148c4000-785b148d6000 r-xp 00002000 00:2d 394217                     /usr/lib/x86_64-linux-gnu/libz.so.1.3
+785b148d6000-785b148dc000 r--p 00014000 00:2d 394217                     /usr/lib/x86_64-linux-gnu/libz.so.1.3
+785b148dc000-785b148dd000 r--p 0001a000 00:2d 394217                     /usr/lib/x86_64-linux-gnu/libz.so.1.3
+785b148dd000-785b148de000 rw-p 0001b000 00:2d 394217                     /usr/lib/x86_64-linux-gnu/libz.so.1.3
+785b148de000-785b14991000 r--p 00000000 00:2d 394114                     /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+785b14991000-785b14cc4000 r-xp 000b3000 00:2d 394114                     /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+785b14cc4000-785b14d8f000 r--p 003e6000 00:2d 394114                     /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+785b14d8f000-785b14deb000 r--p 004b0000 00:2d 394114                     /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+785b14deb000-785b14dee000 rw-p 0050c000 00:2d 394114                     /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+785b14dee000-785b14df1000 rw-p 00000000 00:00 0 
+785b14df1000-785b14e0f000 r--p 00000000 00:2d 394195                     /usr/lib/x86_64-linux-gnu/libssl.so.3
+785b14e0f000-785b14e71000 r-xp 0001e000 00:2d 394195                     /usr/lib/x86_64-linux-gnu/libssl.so.3
+785b14e71000-785b14e8d000 r--p 00080000 00:2d 394195                     /usr/lib/x86_64-linux-gnu/libssl.so.3
+785b14e8d000-785b14e97000 r--p 0009c000 00:2d 394195                     /usr/lib/x86_64-linux-gnu/libssl.so.3
+785b14e97000-785b14e9b000 rw-p 000a6000 00:2d 394195                     /usr/lib/x86_64-linux-gnu/libssl.so.3
+785b14e9b000-785b14ead000 r--p 00000000 00:2d 830500                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+785b14ead000-785b14ebc000 r-xp 00012000 00:2d 830500                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+785b14ebc000-785b14eca000 r--p 00021000 00:2d 830500                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+785b14eca000-785b14ecb000 r--p 0002e000 00:2d 830500                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+785b14ecb000-785b14ed4000 rw-p 0002f000 00:2d 830500                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so
+785b14ed4000-785b14fd4000 rw-p 00000000 00:00 0 
+785b14fd4000-785b14fd5000 r--p 00000000 00:2d 393772                     /usr/lib/locale/C.utf8/LC_MEASUREMENT
+785b14fd5000-785b14fd6000 r--p 00000000 00:2d 393771                     /usr/lib/locale/C.utf8/LC_IDENTIFICATION
+785b14fd6000-785b14fd7000 ---p 00000000 00:00 0 
+785b14fd7000-785b14fd8000 r--p 00000000 00:00 0 
+785b14fd8000-785b14fdb000 r--p 00000000 00:2d 830536                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so
+785b14fdb000-785b14fe2000 r-xp 00003000 00:2d 830536                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so
+785b14fe2000-785b14fe5000 r--p 0000a000 00:2d 830536                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so
+785b14fe5000-785b14fe6000 r--p 0000c000 00:2d 830536                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so
+785b14fe6000-785b14fe7000 rw-p 0000d000 00:2d 830536                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so
+785b14fe7000-785b14fe9000 r--p 00000000 00:2d 830496                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sha2.cpython-312-x86_64-linux-gnu.so
+785b14fe9000-785b14ff4000 r-xp 00002000 00:2d 830496                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sha2.cpython-312-x86_64-linux-gnu.so
+785b14ff4000-785b14ff6000 r--p 0000d000 00:2d 830496                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sha2.cpython-312-x86_64-linux-gnu.so
+785b14ff6000-785b14ff7000 r--p 0000e000 00:2d 830496                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sha2.cpython-312-x86_64-linux-gnu.so
+785b14ff7000-785b14ff8000 rw-p 0000f000 00:2d 830496                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_sha2.cpython-312-x86_64-linux-gnu.so
+785b14ff8000-785b14ffa000 r--p 00000000 00:2d 830494                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_random.cpython-312-x86_64-linux-gnu.so
+785b14ffa000-785b14ffc000 r-xp 00002000 00:2d 830494                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_random.cpython-312-x86_64-linux-gnu.so
+785b14ffc000-785b14ffd000 r--p 00004000 00:2d 830494                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_random.cpython-312-x86_64-linux-gnu.so
+785b14ffd000-785b14ffe000 r--p 00004000 00:2d 830494                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_random.cpython-312-x86_64-linux-gnu.so
+785b14ffe000-785b14fff000 rw-p 00005000 00:2d 830494                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_random.cpython-312-x86_64-linux-gnu.so
+785b14fff000-785b15001000 r--p 00000000 00:2d 830461                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so
+785b15001000-785b15004000 r-xp 00002000 00:2d 830461                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so
+785b15004000-785b15005000 r--p 00005000 00:2d 830461                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so
+785b15005000-785b15006000 r--p 00005000 00:2d 830461                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so
+785b15006000-785b15007000 rw-p 00006000 00:2d 830461                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so
+785b15007000-785b15107000 rw-p 00000000 00:00 0 
+785b15107000-785b15108000 ---p 00000000 00:00 0 
+785b15108000-785b1510a000 r--p 00000000 00:2d 830493                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+785b1510a000-785b1510c000 r-xp 00002000 00:2d 830493                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+785b1510c000-785b1510d000 r--p 00004000 00:2d 830493                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+785b1510d000-785b1510e000 r--p 00004000 00:2d 830493                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+785b1510e000-785b1510f000 rw-p 00005000 00:2d 830493                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so
+785b1510f000-785b15110000 r--p 00000000 00:2d 830470                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+785b15110000-785b15111000 r-xp 00001000 00:2d 830470                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+785b15111000-785b15112000 r--p 00002000 00:2d 830470                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+785b15112000-785b15113000 r--p 00002000 00:2d 830470                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+785b15113000-785b15114000 rw-p 00003000 00:2d 830470                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so
+785b15114000-785b15115000 r--p 00000000 00:2d 830489                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so
+785b15115000-785b15116000 r-xp 00001000 00:2d 830489                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so
+785b15116000-785b15117000 r--p 00002000 00:2d 830489                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so
+785b15117000-785b15118000 r--p 00002000 00:2d 830489                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so
+785b15118000-785b15119000 rw-p 00003000 00:2d 830489                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_opcode.cpython-312-x86_64-linux-gnu.so
+785b15119000-785b1511b000 r--p 00000000 00:2d 830518                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/binascii.cpython-312-x86_64-linux-gnu.so
+785b1511b000-785b1511e000 r-xp 00002000 00:2d 830518                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/binascii.cpython-312-x86_64-linux-gnu.so
+785b1511e000-785b15120000 r--p 00005000 00:2d 830518                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/binascii.cpython-312-x86_64-linux-gnu.so
+785b15120000-785b15121000 r--p 00006000 00:2d 830518                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/binascii.cpython-312-x86_64-linux-gnu.so
+785b15121000-785b15122000 rw-p 00007000 00:2d 830518                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/binascii.cpython-312-x86_64-linux-gnu.so
+785b15122000-785b15123000 r--p 00000000 00:2d 830482                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_heapq.cpython-312-x86_64-linux-gnu.so
+785b15123000-785b15125000 r-xp 00001000 00:2d 830482                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_heapq.cpython-312-x86_64-linux-gnu.so
+785b15125000-785b15128000 r--p 00003000 00:2d 830482                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_heapq.cpython-312-x86_64-linux-gnu.so
+785b15128000-785b15129000 r--p 00005000 00:2d 830482                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_heapq.cpython-312-x86_64-linux-gnu.so
+785b15129000-785b1512a000 rw-p 00006000 00:2d 830482                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_heapq.cpython-312-x86_64-linux-gnu.so
+785b1512a000-785b1512b000 r--p 00000000 00:2d 830491                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+785b1512b000-785b1512c000 r-xp 00001000 00:2d 830491                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+785b1512c000-785b1512d000 r--p 00002000 00:2d 830491                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+785b1512d000-785b1512e000 r--p 00002000 00:2d 830491                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+785b1512e000-785b1512f000 rw-p 00003000 00:2d 830491                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so
+785b1512f000-785b15131000 r--p 00000000 00:2d 830488                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+785b15131000-785b15133000 r-xp 00002000 00:2d 830488                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+785b15133000-785b15134000 r--p 00004000 00:2d 830488                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+785b15134000-785b15135000 r--p 00004000 00:2d 830488                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+785b15135000-785b15136000 rw-p 00005000 00:2d 830488                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so
+785b15136000-785b15138000 r--p 00000000 00:2d 830492                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-x86_64-linux-gnu.so
+785b15138000-785b1513b000 r-xp 00002000 00:2d 830492                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-x86_64-linux-gnu.so
+785b1513b000-785b1513c000 r--p 00005000 00:2d 830492                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-x86_64-linux-gnu.so
+785b1513c000-785b1513d000 r--p 00005000 00:2d 830492                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-x86_64-linux-gnu.so
+785b1513d000-785b1513e000 rw-p 00006000 00:2d 830492                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-x86_64-linux-gnu.so
+785b1513e000-785b1513f000 r--p 00000000 00:2d 830520                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/fcntl.cpython-312-x86_64-linux-gnu.so
+785b1513f000-785b15141000 r-xp 00001000 00:2d 830520                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/fcntl.cpython-312-x86_64-linux-gnu.so
+785b15141000-785b15143000 r--p 00003000 00:2d 830520                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/fcntl.cpython-312-x86_64-linux-gnu.so
+785b15143000-785b15144000 r--p 00004000 00:2d 830520                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/fcntl.cpython-312-x86_64-linux-gnu.so
+785b15144000-785b15145000 rw-p 00005000 00:2d 830520                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/fcntl.cpython-312-x86_64-linux-gnu.so
+785b15145000-785b15149000 r--p 00000000 00:2d 830516                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so
+785b15149000-785b15151000 r-xp 00004000 00:2d 830516                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so
+785b15151000-785b15155000 r--p 0000c000 00:2d 830516                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so
+785b15155000-785b15156000 r--p 0000f000 00:2d 830516                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so
+785b15156000-785b15157000 rw-p 00010000 00:2d 830516                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/array.cpython-312-x86_64-linux-gnu.so
+785b15157000-785b15159000 r--p 00000000 00:2d 830528                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so
+785b15159000-785b1515c000 r-xp 00002000 00:2d 830528                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so
+785b1515c000-785b1515e000 r--p 00005000 00:2d 830528                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so
+785b1515e000-785b1515f000 r--p 00006000 00:2d 830528                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so
+785b1515f000-785b15160000 rw-p 00007000 00:2d 830528                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so
+785b15160000-785b15163000 r--p 00000000 00:2d 830522                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so
+785b15163000-785b1516f000 r-xp 00003000 00:2d 830522                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so
+785b1516f000-785b15174000 r--p 0000f000 00:2d 830522                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so
+785b15174000-785b15175000 r--p 00013000 00:2d 830522                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so
+785b15175000-785b15176000 rw-p 00014000 00:2d 830522                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/math.cpython-312-x86_64-linux-gnu.so
+785b15176000-785b1517a000 r--p 00000000 00:2d 830498                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_socket.cpython-312-x86_64-linux-gnu.so
+785b1517a000-785b15187000 r-xp 00004000 00:2d 830498                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_socket.cpython-312-x86_64-linux-gnu.so
+785b15187000-785b15190000 r--p 00011000 00:2d 830498                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_socket.cpython-312-x86_64-linux-gnu.so
+785b15190000-785b15191000 r--p 00019000 00:2d 830498                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_socket.cpython-312-x86_64-linux-gnu.so
+785b15191000-785b15192000 rw-p 0001a000 00:2d 830498                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_socket.cpython-312-x86_64-linux-gnu.so
+785b15192000-785b15197000 r--p 00000000 00:2d 830490                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_pickle.cpython-312-x86_64-linux-gnu.so
+785b15197000-785b151a9000 r-xp 00005000 00:2d 830490                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_pickle.cpython-312-x86_64-linux-gnu.so
+785b151a9000-785b151af000 r--p 00017000 00:2d 830490                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_pickle.cpython-312-x86_64-linux-gnu.so
+785b151af000-785b151b0000 r--p 0001c000 00:2d 830490                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_pickle.cpython-312-x86_64-linux-gnu.so
+785b151b0000-785b151b1000 rw-p 0001d000 00:2d 830490                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_pickle.cpython-312-x86_64-linux-gnu.so
+785b151b1000-785b151b4000 r--p 00000000 00:2d 830502                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so
+785b151b4000-785b151ba000 r-xp 00003000 00:2d 830502                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so
+785b151ba000-785b151bd000 r--p 00009000 00:2d 830502                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so
+785b151bd000-785b151be000 r--p 0000c000 00:2d 830502                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so
+785b151be000-785b151bf000 rw-p 0000d000 00:2d 830502                     /usr/local/python/3.12.1/lib/python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so
+785b151bf000-785b15525000 rw-p 00000000 00:00 0 
+785b15525000-785b1557e000 r--p 00000000 00:2d 393770                     /usr/lib/locale/C.utf8/LC_CTYPE
+785b1557e000-785b15869000 r--p 00000000 00:2d 531685                     /usr/lib/locale/locale-archive
+785b15869000-785b1586c000 rw-p 00000000 00:00 0 
+785b1586c000-785b15894000 r--p 00000000 00:2d 394104                     /usr/lib/x86_64-linux-gnu/libc.so.6
+785b15894000-785b15a1c000 r-xp 00028000 00:2d 394104                     /usr/lib/x86_64-linux-gnu/libc.so.6
+785b15a1c000-785b15a6b000 r--p 001b0000 00:2d 394104                     /usr/lib/x86_64-linux-gnu/libc.so.6
+785b15a6b000-785b15a6f000 r--p 001fe000 00:2d 394104                     /usr/lib/x86_64-linux-gnu/libc.so.6
+785b15a6f000-785b15a71000 rw-p 00202000 00:2d 394104                     /usr/lib/x86_64-linux-gnu/libc.so.6
+785b15a71000-785b15a7e000 rw-p 00000000 00:00 0 
+785b15a7e000-785b15a8e000 r--p 00000000 00:2d 394146                     /usr/lib/x86_64-linux-gnu/libm.so.6
+785b15a8e000-785b15b0d000 r-xp 00010000 00:2d 394146                     /usr/lib/x86_64-linux-gnu/libm.so.6
+785b15b0d000-785b15b65000 r--p 0008f000 00:2d 394146                     /usr/lib/x86_64-linux-gnu/libm.so.6
+785b15b65000-785b15b66000 r--p 000e7000 00:2d 394146                     /usr/lib/x86_64-linux-gnu/libm.so.6
+785b15b66000-785b15b67000 rw-p 000e8000 00:2d 394146                     /usr/lib/x86_64-linux-gnu/libm.so.6
+785b15b67000-785b15b6e000 r--s 00000000 00:2d 394075                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+785b15b6e000-785b15b70000 rw-p 00000000 00:00 0 
+785b15b70000-785b15b71000 r--p 00000000 00:2d 394084                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+785b15b71000-785b15b9c000 r-xp 00001000 00:2d 394084                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+785b15b9c000-785b15ba6000 r--p 0002c000 00:2d 394084                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+785b15ba6000-785b15ba8000 r--p 00036000 00:2d 394084                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+785b15ba8000-785b15baa000 rw-p 00038000 00:2d 394084                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffd7eaea000-7ffd7eaee000 ---p 00000000 00:00 0 
+7ffd7eaee000-7ffd7ebea000 rw-p 00000000 00:00 0                          [stack]
+7ffd7ebf4000-7ffd7ebf8000 r--p 00000000 00:00 0                          [vvar]
+7ffd7ebf8000-7ffd7ebfa000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+Total number of mappings: 611
+
+JVMTI agents: none
+
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx1024m 
+java_command: <unknown>
+java_class_path (initial): /usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/bin:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/open-korean-text-2.1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/scala-library-2.12.3.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/shineware-ds-1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/snakeyaml-1.12.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/shineware-common-1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/jhannanum-0.8.4.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/twitter-text-1.14.7.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/aho-corasick.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/komoran-3.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/kkma-2.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/jhannanum-0.8.4.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/kkma-2.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/aho-corasick.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/shineware-common-1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/shineware-ds-1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/komoran-3.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/snakeyaml-1.12.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/scala-library-2.12.3.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/open-korean-text-2.1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/twitter-text-1.14.7.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/open-korean-text-2.1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/scala-library-2.12.3.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/shineware-ds-1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/snakeyaml-1.12.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/shineware-common-1.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/jhannanum-0.8.4.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/twitter-text-1.14.7.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/aho-corasick.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/komoran-3.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/konlpy/java/kkma-2.0.jar:/usr/local/python/3.12.1/lib/python3.12/site-packages/org.jpype.jar
+Launcher Type: generic
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MaxNewSize                               = 643825664                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5824512                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122920960                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912768                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1073741824                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Release file:
+IMPLEMENTOR="Microsoft"
+IMPLEMENTOR_VERSION="Microsoft-12574222"
+JAVA_RUNTIME_VERSION="25.0.1+8-LTS"
+JAVA_VERSION="25.0.1"
+JAVA_VERSION_DATE="2025-10-21"
+LIBC="gnu"
+MODULES="java.base java.compiler java.datatransfer java.xml java.prefs java.desktop java.instrument java.logging java.management java.security.sasl java.naming java.rmi java.management.rmi java.net.http java.scripting java.security.jgss java.transaction.xa java.sql java.sql.rowset java.xml.crypto java.se java.smartcardio jdk.accessibility jdk.internal.jvmstat jdk.attach jdk.charsets jdk.internal.opt jdk.zipfs jdk.compiler jdk.crypto.cryptoki jdk.crypto.ec jdk.dynalink jdk.internal.ed jdk.editpad jdk.internal.vm.ci jdk.graal.compiler jdk.graal.compiler.management jdk.hotspot.agent jdk.httpserver jdk.incubator.vector jdk.internal.le jdk.internal.md jdk.jartool jdk.javadoc jdk.jcmd jdk.management jdk.management.agent jdk.jconsole jdk.jdeps jdk.jdwp.agent jdk.jdi jdk.jfr jdk.jlink jdk.jpackage jdk.jshell jdk.jsobject jdk.jstatd jdk.localedata jdk.management.jfr jdk.naming.dns jdk.naming.rmi jdk.net jdk.nio.mapmode jdk.sctp jdk.security.auth jdk.security.jgss jdk.unsupported jdk.unsupported.desktop jdk.xml.dom"
+OS_ARCH="x86_64"
+OS_NAME="Linux"
+SOURCE=".:git:a34d2ff2d503"
+
+Environment Variables:
+JAVA_HOME=/usr/local/sdkman/candidates/java/current
+PATH=/usr/local/rvm/gems/ruby-3.4.7/bin:/usr/local/rvm/gems/ruby-3.4.7@global/bin:/usr/local/rvm/rubies/ruby-3.4.7/bin:/vscode/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v24.11.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin
+SHELL=/bin/bash
+LANG=C.UTF-8
+TERM=xterm-256color
+
+Active Locale:
+LC_ALL=C.UTF-8
+LC_COLLATE=C.UTF-8
+LC_CTYPE=C.UTF-8
+LC_MESSAGES=C.UTF-8
+LC_MONETARY=C.UTF-8
+LC_NUMERIC=C.UTF-8
+LC_TIME=C.UTF-8
+
+Signal Handlers:
+   SIGSEGV: crash_handler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, unblocked
+    SIGBUS: crash_handler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, unblocked
+    SIGFPE: crash_handler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, unblocked
+   SIGPIPE: javaSignalHandler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, blocked
+   SIGXFSZ: javaSignalHandler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, blocked
+    SIGILL: crash_handler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, unblocked
+   SIGUSR2: SR_handler in libjvm.so, mask=00000000000000000000000000000000, flags=SA_RESTART|SA_SIGINFO, blocked
+    SIGHUP: UserHandler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, blocked
+    SIGINT: UserHandler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, blocked
+   SIGTERM: UserHandler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, blocked
+   SIGQUIT: UserHandler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, blocked
+   SIGTRAP: crash_handler in libjvm.so, mask=11100100010111111101111111111110, flags=SA_RESTART|SA_SIGINFO, unblocked
+
+
+Compilation memory statistics disabled.
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.3 LTS"
+uname: Linux 6.8.0-1044-azure #50~22.04.1-Ubuntu SMP Wed Dec  3 15:13:22 UTC 2025 x86_64
+OS uptime: 0 days 2:08 hours
+libc: glibc 2.39 NPTL 2.39 
+rlimit (soft/hard): STACK 8192k/infinity , CORE infinity/infinity , NPROC infinity/infinity , NOFILE 524288/524288 , AS infinity/infinity , CPU infinity/infinity , DATA infinity/infinity , FSIZE infinity/infinity , MEMLOCK 8192k/8192k
+load average: 1.75 1.97 1.60
+
+/proc/meminfo:
+MemTotal:        8135224 kB
+MemFree:          229636 kB
+MemAvailable:    4217400 kB
+Buffers:          221652 kB
+Cached:          3800268 kB
+SwapCached:            0 kB
+Active:          3352568 kB
+Inactive:        3922592 kB
+Active(anon):    1708524 kB
+Inactive(anon):  1619944 kB
+Active(file):    1644044 kB
+Inactive(file):  2302648 kB
+Unevictable:       31072 kB
+Mlocked:           28000 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              4664 kB
+Writeback:             0 kB
+AnonPages:       3255616 kB
+Mapped:           677752 kB
+Shmem:             66132 kB
+KReclaimable:     354700 kB
+Slab:             453724 kB
+SReclaimable:     354700 kB
+SUnreclaim:        99024 kB
+KernelStack:       11168 kB
+PageTables:        47440 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4067612 kB
+Committed_AS:    6859344 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       44360 kB
+VmallocChunk:          0 kB
+Percpu:             1264 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1753088 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      128960 kB
+DirectMap2M:     5113856 kB
+DirectMap1G:     5242880 kB
+
+/sys/kernel/mm/transparent_hugepage/enabled: [always] madvise never
+/sys/kernel/mm/transparent_hugepage/hpage_pmd_size: 2097152
+/sys/kernel/mm/transparent_hugepage/shmem_enabled: always within_size advise [never] deny force
+/sys/kernel/mm/transparent_hugepage/defrag (defrag/compaction efforts parameter): always defer defer+madvise [madvise] never
+
+Process Memory:
+Virtual Size: 3839696K (peak: 3892312K)
+Resident Set Size: 182388K (peak: 184388K) (anon: 123648K, file: 58740K, shmem: 0K)
+Swapped out: 0K
+C-Heap outstanding allocations: 51523K, retained: 8940K
+glibc malloc tunables: (default)
+
+/proc/sys/kernel/threads-max (system-wide limit on the number of threads): 63498
+/proc/sys/vm/max_map_count (maximum number of memory map areas a process may have): 65530
+/proc/sys/vm/swappiness (control to define how aggressively the kernel swaps out anonymous memory): 60
+/proc/sys/kernel/pid_max (system-wide limit on number of process identifiers): 4194304
+
+container information not found.
+Hyper-V virtualization detected
+Steal ticks since vm start: 0
+Steal ticks percentage since vm start:  0.000
+
+CPU: total 2 (initial active 2) (16 cores per cpu, 2 threads per core) family 25 model 17 stepping 1 microcode 0xffffffff, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, rdtscp, rdpid, fsrm, f16c, cet_ss
+CPU Model and flags from /proc/cpuinfo:
+model name	: AMD EPYC 9V74 80-Core Processor
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+
+Online cpus: 0-1
+Offline cpus: 
+BIOS frequency limitation: <Not Available>
+Frequency switch latency (ns): <Not Available>
+Available cpu frequencies: <Not Available>
+Current governor: <Not Available>
+Core performance/turbo boost: <Not Available>
+
+Memory: 4k page, physical 8135224k(4217400k free), swap 0k(0k free)
+Page Sizes: 4k
+
+vm_info: OpenJDK 64-Bit Server VM (25.0.1+8-LTS) for linux-amd64 JRE (25.0.1+8-LTS), built on 2025-10-13T21:28:09Z with gcc 11.3.0
+
+END.

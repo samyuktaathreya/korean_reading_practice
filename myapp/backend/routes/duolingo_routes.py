@@ -60,6 +60,10 @@ def get_strength_scores_from_unit(db, user_id, user_unit):
     
     for record in progress_records:
         tag = record.tag
+        
+        if tag not in tags_to_unit_dict:
+            continue
+
         unit = tags_to_unit_dict[tag]
 
         if unit != user_unit: 
@@ -90,6 +94,7 @@ def get_strength_scores_from_unit(db, user_id, user_unit):
 
 @router.get("/api/generate_review_questions/{user_id}")
 def generate_review_questions(user_id: int, db: Session = Depends(get_db)):
+    # TODO: GENERATE REVIEW QUESTIONS CURRENTLY DRAWS FROM EVERY UNIT, NOT JUST THE ONES THE USER IS FAMILIAR WITH
     calculated_stats = get_strength_scores(db, user_id)
 
     # 4. Sort by strength (Lowest first = Most forgotten)
@@ -107,9 +112,11 @@ def generate_review_questions(user_id: int, db: Session = Depends(get_db)):
         tag = item["tag"]
 
         questions = inverted_index.get(tag, [])
+        print("questions : ", questions)
 
         # Filter out questions we already used in this specific session
         available = [q for q in questions if q["id"] not in used_ids]
+        print("available: ", available)
 
         if available:
             # Pick from the remaining unique ones
@@ -141,15 +148,23 @@ def generate_new_questions(user_id: int, db: Session = Depends(get_db)):
     # 5. Take the bottom 10
     weakest_10_tags = calculated_stats[:10]
 
-    print("weakest 10 tags : ", weakest_10_tags)
+    print("weakest 10 tags length : ", len(weakest_10_tags))
 
     question_set = []
     used_ids = set()
 
     for item in weakest_10_tags:
+        print("loop entered")
         tag = item["tag"]
 
         questions = inverted_index.get(tag, [])
+
+        for q in questions:
+            print("question unit type : ", type(q.get("unit")))
+            print("user unit type : ", type(user_unit))
+
+        questions = [q for q in questions if q.get("unit") == user_unit]
+
         available = [q for q in questions if q["id"] not in used_ids]
 
         if available: 

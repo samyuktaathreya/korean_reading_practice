@@ -27,8 +27,38 @@ unit_to_tags_dict = {} # key: unit, value: tags
 # 4. unit/tags: dictionary, key: unit, value: list of tags corresponding to that unit
 # 5. user_id/unit: dictionary, key: user_id, value: unit that user is on
 
+# ----------------------------- TAGS-UNIT DICTIONARY -----------------------------
+# ----------------------------- UNIT-TAGS DICTIONARY -----------------------------
+# (two birds with one stone)
+
+# tags/unit: dictionary, key: tag, value: the unit that tag belongs to
+# unit/tags: dictionary, key: unit, value: tags of that unit
+TAGS_UNITS_JSON_FILEPATH = './TagsUnits.json'
+
+
+try:
+    with open(TAGS_UNITS_JSON_FILEPATH, 'r', encoding='utf-8') as file:
+        # json.load() parses the file directly into a Python list or dictionary
+        tags_units_data = json.load(file)
+        
+    print("Tags/Units JSON loaded successfully!")
+
+except FileNotFoundError:
+    print(f"Error: The file {file_path} was not found.")
+except json.JSONDecodeError:
+    print("Error: Failed to decode JSON. Check your file syntax.")
+
+for unit, tags in tags_units_data.items():
+    unit = int(unit)
+    for tag in tags: 
+        if tag not in tags_to_unit_dict:
+            tags_to_unit_dict[tag] = unit
+            
+    unit_to_tags_dict[unit] = tags
+
+
 # ----------------------------- TAG-QUESTION DICT (INVERTED_INDEX) -----------------------------
-DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = '../frontend/public/DuolingoStyleQuestions.json'
+DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './DuolingoStyleQuestions.json'
 
 try:
     with open(DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH, 'r', encoding='utf-8') as file:
@@ -61,45 +91,22 @@ q_id_counter = 0
 for category_item in data:
     category = category_item['category']
     for level in category_item['levels']:
-        difficulty = level['difficulty']
         for q in level['questions']:
             q_id_counter += 1
-            question_id = f"q_{q_id_counter}"
-
+            question_obj = {
+                "id": f"q_{q_id_counter}",
+                "unit": unit,   # <-- store unit on the question
+                **q
+            }
             tags_for_this_question = q['tags']
-            tags_for_this_question.append(category)
 
+            unit = max(
+                (tags_to_unit_dict.get(tag) for tag in tags_for_this_question if tags_to_unit_dict.get(tag) is not None),
+                default=None
+            )
+            
             for tag in tags_for_this_question:
                 unique_tags.add(tag)
                 if tag not in inverted_index:
                     inverted_index[tag] = []
-                inverted_index[tag].append(question_id)
-
-# ----------------------------- TAGS-UNIT DICTIONARY -----------------------------
-# ----------------------------- UNIT-TAGS DICTIONARY -----------------------------
-# (two birds with one stone)
-
-# tags/unit: dictionary, key: tag, value: the unit that tag belongs to
-# unit/tags: dictionary, key: unit, value: tags of that unit
-TAGS_UNITS_JSON_FILEPATH = './TagsUnits.json'
-
-
-try:
-    with open(TAGS_UNITS_JSON_FILEPATH, 'r', encoding='utf-8') as file:
-        # json.load() parses the file directly into a Python list or dictionary
-        tags_units_data = json.load(file)
-        
-    print("Tags/Units JSON loaded successfully!")
-
-except FileNotFoundError:
-    print(f"Error: The file {file_path} was not found.")
-except json.JSONDecodeError:
-    print("Error: Failed to decode JSON. Check your file syntax.")
-
-for unit, tags in tags_units_data.items():
-    for tag in tags: 
-        if tag not in tags_to_unit_dict:
-            tags_to_unit_dict[tag] = unit
-    unit_to_tags_dict[unit] = tags
-
-
+                inverted_index[tag].append(question_obj)

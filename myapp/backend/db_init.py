@@ -11,7 +11,7 @@ from datetime import date
 # 5. user_id/unit: dictionary, key: user_id, value: unit that user is on
 
 # ----------------------------- TAG-QUESTION DICT -----------------------------
-DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = '../frontend/public/DuolingoStyleQuestions.json'
+DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './DuolingoStyleQuestions.json'
 
 try:
     with open(DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH, 'r', encoding='utf-8') as file:
@@ -50,8 +50,6 @@ for category_item in data:
             question_id = f"q_{q_id_counter}"
 
             tags_for_this_question = q['tags']
-            tags_for_this_question.append(category)
-
             for tag in tags_for_this_question:
                 unique_tags.add(tag)
                 if tag not in inverted_index:
