@@ -9,10 +9,16 @@ class StrengthTable(Base):
     tag = Column(String)
     user_id = Column(Integer)
     stability = Column(Float, default=0)
-    last_practice = Column(DateTime, default=datetime.now)
+    last_practice = Column(DateTime, default=datetime.utcnow)
 
     __table_args__ = (  
         UniqueConstraint('tag', 'user_id', name='_tag_user_uc'),
     )
 
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    current_unit = Column(Integer, default=1)
     

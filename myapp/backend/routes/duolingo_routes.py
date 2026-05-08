@@ -1,7 +1,7 @@
 # routers/practice.py
 from fastapi import APIRouter, Depends, Body
 from sqlalchemy.orm import Session
-from database import SessionLocal, INVERTED_INDEX
+from database import SessionLocal, inverted_index, tags_to_unit_dict, unit_to_tags_dict
 import crud
 from datetime import datetime
 import random
@@ -16,9 +16,9 @@ def get_db():
     finally:
         db.close()
 
-@router.get("/api/initialize/{user_id}")
-def initialize_db(user_id: int, db: Session = Depends(get_db)):
-    # 1. Look up the user's progress records
+# --------------------------------- HELPERS ---------------------------------
+def get_strength_scores(db, user_id):
+    # Look up the user's progress records
     progress_records = crud.get_progress_table_by_user_id(db, user_id)
 
     # store strengths in memory
@@ -46,6 +46,52 @@ def initialize_db(user_id: int, db: Session = Depends(get_db)):
             "stability": stability # keeping this to update later
         })
 
+    return calculated_stats
+
+# only get strength scores for tags from a specific unit
+def get_strength_scores_from_unit(db, user_id, user_unit):
+    # Look up the user's progress records
+    progress_records = crud.get_progress_table_by_user_id(db, user_id)
+
+    # store strengths in memory
+    calculated_stats = []
+
+    now = datetime.utcnow()
+    
+    for record in progress_records:
+        tag = record.tag
+        unit = tags_to_unit_dict[tag]
+
+        if unit != user_unit: 
+            continue
+        
+        stability = record.stability
+        last_practice = record.last_practice
+        
+        # 1. Calculate Δt (Time elapsed in days)
+        # We use .total_seconds() / 86400 to get a precise decimal of days
+        delta_t = (now - last_practice).total_seconds() / 86400
+        
+        # 2. Apply the SRS Formula: S = 0.5 ^ (Δt / h)
+        # If delta_t is 0 (just practiced), strength is 1.0
+        # If delta_t == stability, strength is 0.5
+        current_strength = 0.5 ** (delta_t / stability)
+        
+        # 3. Store in a temporary list for sorting
+        calculated_stats.append({
+            "tag": record.tag,
+            "strength": current_strength,
+            "stability": stability # keeping this to update later
+        })
+
+    return calculated_stats
+
+# --------------------------------- ENDPOINTS ---------------------------------
+
+@router.get("/api/generate_review_questions/{user_id}")
+def generate_review_questions(user_id: int, db: Session = Depends(get_db)):
+    calculated_stats = get_strength_scores(db, user_id)
+
     # 4. Sort by strength (Lowest first = Most forgotten)
     calculated_stats.sort(key=lambda x: x["strength"])
 
@@ -60,7 +106,7 @@ def initialize_db(user_id: int, db: Session = Depends(get_db)):
     for item in weakest_10_tags:
         tag = item["tag"]
 
-        questions = INVERTED_INDEX.get(tag, [])
+        questions = inverted_index.get(tag, [])
 
         # Filter out questions we already used in this specific session
         available = [q for q in questions if q["id"] not in used_ids]
@@ -75,6 +121,49 @@ def initialize_db(user_id: int, db: Session = Depends(get_db)):
             # just pick one anyway (better than an empty set or a crash)
             selected_q = random.choice(questions)
             question_set.append(selected_q)
+
+    # 6. Return the data
+    return {
+        "user_id": user_id,
+        "question_set": question_set
+    }
+
+@router.get("/api/generate_new_questions/{user_id}")
+def generate_new_questions(user_id: int, db: Session = Depends(get_db)):
+    # Get user's unit
+    user_unit = crud.get_user(db, user_id).current_unit
+
+    calculated_stats = get_strength_scores_from_unit(db, user_id, user_unit)
+
+    # 4. Sort by strength (Lowest first = Most forgotten)
+    calculated_stats.sort(key=lambda x: x["strength"])
+
+    # 5. Take the bottom 10
+    weakest_10_tags = calculated_stats[:10]
+
+    print("weakest 10 tags : ", weakest_10_tags)
+
+    question_set = []
+    used_ids = set()
+
+    for item in weakest_10_tags:
+        tag = item["tag"]
+
+        questions = inverted_index.get(tag, [])
+        available = [q for q in questions if q["id"] not in used_ids]
+
+        if available: 
+            random.shuffle(available)
+            add_count = 0
+            for question in available:
+                if len(question_set) < 10 and add_count < 4:
+                    question_set.append(question)
+                    used_ids.add(question["id"])
+                    add_count += 1
+                else:
+                    break
+
+    random.shuffle(question_set)
 
     # 6. Return the data
     return {

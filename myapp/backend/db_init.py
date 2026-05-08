@@ -2,7 +2,15 @@ import sqlite3
 import json
 from datetime import date
 
-# 1. Load JSON Data
+# The database is composed of 5 parts
+
+# 1. strength table: SQL, columns: tag, user_id, stability, last practiced
+# 2. tags/questions: dictionary, key: tag; value: list of questions corresponding to that tag
+# 3. tags/unit: dictionary, key: tag, value: the unit that tag belongs to
+# 4. unit/tags: dictionary, key: unit, value: list of tags corresponding to that unit
+# 5. user_id/unit: dictionary, key: user_id, value: unit that user is on
+
+# ----------------------------- TAG-QUESTION DICT -----------------------------
 DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = '../frontend/public/DuolingoStyleQuestions.json'
 
 try:
@@ -15,7 +23,7 @@ try:
     print(f"First Category: {data[0]['category']}")
 
 except FileNotFoundError:
-    print(f"Error: The file {file_path} was not found.")
+    print(f"Error: The file {DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH} was not found.")
 except json.JSONDecodeError:
     print("Error: Failed to decode JSON. Check your file syntax.")
 
@@ -40,26 +48,17 @@ for category_item in data:
         for q in level['questions']:
             q_id_counter += 1
             question_id = f"q_{q_id_counter}"
-            
-            # Tag Extraction Logic: 
-            # 1. The 'answer' from 'easy' level questions is a perfect grammar tag itself (e.g., 은/는/이/가).
-            # 2. We can also add the overall category name as a tag.
-            tags_for_this_question = []
-            
-            if difficulty == "easy":
-                tags_for_this_question.append(q['answer'])
-            
-            # Use categories as tags too (e.g., 'grammar_particles', 'daily_activities')
+
+            tags_for_this_question = q['tags']
             tags_for_this_question.append(category)
 
-            # Build the inverted index and collect unique tags
             for tag in tags_for_this_question:
                 unique_tags.add(tag)
                 if tag not in inverted_index:
                     inverted_index[tag] = []
                 inverted_index[tag].append(question_id)
 
-# 4. SQLite Database Operations
+# ----------------------------- STRENGTH TABLE -----------------------------
 conn = sqlite3.connect('duolingo_style_db.db')
 cursor = conn.cursor()
 
@@ -84,10 +83,24 @@ for tag in unique_tags:
         VALUES (?, ?, ?, ?)
     ''', (tag, user_id, initial_strength, today))
 
+# ----------------------------- USERS TABLE -----------------------------
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        current_unit INTEGER DEFAULT 1
+    )
+''')
+
+# Insert our default user if they don't exist yet
+cursor.execute('''
+    INSERT OR IGNORE INTO users (id, current_unit)
+    VALUES (?, ?)
+''', (user_id, 1))
+
 conn.commit()
 conn.close()
 
-# 5. Verify the results
+# ----------------------------- VERIFY RESULTS -----------------------------
 print(f"--- SQL Table: {len(unique_tags)} tags initialized. ---")
 print("\n--- Inverted Index (JSON Format) ---")
 print(json.dumps(inverted_index, ensure_ascii=False, indent=2))
