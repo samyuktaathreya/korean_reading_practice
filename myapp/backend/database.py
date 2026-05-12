@@ -18,6 +18,7 @@ QUESTIONS_FILEPATH = 'DuolingoStyleQuestions.json'
 inverted_index = {} # key: tag, value: list of questions at that tag
 tags_to_unit_dict = {} # key: tag, value: units
 unit_to_tags_dict = {} # key: unit, value: tags
+unit_to_unit_test_questions_dict = {} # key: unit, value: list of unit test questions
 
 # The database is composed of 5 parts
 
@@ -44,7 +45,7 @@ try:
     print("Tags/Units JSON loaded successfully!")
 
 except FileNotFoundError:
-    print(f"Error: The file {file_path} was not found.")
+    print(f"Error: The file {TAGS_UNITS_JSON_FILEPATH} was not found.")
 except json.JSONDecodeError:
     print("Error: Failed to decode JSON. Check your file syntax.")
 
@@ -93,6 +94,12 @@ for category_item in data:
     for level in category_item['levels']:
         for q in level['questions']:
             q_id_counter += 1
+            
+            unit = max(
+                (tags_to_unit_dict.get(tag) for tag in tags_for_this_question if tags_to_unit_dict.get(tag) is not None),
+                default=None
+            )
+            
             question_obj = {
                 "id": f"q_{q_id_counter}",
                 "unit": unit,   # <-- store unit on the question
@@ -100,13 +107,30 @@ for category_item in data:
             }
             tags_for_this_question = q['tags']
 
-            unit = max(
-                (tags_to_unit_dict.get(tag) for tag in tags_for_this_question if tags_to_unit_dict.get(tag) is not None),
-                default=None
-            )
-            
             for tag in tags_for_this_question:
                 unique_tags.add(tag)
                 if tag not in inverted_index:
                     inverted_index[tag] = []
                 inverted_index[tag].append(question_obj)
+
+# ----------------------------- UNIT-UNIT_TEST_QUESTIONS DICTIONARY -----------------------------
+UNIT_TEST_QUESTIONS_FILEPATH = './UnitTestQuestions.json'
+
+try:
+    with open(UNIT_TEST_QUESTIONS_FILEPATH, 'r', encoding='utf-8') as file:
+        # json.load() parses the file directly into a Python list or dictionary
+        unit_test_questions_data = json.load(file)
+        
+    print("Data loaded successfully!")
+    # Example: Access the first category
+    print(f"First Category: {data[0]['category']}")
+
+except FileNotFoundError:
+    print(f"Error: The file {UNIT_TEST_QUESTIONS_FILEPATH} was not found.")
+except json.JSONDecodeError:
+    print("Error: Failed to decode JSON. Check your file syntax.")
+
+for category_item in unit_test_questions_data:
+    unit = category_item['unit']
+    questions = category_item['questions']
+    unit_to_unit_test_questions_dict[unit] = questions
