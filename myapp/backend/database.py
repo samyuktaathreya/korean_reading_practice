@@ -95,6 +95,8 @@ for category_item in data:
         for q in level['questions']:
             q_id_counter += 1
             
+            tags_for_this_question = q['tags']
+            
             unit = max(
                 (tags_to_unit_dict.get(tag) for tag in tags_for_this_question if tags_to_unit_dict.get(tag) is not None),
                 default=None
@@ -105,7 +107,6 @@ for category_item in data:
                 "unit": unit,   # <-- store unit on the question
                 **q
             }
-            tags_for_this_question = q['tags']
 
             for tag in tags_for_this_question:
                 unique_tags.add(tag)
