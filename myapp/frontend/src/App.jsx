@@ -14,6 +14,7 @@ function App() {
         <Route path="/interactive-textbook" element={<InteractiveTextbook />} />
         <Route path="/listening-practice" element={<ListeningPractice />} />
         <Route path="/duolingo-style-practice" element={<DuolingoStyleQuestions />} />
+        <Route path="*" element={<div>I am lost! Current path: {window.location.pathname}</div>} />
       </Routes>
     </BrowserRouter>
   )

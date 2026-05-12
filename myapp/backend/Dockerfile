@@ -5,13 +5,18 @@ FROM python:3.12-slim
 ENV DEBIAN_FRONTEND=noninteractive
 
 # 3. Install HEADLESS Java (and clean up the cache to save disk space)
-RUN apt-get update && apt-get install -y default-jre-headless && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
+    default-jre-headless \
+    build-essential \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 # 4. Set the working directory
 WORKDIR /app
 
 # 5. Install the Python libraries
-RUN pip install fastapi uvicorn edge-tts pydantic konlpy httpx deep-translator
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 6. Copy your code
 COPY . .
