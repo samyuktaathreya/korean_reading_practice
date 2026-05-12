@@ -1,0 +1,817 @@
+[
+  {
+    "category": "grammar_particles",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "grammar_particles_easy_1",
+            "question": "저___ 학생이에요.",
+            "hint": "I am a student. (topic particle)",
+            "answer": "는",
+            "tags": ["저", "는", "은/는", "주제_조사", "학생", "이에요", "이에요/예요", "명사_종결어미"]
+          },
+          {
+            "id": "grammar_particles_easy_2",
+            "question": "선생님___ 한국 사람이에요.",
+            "hint": "The teacher is Korean. (topic particle)",
+            "answer": "은",
+            "tags": ["선생님", "은", "은/는", "주제_조사", "한국", "사람", "이에요", "이에요/예요"]
+          },
+          {
+            "id": "grammar_particles_easy_3",
+            "question": "치엔 씨___ 중국 사람이에요.",
+            "hint": "Chien is Chinese. (topic particle)",
+            "answer": "는",
+            "tags": ["치엔", "씨", "는", "은/는", "주제_조사", "중국", "사람", "이에요"]
+          },
+          {
+            "id": "grammar_particles_easy_4",
+            "question": "공무원___ 몽골 사람이에요.",
+            "hint": "The civil servant is Mongolian. (topic particle)",
+            "answer": "은",
+            "tags": ["공무원", "은", "은/는", "주제_조사", "몽골", "사람", "이에요"]
+          },
+          {
+            "id": "grammar_particles_easy_5",
+            "question": "가방___ 침대 위에 있어요.",
+            "hint": "The bag is on the bed. (subject particle)",
+            "answer": "이",
+            "tags": ["가방", "이", "이/가", "주격_조사", "침대", "위", "에", "있어요", "있다"]
+          },
+          {
+            "id": "grammar_particles_easy_6",
+            "question": "유키 씨___ 교실에 있어요?",
+            "hint": "Is Yuki in the classroom? (subject particle)",
+            "answer": "가",
+            "tags": ["유키", "씨", "가", "이/가", "주격_조사", "교실", "에", "있어요", "있다"]
+          },
+          {
+            "id": "grammar_particles_easy_7",
+            "question": "펜___ 책상 위에 없어요.",
+            "hint": "The pen is not on the desk. (subject particle)",
+            "answer": "이",
+            "tags": ["펜", "이", "이/가", "주격_조사", "책상", "위", "에", "없어요", "없다"]
+          },
+          {
+            "id": "grammar_particles_easy_8",
+            "question": "의자___ 있어요?",
+            "hint": "Is there a chair? (subject particle)",
+            "answer": "가",
+            "tags": ["의자", "가", "이/가", "주격_조사", "있어요", "있다"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "grammar_particles_medium_1",
+            "question": "책이 가방 안에 있어요.",
+            "answer": "The book is in the bag.",
+            "tags": ["책", "이", "가방", "안", "에", "있어요", "있다", "이/가", "위치_조사"]
+          },
+          {
+            "id": "grammar_particles_medium_2",
+            "question": "투이 씨는 집에 없어요.",
+            "answer": "Tui is not at home.",
+            "tags": ["투이", "씨", "는", "집", "에", "없어요", "없다", "은/는", "위치_조사"]
+          },
+          {
+            "id": "grammar_particles_medium_3",
+            "question": "마크 씨는 오늘 학교에 가요.",
+            "answer": "Mark is going to school today.",
+            "tags": ["마크", "씨", "는", "오늘", "학교", "에", "가요", "가다", "은/는", "이동_조사"]
+          },
+          {
+            "id": "grammar_particles_medium_4",
+            "question": "토야 씨는 몽골 사람이에요.",
+            "answer": "Toya is Mongolian.",
+            "tags": ["토야", "씨", "는", "몽골", "사람", "이에요", "은/는", "이에요/예요"]
+          },
+          {
+            "id": "grammar_particles_medium_5",
+            "question": "수진 씨는 의사예요.",
+            "answer": "Sujin is a doctor.",
+            "tags": ["수진", "씨", "는", "의사", "예요", "은/는", "이에요/예요"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "grammar_particles_hard_1",
+            "question": "The pen is not on the desk.",
+            "answer": "펜이 책상 위에 없어요.",
+            "tags": ["펜", "이", "책상", "위", "에", "없어요", "없다", "이/가"]
+          },
+          {
+            "id": "grammar_particles_hard_2",
+            "question": "Minsoo is a police officer.",
+            "answer": "민수 씨는 경찰이에요.",
+            "tags": ["민수", "씨", "는", "경찰", "이에요", "은/는", "이에요/예요"]
+          },
+          {
+            "id": "grammar_particles_hard_3",
+            "question": "The book is in the classroom.",
+            "answer": "책이 교실에 있어요.",
+            "tags": ["책", "이", "교실", "에", "있어요", "있다", "이/가"]
+          },
+          {
+            "id": "grammar_particles_hard_4",
+            "question": "Is the bag on the chair?",
+            "answer": "가방이 의자 위에 있어요?",
+            "tags": ["가방", "이", "의자", "위", "에", "있어요", "있다", "이/가"]
+          },
+          {
+            "id": "grammar_particles_hard_5",
+            "question": "Yuki is Japanese.",
+            "answer": "유키 씨는 일본 사람이에요.",
+            "tags": ["유키", "씨", "는", "일본", "사람", "이에요", "은/는", "이에요/예요"]
+          },
+          {
+            "id": "grammar_particles_hard_6",
+            "question": "The teacher is Korean.",
+            "answer": "선생님은 한국 사람이에요.",
+            "tags": ["선생님", "은", "한국", "사람", "이에요", "은/는", "이에요/예요"]
+          },
+          {
+            "id": "grammar_particles_hard_7",
+            "question": "Tawan is going to the park.",
+            "answer": "타완 씨는 공원에 가요.",
+            "tags": ["타완", "씨", "는", "공원", "에", "가요", "가다", "은/는", "에 (이동)"]
+          },
+          {
+            "id": "grammar_particles_hard_8",
+            "question": "The desk is in the classroom.",
+            "answer": "책상이 교실에 있어요.",
+            "tags": ["책상", "이", "교실", "에", "있어요", "있다", "이/가"]
+          },
+          {
+            "id": "grammar_particles_hard_9",
+            "question": "The chair is not next to the bed.",
+            "answer": "의자가 침대 옆에 없어요.",
+            "tags": ["의자", "가", "침대", "옆", "에", "없어요", "없다", "이/가"]
+          },
+          {
+            "id": "grammar_particles_hard_10",
+            "question": "Lora is going to the market.",
+            "answer": "로라 씨는 시장에 가요.",
+            "tags": ["로라", "씨", "는", "시장", "에", "가요", "가다", "은/는"]
+          },
+          {
+            "id": "grammar_particles_hard_11",
+            "question": "The student is working.",
+            "answer": "학생은 일해요.",
+            "tags": ["학생", "은", "일해요", "일하다", "은/는", "해요체"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "introductions_and_occupations",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "introductions_and_occupations_easy_1",
+            "question": "저는 왕치엔___.",
+            "hint": "I am Wang Chien.",
+            "answer": "이에요",
+            "tags": ["저", "는", "왕치엔", "이에요", "이에요/예요", "자기소개"]
+          },
+          {
+            "id": "introductions_and_occupations_easy_2",
+            "question": "저는 김민수___.",
+            "hint": "I am Kim Minsoo.",
+            "answer": "예요",
+            "tags": ["저", "는", "김민수", "예요", "이에요/예요", "자기소개"]
+          },
+          {
+            "id": "introductions_and_occupations_easy_3",
+            "question": "마크 씨는 미국 사람___?",
+            "hint": "Is Mark American?",
+            "answer": "이에요",
+            "tags": ["마크", "씨", "는", "미국", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_easy_4",
+            "question": "저는 경찰___.",
+            "hint": "I am a police officer.",
+            "answer": "이에요",
+            "tags": ["저", "는", "경찰", "이에요", "직업"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "introductions_and_occupations_medium_1",
+            "question": "네, 저는 회사원이에요.",
+            "answer": "Yes, I am a company employee.",
+            "tags": ["네", "저", "는", "회사원", "이에요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_medium_2",
+            "question": "아니요, 저는 공무원이에요.",
+            "answer": "No, I am a civil servant.",
+            "tags": ["아니요", "저", "는", "공무원", "이에요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_medium_3",
+            "question": "타완 씨는 태국 사람이에요?",
+            "answer": "Is Tawan Thai?",
+            "tags": ["타완", "씨", "는", "태국", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_medium_4",
+            "question": "아니요, 저는 의사예요.",
+            "answer": "No, I am a doctor.",
+            "tags": ["아니요", "저", "는", "의사", "예요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_medium_5",
+            "question": "선생님은 한국 사람이에요.",
+            "answer": "The teacher is Korean.",
+            "tags": ["선생님", "은", "한국", "사람", "이에요", "국적", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_medium_6",
+            "question": "유키 씨는 일본 사람이에요.",
+            "answer": "Yuki is Japanese.",
+            "tags": ["유키", "씨", "는", "일본", "사람", "이에요", "국적"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "introductions_and_occupations_hard_1",
+            "question": "Are you a police officer?",
+            "answer": "경찰이에요?",
+            "tags": ["경찰", "이에요", "의문문", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_2",
+            "question": "No, I am a teacher.",
+            "answer": "아니요, 저는 선생님이에요.",
+            "tags": ["아니요", "저", "는", "선생님", "이에요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_3",
+            "question": "Yes, I am a company employee.",
+            "answer": "네, 저는 회사원이에요.",
+            "tags": ["네", "저", "는", "회사원", "이에요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_4",
+            "question": "Are you an American?",
+            "answer": "미국 사람이에요?",
+            "tags": ["미국", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_5",
+            "question": "No, I am Australian.",
+            "answer": "아니요, 저는 호주 사람이에요.",
+            "tags": ["아니요", "저", "는", "호주", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_6",
+            "question": "Is Mark a doctor?",
+            "answer": "마크 씨는 의사예요?",
+            "tags": ["마크", "씨", "는", "의사", "예요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_7",
+            "question": "Yes, Mark is a doctor.",
+            "answer": "네, 마크 씨는 의사예요.",
+            "tags": ["네", "마크", "씨", "는", "의사", "예요", "직업"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_8",
+            "question": "Tui is Vietnamese.",
+            "answer": "투이 씨는 베트남 사람이에요.",
+            "tags": ["투이", "씨", "는", "베트남", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_9",
+            "question": "Are you German?",
+            "answer": "독일 사람이에요?",
+            "tags": ["독일", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_10",
+            "question": "No, I am Chinese.",
+            "answer": "아니요, 저는 중국 사람이에요.",
+            "tags": ["아니요", "저", "는", "중국", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_11",
+            "question": "Is Weera Thai?",
+            "answer": "위라 씨는 태국 사람이에요?",
+            "tags": ["위라", "씨", "는", "태국", "사람", "이에요", "국적"]
+          },
+          {
+            "id": "introductions_and_occupations_hard_12",
+            "question": "Huong is a teacher.",
+            "answer": "흐엉 씨는 선생님이에요.",
+            "tags": ["흐엉", "씨", "는", "선생님", "이에요", "직업"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "daily_activities",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "daily_activities_easy_1",
+            "question": "수진 씨는 운동___.",
+            "hint": "Sujin is exercising.",
+            "answer": "해요",
+            "tags": ["수진", "씨", "는", "운동", "해요", "하다", "해요체", "일상_활동"]
+          },
+          {
+            "id": "daily_activities_easy_2",
+            "question": "저는 일___.",
+            "hint": "I am working.",
+            "answer": "해요",
+            "tags": ["저", "는", "일", "해요", "하다", "해요체", "일상_활동"]
+          },
+          {
+            "id": "daily_activities_easy_3",
+            "question": "치엔 씨는 이야기___.",
+            "hint": "Chien is talking.",
+            "answer": "해요",
+            "tags": ["치엔", "씨", "는", "이야기", "해요", "하다", "해요체", "일상_활동"]
+          },
+          {
+            "id": "daily_activities_easy_4",
+            "question": "마크 씨는 뭐 ___?",
+            "hint": "What is Mark doing?",
+            "answer": "해요",
+            "tags": ["마크", "씨", "는", "뭐", "해요", "하다", "의문문"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "daily_activities_medium_1",
+            "question": "지금 뭐 해요?",
+            "answer": "What are you doing now?",
+            "tags": ["지금", "뭐", "해요", "하다", "현재_진행"]
+          },
+          {
+            "id": "daily_activities_medium_2",
+            "question": "마크 씨는 공부해요.",
+            "answer": "Mark is studying.",
+            "tags": ["마크", "씨", "는", "공부해요", "공부하다", "해요체"]
+          },
+          {
+            "id": "daily_activities_medium_3",
+            "question": "유키 씨는 전화해요.",
+            "answer": "Yuki is calling.",
+            "tags": ["유키", "씨", "는", "전화해요", "전화하다", "해요체"]
+          },
+          {
+            "id": "daily_activities_medium_4",
+            "question": "저는 운동해요.",
+            "answer": "I am exercising.",
+            "tags": ["저", "는", "운동해요", "운동하다", "해요체"]
+          },
+          {
+            "id": "daily_activities_medium_5",
+            "question": "타완 씨는 일해요.",
+            "answer": "Tawan is working.",
+            "tags": ["타완", "씨", "는", "일해요", "일하다", "해요체"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "daily_activities_hard_1",
+            "question": "What are you doing today?",
+            "answer": "오늘 뭐 해요?",
+            "tags": ["오늘", "뭐", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "daily_activities_hard_2",
+            "question": "What are you doing now?",
+            "answer": "지금 뭐 해요?",
+            "tags": ["지금", "뭐", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "daily_activities_hard_3",
+            "question": "Sujin is studying.",
+            "answer": "수진 씨는 공부해요.",
+            "tags": ["수진", "씨", "는", "공부해요", "공부하다"]
+          },
+          {
+            "id": "daily_activities_hard_4",
+            "question": "I am exercising.",
+            "answer": "저는 운동해요.",
+            "tags": ["저", "는", "운동해요", "운동하다"]
+          },
+          {
+            "id": "daily_activities_hard_5",
+            "question": "Chien is calling.",
+            "answer": "치엔 씨는 전화해요.",
+            "tags": ["치엔", "씨", "는", "전화해요", "전화하다"]
+          },
+          {
+            "id": "daily_activities_hard_6",
+            "question": "Mark is talking.",
+            "answer": "마크 씨는 이야기해요.",
+            "tags": ["마크", "씨", "는", "이야기해요", "이야기하다"]
+          },
+          {
+            "id": "daily_activities_hard_7",
+            "question": "The student is studying.",
+            "answer": "학생은 공부해요.",
+            "tags": ["학생", "은", "공부해요", "공부하다"]
+          },
+          {
+            "id": "daily_activities_hard_8",
+            "question": "The doctor is working.",
+            "answer": "의사는 일해요.",
+            "tags": ["의사", "는", "일해요", "일하다"]
+          },
+          {
+            "id": "daily_activities_hard_9",
+            "question": "Are you working now?",
+            "answer": "지금 일해요?",
+            "tags": ["지금", "일해요", "일하다", "의문문"]
+          },
+          {
+            "id": "daily_activities_hard_10",
+            "question": "No, I am exercising.",
+            "answer": "아니요, 운동해요.",
+            "tags": ["아니요", "운동해요", "운동하다"]
+          },
+          {
+            "id": "daily_activities_hard_11",
+            "question": "Is Yuki calling?",
+            "answer": "유키 씨는 전화해요?",
+            "tags": ["유키", "씨", "는", "전화해요", "전화하다", "의문문"]
+          },
+          {
+            "id": "daily_activities_hard_12",
+            "question": "Yes, I am talking.",
+            "answer": "네, 이야기해요.",
+            "tags": ["네", "이야기해요", "이야기하다"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "places_and_movement",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "places_and_movement_easy_1",
+            "question": "투이 씨는 시장에 ___.",
+            "hint": "Tui is going to the market.",
+            "answer": "가요",
+            "tags": ["투이", "씨", "는", "시장", "에", "가요", "가다", "이동"]
+          },
+          {
+            "id": "places_and_movement_easy_2",
+            "question": "저는 공원에 ___.",
+            "hint": "I am going to the park.",
+            "answer": "가요",
+            "tags": ["저", "는", "공원", "에", "가요", "가다", "이동"]
+          },
+          {
+            "id": "places_and_movement_easy_3",
+            "question": "오늘 어디___ 가요?",
+            "hint": "Where are you going today?",
+            "answer": "에",
+            "tags": ["오늘", "어디", "에", "가요", "가다", "에 (이동)"]
+          },
+          {
+            "id": "places_and_movement_easy_4",
+            "question": "로라 씨는 집___ 가요.",
+            "hint": "Lora is going home.",
+            "answer": "에",
+            "tags": ["로라", "씨", "는", "집", "에", "가요", "가다", "에 (이동)"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "places_and_movement_medium_1",
+            "question": "어디에 가요?",
+            "answer": "Where are you going?",
+            "tags": ["어디", "에", "가요", "가다", "의문문"]
+          },
+          {
+            "id": "places_and_movement_medium_2",
+            "question": "식당에 가요.",
+            "answer": "I am going to the restaurant.",
+            "tags": ["식당", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_medium_3",
+            "question": "타완 씨는 학교에 가요?",
+            "answer": "Is Tawan going to school?",
+            "tags": ["타완", "씨", "는", "학교", "에", "가요", "가다", "의문문"]
+          },
+          {
+            "id": "places_and_movement_medium_4",
+            "question": "아니요, 회사에 가요.",
+            "answer": "No, I am going to the company.",
+            "tags": ["아니요", "회사", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_medium_5",
+            "question": "저는 시장에 가요.",
+            "answer": "I am going to the market.",
+            "tags": ["저", "는", "시장", "에", "가요", "가다"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "places_and_movement_hard_1",
+            "question": "Where are you going today?",
+            "answer": "오늘 어디에 가요?",
+            "tags": ["오늘", "어디", "에", "가요", "가다", "의문문"]
+          },
+          {
+            "id": "places_and_movement_hard_2",
+            "question": "I am going to the park.",
+            "answer": "저는 공원에 가요.",
+            "tags": ["저", "는", "공원", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_3",
+            "question": "Is Mark going home?",
+            "answer": "마크 씨는 집에 가요?",
+            "tags": ["마크", "씨", "는", "집", "에", "가요", "가다", "의문문"]
+          },
+          {
+            "id": "places_and_movement_hard_4",
+            "question": "No, I am going to the restaurant.",
+            "answer": "아니요, 식당에 가요.",
+            "tags": ["아니요", "식당", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_5",
+            "question": "Chien is going to school.",
+            "answer": "치엔 씨는 학교에 가요.",
+            "tags": ["치엔", "씨", "는", "학교", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_6",
+            "question": "Are you going to the company?",
+            "answer": "회사에 가요?",
+            "tags": ["회사", "에", "가요", "가다", "의문문"]
+          },
+          {
+            "id": "places_and_movement_hard_7",
+            "question": "No, I am going to the market.",
+            "answer": "아니요, 시장에 가요.",
+            "tags": ["아니요", "시장", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_8",
+            "question": "The teacher is going to school.",
+            "answer": "선생님은 학교에 가요.",
+            "tags": ["선생님", "은", "학교", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_9",
+            "question": "The police officer is going to the park.",
+            "answer": "경찰은 공원에 가요.",
+            "tags": ["경찰", "은", "공원", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_10",
+            "question": "Tui is going home.",
+            "answer": "투이 씨는 집에 가요.",
+            "tags": ["투이", "씨", "는", "집", "에", "가요", "가다"]
+          },
+          {
+            "id": "places_and_movement_hard_11",
+            "question": "Are you going to the market now?",
+            "answer": "지금 시장에 가요?",
+            "tags": ["지금", "시장", "에", "가요", "가다", "의문문"]
+          },
+          {
+            "id": "places_and_movement_hard_12",
+            "question": "Yes, I am going to the restaurant.",
+            "answer": "네, 식당에 가요.",
+            "tags": ["네", "식당", "에", "가요", "가다"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "locations_and_positions",
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "locations_and_positions_easy_1",
+            "question": "책이 가방 ___에 있어요.",
+            "hint": "The book is INSIDE the bag.",
+            "answer": "안",
+            "tags": ["책", "이", "가방", "안", "에", "있어요", "위치_명사"]
+          },
+          {
+            "id": "locations_and_positions_easy_2",
+            "question": "펜이 책상 ___에 없어요.",
+            "hint": "The pen is not ON the desk.",
+            "answer": "위",
+            "tags": ["펜", "이", "책상", "위", "에", "없어요", "위치_명사"]
+          },
+          {
+            "id": "locations_and_positions_easy_3",
+            "question": "침대 ___에 있어요.",
+            "hint": "It is UNDER the bed. (Starts with 아)",
+            "answer": "아래",
+            "tags": ["침대", "아래", "에", "있어요", "위치_명사"]
+          },
+          {
+            "id": "locations_and_positions_easy_4",
+            "question": "의자가 책상 ___에 있어요.",
+            "hint": "The chair is NEXT TO the desk.",
+            "answer": "옆",
+            "tags": ["의자", "가", "책상", "옆", "에", "있어요", "위치_명사"]
+          },
+          {
+            "id": "locations_and_positions_easy_5",
+            "question": "선생님이 교실 ___에 있어요.",
+            "hint": "The teacher is OUTSIDE the classroom.",
+            "answer": "밖",
+            "tags": ["선생님", "이", "교실", "밖", "에", "있어요", "위치_명사"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "locations_and_positions_medium_1",
+            "question": "무엇이 있어요?",
+            "answer": "What is there?",
+            "tags": ["무엇", "이", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "locations_and_positions_medium_2",
+            "question": "책상이 있어요?",
+            "answer": "Is there a desk?",
+            "tags": ["책상", "이", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "locations_and_positions_medium_3",
+            "question": "네, 의자가 있어요.",
+            "answer": "Yes, there is a chair.",
+            "tags": ["네", "의자", "가", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_medium_4",
+            "question": "책이 어디에 있어요?",
+            "answer": "Where is the book?",
+            "tags": ["책", "이", "어디", "에", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "locations_and_positions_medium_5",
+            "question": "아니요, 책상 위에 없어요.",
+            "answer": "No, it is not on the desk.",
+            "tags": ["아니요", "책상", "위", "에", "없어요", "없다"]
+          },
+          {
+            "id": "locations_and_positions_medium_6",
+            "question": "가방이 침대 위에 있어요.",
+            "answer": "The bag is on the bed.",
+            "tags": ["가방", "이", "침대", "위", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_medium_7",
+            "question": "투이 씨가 집에 있어요?",
+            "answer": "Is Tui at home?",
+            "tags": ["투이", "씨", "가", "집", "에", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "locations_and_positions_medium_8",
+            "question": "아니요, 학교에 있어요.",
+            "answer": "No, she is at school.",
+            "tags": ["아니요", "학교", "에", "있어요", "있다"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "locations_and_positions_hard_1",
+            "question": "Where is the bag?",
+            "answer": "가방이 어디에 있어요?",
+            "tags": ["가방", "이", "어디", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_2",
+            "question": "It is in the classroom.",
+            "answer": "교실에 있어요.",
+            "tags": ["교실", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_3",
+            "question": "Is the pen on the desk?",
+            "answer": "펜이 책상 위에 있어요?",
+            "tags": ["펜", "이", "책상", "위", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_4",
+            "question": "No, it is in the bag.",
+            "answer": "아니요, 가방 안에 있어요.",
+            "tags": ["아니요", "가방", "안", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_5",
+            "question": "Is Tui at home?",
+            "answer": "투이 씨가 집에 있어요?",
+            "tags": ["투이", "씨", "가", "집", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_6",
+            "question": "No, she is not at home.",
+            "answer": "아니요, 집에 없어요.",
+            "tags": ["아니요", "집", "에", "없어요", "없다"]
+          },
+          {
+            "id": "locations_and_positions_hard_7",
+            "question": "Yes, there is a pen.",
+            "answer": "네, 펜이 있어요.",
+            "tags": ["네", "펜", "이", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_8",
+            "question": "The book is under the chair.",
+            "answer": "책이 의자 아래에 있어요.",
+            "tags": ["책", "이", "의자", "아래", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_9",
+            "question": "The desk is next to the bed.",
+            "answer": "책상이 침대 옆에 있어요.",
+            "tags": ["책상", "이", "침대", "옆", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_10",
+            "question": "Is the teacher in front of the classroom?",
+            "answer": "선생님이 교실 앞에 있어요?",
+            "tags": ["선생님", "이", "교실", "앞", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_11",
+            "question": "No, the student is outside.",
+            "answer": "아니요, 학생이 밖에 있어요.",
+            "tags": ["아니요", "학생", "이", "밖", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_12",
+            "question": "The bag is behind the chair.",
+            "answer": "가방이 의자 뒤에 있어요.",
+            "tags": ["가방", "이", "의자", "뒤", "에", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_13",
+            "question": "Is there a chair?",
+            "answer": "의자가 있어요?",
+            "tags": ["의자", "가", "있어요", "있다"]
+          },
+          {
+            "id": "locations_and_positions_hard_14",
+            "question": "No, there is no desk.",
+            "answer": "아니요, 책상이 없어요.",
+            "tags": ["아니요", "책상", "이", "없어요", "없다"]
+          }
+        ]
+      }
+    ]
+  }
+]
