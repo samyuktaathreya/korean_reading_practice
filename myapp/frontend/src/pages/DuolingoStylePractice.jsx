@@ -89,6 +89,7 @@ function WordWithTooltip({ word, wordCache, setWordCache }) {
                     {info.romanization && (
                         <span className="word-tooltip-romanization"> ({info.romanization})</span>
                     )}
+                    <p>Click to hear</p>
                 </span>
             )}
         </span>
@@ -187,8 +188,7 @@ function Question({
     const words = currentQuestionObj.question.split(" ");
     const questionIsKorean = isQuestionInKorean(currentQuestionObj.question);
     const answerNeedsKorean = !questionIsKorean;
-    console.log(currentQuestionObj);
-    console.log("answer needs korean : ", answerNeedsKorean);
+    const isGrammarParticleQuestion = currentQuestionObj.question.includes("___");
 
     return (
         <div className="question-page">
@@ -208,7 +208,8 @@ function Question({
                         : currentQuestionObj.question
                     }
                 </h1>
-                {questionIsKorean && (
+                {questionIsKorean && 
+                    !isGrammarParticleQuestion && (
                     <button className="audio-btn" onClick={onPlayAudio}>
                         🔈 Play Audio
                     </button>
@@ -280,6 +281,8 @@ export default function DuolingoStyleQuestions() {
     useEffect(() => {
         if (!currentQuestionObj) return;
         if (!isQuestionInKorean(currentQuestionObj.question)) return;
+        const isGrammarParticleQuestion = currentQuestionObj.question.includes("___");
+        if (isGrammarParticleQuestion) return;
 
         let cancelled = false;
         (async () => {
