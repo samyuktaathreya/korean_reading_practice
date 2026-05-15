@@ -10,6 +10,9 @@ from datetime import date
 # 4. unit/tags: dictionary, key: unit, value: list of tags corresponding to that unit
 # 5. user_id/unit: dictionary, key: user_id, value: unit that user is on
 
+# all the data stored as a JSON are in database.py (#2,#3,#4) <- with plans to move to SQL eventually...
+# the SQL parts are here: strength table and user table (#1,#5)
+
 # ----------------------------- TAG-QUESTION DICT -----------------------------
 DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './SejongKorean2022_Questions_DB/questions.json'
 

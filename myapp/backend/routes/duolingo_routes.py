@@ -86,6 +86,8 @@ def generate_questions(
     for item in weakest_tags:
         tag = item["tag"]
 
+        exposure_count = crud.get_row_by_user_id_and_tag(db, user_id, tag).exposure_count
+
         questions = inverted_index.get(tag, [])
 
         questions = [q for q in questions if unit_min <= q.get("unit") and q.get("unit") <= unit_max]
@@ -159,6 +161,10 @@ def submit_session(user_id: int,
     db: Session = Depends(get_db)
     ):
 
+    # if user did an intro session, increase their "intro_rounds_completed" attribute
+    user = crud.get_user(db, user_id)
+    crud.increase_intro_rounds_completed(db, user_id)
+
     results = []
     num_of_questions_user_answered_correct = 0
 
@@ -197,7 +203,17 @@ def submit_session(user_id: int,
 
 @router.get("/api/generate_session/{user_id}", response_model=SessionResponse)
 def generate_session(user_id: int, db: Session = Depends(get_db)):
-    user_unit = crud.get_user(db, user_id).current_unit
+    user = crud.get_user(db, user_id)
+    user_unit = user.current_unit
+
+    intro_rounds_completed = user.intro_rounds_completed
+    if intro_rounds_completed >= 2:
+        user_level = "review"
+    else:
+        user_level = "intro"
+
+    if user_level == "intro":
+        return generate_intro_session()
 
     if user_unit == 1: # check if they need review sesh or unit test
         # calculate current unit scores:

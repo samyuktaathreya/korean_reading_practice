@@ -1,0 +1,558 @@
+[
+  {
+    "category": "unit1_greetings_and_introductions",
+    "unit": 1,
+    "title": "Hi, I'm Anna",
+    "topic": "Introducing Yourself",
+    "vocabulary": ["나라", "직업", "네", "아니요", "저", "씨", "이름", "제", "친구", "이 사람"],
+    "grammar_points": ["이에요/예요", "은/는"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u1_easy_v1",
+            "question_type": "define vocabulary words in english",
+            "question": "안녕하세요",
+            "choices": ["👋 Hello", "🙏 Thank you", "🍎 Apple", "🚗 Car"],
+            "answer": "👋 Hello",
+            "tags": ["안녕하세요", "인사", "자기소개"]
+          },
+          {
+            "id": "u1_easy_v2",
+            "question_type": "define vocabulary words in english",
+            "question": "이름",
+            "choices": ["📝 Name", "🎂 Age", "💼 Job", "🗺️ Country"],
+            "answer": "📝 Name",
+            "tags": ["이름", "자기소개"]
+          },
+          {
+            "id": "u1_easy_v3",
+            "question_type": "define vocabulary words in english",
+            "question": "친구",
+            "choices": ["👥 Friend", "👨‍🏫 Teacher", "👩‍⚕️ Doctor", "🎤 Singer"],
+            "answer": "👥 Friend",
+            "tags": ["친구", "직업"]
+          },
+          {
+            "id": "u1_easy_v4",
+            "question_type": "define vocabulary words in english",
+            "question": "어머니",
+            "choices": ["👩 Mother", "👨 Father", "👦 Older Brother", "👧 Younger Sibling"],
+            "answer": "👩 Mother",
+            "tags": ["어머니", "동생", "형", "아버지"]
+          },
+          {
+            "id": "u1_easy_v5",
+            "question_type": "define vocabulary words in english",
+            "question": "한국",
+            "choices": ["🇰🇷 South Korea", "🇨🇦 Canada", "🇻🇳 Vietnam", "🇺🇸 USA"],
+            "answer": "🇰🇷 South Korea",
+            "tags": ["한국", "나라", "국적", "사람", "주노", "민수", "수진"]
+          },
+          {
+            "id": "u1_easy_v6",
+            "question_type": "define vocabulary words in english",
+            "question": "캐나다",
+            "choices": ["🇨🇦 Canada", "🇫🇷 France", "🇹🇭 Thailand", "🇮🇩 Indonesia"],
+            "answer": "🇨🇦 Canada",
+            "tags": ["캐나다", "프랑스", "태국", "인도네시아", "나라", "국적", "마리", "마크", "타완"]
+          },
+          {
+            "id": "u1_easy_v7",
+            "question_type": "define vocabulary words in english",
+            "question": "베트남",
+            "choices": ["🇻🇳 Vietnam", "🇺🇸 USA", "🇨🇳 China", "🇯🇵 Japan"],
+            "answer": "🇻🇳 Vietnam",
+            "tags": ["베트남", "미국", "중국", "일본", "나라", "국적", "유나", "웨이", "유키", "투이"]
+          },
+          {
+            "id": "u1_easy_v8",
+            "question_type": "define vocabulary words in english",
+            "question": "러시아",
+            "choices": ["🇷🇺 Russia", "🇰🇪 Kenya", "🇲🇳 Mongolia", "🇩🇪 Germany"],
+            "answer": "🇷🇺 Russia",
+            "tags": ["러시아", "케냐", "몽골", "독일", "나라", "국적", "토야", "위라", "흐엉"]
+          },
+          {
+            "id": "u1_easy_v9",
+            "question_type": "define vocabulary words in english",
+            "question": "호주",
+            "choices": ["🇦🇺 Australia", "🇩🇪 Germany", "🇫🇷 France", "🇺🇸 USA"],
+            "answer": "🇦🇺 Australia",
+            "tags": ["호주", "나라", "국적", "로라", "치엔", "리사"]
+          },
+          {
+            "id": "u1_easy_v10",
+            "question_type": "define vocabulary words in english",
+            "question": "선생님",
+            "choices": ["👨‍🏫 Teacher", "👮 Police Officer", "🎤 Singer", "👨‍🍳 Chef"],
+            "answer": "👨‍🏫 Teacher",
+            "tags": ["선생님", "경찰", "가수", "요리사", "직업", "회사원", "대학생", "의사"]
+          },
+          {
+            "id": "u1_easy_fb1",
+            "question_type": "fill in the blank",
+            "question": "저___ 안나예요.",
+            "hint": "는",
+            "answer": "는",
+            "tags": ["저", "는", "은/는", "주제_조사", "안나", "이름", "씨", "제"]
+          },
+          {
+            "id": "u1_easy_fb2",
+            "question_type": "fill in the blank",
+            "question": "이 사람___ 누구예요?",
+            "hint": "은",
+            "answer": "은",
+            "tags": ["은", "은/는", "주제_조사", "이 사람", "누구"]
+          },
+          {
+            "id": "u1_easy_fb3",
+            "question_type": "fill in the blank",
+            "question": "박지윤___ 대학생이에요.",
+            "hint": "은",
+            "answer": "은",
+            "tags": ["박지윤", "대학생", "직업", "은", "서유리", "이서준", "김진우", "수지", "유진"]
+          },
+          {
+            "id": "u1_easy_fb4",
+            "question_type": "fill in the blank",
+            "question": "저는 요리사___.",
+            "hint": "예요",
+            "answer": "예요",
+            "tags": ["예요", "이에요/예요", "명사_종결어미", "요리사", "직업"]
+          },
+          {
+            "id": "u1_easy_fb5",
+            "question_type": "fill in the blank",
+            "question": "아버지는 회사원___.",
+            "hint": "이에요",
+            "answer": "이에요",
+            "tags": ["이에요", "이에요/예요", "명사_종결어미", "아버지", "회사원", "직업"]
+          },
+          {
+            "id": "u1_easy_mc1",
+            "question_type": "multiple choice",
+            "question": "안녕하세요? 학생이에요?",
+            "choices": ["👍 네", "👎 아니요", "👋 안녕하세요", "👤 저"],
+            "answer": "👍 네",
+            "tags": ["네", "아니요"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "unit2_numbers_and_phone",
+    "unit": 2,
+    "title": "Can I have your phone number?",
+    "topic": "Introducing Yourself",
+    "vocabulary": ["전화번호", "한자어 수", "층", "월", "번", "호", "원", "쪽", "이름", "카페", "식당", "영화관", "노래방", "PC방"],
+    "grammar_points": ["이/가", "이/가 아니에요"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u2_easy_v1",
+            "question_type": "define vocabulary words in english",
+            "question": "영 / 공",
+            "choices": ["0️⃣ Zero", "1️⃣ One", "2️⃣ Two", "3️⃣ Three"],
+            "answer": "0️⃣ Zero",
+            "tags": ["영", "공", "한자어_수", "전화번호"]
+          },
+          {
+            "id": "u2_easy_v2",
+            "question_type": "define vocabulary words in english",
+            "question": "일 / 이 / 삼 / 사",
+            "choices": ["1️⃣, 2️⃣, 3️⃣, 4️⃣", "5️⃣, 6️⃣, 7️⃣, 8️⃣", "0️⃣, 1️⃣, 2️⃣, 3️⃣", "9️⃣, 🔟, 1️⃣1️⃣, 1️⃣2️⃣"],
+            "answer": "1️⃣, 2️⃣, 3️⃣, 4️⃣",
+            "tags": ["일", "이", "삼", "사", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v3",
+            "question_type": "define vocabulary words in english",
+            "question": "오 / 육 / 칠 / 팔",
+            "choices": ["5️⃣, 6️⃣, 7️⃣, 8️⃣", "1️⃣, 2️⃣, 3️⃣, 4️⃣", "9️⃣, 🔟, 1️⃣1️⃣, 1️⃣2️⃣", "2️⃣0️⃣, 3️⃣0️⃣, 4️⃣0️⃣, 5️⃣0️⃣"],
+            "answer": "5️⃣, 6️⃣, 7️⃣, 8️⃣",
+            "tags": ["오", "육", "칠", "팔", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v4",
+            "question_type": "define vocabulary words in english",
+            "question": "구 / 십",
+            "choices": ["9️⃣, 1️⃣0️⃣", "7️⃣, 8️⃣", "5️⃣, 6️⃣", "1️⃣, 2️⃣"],
+            "answer": "9️⃣, 1️⃣0️⃣",
+            "tags": ["구", "십", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v5",
+            "question_type": "define vocabulary words in english",
+            "question": "십일 / 십이 / 십삼 / 십사 / 십오",
+            "choices": ["11, 12, 13, 14, 15", "1, 2, 3, 4, 5", "21, 22, 23, 24, 25", "10, 20, 30, 40, 50"],
+            "answer": "11, 12, 13, 14, 15",
+            "tags": ["십일", "십이", "십삼", "십사", "십오", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v6",
+            "question_type": "define vocabulary words in english",
+            "question": "십육 / 십칠 / 십팔 / 십구",
+            "choices": ["16, 17, 18, 19", "6, 7, 8, 9", "26, 27, 28, 29", "60, 70, 80, 90"],
+            "answer": "16, 17, 18, 19",
+            "tags": ["십육", "십칠", "십팔", "십구", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v7",
+            "question_type": "define vocabulary words in english",
+            "question": "이십 / 삼십 / 사십 / 오십",
+            "choices": ["20, 30, 40, 50", "2, 3, 4, 5", "12, 13, 14, 15", "200, 300, 400, 500"],
+            "answer": "20, 30, 40, 50",
+            "tags": ["이십", "삼십", "사십", "오십", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v8",
+            "question_type": "define vocabulary words in english",
+            "question": "육십 / 칠십 / 팔십 / 구십 / 백",
+            "choices": ["60, 70, 80, 90, 100", "6, 7, 8, 9, 10", "16, 17, 18, 19, 20", "600, 700, 800, 900, 1000"],
+            "answer": "60, 70, 80, 90, 100",
+            "tags": ["육십", "칠십", "팔십", "구십", "백", "한자어_수"]
+          },
+          {
+            "id": "u2_easy_v9",
+            "question_type": "define vocabulary words in english",
+            "question": "월 / 번 / 호 / 원 / 쪽",
+            "choices": ["📅 Month, Number, Room, Won (₩), Page", "🗓️ Year, Floor, Day, Age, Time", "🗺️ Date, Name, Place, Phone, Job", "⏳ Week, Hour, Minute, Second, Year"],
+            "answer": "📅 Month, Number, Room, Won (₩), Page",
+            "tags": ["월", "번", "호", "원", "쪽"]
+          },
+          {
+            "id": "u2_easy_v10",
+            "question_type": "define vocabulary words in english",
+            "question": "카페 / 영화관",
+            "choices": ["☕ Café / 🎬 Cinema", "🍽️ Restaurant / 🎤 Karaoke", "💻 PC Room / 🚇 Subway", "🏥 Hospital / 🏫 School"],
+            "answer": "☕ Café / 🎬 Cinema",
+            "tags": ["카페", "영화관"]
+          },
+          {
+            "id": "u2_easy_v11",
+            "question_type": "define vocabulary words in english",
+            "question": "노래방 / PC방 / 식당",
+            "choices": ["🎤 Karaoke / 💻 PC Room / 🍽️ Restaurant", "☕ Café / 🎬 Cinema / 📚 Library", "🏡 House / 🏫 School / 🌲 Park", "🏦 Bank / 🛍️ Mall / 🏨 Hotel"],
+            "answer": "🎤 Karaoke / 💻 PC Room / 🍽️ Restaurant",
+            "tags": ["노래방", "PC방", "식당"]
+          },
+          {
+            "id": "u2_easy_v12",
+            "question_type": "define vocabulary words in english",
+            "question": "지하",
+            "choices": ["👇 Basement / Underground", "☝️ Rooftop / Top Floor", "🚪 Entrance", "🛗 Elevator"],
+            "answer": "👇 Basement / Underground",
+            "tags": ["지하"]
+          },
+          {
+            "id": "u2_easy_fb1",
+            "question_type": "fill in the blank",
+            "question": "이름___ 뭐예요?",
+            "hint": "이",
+            "answer": "이",
+            "tags": ["이", "이/가", "주격_조사", "이름이_뭐예요", "뭐"]
+          },
+          {
+            "id": "u2_easy_fb2",
+            "question_type": "fill in the blank",
+            "question": "전화번호___ 뭐예요?",
+            "hint": "가",
+            "answer": "가",
+            "tags": ["가", "이/가", "주격_조사", "전화번호", "뭐"]
+          },
+          {
+            "id": "u2_easy_fb3",
+            "question_type": "fill in the blank",
+            "question": "저는 학생이 ___.",
+            "hint": "아니에요",
+            "answer": "아니에요",
+            "tags": ["이/가 아니에요", "아니에요", "부정"]
+          },
+          {
+            "id": "u2_easy_fb4",
+            "question_type": "fill in the blank",
+            "question": "식당이 몇 ___이에요?",
+            "hint": "층",
+            "answer": "층",
+            "tags": ["층", "몇", "식당"]
+          },
+          {
+            "id": "u2_easy_fb5",
+            "question_type": "fill in the blank",
+            "question": "___ 안나예요.",
+            "hint": "제가",
+            "answer": "제가",
+            "tags": ["제가", "누구예요"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "unit3_objects_and_locations",
+    "unit": 3,
+    "title": "My bag is next to the desk",
+    "topic": "Objects and Movements",
+    "vocabulary": ["책", "책상", "의자", "가방", "필통", "시계", "핸드폰", "앞", "뒤", "위", "아래/밑", "옆", "사이", "안", "밖"],
+    "grammar_points": ["이, 그, 저", "에 있다/없다"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u3_easy_v1",
+            "question_type": "define vocabulary words in english",
+            "question": "책 / 책상 / 의자",
+            "choices": ["📖 Book /  desk / 🪑 chair", "🎒 Bag / ✏️ pencil case / ⏰ clock", "📱 Phone / 🏫 classroom / 🏠 house", "🚪 Door / 🪟 window / 💡 light"],
+            "answer": "📖 Book / desk / 🪑 chair",
+            "tags": ["책", "책상", "의자", "물건"]
+          },
+          {
+            "id": "u3_easy_v2",
+            "question_type": "define vocabulary words in english",
+            "question": "가방 / 필통 / 시계 / 핸드폰",
+            "choices": ["🎒 Bag / ✏️ pencil case / ⏰ clock / 📱 phone", "📖 Book / 🪑 chair / 🏫 classroom / 🏠 house", "🚗 Car / 🚲 bicycle / 🚌 bus / 🚇 train", "🍎 Apple / 🍌 banana / 🍉 watermelon / 🍇 grape"],
+            "answer": "🎒 Bag / ✏️ pencil case / ⏰ clock / 📱 phone",
+            "tags": ["가방", "필통", "시계", "핸드폰", "물건"]
+          },
+          {
+            "id": "u3_easy_v3",
+            "question_type": "define vocabulary words in english",
+            "question": "앞 / 뒤 / 위 / 아래 / 밑",
+            "choices": ["Front / Behind / On (top) / Under (bottom)", "Left / Right / Inside / Outside", "Between / Next to / Far / Close", "North / South / East / West"],
+            "answer": "Front / Behind / On (top) / Under (bottom)",
+            "tags": ["앞", "뒤", "위", "아래", "밑", "위치_명사"]
+          },
+          {
+            "id": "u3_easy_v4",
+            "question_type": "define vocabulary words in english",
+            "question": "옆 / 사이 / 안 / 밖",
+            "choices": ["Next to / Between / Inside / Outside", "Front / Behind / On top / Under", "Far / Close / Left / Right", "Above / Below / Center / Corner"],
+            "answer": "Next to / Between / Inside / Outside",
+            "tags": ["옆", "사이", "안", "밖", "위치_명사"]
+          },
+          {
+            "id": "u3_easy_v5",
+            "question_type": "define vocabulary words in english",
+            "question": "교실 / 도서관 / 집",
+            "choices": ["🏫 Classroom / 📚 library / 🏠 house", "🍽️ Restaurant / ☕ café / 🎬 cinema", "🏥 Hospital / 🏦 bank / 🏢 office", "🌲 Park / 🏖️ beach / ⛰️ mountain"],
+            "answer": "🏫 Classroom / 📚 library / 🏠 house",
+            "tags": ["교실", "도서관", "집"]
+          },
+          {
+            "id": "u3_easy_v6",
+            "question_type": "define vocabulary words in english",
+            "question": "무엇",
+            "choices": ["❓ What", "👤 Who", "📍 Where", "📅 When"],
+            "answer": "❓ What",
+            "tags": ["무엇"]
+          },
+          {
+            "id": "u3_easy_fb1",
+            "question_type": "fill in the blank",
+            "question": "___ 가방 (this bag near me)",
+            "hint": "이",
+            "answer": "이",
+            "tags": ["이", "이/그/저", "지시사"]
+          },
+          {
+            "id": "u3_easy_fb2",
+            "question_type": "fill in the blank",
+            "question": "___ 책상 (that desk near you)",
+            "hint": "그",
+            "answer": "그",
+            "tags": ["그", "이/그/저", "지시사"]
+          },
+          {
+            "id": "u3_easy_fb3",
+            "question_type": "fill in the blank",
+            "question": "___ 의자 (that chair far over there)",
+            "hint": "저",
+            "answer": "저",
+            "tags": ["저", "이/그/저", "지시사"]
+          },
+          {
+            "id": "u3_easy_fb4",
+            "question_type": "fill in the blank",
+            "question": "교실에 책상이 ___.",
+            "hint": "있어요",
+            "answer": "있어요",
+            "tags": ["에_있다", "있어요", "있다", "무엇이_있어요"]
+          },
+          {
+            "id": "u3_easy_fb5",
+            "question_type": "fill in the blank",
+            "question": "시계가 가방 안에 ___.",
+            "hint": "없어요",
+            "answer": "없어요",
+            "tags": ["에_없다", "없어요", "없다"]
+          },
+          {
+            "id": "u3_easy_fb6",
+            "question_type": "fill in the blank",
+            "question": "필통이 어디___ 있어요?",
+            "hint": "에",
+            "answer": "에",
+            "tags": ["어디", "에", "위치"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "unit4_actions_and_hobbies",
+    "unit": 4,
+    "title": "I watch movies on weekends",
+    "topic": "Daily Actions",
+    "vocabulary": ["먹다", "읽다", "보다", "마시다", "듣다", "만나다", "자다", "일하다", "요리하다", "공부하다", "하다", "맛있다", "오늘", "지금", "현재", "영화", "한국어", "불고기", "피자", "커피", "텔레비전", "음악", "정말"],
+    "grammar_points": ["-아요/어요", "을/를"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u4_easy_v1",
+            "question_type": "define vocabulary words in english",
+            "question": "먹다",
+            "choices": ["🍽️ To eat", "📖 To read", "🎬 To watch", "☕ To drink"],
+            "answer": "🍽️ To eat",
+            "tags": ["먹어요", "먹다", "기본_동사"]
+          },
+          {
+            "id": "u4_easy_v2",
+            "question_type": "define vocabulary words in english",
+            "question": "읽다",
+            "choices": ["📖 To read", "🍽️ To eat", "🎵 To listen", "😴 To sleep"],
+            "answer": "📖 To read",
+            "tags": ["읽어요", "읽다", "기본_동사"]
+          },
+          {
+            "id": "u4_easy_v3",
+            "question_type": "define vocabulary words in english",
+            "question": "보다",
+            "choices": ["🎬 To watch / see", "☕ To drink", "👥 To meet", "💼 To work"],
+            "answer": "🎬 To watch / see",
+            "tags": ["봐요", "보다", "기본_동사"]
+          },
+          {
+            "id": "u4_easy_v4",
+            "question_type": "define vocabulary words in english",
+            "question": "마시다",
+            "choices": ["☕ To drink", "🎬 To watch", "🍳 To cook", "📚 To study"],
+            "answer": "☕ To drink",
+            "tags": ["마셔요", "마시다", "기본_동사"]
+          },
+          {
+            "id": "u4_easy_v5",
+            "question_type": "define vocabulary words in english",
+            "question": "듣다",
+            "choices": ["🎵 To listen", "👥 To meet", "😴 To sleep", "💼 To work"],
+            "answer": "🎵 To listen",
+            "tags": ["들어요", "듣다", "기본_동사"]
+          },
+          {
+            "id": "u4_easy_v6",
+            "question_type": "define vocabulary words in english",
+            "question": "만나다",
+            "choices": ["👥 To meet", "😴 To sleep", "💼 To work", "🍳 To cook"],
+            "answer": "👥 To meet",
+            "tags": ["만나요", "만나다", "기본_동사"]
+          },
+          {
+            "id": "u4_easy_v7",
+            "question_type": "define vocabulary words in english",
+            "question": "자다 / 일하다",
+            "choices": ["😴 Sleep / 💼 Work", "🍽️ Eat / 📖 Read", "🎬 Watch / ☕ Drink", "🎵 Listen / 👥 Meet"],
+            "answer": "😴 Sleep / 💼 Work",
+            "tags": ["자요", "자다", "일해요", "일하다", "기본_동사", "해요", "하다"]
+          },
+          {
+            "id": "u4_easy_v8",
+            "question_type": "define vocabulary words in english",
+            "question": "요리하다 / 공부하다",
+            "choices": ["🍳 Cook / 📚 Study", "😴 Sleep / 💼 Work", "🍽️ Eat / 📖 Read", "🎵 Listen / 👥 Meet"],
+            "answer": "🍳 Cook / 📚 Study",
+            "tags": ["요리해요", "요리하다", "공부해요", "공부하다", "기본_동사", "해요", "하다"]
+          },
+          {
+            "id": "u4_easy_v9",
+            "question_type": "define vocabulary words in english",
+            "question": "맛있다",
+            "choices": ["😋 Delicious", "😴 Tired", "💼 Busy", "📖 Hard"],
+            "answer": "😋 Delicious",
+            "tags": ["맛있어요", "맛있다"]
+          },
+          {
+            "id": "u4_easy_v10",
+            "question_type": "define vocabulary words in english",
+            "question": "영화 / 텔레비전",
+            "choices": ["🎬 Movie / 📺 Television", "🎵 Music / 📖 Book", "🍕 Pizza / ☕ Coffee", "🥩 Bulgogi / 🍚 Rice"],
+            "answer": "🎬 Movie / 📺 Television",
+            "tags": ["영화", "텔레비전"]
+          },
+          {
+            "id": "u4_easy_v11",
+            "question_type": "define vocabulary words in english",
+            "question": "정말",
+            "choices": ["🔥 Really / Very", "⏳ Now", "📅 Today", "❌ Not"],
+            "answer": "🔥 Really / Very",
+            "tags": ["정말"]
+          },
+          {
+            "id": "u4_easy_fb1",
+            "question_type": "fill in the blank",
+            "question": "가방에 책이 있___?",
+            "hint": "어요?",
+            "answer": "어요?",
+            "tags": ["의문문", "현재", "지금", "오늘", "아요/어어요", "-아요/어요", "동사_어미"]
+          },
+          {
+            "id": "u4_easy_fb2",
+            "question_type": "fill in the blank",
+            "question": "피자___ 먹어요.",
+            "hint": "를",
+            "answer": "를",
+            "tags": ["목적격_조사", "를", "을/를", "피자"]
+          },
+          {
+            "id": "u4_easy_fb3",
+            "question_type": "fill in the blank",
+            "question": "불고기___ 요리해요.",
+            "hint": "를",
+            "answer": "를",
+            "tags": ["목적격_조사", "를", "을/를", "불고기"]
+          },
+          {
+            "id": "u4_easy_fb4",
+            "question_type": "fill in the blank",
+            "question": "커피___ 마셔요.",
+            "hint": "를",
+            "answer": "를",
+            "tags": ["목적격_조사", "를", "을/를", "커피"]
+          },
+          {
+            "id": "u4_easy_fb5",
+            "question_type": "fill in the blank",
+            "question": "음악___ 들어요.",
+            "hint": "을",
+            "answer": "을",
+            "tags": ["목적격_조사", "을", "을/를", "음악"]
+          },
+          {
+            "id": "u4_easy_fb6",
+            "question_type": "fill in the blank",
+            "question": "한국어___ 공부해요.",
+            "hint": "를",
+            "answer": "를",
+            "tags": ["목적격_조사", "를", "을/를", "한국어"]
+          }
+        ]
+      }
+    ]
+  }
+]

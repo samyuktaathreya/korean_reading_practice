@@ -42,3 +42,11 @@ def update_user_unit(db: Session, user_id: int, new_unit: int):
         db.commit()
         db.refresh(user)
     return user
+
+def increase_intro_rounds_completed(db, user_id):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if user:
+        user.intro_rounds_completed += 1
+        db.commit()
+        db.refresh(user)
+    return user
