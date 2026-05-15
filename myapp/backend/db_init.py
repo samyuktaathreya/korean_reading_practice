@@ -11,7 +11,7 @@ from datetime import date
 # 5. user_id/unit: dictionary, key: user_id, value: unit that user is on
 
 # ----------------------------- TAG-QUESTION DICT -----------------------------
-DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './DuolingoStyleQuestions.json'
+DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './SejongKorean2022_Questions_DB/questions.json'
 
 try:
     with open(DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH, 'r', encoding='utf-8') as file:

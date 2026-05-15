@@ -27,14 +27,20 @@ const levelToInstruction = (level) => {
 
 const isQuestionInKorean = (text) => {
     const koreanRegex = /[\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]/;
+    console.log("question text : ", text);
     return koreanRegex.test(text);
 };
 
 // Word-level diff: returns segments of {text, underline} so we can
 // underline the parts of the correct answer that differed from user's input.
 function diffSegments(correct, userAns) {
+    // If correct is missing, we can't diff
+    if (!correct) return [];
+    
     const correctWords = correct.split(" ");
-    const userWords = userAns.trim().split(" ");
+    // If userAns is null/undefined/empty (skip), treat as empty array
+    const userWords = (userAns || "").trim().split(" ");
+    
     return correctWords.map((word, i) => ({
         text: word,
         underline: clean(word) !== clean(userWords[i] ?? ""),
@@ -162,13 +168,20 @@ function SmartInput({ value, onChange, disabled, isCorrect, hasSubmitted, needsK
 // ── DiffAnswer ───────────────────────────────────────────────────────
 
 function DiffAnswer({ correctAnswer, userAnswer }) {
+    // First: Calculate the segments
     const segments = diffSegments(correctAnswer, userAnswer);
+    
+    // Second: Now you can safely check if segments exists or has length
+    if (!segments || segments.length === 0) {
+        return <p className="diff-answer">{correctAnswer}</p>;
+    }
+
     return (
         <p className="diff-answer">
             {segments.map((seg, i) => (
                 <span key={i}>
                     {seg.underline
-                        ? <span className="diff-answer__underline">{seg.text}</span>
+                        ? <span className="diff-answer__underline" style={{ textDecoration: 'underline', color: '#ff4b4b' }}>{seg.text}</span>
                         : seg.text}
                     {i < segments.length - 1 ? " " : ""}
                 </span>
@@ -187,7 +200,8 @@ function Question({
 }) {
     const words = currentQuestionObj.question.split(" ");
     const questionIsKorean = isQuestionInKorean(currentQuestionObj.question);
-    const answerNeedsKorean = !questionIsKorean;
+    const answerNeedsKorean = !questionIsKorean || currentQuestionObj.question_type === "fill in the blank";
+    console.log("answer needs korean : ", answerNeedsKorean);
     const isGrammarParticleQuestion = currentQuestionObj.question.includes("___");
 
     return (

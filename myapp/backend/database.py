@@ -13,7 +13,8 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 QUESTIONS_DATA = []
-QUESTIONS_FILEPATH = 'DuolingoStyleQuestions.json'
+JSON_FOLDER_FILEPATH = './SejongKorean2022_Questions_DB/'
+QUESTIONS_FILEPATH = JSON_FOLDER_FILEPATH + 'questions.json'
 
 inverted_index = {} # key: tag, value: list of questions at that tag
 tags_to_unit_dict = {} # key: tag, value: units
@@ -34,7 +35,7 @@ unit_to_unit_test_questions_dict = {} # key: unit, value: list of unit test ques
 
 # tags/unit: dictionary, key: tag, value: the unit that tag belongs to
 # unit/tags: dictionary, key: unit, value: tags of that unit
-TAGS_UNITS_JSON_FILEPATH = './TagsUnits.json'
+TAGS_UNITS_JSON_FILEPATH = JSON_FOLDER_FILEPATH + 'unit_to_tags.json'
 
 
 try:
@@ -59,7 +60,7 @@ for unit, tags in tags_units_data.items():
 
 
 # ----------------------------- TAG-QUESTION DICT (INVERTED_INDEX) -----------------------------
-DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './DuolingoStyleQuestions.json'
+DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = JSON_FOLDER_FILEPATH + 'questions.json'
 
 try:
     with open(DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH, 'r', encoding='utf-8') as file:
@@ -115,7 +116,7 @@ for category_item in data:
                 inverted_index[tag].append(question_obj)
 
 # ----------------------------- UNIT-UNIT_TEST_QUESTIONS DICTIONARY -----------------------------
-UNIT_TEST_QUESTIONS_FILEPATH = './UnitTestQuestions.json'
+UNIT_TEST_QUESTIONS_FILEPATH = JSON_FOLDER_FILEPATH + 'unit_test_questions.json'
 
 try:
     with open(UNIT_TEST_QUESTIONS_FILEPATH, 'r', encoding='utf-8') as file:
