@@ -440,3 +440,248 @@
     text-align: center;
     margin-top: 100px;
 }
+
+/* Container Shell Layout */
+.dashboard-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.content-viewport {
+  padding-top: 20px;
+}
+
+.unit-badge {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #4b4b4b;
+}
+
+/* Card Module Setup */
+.milestone-card {
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background: #ffffff;
+}
+
+.objective-title {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #afafaf;
+  letter-spacing: 0.8px;
+  margin: 0 0 8px 0;
+}
+
+.objective-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin: 0 0 16px 0;
+}
+
+/* Milestone Track Line */
+.progress-track-wrapper {
+  background: #e5e5e5;
+  border-radius: 8px;
+  height: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-track-fill {
+  height: 100%;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fill-success {
+  background: #58cc02;
+}
+
+.fill-primary {
+  background: #1cb0f6;
+}
+
+/* Histogram Chart Component Layout */
+.chart-section {
+  margin-bottom: 32px;
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.chart-heading {
+  margin: 0 0 4px 0;
+  color: #3c3c3c;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.chart-subheading {
+  margin: 0 0 24px 0;
+  color: #afafaf;
+  font-size: 0.85rem;
+}
+
+.histogram-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 160px;
+  padding-top: 20px;
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+
+/* Columns & Dynamic Interactive Items */
+.chart-column-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 6px;
+  transition: transform 0.2s ease;
+}
+
+.chart-column-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+.column-active .chart-bar-container {
+  ring: 2px solid #1cb0f6;
+  outline: 2px solid #1cb0f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.chart-value-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #777777;
+  margin-bottom: 4px;
+}
+
+.chart-bar-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  background: #f7f7f7;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+
+.chart-bar-fill {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+/* Chart Palette Color Coding matching logic */
+.chart-bar--weak {
+  background: #ff4b4b;
+}
+
+.chart-bar--cooling {
+  background: #ffc800;
+}
+
+.chart-bar--stable {
+  background: #58cc02;
+}
+
+.chart-axis-label {
+  font-size: 0.75rem;
+  color: #777777;
+  margin-top: 8px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Inspection Target Overlay List Container */
+.inspection-panel {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.inspection-title {
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  color: #4b4b4b;
+  font-weight: 700;
+}
+
+.empty-inspection-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777777;
+  font-style: italic;
+}
+
+.inspection-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.inspection-item-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.inspection-item-tag.border-stable {
+  border-left: 3px solid #58cc02;
+}
+
+.inspection-item-tag.border-cooling {
+  border-left: 3px solid #ffc800;
+}
+
+.inspection-item-tag.border-weak {
+  border-left: 3px solid #ff4b4b;
+}
+
+.inspection-tag-name {
+  color: #3c3c3c;
+}
+
+.inspection-tag-val {
+  color: #afafaf;
+  font-size: 0.75rem;
+}
+
+/* Action Controls Layout */
+.action-wrapper {
+  text-align: center;
+}
+
+.full-width-btn {
+  width: 100%;
+  padding: 16px;
+  font-weight: bold;
+}
+
+.complete-screen {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -88,7 +88,8 @@ for tag in unique_tags:
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        current_unit INTEGER DEFAULT 1
+        current_unit INTEGER DEFAULT 1,
+        intro_rounds_completed INTEGER DEFAULT 0
     )
 ''')
 

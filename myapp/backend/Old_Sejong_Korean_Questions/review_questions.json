@@ -1,0 +1,1994 @@
+{
+    "1" : [
+        {
+            "id": "u1_fill_in_the_blank_1",
+            "question_type": "fill in the blank",
+            "question": "저는 타완___.",
+            "answer": "이에요",
+            "tags": ["타완", "이에요", "국적", "자기소개"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_2",
+            "question_type": "fill in the blank",
+            "question": "저는 유키___.",
+            "answer": "예요",
+            "tags": ["유키", "예요", "국적", "자기소개"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_3",
+            "question_type": "fill in the blank",
+            "question": "수진 씨___ 한국 사람이에요?",
+            "answer": "는",
+            "tags": ["수진", "는", "은/는", "국적"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_4",
+            "question_type": "fill in the blank",
+            "question": "마크 씨___ 회사원이에요?",
+            "answer": "는",
+            "tags": ["마크", "는", "은/는", "직업"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_5",
+            "question_type": "fill in the blank",
+            "question": "저는 김민수___.",
+            "answer": "예요",
+            "tags": ["민수", "예요", "이름", "자기소개"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_6",
+            "question_type": "fill in the blank",
+            "question": "저는 왕치엔___.",
+            "answer": "이에요",
+            "tags": ["왕치엔", "이에요", "이름", "자기소개"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_7",
+            "question_type": "fill in the blank",
+            "question": "치엔 씨는 중국 사람___?",
+            "answer": "이에요",
+            "tags": ["치엔", "이에요", "국적", "의문형"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_8",
+            "question_type": "fill in the blank",
+            "question": "네, 태국 사람___.",
+            "answer": "이에요",
+            "tags": ["태국 사람", "이에요", "국적", "긍정형"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_9",
+            "question_type": "fill in the blank",
+            "question": "아니요, 학생___.",
+            "answer": "이에요",
+            "tags": ["학생", "이에요", "직업", "부정응답"]
+        },
+        {
+            "id": "u1_fill_in_the_blank_10",
+            "question_type": "fill in the blank",
+            "question": "이 사람은 선생님___?",
+            "answer": "이에요",
+            "tags": ["선명님", "이에요", "직업", "의문형"]
+        },
+
+        {
+            "id": "u1_listening_1",
+            "question_type": "listening",
+            "question": "안녕하세요?",
+            "answer": "안녕하세요?",
+            "tags": ["인사", "인사말"]
+        },
+        {
+            "id": "u1_listening_2",
+            "question_type": "listening",
+            "question": "저는 타완이에요.",
+            "answer": "저는 타완이에요.",
+            "tags": ["타완", "이에요", "자기소개"]
+        },
+        {
+            "id": "u1_listening_3",
+            "question_type": "listening",
+            "question": "태국 사람이에요?",
+            "answer": "태국 사람이에요?",
+            "tags": ["태국 사람", "이에요", "국적"]
+        },
+        {
+            "id": "u1_listening_4",
+            "question_type": "listening",
+            "question": "네, 태국 사람이에요.",
+            "answer": "네, 태국 사람이에요.",
+            "tags": ["네", "태국 사람", "국적"]
+        },
+        {
+            "id": "u1_listening_5",
+            "question_type": "listening",
+            "question": "안녕하세요? 저는 김민수예요.",
+            "answer": "안녕하세요? 저는 김민수예요.",
+            "tags": ["안녕하세요", "민수", "예요"]
+        },
+        {
+            "id": "u1_listening_6",
+            "question_type": "listening",
+            "question": "안녕하세요? 저는 왕치엔이에요.",
+            "answer": "안녕하세요? 저는 왕치엔이에요.",
+            "tags": ["안녕하세요", "왕치엔", "이에요"]
+        },
+        {
+            "id": "u1_listening_7",
+            "question_type": "listening",
+            "question": "치엔 씨는 중국 사람이에요?",
+            "answer": "치엔 씨는 중국 사람이에요?",
+            "tags": ["치엔", "중국 사람", "국적"]
+        },
+        {
+            "id": "u1_listening_8",
+            "question_type": "listening",
+            "question": "네, 중국 사람이에요.",
+            "answer": "네, 중국 사람이에요.",
+            "tags": ["네", "중국 사람", "국적"]
+        },
+        {
+            "id": "u1_listening_9",
+            "question_type": "listening",
+            "question": "민수 씨는 한국 사람이에요?",
+            "answer": "민수 씨는 한국 사람이에요?",
+            "tags": ["민수", "한국 사람", "국적"]
+        },
+        {
+            "id": "u1_listening_10",
+            "question_type": "listening",
+            "question": "네, 한국 사람이에요.",
+            "answer": "네, 한국 사람이에요.",
+            "tags": ["네", "한국 사람", "국적"]
+        },
+
+        {
+            "id": "u1_translate_en_ko_1",
+            "question_type": "translate english to korean",
+            "question": "Hello? / Hi.",
+            "answer": "안녕하세요?",
+            "tags": ["안녕하세요", "인사"]
+        },
+        {
+            "id": "u1_translate_en_ko_2",
+            "question_type": "translate english to korean",
+            "question": "I am Tawan.",
+            "answer": "저는 타완이에요.",
+            "tags": ["저", "는", "타완", "이에요"]
+        },
+        {
+            "id": "u1_translate_en_ko_3",
+            "question_type": "translate english to korean",
+            "question": "Are you Thai?",
+            "answer": "태국 사람이에요?",
+            "tags": ["태국", "사람", "이에요"]
+        },
+        {
+            "id": "u1_translate_en_ko_4",
+            "question_type": "translate english to korean",
+            "question": "Yes, I'm Thai.",
+            "answer": "네, 태국 사람이에요.",
+            "tags": ["네", "태국", "사람", "이에요"]
+        },
+        {
+            "id": "u1_translate_en_ko_5",
+            "question_type": "translate english to korean",
+            "question": "Is Mr. Chien a Chinese person?",
+            "answer": "치엔 씨는 중국 사람이에요?",
+            "tags": ["치엔", "씨", "중국", "사람"]
+        },
+        {
+            "id": "u1_translate_en_ko_6",
+            "question_type": "translate english to korean",
+            "question": "Is Mr. Minsoo a Korean person?",
+            "answer": "민수 씨는 한국 사람이에요?",
+            "tags": ["민수", "씨", "한국", "사람"]
+        },
+        {
+            "id": "u1_translate_en_ko_7",
+            "question_type": "translate english to korean",
+            "question": "I am Yuki.",
+            "answer": "저는 유키예요.",
+            "tags": ["저", "는", "유키", "예요"]
+        },
+        {
+            "id": "u1_translate_en_ko_8",
+            "question_type": "translate english to korean",
+            "question": "Are you an office worker?",
+            "answer": "회사원이에요?",
+            "tags": ["회사원", "이에요", "직업"]
+        },
+        {
+            "id": "u1_translate_en_ko_9",
+            "question_type": "translate english to korean",
+            "question": "No, I am a student.",
+            "answer": "아니요, 학생이에요.",
+            "tags": ["아니요", "학생", "이에요", "직업"]
+        },
+        {
+            "id": "u1_translate_en_ko_10",
+            "question_type": "translate english to korean",
+            "question": "What is this person's name?",
+            "answer": "이 사람의 이름은 무엇이에요?",
+            "tags": ["이", "사람", "이름", "무엇"]
+        },
+
+        {
+            "id": "u1_translate_ko_en_1",
+            "question_type": "translate korean to english",
+            "question": "안녕하세요?",
+            "answer": "Hello?",
+            "tags": ["안녕하세요", "인사"]
+        },
+        {
+            "id": "u1_translate_ko_en_2",
+            "question_type": "translate korean to english",
+            "question": "저는 타완이에요.",
+            "answer": "I am Tawan.",
+            "tags": ["저", "는", "타완", "이에요"]
+        },
+        {
+            "id": "u1_translate_ko_en_3",
+            "question_type": "translate korean to english",
+            "question": "태국 사람이에요?",
+            "answer": "Are you Thai?",
+            "tags": ["태국", "사람", "이에요"]
+        },
+        {
+            "id": "u1_translate_ko_en_4",
+            "question_type": "translate korean to english",
+            "question": "네, 태국 사람이에요.",
+            "answer": "Yes, I am Thai.",
+            "tags": ["네", "태국", "사람", "이에요"]
+        },
+        {
+            "id": "u1_translate_ko_en_5",
+            "question_type": "translate korean to english",
+            "question": "치엔 씨는 중국 사람이에요?",
+            "answer": "Is Mr. Chien Chinese?",
+            "tags": ["치엔", "중국 사람", "국적"]
+        },
+        {
+            "id": "u1_translate_ko_en_6",
+            "question_type": "translate korean to english",
+            "question": "안녕하세요? 저는 김민수예요.",
+            "answer": "Hello? I am Kim Minsoo.",
+            "tags": ["안녕하세요", "민수", "예요"]
+        },
+        {
+            "id": "u1_translate_ko_en_7",
+            "question_type": "translate korean to english",
+            "question": "네, 중국 사람이에요.",
+            "answer": "Yes, I am Chinese.",
+            "tags": ["네", "중국 사람", "국적"]
+        },
+        {
+            "id": "u1_translate_ko_en_8",
+            "question_type": "translate korean to english",
+            "question": "아니요, 저는 의사예요.",
+            "answer": "No, I am a doctor.",
+            "tags": ["아니요", "의사", "예요"]
+        },
+        {
+            "id": "u1_translate_ko_en_9",
+            "question_type": "translate korean to english",
+            "question": "이 사람은 선생님이에요?",
+            "answer": "Is this person a teacher?",
+            "tags": ["이 사람", "선생님", "이에요"]
+        },
+        {
+            "id": "u1_translate_ko_en_10",
+            "question_type": "translate korean to english",
+            "question": "전화번호: (02) 2689-9775",
+            "answer": "Phone number: (02) 2689-9775",
+            "tags": ["전화번호", "명함"]
+        },
+
+        {
+            "id": "u1_conversation_1",
+            "question_type": "conversation",
+            "question": "안녕하세요? 저는 김민수예요.",
+            "answer": "안녕하세요? 저는 왕치엔이에요.",
+            "tags": ["대화", "인사", "자기소개"]
+        },
+        {
+            "id": "u1_conversation_2",
+            "question_type": "conversation",
+            "question": "태국 사람이에요?",
+            "answer": "네, 태국 사람이에요.",
+            "tags": ["대화", "국적", "질문"]
+        },
+        {
+            "id": "u1_conversation_3",
+            "question_type": "conversation",
+            "question": "치엔 씨는 중국 사람이에요?",
+            "answer": "네, 중국 사람이에요.",
+            "tags": ["대화", "국적", "중국"]
+        },
+        {
+            "id": "u1_conversation_4",
+            "question_type": "conversation",
+            "question": "민수 씨는 한국 사람이에요?",
+            "answer": "네, 한국 사람이에요.",
+            "tags": ["대화", "국적", "한국"]
+        },
+        {
+            "id": "u1_conversation_5",
+            "question_type": "conversation",
+            "question": "마크 씨는 회사원이에요?",
+            "answer": "아니요, 학생이에요.",
+            "tags": ["대화", "직업", "부정"]
+        },
+        {
+            "id": "u1_conversation_6",
+            "question_type": "conversation",
+            "question": "이 사람의 이름은 무엇이에요?",
+            "answer": "이진수예요.",
+            "tags": ["대화", "이름", "명함"]
+        },
+        {
+            "id": "u1_conversation_7",
+            "question_type": "conversation",
+            "question": "이 사람은 선생님이에요?",
+            "answer": "아니요, 회사원이에요.",
+            "tags": ["대화", "직업", "확인"]
+        },
+        {
+            "id": "u1_conversation_8",
+            "question_type": "conversation",
+            "question": "유키 씨는 일본 사람이에요?",
+            "answer": "네, 일본 사람이에요.",
+            "tags": ["대화", "국적", "일본"]
+        },
+        {
+            "id": "u1_conversation_9",
+            "question_type": "conversation",
+            "question": "안녕하세요?",
+            "answer": "안녕하세요?",
+            "tags": ["대화", "인사"]
+        },
+        {
+            "id": "u1_conversation_10",
+            "question_type": "conversation",
+            "question": "투이 씨는 베트남 사람이에요?",
+            "answer": "네, 베트남 사람이에요.",
+            "tags": ["대화", "국적", "베트남"]
+        },
+
+        {
+            "id": "u1_speaking_1",
+            "question_type": "speaking",
+            "question": "안녕하세요?",
+            "answer": "안녕하세요?",
+            "tags": ["말하기", "인사"]
+        },
+        {
+            "id": "u1_speaking_2",
+            "question_type": "speaking",
+            "question": "저는 타완이에요.",
+            "answer": "저는 타완이에요.",
+            "tags": ["말하기", "자기소개"]
+        },
+        {
+            "id": "u1_speaking_3",
+            "question_type": "speaking",
+            "question": "태국 사람이에요?",
+            "answer": "태국 사람이에요?",
+            "tags": ["말하기", "의문형"]
+        },
+        {
+            "id": "u1_speaking_4",
+            "question_type": "speaking",
+            "question": "네, 태국 사람이에요.",
+            "answer": "네, 태국 사람이에요.",
+            "tags": ["말하기", "긍정문"]
+        },
+        {
+            "id": "u1_speaking_5",
+            "question_type": "speaking",
+            "question": "저는 유키예요.",
+            "answer": "저는 유키예요.",
+            "tags": ["말하기", "이름"]
+        },
+        {
+            "id": "u1_speaking_6",
+            "question_type": "speaking",
+            "question": "치엔 씨는 중국 사람이에요?",
+            "answer": "치엔 씨는 중국 사람이에요?",
+            "tags": ["말하기", "국적조사"]
+        },
+        {
+            "id": "u1_speaking_7",
+            "question_type": "speaking",
+            "question": "마크 씨는 회사원이에요?",
+            "answer": "마크 씨는 회사원이에요?",
+            "tags": ["말하기", "직업조사"]
+        },
+        {
+            "id": "u1_speaking_8",
+            "question_type": "speaking",
+            "question": "아니요, 학생이에요.",
+            "answer": "아니요, 학생이에요.",
+            "tags": ["말하기", "부정문"]
+        },
+        {
+            "id": "u1_speaking_9",
+            "question_type": "speaking",
+            "question": "이 사람의 이름은 무엇이에요?",
+            "answer": "이 사람의 이름은 무엇이에요?",
+            "tags": ["말하기", "정보확인"]
+        },
+        {
+            "id": "u1_speaking_10",
+            "question_type": "speaking",
+            "question": "아니요, 저는 의사예요.",
+            "answer": "아니요, 저는 의사예요.",
+            "tags": ["말하기", "직업"]
+        },
+
+        {
+            "id": "u1_error_correction_1",
+            "question_type": "error correction",
+            "question": "저는 타완예요.",
+            "answer": "저는 타완이에요.",
+            "tags": ["틀린 문법", "타완", "이에요"]
+        },
+        {
+            "id": "u1_error_correction_2",
+            "question_type": "error correction",
+            "question": "저는 유키이에요.",
+            "answer": "저는 유키예요.",
+            "tags": ["틀린 문법", "유키", "예요"]
+        },
+        {
+            "id": "u1_error_correction_3",
+            "question_type": "error correction",
+            "question": "태국사람 이에요?",
+            "answer": "태국 사람이에요?",
+            "tags": ["틀린 띄어쓰기", "태국 사람", "이에요"]
+        },
+        {
+            "id": "u1_error_correction_4",
+            "question_type": "error correction",
+            "question": "치엔 씨는 중국 사람 예요?",
+            "answer": "치엔 씨는 중국 사람이에요?",
+            "tags": ["틀린 문법", "중국 사람", "이에요"]
+        },
+        {
+            "id": "u1_error_correction_5",
+            "question_type": "error correction",
+            "question": "안녕 하세요?",
+            "answer": "안녕하세요?",
+            "tags": ["틀린 띄어쓰기", "안녕하세요"]
+        },
+        {
+            "id": "u1_error_correction_6",
+            "question_type": "error correction",
+            "question": "저 는 타완이에요.",
+            "answer": "저는 타완이에요.",
+            "tags": ["틀린 띄어쓰기", "저는"]
+        },
+        {
+            "id": "u1_error_correction_7",
+            "question_type": "error correction",
+            "question": "네, 태국 사남이에요.",
+            "answer": "네, 태국 사람이에요.",
+            "tags": ["오타", "사람", "사남"]
+        },
+        {
+            "id": "u1_error_correction_8",
+            "question_type": "error correction",
+            "question": "마크 씨은 회사원이에요?",
+            "answer": "마크 씨는 회사원이에요?",
+            "tags": ["틀린 조사", "씨는", "씨은"]
+        },
+        {
+            "id": "u1_error_correction_9",
+            "question_type": "error correction",
+            "question": "이 사람은 선셍님이에요?",
+            "answer": "이 사람은 선생님이에요?",
+            "tags": ["오타", "선생님", "선셍님"]
+        },
+        {
+            "id": "u1_error_correction_10",
+            "question_type": "error correction",
+            "question": "아니요, 학셍이에요.",
+            "answer": "아니요, 학생이에요.",
+            "tags": ["오타", "학생", "학셍"]
+        }
+    ],
+    "2" : [
+        {
+            "id": "u2_fill_in_the_blank_1",
+            "question_type": "fill in the blank",
+            "question": "수진 씨는 뭐 ___?",
+            "answer": "해요",
+            "tags": ["뭐", "해요", "하다", "일상생활"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_2",
+            "question_type": "fill in the blank",
+            "question": "저는 지금 공부___. 마크 씨는 뭐 해요?",
+            "answer": "해요",
+            "tags": ["공부하다", "해요", "동작"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_3",
+            "question_type": "fill in the blank",
+            "question": "타완 씨는 회사___ 가요.",
+            "answer": "에",
+            "tags": ["회사", "에", "에 가다", "장소"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_4",
+            "question_type": "fill in the blank",
+            "question": "민수 씨는 학교에 가요. 거기에서 공부___.",
+            "answer": "해요",
+            "tags": ["학교", "공부하다", "해요"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_5",
+            "question_type": "fill in the blank",
+            "question": "치엔 씨는 지금 집___ 와요.",
+            "answer": "에",
+            "tags": ["집", "에", "오다", "에 가다/오다"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_6",
+            "question_type": "fill in the blank",
+            "question": "투이 씨는 시장에서 사과를 ___.",
+            "answer": "사요",
+            "tags": ["사다", "사요", "동작", "시장"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_7",
+            "question_type": "fill in the blank",
+            "question": "유키 씨는 공원에서 ___.",
+            "answer": "운동해요",
+            "tags": ["공원", "운동하다", "운동해요"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_8",
+            "question_type": "fill in the blank",
+            "question": "마크 씨는 식당에서 밥을 ___.",
+            "answer": "먹어요",
+            "tags": ["식당", "먹다", "먹어요", "어휘"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_9",
+            "question_type": "fill in the blank",
+            "question": "로라 씨는 친구하고 ___.",
+            "answer": "이야기해요",
+            "tags": ["친구", "이야기하다", "이야기해요"]
+        },
+        {
+            "id": "u2_fill_in_the_blank_10",
+            "question_type": "fill in the blank",
+            "question": "지금 친구에게 전화___.",
+            "answer": "해요",
+            "tags": ["전화하다", "해요", "동작"]
+        },
+
+        {
+            "id": "u2_listening_1",
+            "question_type": "listening",
+            "question": "수진 씨는 뭐 해요?",
+            "answer": "수진 씨는 뭐 해요?",
+            "tags": ["수진", "뭐 해요", "질문"]
+        },
+        {
+            "id": "u2_listening_2",
+            "question_type": "listening",
+            "question": "운동해요. 마크 씨는 뭐 해요?",
+            "answer": "운동해요. 마크 씨는 뭐 해요?",
+            "tags": ["운동해요", "마크", "대화"]
+        },
+        {
+            "id": "u2_listening_3",
+            "question_type": "listening",
+            "question": "저는 공부해요.",
+            "answer": "저는 공부해요.",
+            "tags": ["저", "공부해요", "동작"]
+        },
+        {
+            "id": "u2_listening_4",
+            "question_type": "listening",
+            "question": "타완 씨는 어디에 가요?",
+            "answer": "타완 씨는 어디에 가요?",
+            "tags": ["타완", "어디", "에 가다"]
+        },
+        {
+            "id": "u2_listening_5",
+            "question_type": "listening",
+            "question": "회사에 가요.",
+            "answer": "회사에 가요.",
+            "tags": ["회사", "에 가다"]
+        },
+        {
+            "id": "u2_listening_6",
+            "question_type": "listening",
+            "question": "민수 씨는 학교에 가요. 공부해요.",
+            "answer": "민수 씨는 학교에 가요. 공부해요.",
+            "tags": ["민수", "학교", "공부해요"]
+        },
+        {
+            "id": "u2_listening_7",
+            "question_type": "listening",
+            "question": "로라 씨는 지금 집에서 쉬어요.",
+            "answer": "로라 씨는 지금 집에서 쉬어요.",
+            "tags": ["로라", "집", "쉬어요"]
+        },
+        {
+            "id": "u2_listening_8",
+            "question_type": "listening",
+            "question": "마크 씨는 오늘 시장에 가요.",
+            "answer": "마크 씨는 오늘 시장에 가요.",
+            "tags": ["마크", "오늘", "시장"]
+        },
+        {
+            "id": "u2_listening_9",
+            "question_type": "listening",
+            "question": "커피숍에서 친구를 만나요.",
+            "answer": "커피숍에서 친구를 만나요.",
+            "tags": ["커피숍", "친구", "만나요"]
+        },
+        {
+            "id": "u2_listening_10",
+            "question_type": "listening",
+            "question": "10시에 투이 씨에게 전화해요.",
+            "answer": "10시에 투이 씨에게 전화해요.",
+            "tags": ["시간", "투이", "전화해요"]
+        },
+
+        {
+            "id": "u2_translate_en_ko_1",
+            "question_type": "translate english to korean",
+            "question": "What is Sujin doing?",
+            "answer": "수진 씨는 뭐 해요?",
+            "tags": ["수진", "뭐", "해요"]
+        },
+        {
+            "id": "u2_translate_en_ko_2",
+            "question_type": "translate english to korean",
+            "question": "I am studying.",
+            "answer": "저는 공부해요.",
+            "tags": ["저", "공부하다", "해요"]
+        },
+        {
+            "id": "u2_translate_en_ko_3",
+            "question_type": "translate english to korean",
+            "question": "Where is Tawan going?",
+            "answer": "타완 씨는 어디에 가요?",
+            "tags": ["타완", "어디", "에 가다"]
+        },
+        {
+            "id": "u2_translate_en_ko_4",
+            "question_type": "translate english to korean",
+            "question": "I am going to the office.",
+            "answer": "회사에 가요.",
+            "tags": ["회사", "에 가다"]
+        },
+        {
+            "id": "u2_translate_en_ko_5",
+            "question_type": "translate english to korean",
+            "question": "Minsoo goes to school.",
+            "answer": "민수 씨는 학교에 가요.",
+            "tags": ["민수", "학교", "에 가다"]
+        },
+        {
+            "id": "u2_translate_en_ko_6",
+            "question_type": "translate english to korean",
+            "question": "Does Mark make a phone call?",
+            "answer": "마크 씨는 전화해요?",
+            "tags": ["마크", "전화하다", "해요"]
+        },
+        {
+            "id": "u2_translate_en_ko_7",
+            "question_type": "translate english to korean",
+            "question": "I exercise at the park.",
+            "answer": "공원에서 운동해요.",
+            "tags": ["공원", "운동하다", "운동해요"]
+        },
+        {
+            "id": "u2_translate_en_ko_8",
+            "question_type": "translate english to korean",
+            "question": "I meet a friend at a coffee shop.",
+            "answer": "커피숍에서 친구를 만나요.",
+            "tags": ["커피숍", "친구", "만나요"]
+        },
+        {
+            "id": "u2_translate_en_ko_9",
+            "question_type": "translate english to korean",
+            "question": "What are you doing today?",
+            "answer": "오늘 뭐 해요?",
+            "tags": ["오늘", "뭐", "해요"]
+        },
+        {
+            "id": "u2_translate_en_ko_10",
+            "question_type": "translate english to korean",
+            "question": "I rest at home.",
+            "answer": "집에서 쉬어요.",
+            "tags": ["집", "쉬다", "쉬어요"]
+        },
+
+        {
+            "id": "u2_translate_ko_en_1",
+            "question_type": "translate korean to english",
+            "question": "수진 씨는 뭐 해요?",
+            "answer": "What is Sujin doing?",
+            "tags": ["수진", "뭐", "해요"]
+        },
+        {
+            "id": "u2_translate_ko_en_2",
+            "question_type": "translate korean to english",
+            "question": "운동해요. 마크 씨는 뭐 해요?",
+            "answer": "I'm working out. What are you doing, Mark?",
+            "tags": ["운동해요", "마크", "뭐 해요"]
+        },
+        {
+            "id": "u2_translate_ko_en_3",
+            "question_type": "translate korean to english",
+            "question": "저는 공부해요.",
+            "answer": "I am studying.",
+            "tags": ["저", "공부해요"]
+        },
+        {
+            "id": "u2_translate_ko_en_4",
+            "question_type": "translate korean to english",
+            "question": "타완 씨는 회사원이에요. 회사에 가요.",
+            "answer": "Tawan is an office worker. He goes to the office.",
+            "tags": ["타완", "회사원", "회사"]
+        },
+        {
+            "id": "u2_translate_ko_en_5",
+            "question_type": "translate korean to english",
+            "question": "민수 씨는 학생이에요. 학교에 가요.",
+            "answer": "Minsoo is a student. He goes to school.",
+            "tags": ["민수", "학생", "학교"]
+        },
+        {
+            "id": "u2_translate_ko_en_6",
+            "question_type": "translate korean to english",
+            "question": "마크 씨는 어디에 가요?",
+            "answer": "Where is Mark going?",
+            "tags": ["마크", "어디", "에 가다"]
+        },
+        {
+            "id": "u2_translate_ko_en_7",
+            "question_type": "translate korean to english",
+            "question": "15:00 시장",
+            "answer": "15:00 Market",
+            "tags": ["시간", "시장", "메모"]
+        },
+        {
+            "id": "u2_translate_ko_en_8",
+            "question_type": "translate korean to english",
+            "question": "민수 씨는 일해요.",
+            "answer": "Minsoo works.",
+            "tags": ["민수", "일하다", "일해요"]
+        },
+        {
+            "id": "u2_translate_ko_en_9",
+            "question_type": "translate korean to english",
+            "question": "공부해요.",
+            "answer": "I am studying. / He studies.",
+            "tags": ["공부하다", "문장"]
+        },
+        {
+            "id": "u2_translate_ko_en_10",
+            "question_type": "translate korean to english",
+            "question": "집에 가요.",
+            "answer": "I'm going home.",
+            "tags": ["집", "에 가다"]
+        },
+
+        {
+            "id": "u2_conversation_1",
+            "question_type": "conversation",
+            "question": "수진 씨는 뭐 해요?",
+            "answer": "운동해요.",
+            "tags": ["대화", "일상생활", "질문"]
+        },
+        {
+            "id": "u2_conversation_2",
+            "question_type": "conversation",
+            "question": "마크 씨는 뭐 해요?",
+            "answer": "저는 공부해요.",
+            "tags": ["대화", "마크", "공부하다"]
+        },
+        {
+            "id": "u2_conversation_3",
+            "question_type": "conversation",
+            "question": "타완 씨는 어디에 가요?",
+            "answer": "회사에 가요.",
+            "tags": ["대화", "장소", "회사"]
+        },
+        {
+            "id": "u2_conversation_4",
+            "question_type": "conversation",
+            "question": "마크 씨는 전화해요?",
+            "answer": "네, 투이 씨에게 전화해요.",
+            "tags": ["대화", "전화하다", "네"]
+        },
+        {
+            "id": "u2_conversation_5",
+            "question_type": "conversation",
+            "question": "민수 씨는 학교에서 뭐 해요?",
+            "answer": "공부해요.",
+            "tags": ["대화", "학교", "공부하다"]
+        },
+        {
+            "id": "u2_conversation_6",
+            "question_type": "conversation",
+            "question": "오늘 어디에 가요?",
+            "answer": "시장에 가요.",
+            "tags": ["대화", "오늘", "시장"]
+        },
+        {
+            "id": "u2_conversation_7",
+            "question_type": "conversation",
+            "question": "타완 씨는 일해요?",
+            "answer": "네, 회사에서 일해요.",
+            "tags": ["대화", "일하다", "확인"]
+        },
+        {
+            "id": "u2_conversation_8",
+            "question_type": "conversation",
+            "question": "민수 씨는 일해요?",
+            "answer": "아니요, 공부해요. 학생이에요.",
+            "tags": ["대화", "일하다", "부정"]
+        },
+        {
+            "id": "u2_conversation_9",
+            "question_type": "conversation",
+            "question": "로라 씨는 지금 뭐 해요?",
+            "answer": "집에서 쉬어요.",
+            "tags": ["대화", "로라", "쉬다"]
+        },
+        {
+            "id": "u2_conversation_10",
+            "question_type": "conversation",
+            "question": "커피숍에서 무엇을 해요?",
+            "answer": "친구를 만나요.",
+            "tags": ["대화", "커피숍", "만나다"]
+        },
+
+        {
+            "id": "u2_speaking_1",
+            "question_type": "speaking",
+            "question": "수진 씨는 뭐 해요?",
+            "answer": "수진 씨는 뭐 해요?",
+            "tags": ["말하기", "질문형"]
+        },
+        {
+            "id": "u2_speaking_2",
+            "question_type": "speaking",
+            "question": "운동해요.",
+            "answer": "운동해요.",
+            "tags": ["말하기", "동작"]
+        },
+        {
+            "id": "u2_speaking_3",
+            "question_type": "speaking",
+            "question": "저는 공부해요.",
+            "answer": "저는 공부해요.",
+            "tags": ["말하기", "공부"]
+        },
+        {
+            "id": "u2_speaking_4",
+            "question_type": "speaking",
+            "question": "타완 씨는 어디에 가요?",
+            "answer": "타완 씨는 어디에 가요?",
+            "tags": ["말하기", "이동"]
+        },
+        {
+            "id": "u2_speaking_5",
+            "question_type": "speaking",
+            "question": "회사에 가요.",
+            "answer": "회사에 가요.",
+            "tags": ["말하기", "장소"]
+        },
+        {
+            "id": "u2_speaking_6",
+            "question_type": "speaking",
+            "question": "학교에 가요. 공부해요.",
+            "answer": "학교에 가요. 공부해요.",
+            "tags": ["말하기", "연속문"]
+        },
+        {
+            "id": "u2_speaking_7",
+            "question_type": "speaking",
+            "question": "마크 씨는 전화해요?",
+            "answer": "마크 씨는 전화해요?",
+            "tags": ["말하기", "의문"]
+        },
+        {
+            "id": "u2_speaking_8",
+            "question_type": "speaking",
+            "question": "회사원이에요. 회사에 가요.",
+            "answer": "회사원이에요. 회사에 가요.",
+            "tags": ["말하기", "상태복합"]
+        },
+        {
+            "id": "u2_speaking_9",
+            "question_type": "speaking",
+            "question": "오늘 어디에 가요?",
+            "answer": "오늘 어디에 가요?",
+            "tags": ["말하기", "시간정보"]
+        },
+        {
+            "id": "u2_speaking_10",
+            "question_type": "speaking",
+            "question": "집에서 공부해요.",
+            "answer": "집에서 공부해요.",
+            "tags": ["말하기", "동작행위"]
+        },
+
+        {
+            "id": "u2_error_correction_1",
+            "question_type": "error correction",
+            "question": "저는 공부하여.",
+            "answer": "저는 공부해요.",
+            "tags": ["틀린 활용", "공부하다", "해요"]
+        },
+        {
+            "id": "u2_error_correction_2",
+            "question_type": "error correction",
+            "question": "수진 씨는 뭐 하요?",
+            "answer": "수진 씨는 뭐 해요?",
+            "tags": ["오타", "해요", "하요"]
+        },
+        {
+            "id": "u2_error_correction_3",
+            "question_type": "error correction",
+            "question": "타완 씨는 어디 가요?",
+            "answer": "타완 씨는 어디에 가요?",
+            "tags": ["틀린 조사", "어디에", "에 생략오류"]
+        },
+        {
+            "id": "u2_error_correction_4",
+            "question_type": "error correction",
+            "question": "회사애 가요.",
+            "answer": "회사에 가요.",
+            "tags": ["오타", "조사 오류", "애/에 혼동"]
+        },
+        {
+            "id": "u2_error_correction_5",
+            "question_type": "error correction",
+            "question": "학교에 가요 공부해요.",
+            "answer": "학교에 가요. 공부해요.",
+            "tags": ["문장 부호", "띄어쓰기/마침표"]
+        },
+        {
+            "id": "u2_error_correction_6",
+            "question_type": "error correction",
+            "question": "민수 씨는 운동해요.",
+            "answer": "민수 씨는 운동해요.",
+            "tags": ["오타", "운동해요", "운동"]
+        },
+        {
+            "id": "u2_error_correction_7",
+            "question_type": "error correction",
+            "question": "저는 시장에가요.",
+            "answer": "저는 시장에 가요.",
+            "tags": ["틀린 띄어쓰기", "시장에 가요"]
+        },
+        {
+            "id": "u2_error_correction_8",
+            "question_type": "error correction",
+            "question": "커피숍에 서 친구를 만나요.",
+            "answer": "커피숍에서 친구를 만나요.",
+            "tags": ["틀린 띄어쓰기", "에서", "커피숍에서"]
+        },
+        {
+            "id": "u2_error_correction_9",
+            "question_type": "error correction",
+            "question": "마크 씨는 전하해요?",
+            "answer": "마크 씨는 전화해요?",
+            "tags": ["오타", "전화해요", "전하해요"]
+        },
+        {
+            "id": "u2_error_correction_10",
+            "question_type": "error correction",
+            "question": "집에서 쉬요.",
+            "answer": "집에서 쉬어요.",
+            "tags": ["틀린 활용", "쉬다", "쉬어요"]
+        }
+    ],
+    "3": [
+        {
+            "id": "u3_fill_in_the_blank_1",
+            "question_type": "fill in the blank",
+            "question": "책상___ 있어요?",
+            "answer": "이",
+            "tags": ["책상", "이", "이/가", "물건"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_2",
+            "question_type": "fill in the blank",
+            "question": "의자___ 있어요?",
+            "answer": "가",
+            "tags": ["의자", "가", "이/가", "물건"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_3",
+            "question_type": "fill in the blank",
+            "question": "펜이 책상 위___ 있어요.",
+            "answer": "에",
+            "tags": ["책상 위", "에", "에 있다", "위치"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_4",
+            "question_type": "fill in the blank",
+            "question": "가방이 어디___ 있어요?",
+            "answer": "에",
+            "tags": ["어디", "에", "에 있다", "질문"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_5",
+            "question_type": "fill in the blank",
+            "question": "책상 앞에 의자___ 있어요.",
+            "answer": "가",
+            "tags": ["의자", "가", "이/가", "위치문장"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_6",
+            "question_type": "fill in the blank",
+            "question": "방에 침대___ 있어요.",
+            "answer": "가",
+            "tags": ["침대", "가", "이/가", "방"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_7",
+            "question_type": "fill in the blank",
+            "question": "책상 옆에 가방이 ___.",
+            "answer": "있어요",
+            "tags": ["책상 옆", "있어요", "에 있다"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_8",
+            "question_type": "fill in the blank",
+            "question": "컴퓨터가 책상 위에 ___.",
+            "answer": "없어요",
+            "tags": ["컴퓨터", "없어요", "에 없다"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_9",
+            "question_type": "fill in the blank",
+            "question": "전화기___ 침대 옆에 있어요.",
+            "answer": "가",
+            "tags": ["전화기", "가", "이/가", "물건"]
+        },
+        {
+            "id": "u3_fill_in_the_blank_10",
+            "question_type": "fill in the blank",
+            "question": "책이 책상 ___에 있어요. (Look at picture: on top)",
+            "answer": "위",
+            "tags": ["책상", "위", "위치어휘"]
+        },
+
+        {
+            "id": "u3_listening_1",
+            "question_type": "listening",
+            "question": "책상이 있어요?",
+            "answer": "책상이 있어요?",
+            "tags": ["책상", "있어요", "질문"]
+        },
+        {
+            "id": "u3_listening_2",
+            "question_type": "listening",
+            "question": "네, 책상이 있어요.",
+            "answer": "네, 책상이 있어요.",
+            "tags": ["네", "책상", "확인"]
+        },
+        {
+            "id": "u3_listening_3",
+            "question_type": "listening",
+            "question": "의자가 있어요?",
+            "answer": "의자가 있어요?",
+            "tags": ["의자", "있어요", "질문"]
+        },
+        {
+            "id": "u3_listening_4",
+            "question_type": "listening",
+            "question": "펜이 있어요?",
+            "answer": "펜이 있어요?",
+            "tags": ["펜", "있어요", "물건"]
+        },
+        {
+            "id": "u3_listening_5",
+            "question_type": "listening",
+            "question": "네, 펜이 있어요.",
+            "answer": "네, 펜이 있어요.",
+            "tags": ["네", "펜", "확인"]
+        },
+        {
+            "id": "u3_listening_6",
+            "question_type": "listening",
+            "question": "유키 씨가 있어요?",
+            "answer": "유키 씨가 있어요?",
+            "tags": ["유키", "가 있다", "인물확인"]
+        },
+        {
+            "id": "u3_listening_7",
+            "question_type": "listening",
+            "question": "책이 어디에 있어요?",
+            "answer": "책이 어디에 있어요?",
+            "tags": ["책", "어디", "위치질문"]
+        },
+        {
+            "id": "u3_listening_8",
+            "question_type": "listening",
+            "question": "책상 위에 있어요.",
+            "answer": "책상 위에 있어요.",
+            "tags": ["책상 위", "에 있다"]
+        },
+        {
+            "id": "u3_listening_9",
+            "question_type": "listening",
+            "question": "가방은 침대 밑에 있어요.",
+            "answer": "가방은 침대 밑에 있어요.",
+            "tags": ["가방", "침대 밑", "위치"]
+        },
+        {
+            "id": "u3_listening_10",
+            "question_type": "listening",
+            "question": "방에 책상이 있어요.",
+            "answer": "방에 책상이 있어요.",
+            "tags": ["방", "책상", "존재"]
+        },
+
+        {
+            "id": "u3_translate_en_ko_1",
+            "question_type": "translate english to korean",
+            "question": "Is there a desk?",
+            "answer": "책상이 있어요?",
+            "tags": ["책상", "이", "있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_2",
+            "question_type": "translate english to korean",
+            "question": "Yes, there is a chair.",
+            "answer": "네, 의자가 있어요.",
+            "tags": ["네", "의자", "가 있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_3",
+            "question_type": "translate english to korean",
+            "question": "Is there a pen?",
+            "answer": "펜이 있어요?",
+            "tags": ["펜", "이", "있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_4",
+            "question_type": "translate english to korean",
+            "question": "Is Yuki here?",
+            "answer": "유키 씨가 있어요?",
+            "tags": ["유키 씨", "가", "있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_5",
+            "question_type": "translate english to korean",
+            "question": "Where is the book?",
+            "answer": "책이 어디에 있어요?",
+            "tags": ["책", "어디에", "있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_6",
+            "question_type": "translate english to korean",
+            "question": "It is on top of the desk.",
+            "answer": "책상 위에 있어요.",
+            "tags": ["책상", "위", "에 있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_7",
+            "question_type": "translate english to korean",
+            "question": "A chair is in front of the desk.",
+            "answer": "책상 앞에 의자가 있어요.",
+            "tags": ["책상 앞", "의자", "가 있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_8",
+            "question_type": "translate english to korean",
+            "question": "A bag is next to the desk.",
+            "answer": "책상 옆에 가방이 있어요.",
+            "tags": ["책상 옆", "가방", "이 있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_9",
+            "question_type": "translate english to korean",
+            "question": "There is a desk in the room.",
+            "answer": "방에 책상이 있어요.",
+            "tags": ["방에", "책상", "이 있어요"]
+        },
+        {
+            "id": "u3_translate_en_ko_10",
+            "question_type": "translate english to korean",
+            "question": "There is no bed next to the desk.",
+            "answer": "책상 옆에 침대가 없어요.",
+            "tags": ["책상 옆", "침대", "가 없어요"]
+        },
+
+        {
+            "id": "u3_translate_ko_en_1",
+            "question_type": "translate korean to english",
+            "question": "책상이 있어요?",
+            "answer": "Is there a desk?",
+            "tags": ["책상", "이", "있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_2",
+            "question_type": "translate korean to english",
+            "question": "네, 의자가 있어요.",
+            "answer": "Yes, there is a chair.",
+            "tags": ["네", "의자", "가 있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_3",
+            "question_type": "translate korean to english",
+            "question": "펜이 있어요?",
+            "answer": "Is there a pen?",
+            "tags": ["펜", "이", "있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_4",
+            "question_type": "translate korean to english",
+            "question": "책이 어디에 있어요?",
+            "answer": "Where is the book?",
+            "tags": ["책", "어디에", "있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_5",
+            "question_type": "translate korean to english",
+            "question": "책상 위에 있어요.",
+            "answer": "It is on the desk.",
+            "tags": ["책상 위", "에 있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_6",
+            "question_type": "translate korean to english",
+            "question": "방에 책상이 있어요.",
+            "answer": "There is a desk in the room.",
+            "tags": ["방에", "책상", "이 있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_7",
+            "question_type": "translate korean to english",
+            "question": "책상 앞에 의자가 있어요.",
+            "answer": "There is a chair in front of the desk.",
+            "tags": ["책상 앞", "의자", "가 있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_8",
+            "question_type": "translate korean to english",
+            "question": "책상 옆에 가방이 있어요.",
+            "answer": "There is a bag next to the desk.",
+            "tags": ["책상 옆", "가방", "이 있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_9",
+            "question_type": "translate korean to english",
+            "question": "책상 위에 책이 있어요.",
+            "answer": "There is a book on the desk.",
+            "tags": ["책상 위", "책", "이 있어요"]
+        },
+        {
+            "id": "u3_translate_ko_en_10",
+            "question_type": "translate korean to english",
+            "question": "침대 위에 아무것도 없어요.",
+            "answer": "There is nothing on the bed.",
+            "tags": ["침대 위", "없어요"]
+        },
+
+        {
+            "id": "u3_conversation_1",
+            "question_type": "conversation",
+            "question": "책상이 있어요?",
+            "answer": "네, 책상이 있어요.",
+            "tags": ["대화", "물건", "질문"]
+        },
+        {
+            "id": "u3_conversation_2",
+            "question_type": "conversation",
+            "question": "의자가 있어요?",
+            "answer": "네, 의자가 있어요.",
+            "tags": ["대화", "의자", "확인"]
+        },
+        {
+            "id": "u3_conversation_3",
+            "question_type": "conversation",
+            "question": "펜이 있어요?",
+            "answer": "네, 펜이 있어요.",
+            "tags": ["대화", "펜", "긍정"]
+        },
+        {
+            "id": "u3_conversation_4",
+            "question_type": "conversation",
+            "question": "유키 씨가 있어요?",
+            "answer": "네, 유키 씨가 있어요.",
+            "tags": ["대화", "인물", "존재"]
+        },
+        {
+            "id": "u3_conversation_5",
+            "question_type": "conversation",
+            "question": "책이 어디에 있어요?",
+            "answer": "책상 위에 있어요.",
+            "tags": ["대화", "책", "위치답변"]
+        },
+        {
+            "id": "u3_conversation_6",
+            "question_type": "conversation",
+            "question": "방에 침대가 있어요?",
+            "answer": "아니요, 침대가 없어요.",
+            "tags": ["대화", "방", "부정답변"]
+        },
+        {
+            "id": "u3_conversation_7",
+            "question_type": "conversation",
+            "question": "가방이 책상 밑에 있어요?",
+            "answer": "아니요, 책상 옆에 있어요.",
+            "tags": ["대화", "가방", "정정하기"]
+        },
+        {
+            "id": "u3_conversation_8",
+            "question_type": "conversation",
+            "question": "의자가 어디에 있어요?",
+            "answer": "책상 앞에 있어요.",
+            "tags": ["대화", "의자", "위치"]
+        },
+        {
+            "id": "u3_conversation_9",
+            "question_type": "conversation",
+            "question": "컴퓨터가 있어요?",
+            "answer": "네, 책상 위에 있어요.",
+            "tags": ["대화", "컴퓨터", "복합답변"]
+        },
+        {
+            "id": "u3_conversation_10",
+            "question_type": "conversation",
+            "question": "책상 옆에 가방이 있어요?",
+            "answer": "네, 가방이 있어요.",
+            "tags": ["대화", "가방", "확인"]
+        },
+
+        {
+            "id": "u3_speaking_1",
+            "question_type": "speaking",
+            "question": "책상이 있어요?",
+            "answer": "책상이 있어요?",
+            "tags": ["말하기", "질문형"]
+        },
+        {
+            "id": "u3_speaking_2",
+            "question_type": "speaking",
+            "question": "네, 책상이 있어요.",
+            "answer": "네, 책상이 있어요.",
+            "tags": ["말하기", "평서문"]
+        },
+        {
+            "id": "u3_speaking_3",
+            "question_type": "speaking",
+            "question": "의자가 있어요?",
+            "answer": "의자가 있어요?",
+            "tags": ["말하기", "의자"]
+        },
+        {
+            "id": "u3_speaking_4",
+            "question_type": "speaking",
+            "question": "펜이 있어요?",
+            "answer": "펜이 있어요?",
+            "tags": ["말하기", "펜"]
+        },
+        {
+            "id": "u3_speaking_5",
+            "question_type": "speaking",
+            "question": "책이 어디에 있어요?",
+            "answer": "책이 어디에 있어요?",
+            "tags": ["말하기", "의문사"]
+        },
+        {
+            "id": "u3_speaking_6",
+            "question_type": "speaking",
+            "question": "책상 위에 있어요.",
+            "answer": "책상 위에 있어요.",
+            "tags": ["말하기", "위치답변"]
+        },
+        {
+            "id": "u3_speaking_7",
+            "question_type": "speaking",
+            "question": "방에 책상이 있어요.",
+            "answer": "방에 책상이 있어요.",
+            "tags": ["말하기", "존재문"]
+        },
+        {
+            "id": "u3_speaking_8",
+            "question_type": "speaking",
+            "question": "책상 앞에 의자가 있어요.",
+            "answer": "책상 앞에 의자가 있어요.",
+            "tags": ["말하기", "구조"]
+        },
+        {
+            "id": "u3_speaking_9",
+            "question_type": "speaking",
+            "question": "책상 옆에 가방이 있어요.",
+            "answer": "책상 옆에 가방이 있어요.",
+            "tags": ["말하기", "구조"]
+        },
+        {
+            "id": "u3_speaking_10",
+            "question_type": "speaking",
+            "question": "책상 위에 책이 있어요.",
+            "answer": "책상 위에 책이 있어요.",
+            "tags": ["말하기", "복합"]
+        },
+
+        {
+            "id": "u3_error_correction_1",
+            "question_type": "error correction",
+            "question": "책상가 있어요?",
+            "answer": "책상이 있어요?",
+            "tags": ["틀린 조사", "책상", "이/가 오류"]
+        },
+        {
+            "id": "u3_error_correction_2",
+            "question_type": "error correction",
+            "question": "의자이 있어요?",
+            "answer": "의자가 있어요?",
+            "tags": ["틀린 조사", "의자", "이/가 오류"]
+        },
+        {
+            "id": "u3_error_correction_3",
+            "question_type": "error correction",
+            "question": "책이 어디 가 있어요?",
+            "answer": "책이 어디에 있어요?",
+            "tags": ["틀린 조사", "어디에", "에 생략오류"]
+        },
+        {
+            "id": "u3_error_correction_4",
+            "question_type": "error correction",
+            "question": "책상위 에 있어요.",
+            "answer": "책상 위에 있어요.",
+            "tags": ["틀린 띄어쓰기", "책상 위", "위에"]
+        },
+        {
+            "id": "u3_error_correction_5",
+            "question_type": "error correction",
+            "question": "책상 에 가방이 있어요.",
+            "answer": "책상 옆에 가방이 있어요.",
+            "tags": ["의미 유실", "옆", "위치 생략오류"]
+        },
+        {
+            "id": "u3_error_correction_6",
+            "question_type": "error correction",
+            "question": "방에 책상 이 있어요.",
+            "answer": "방에 책상이 있어요.",
+            "tags": ["틀린 띄어쓰기", "책상이"]
+        },
+        {
+            "id": "u3_error_correction_7",
+            "question_type": "error correction",
+            "question": "침대 밑애 있어요.",
+            "answer": "침대 밑에 있어요.",
+            "tags": ["오타", "조사 오류", "애/에 혼동"]
+        },
+        {
+            "id": "u3_error_correction_8",
+            "question_type": "error correction",
+            "question": "책상 압에 의자가 있어요.",
+            "answer": "책상 앞에 의자가 있어요.",
+            "tags": ["오타", "발음陷阱", "앞에", "압에"]
+        },
+        {
+            "id": "u3_error_correction_9",
+            "question_type": "error correction",
+            "question": "의자가 업서요.",
+            "answer": "의자가 없어요.",
+            "tags": ["오타", "연음오류", "없어요", "업서요"]
+        },
+        {
+            "id": "u3_error_correction_10",
+            "question_type": "error correction",
+            "question": "펜이 있서요.",
+            "answer": "펜이 있어요.",
+            "tags": ["오타", "받침오류", "있어요", "있서요"]
+        }
+    ],
+    "4": [
+    {
+        "id": "u4_fill_in_the_blank_1",
+        "question_type": "fill in the blank",
+        "question": "투이 씨, 무엇___ 사요?",
+        "answer": "을",
+        "tags": ["무엇", "을", "을/를", "쇼핑"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_2",
+        "question_type": "fill in the blank",
+        "question": "저는 시장에서 사과___ 사요.",
+        "answer": "를",
+        "tags": ["사과", "를", "을/를", "식품"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_3",
+        "question_type": "fill in the blank",
+        "question": "사과가 오백 원___. (It is 500 won.)",
+        "answer": "이에요",
+        "tags": ["숫자", "원", "이에요", "가격"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_4",
+        "question_type": "fill in the blank",
+        "question": "아저씨, 이 오렌지 얼마___?",
+        "answer": "예요",
+        "tags": ["얼마", "예요", "가격질문", "회화"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_5",
+        "question_type": "fill in the blank",
+        "question": "빵하고 우유___ 주세요.",
+        "answer": "를",
+        "tags": ["우유", "를", "을/를", "주세요"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_6",
+        "question_type": "fill in the blank",
+        "question": "여기 오렌지 세 개 있습시다. 오렌지___ 주세요.",
+        "answer": "를",
+        "tags": ["오렌지", "를", "을/를", "물건사기"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_7",
+        "question_type": "fill in the blank",
+        "question": "가: 빵을 사요? 나: 아니요, 물___ 사요.",
+        "answer": "을",
+        "tags": ["물", "을", "을/를", "식품"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_8",
+        "question_type": "fill in the blank",
+        "question": "여기에 앉___. (Please sit here.)",
+        "answer": "으세요",
+        "tags": ["앉다", "으세요", "-(으)세요", "명령/요청"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_9",
+        "question_type": "fill in the blank",
+        "question": "책을 읽___. (Please read the book.)",
+        "answer": "으세요",
+        "tags": ["읽다", "으세요", "-(으)세요"]
+    },
+    {
+        "id": "u4_fill_in_the_blank_10",
+        "question_type": "fill in the blank",
+        "question": "내일 시장에 가___. (Please go to the market tomorrow.)",
+        "answer": "세요",
+        "tags": ["가다", "세요", "-(으)세요"]
+    },
+
+    {
+        "id": "u4_listening_1",
+        "question_type": "listening",
+        "question": "민수 씨, 어디 가요?",
+        "answer": "민수 씨, 어디 가요?",
+        "tags": ["민수", "어디 가요", "질문"]
+    },
+    {
+        "id": "u4_listening_2",
+        "question_type": "listening",
+        "question": "시장에 가요.",
+        "answer": "시장에 가요.",
+        "tags": ["시장", "에 가다"]
+    },
+    {
+        "id": "u4_listening_3",
+        "question_type": "listening",
+        "question": "무엇을 사요?",
+        "answer": "무엇을 사요?",
+        "tags": ["무엇", "사요", "목적어"]
+    },
+    {
+        "id": "u4_listening_4",
+        "question_type": "listening",
+        "question": "사과를 사요.",
+        "answer": "사과를 사요.",
+        "tags": ["사과", "사요"]
+    },
+    {
+        "id": "u4_listening_5",
+        "question_type": "listening",
+        "question": "이 오렌지 얼마예요?",
+        "answer": "이 오렌지 얼마예요?",
+        "tags": ["오렌지", "얼마예요", "가격"]
+    },
+    {
+        "id": "u4_listening_6",
+        "question_type": "listening",
+        "question": "한 개에 구백 원이에요.",
+        "answer": "한 개에 구백 원이에요.",
+        "tags": ["숫자", "구백 원", "수량"]
+    },
+    {
+        "id": "u4_listening_7",
+        "question_type": "listening",
+        "question": "오렌지 세 개 주세요.",
+        "answer": "오렌지 세 개 주세요.",
+        "tags": ["오렌지", "주세요", "요청"]
+    },
+    {
+        "id": "u4_listening_8",
+        "question_type": "listening",
+        "question": "여기 있어요. 이천칠백 원이에요.",
+        "answer": "여기 있어요. 이천칠백 원이에요.",
+        "tags": ["여기 있어요", "이천칠백 원"]
+    },
+    {
+        "id": "u4_listening_9",
+        "question_type": "listening",
+        "question": "오늘 사과가 싸요. 오백 원이에요.",
+        "answer": "오늘 사과가 싸요. 오백 원이에요.",
+        "tags": ["오늘", "싸요", "오백 원"]
+    },
+    {
+        "id": "u4_listening_10",
+        "question_type": "listening",
+        "question": "빵은 천삼백 원이에요.",
+        "answer": "빵은 천삼백 원이에요.",
+        "tags": ["빵", "천삼백 원", "영수증"]
+    },
+
+    {
+        "id": "u4_translate_en_ko_1",
+        "question_type": "translate english to korean",
+        "question": "Where are you going, Minsoo?",
+        "answer": "민수 씨, 어디 가요?",
+        "tags": ["민수", "어디", "가요"]
+    },
+    {
+        "id": "u4_translate_en_ko_2",
+        "question_type": "translate english to korean",
+        "question": "I am going to the market.",
+        "answer": "시장에 가요.",
+        "tags": ["시장", "에 가다"]
+    },
+    {
+        "id": "u4_translate_en_ko_3",
+        "question_type": "translate english to korean",
+        "question": "What do you buy?",
+        "answer": "무엇을 사요?",
+        "tags": ["무엇", "을", "사요"]
+    },
+    {
+        "id": "u4_translate_en_ko_4",
+        "question_type": "translate english to korean",
+        "question": "I buy apples.",
+        "answer": "사과를 사요.",
+        "tags": ["사과", "를", "사요"]
+    },
+    {
+        "id": "u4_translate_en_ko_5",
+        "question_type": "translate english to korean",
+        "question": "How much is this orange?",
+        "answer": "이 오렌지 얼마예요?",
+        "tags": ["이", "오렌지", "얼마예요"]
+    },
+    {
+        "id": "u4_translate_en_ko_6",
+        "question_type": "translate english to korean",
+        "question": "It is 900 won for one piece.",
+        "answer": "한 개에 구백 원이에요.",
+        "tags": ["한 개", "구백 원", "이에요"]
+    },
+    {
+        "id": "u4_translate_en_ko_7",
+        "question_type": "translate english to korean",
+        "question": "Please give me three oranges.",
+        "answer": "오렌지 세 개 주세요.",
+        "tags": ["오렌지", "세 개", "주세요"]
+    },
+    {
+        "id": "u4_translate_en_ko_8",
+        "question_type": "translate english to korean",
+        "question": "It is 2,700 won in total.",
+        "answer": "합계 이천칠백 원이에요.",
+        "tags": ["합계", "이천칠백 원", "영수증"]
+    },
+    {
+        "id": "u4_translate_en_ko_9",
+        "question_type": "translate english to korean",
+        "question": "Water is 500 won.",
+        "answer": "물은 오백 원이에요.",
+        "tags": ["물", "은", "오백 원"]
+    },
+    {
+        "id": "u4_translate_en_ko_10",
+        "question_type": "translate english to korean",
+        "question": "Please buy some bread.",
+        "answer": "빵을 사세요.",
+        "tags": ["빵", "을", "사세요"]
+    },
+
+    {
+        "id": "u4_translate_ko_en_1",
+        "question_type": "translate korean to english",
+        "question": "민수 씨, 어디 가요?",
+        "answer": "Minsoo, where are you going?",
+        "tags": ["민수", "어디", "가요"]
+    },
+    {
+        "id": "u4_translate_ko_en_2",
+        "question_type": "translate korean to english",
+        "question": "시장에 가요. 사과를 사요.",
+        "answer": "I'm going to the market. I buy apples.",
+        "tags": ["시장", "사과", "사요"]
+    },
+    {
+        "id": "u4_translate_ko_en_3",
+        "question_type": "translate korean to english",
+        "question": "이 오렌지 얼마예요?",
+        "answer": "How much is this orange?",
+        "tags": ["이", "오렌지", "얼마예요"]
+    },
+    {
+        "id": "u4_translate_ko_en_4",
+        "question_type": "translate korean to english",
+        "question": "구백 원이에요. 오렌지 세 개 주세요.",
+        "answer": "It's 900 won. Please give me three oranges.",
+        "tags": ["구백 원", "오렌지", "주세요"]
+    },
+    {
+        "id": "u4_translate_ko_en_5",
+        "question_type": "translate korean to english",
+        "question": "여기 있어요. 이천칠백 원이에요.",
+        "answer": "Here it is. It's 2,700 won.",
+        "tags": ["여기 있어요", "이천칠백 원"]
+    },
+    {
+        "id": "u4_translate_ko_en_6",
+        "question_type": "translate korean to english",
+        "question": "오늘 사과가 싸요.",
+        "answer": "Apples are cheap today.",
+        "tags": ["오늘", "사과", "싸요"]
+    },
+    {
+        "id": "u4_translate_ko_en_7",
+        "question_type": "translate korean to english",
+        "question": "우유를 사세요.",
+        "answer": "Please buy some milk.",
+        "tags": ["우유", "사세요", "요청"]
+    },
+    {
+        "id": "u4_translate_ko_en_8",
+        "question_type": "translate korean to english",
+        "question": "빵은 천삼백 원이에요.",
+        "answer": "Bread is 1,300 won.",
+        "tags": ["빵", "천삼백 원"]
+    },
+    {
+        "id": "u4_translate_ko_en_9",
+        "question_type": "translate korean to english",
+        "question": "무엇을 사요? 주스를 사요.",
+        "answer": "What do you buy? I buy juice.",
+        "tags": ["무엇", "주스", "사요"]
+    },
+    {
+        "id": "u4_translate_ko_en_10",
+        "question_type": "translate korean to english",
+        "question": "물은 오백 원이에요.",
+        "answer": "Water is 500 won.",
+        "tags": ["물", "오백 원"]
+    },
+
+    {
+        "id": "u4_conversation_1",
+        "question_type": "conversation",
+        "question": "민수 씨, 어디 가요?",
+        "answer": "시장에 가요.",
+        "tags": ["대화", "이동", "시장"]
+    },
+    {
+        "id": "u4_conversation_2",
+        "question_type": "conversation",
+        "question": "무엇을 사요?",
+        "answer": "사과를 사요.",
+        "tags": ["대화", "쇼핑목적", "사과"]
+    },
+    {
+        "id": "u4_conversation_3",
+        "question_type": "conversation",
+        "question": "이 오렌지 얼마예요?",
+        "answer": "구백 원이에요.",
+        "tags": ["대화", "가격", "오렌지"]
+    },
+    {
+        "id": "u4_conversation_4",
+        "question_type": "conversation",
+        "question": "오렌지 세 개 주세요.",
+        "answer": "여기 있어요. 이천칠백 원이에요.",
+        "tags": ["대화", "물건건네기", "계산"]
+    },
+    {
+        "id": "u4_conversation_5",
+        "question_type": "conversation",
+        "question": "오늘 사과가 싸요?",
+        "answer": "네, 사과가 오백 원이에요.",
+        "tags": ["대화", "상태확인", "싸다"]
+    },
+    {
+        "id": "u4_conversation_6",
+        "question_type": "conversation",
+        "question": "빵은 얼마예요?",
+        "answer": "천삼백 원이에요.",
+        "tags": ["대화", "빵", "가격"]
+    },
+    {
+        "id": "u4_conversation_7",
+        "question_type": "conversation",
+        "question": "아저씨, 우유가 있어요?",
+        "answer": "네, 여기 있어요.",
+        "tags": ["대화", "존재유무", "우유"]
+    },
+    {
+        "id": "u4_conversation_8",
+        "question_type": "conversation",
+        "question": "무엇을 사세요?",
+        "answer": "빵하고 주스를 사요.",
+        "tags": ["대화", "존재존칭", "물건선택"]
+    },
+    {
+        "id": "u4_conversation_9",
+        "question_type": "conversation",
+        "question": "물은 얼마예요?",
+        "answer": "오백 원이에요.",
+        "tags": ["대화", "물", "가격"]
+    },
+    {
+        "id": "u4_conversation_10",
+        "question_type": "conversation",
+        "question": "여기 이천칠백 원 있습니다.",
+        "answer": "감사합니다.",
+        "tags": ["대화", "지불", "인사"]
+    },
+
+    {
+        "id": "u4_speaking_1",
+        "question_type": "speaking",
+        "question": "민수 씨, 어디 가요?",
+        "answer": "민수 씨, 어디 가요?",
+        "tags": ["말하기", "질문구조"]
+    },
+    {
+        "id": "u4_speaking_2",
+        "question_type": "speaking",
+        "question": "시장에 가요.",
+        "answer": "시장에 가요.",
+        "tags": ["말하기", "이동"]
+    },
+    {
+        "id": "u4_speaking_3",
+        "question_type": "speaking",
+        "question": "무엇을 사요?",
+        "answer": "무엇을 사요?",
+        "tags": ["말하기", "목적격"]
+    },
+    {
+        "id": "u4_speaking_4",
+        "question_type": "speaking",
+        "question": "사과를 사요.",
+        "answer": "사과를 사요.",
+        "tags": ["말하기", "목적격단어"]
+    },
+    {
+        "id": "u4_speaking_5",
+        "question_type": "speaking",
+        "question": "이 오렌지 얼마예요?",
+        "answer": "이 오렌지 얼마예요?",
+        "tags": ["말하기", "가격질문"]
+    },
+    {
+        "id": "u4_speaking_6",
+        "question_type": "speaking",
+        "question": "한 개에 구백 원이에요.",
+        "answer": "한 개에 구백 원이에요.",
+        "tags": ["말하기", "단가표현"]
+    },
+    {
+        "id": "u4_speaking_7",
+        "question_type": "speaking",
+        "question": "오렌지 세 개 주세요.",
+        "answer": "오렌지 세 개 주세요.",
+        "tags": ["말하기", "요청하기"]
+    },
+    {
+        "id": "u4_speaking_8",
+        "question_type": "speaking",
+        "question": "여기 있어요. 이천칠백 원이에요.",
+        "answer": "여기 있어요. 이천칠백 원이에요.",
+        "tags": ["말하기", "수수지불"]
+    },
+    {
+        "id": "u4_speaking_9",
+        "question_type": "speaking",
+        "question": "오늘 사과가 싸요. 오백 원이에요.",
+        "answer": "오늘 사과가 싸요. 오백 원이에요.",
+        "tags": ["말하기", "정보전달"]
+    },
+    {
+        "id": "u4_speaking_10",
+        "question_type": "speaking",
+        "question": "빵을 사세요.",
+        "answer": "빵을 사세요.",
+        "tags": ["말하기", "존칭명령"]
+    },
+
+    {
+        "id": "u4_error_correction_1",
+        "question_type": "error correction",
+        "question": "사과을 사요.",
+        "answer": "사과를 사요.",
+        "tags": ["틀린 조사", "사과", "을/를 오류"]
+    },
+    {
+        "id": "u4_error_correction_2",
+        "question_type": "error correction",
+        "question": "무엇를 사요?",
+        "answer": "무엇을 사요?",
+        "tags": ["틀린 조사", "무엇", "을/를 오류"]
+    },
+    {
+        "id": "u4_error_correction_3",
+        "question_type": "error correction",
+        "question": "오렌지 얼마에요?",
+        "answer": "오렌지 얼마예요?",
+        "tags": ["오타", "얼마예요", "에/예 혼동"]
+    },
+    {
+        "id": "u4_error_correction_4",
+        "question_type": "error correction",
+        "question": "오렌지 세개 주세요.",
+        "answer": "오렌지 세 개 주세요.",
+        "tags": ["틀린 띄어쓰기", "의존명사", "세 개"]
+    },
+    {
+        "id": "u4_error_correction_5",
+        "question_type": "error correction",
+        "question": "사과가 오백원이에요.",
+        "answer": "사과가 오백 원이에요.",
+        "tags": ["틀린 띄어쓰기", "단위 띄어쓰기", "오백 원"]
+    },
+    {
+        "id": "u4_error_correction_6",
+        "question_type": "error correction",
+        "question": "빵은 천삼백 원 이에요.",
+        "answer": "빵은 천삼백 원이에요.",
+        "tags": ["틀린 띄어쓰기", "조사 결합", "원이에요"]
+    },
+    {
+        "id": "u4_error_correction_7",
+        "question_type": "error correction",
+        "question": "여기 잇어요.",
+        "answer": "여기 있어요.",
+        "tags": ["오타", "받침 오류", "있어요", "잇어요"]
+    },
+    {
+        "id": "u4_error_correction_8",
+        "question_type": "error correction",
+        "question": "우유를 사으세요.",
+        "answer": "우유를 사세요.",
+        "tags": ["틀린 활용", "사다", "사세요 불필요한 매개모음"]
+    },
+    {
+        "id": "u4_error_correction_9",
+        "question_type": "error correction",
+        "question": "책을 읽세요.",
+        "answer": "책을 읽으세요.",
+        "tags": ["틀린 활용", "읽다", "읽으세요 매개모음 누락"]
+    },
+    {
+        "id": "u4_error_correction_10",
+        "question_type": "error correction",
+        "question": "물를 사요.",
+        "answer": "물을 사요.",
+        "tags": ["틀린 조사", "물", "목적격 생략 및 오용"]
+    }
+    ]
+}

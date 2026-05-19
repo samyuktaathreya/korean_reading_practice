@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import Header from '../Components/Header';
-import * as Hangul from 'hangul-js'; // Import the library
+import * as Hangul from 'hangul-js'; 
 
 const USER_ID = 1;
 
 const clean = (str) => {
     return str
         .toLowerCase()
-        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")  // add ? here
-        .replace(/[。、！？「」『』【】]/g, "")            // Korean/CJK punctuation
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "")  
+        .replace(/[。、！？「」『』【】]/g, "")            
         .replace(/\bim\b/g, "i am")
         .replace(/\byoure\b/g, "you are")
         .replace(/\bhes\b/g, "he is")
@@ -27,27 +27,18 @@ const levelToInstruction = (level) => {
 
 const isQuestionInKorean = (text) => {
     const koreanRegex = /[\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]/;
-    console.log("question text : ", text);
     return koreanRegex.test(text);
 };
 
-// Word-level diff: returns segments of {text, underline} so we can
-// underline the parts of the correct answer that differed from user's input.
 function diffSegments(correct, userAns) {
-    // If correct is missing, we can't diff
     if (!correct) return [];
-    
     const correctWords = correct.split(" ");
-    // If userAns is null/undefined/empty (skip), treat as empty array
     const userWords = (userAns || "").trim().split(" ");
-    
     return correctWords.map((word, i) => ({
         text: word,
         underline: clean(word) !== clean(userWords[i] ?? ""),
     }));
 }
-
-// ── WordWithTooltip ──────────────────────────────────────────────────
 
 function WordWithTooltip({ word, wordCache, setWordCache }) {
     const [info, setInfo] = useState(null);
@@ -91,7 +82,6 @@ function WordWithTooltip({ word, wordCache, setWordCache }) {
             {isHovered && info && (
                 <span className="word-tooltip">
                     <strong>{info.base_word}: {info.translation}</strong>
-                    {/* Shows romanized spelling for names like 마크 → "Mark" */}
                     {info.romanization && (
                         <span className="word-tooltip-romanization"> ({info.romanization})</span>
                     )}
@@ -101,19 +91,6 @@ function WordWithTooltip({ word, wordCache, setWordCache }) {
         </span>
     );
 }
-
-// ── SmartInput ───────────────────────────────────────────────────────
-// Signals to the OS/browser which keyboard is needed, so the user
-// doesn't have to switch manually between Korean and English.
-
-// Standard Korean QWERTY keyboard layout map
-const QWERTY_TO_HANGUL = {
-  'r':'ㄱ','R':'ㄲ','s':'ㄴ','e':'ㄷ','E':'ㄸ','f':'ㄹ','a':'ㅁ','q':'ㅂ','Q':'ㅃ',
-  't':'ㅅ','T':'ㅆ','d':'ㅇ','w':'ㅈ','W':'ㅉ','c':'ㅊ','z':'ㅋ','x':'ㅌ','v':'ㅍ','g':'ㅎ',
-  'k':'ㅏ','o':'ㅐ','i':'ㅑ','O':'ㅒ','j':'ㅓ','p':'ㅔ','u':'ㅕ','P':'ㅖ','h':'ㅗ','y':'ㅛ',
-  'n':'ㅜ','b':'ㅠ','m':'ㅡ','l':'ㅣ','K':'ㅘ','H':'ㅙ','Y':'ㅚ','J':'ㅝ','N':'ㅞ','B':'ㅟ','M':'ㅢ',
-  ' ': ' ', '1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9', '0': '0'
-};
 
 function SmartInput({ value, onChange, disabled, isCorrect, hasSubmitted, needsKorean }) {
     const inputRef = useRef(null);
@@ -139,9 +116,7 @@ function SmartInput({ value, onChange, disabled, isCorrect, hasSubmitted, needsK
             const jamos = Hangul.disassemble(value);
             if (jamo) {
                 onChange(Hangul.assemble([...jamos, jamo]));
-            }
-            // ignore keys with no Korean mapping (numbers, symbols, etc.)
-            else {
+            } else {
                 onChange(Hangul.assemble([...jamos, e.key]));
             }
         }
@@ -165,23 +140,25 @@ function SmartInput({ value, onChange, disabled, isCorrect, hasSubmitted, needsK
     );
 }
 
-// ── DiffAnswer ───────────────────────────────────────────────────────
+const QWERTY_TO_HANGUL = {
+  'r':'ㄱ','R':'ㄲ','s':'ㄴ','e':'ㄷ','E':'ㄸ','f':'ㄹ','a':'ㅁ','q':'ㅂ','Q':'ㅃ',
+  't':'ㅅ','T':'ㅆ','d':'ㅇ','w':'ㅈ','W':'ㅉ','c':'ㅊ','z':'ㅋ','x':'ㅌ','v':'ㅍ','g':'ㅎ',
+  'k':'ㅏ','o':'ㅐ','i':'ㅑ','O':'ㅒ','j':'ㅓ','p':'ㅔ','u':'ㅕ','P':'ㅖ','h':'ㅗ','y':'요',
+  'n':'ㅜ','b':'ㅠ','m':'ㅡ','l':'ㅣ','K':'ㅘ','H':'ㅙ','Y':'ㅚ','J':'ㅝ','N':'ㅞ','B':'ㅟ','M':'ㅢ',
+  ' ': ' ', '1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9', '0': '0'
+};
 
 function DiffAnswer({ correctAnswer, userAnswer }) {
-    // First: Calculate the segments
     const segments = diffSegments(correctAnswer, userAnswer);
-    
-    // Second: Now you can safely check if segments exists or has length
     if (!segments || segments.length === 0) {
         return <p className="diff-answer">{correctAnswer}</p>;
     }
-
     return (
         <p className="diff-answer">
             {segments.map((seg, i) => (
                 <span key={i}>
                     {seg.underline
-                        ? <span className="diff-answer__underline" style={{ textDecoration: 'underline', color: '#ff4b4b' }}>{seg.text}</span>
+                        ? <span className="diff-answer__underline">{seg.text}</span>
                         : seg.text}
                     {i < segments.length - 1 ? " " : ""}
                 </span>
@@ -189,8 +166,6 @@ function DiffAnswer({ correctAnswer, userAnswer }) {
         </p>
     );
 }
-
-// ── Question ─────────────────────────────────────────────────────────
 
 function Question({
     currentQuestionObj, currentIndex, totalQuestions, userAnswer,
@@ -201,7 +176,6 @@ function Question({
     const words = currentQuestionObj.question.split(" ");
     const questionIsKorean = isQuestionInKorean(currentQuestionObj.question);
     const answerNeedsKorean = !questionIsKorean || currentQuestionObj.question_type === "fill in the blank";
-    console.log("answer needs korean : ", answerNeedsKorean);
     const isGrammarParticleQuestion = currentQuestionObj.question.includes("___");
 
     return (
@@ -222,8 +196,7 @@ function Question({
                         : currentQuestionObj.question
                     }
                 </h1>
-                {questionIsKorean && 
-                    !isGrammarParticleQuestion && (
+                {questionIsKorean && !isGrammarParticleQuestion && (
                     <button className="audio-btn" onClick={onPlayAudio}>
                         🔈 Play Audio
                     </button>
@@ -273,25 +246,153 @@ function Question({
     );
 }
 
-// ── Main Component ───────────────────────────────────────────────────
+// ── ProgressDashboard Component (With Histogram Chart) ──
+function ProgressDashboard({ progressData, onStartSession, isLoading }) {
+    const [selectedBucket, setSelectedBucket] = useState(null);
+
+    if (!progressData) return <div className="loading-screen">Loading your setup...</div>;
+
+    const { current_unit, milestone_summary, knowledge_grid } = progressData;
+    
+    let progressPercent = 0;
+    if (milestone_summary.current_step === "intro_rounds") {
+        progressPercent = (milestone_summary.intro_rounds_completed / 2) * 100;
+    } else {
+        progressPercent = (milestone_summary.stable_tags_in_unit / milestone_summary.total_tags_in_unit) * 100;
+    }
+
+    // Define 5 clean bucket ranges for strength
+    const buckets = [
+        { label: "0-20%", min: 0.0, max: 0.2, key: "b1", statusClass: "chart-bar--weak" },
+        { label: "21-40%", min: 0.2, max: 0.4, key: "b2", statusClass: "chart-bar--weak" },
+        { label: "41-60%", min: 0.4, max: 0.6, key: "b3", statusClass: "chart-bar--weak" },
+        { label: "61-80%", min: 0.6, max: 0.8, key: "b4", statusClass: "chart-bar--cooling" },
+        { label: "81-100%", min: 0.8, max: 1.01, key: "b5", statusClass: "chart-bar--stable" }
+    ];
+
+    // Distribute tags across buckets
+    const bucketData = buckets.map(b => {
+        const tagsInBucket = knowledge_grid.filter(item => item.strength >= b.min && item.strength < b.max);
+        return { ...b, tags: tagsInBucket, count: tagsInBucket.length };
+    });
+
+    // Determine max count to compute relative heights scaling up to 100%
+    const maxCount = Math.max(...bucketData.map(b => b.count), 1);
+
+    const activeBucketInfo = bucketData.find(b => b.key === selectedBucket);
+
+    return (
+        <div className="dashboard-container">
+            <div className="unit-badge">
+                📍 Current Unit: {current_unit}
+            </div>
+
+            <div className="milestone-card">
+                <h3 className="objective-title">Current Objective</h3>
+                <p className="objective-text">{milestone_summary.status_message}</p>
+                <div className="progress-track-wrapper">
+                    <div 
+                        className={`progress-track-fill ${milestone_summary.current_step === 'unit_test_ready' ? 'fill-success' : 'fill-primary'}`}
+                        style={{ width: `${progressPercent}%` }} 
+                    />
+                </div>
+            </div>
+
+            {/* Histogram Layout Structure */}
+            <div className="chart-section">
+                <h4 className="chart-heading">Concept Mastery Breakdown</h4>
+                <p className="chart-subheading">Click on any bar to inspect underlying tags</p>
+                
+                <div className="histogram-chart">
+                    {bucketData.map((b) => {
+                        const barHeightPercent = (b.count / maxCount) * 100;
+                        const isBarActive = selectedBucket === b.key;
+
+                        return (
+                            <div 
+                                key={b.key} 
+                                className={`chart-column-wrapper ${isBarActive ? 'column-active' : ''}`}
+                                onClick={() => setSelectedBucket(isBarActive ? null : b.key)}
+                            >
+                                <div className="chart-value-label">{b.count}</div>
+                                <div className="chart-bar-container">
+                                    <div 
+                                        className={`chart-bar-fill ${b.statusClass}`} 
+                                        style={{ height: `${barHeightPercent}%` }}
+                                    />
+                                </div>
+                                <div className="chart-axis-label">{b.label}</div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* Conditional Inspection List Block */}
+                {activeBucketInfo && (
+                    <div className="inspection-panel">
+                        <h5 className="inspection-title">
+                            Tags at {activeBucketInfo.label} Strength ({activeBucketInfo.count})
+                        </h5>
+                        {activeBucketInfo.count === 0 ? (
+                            <p className="empty-inspection-text">No tags currently within this range.</p>
+                        ) : (
+                            <div className="inspection-list">
+                                {activeBucketInfo.tags.map(t => (
+                                    <div key={t.tag} className={`inspection-item-tag border-${t.status}`}>
+                                        <span className="inspection-tag-name">{t.tag}</span>
+                                        <span className="inspection-tag-val">{(t.strength * 100).toFixed(0)}%</span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
+            </div>
+
+            <div className="action-wrapper">
+                <button 
+                    onClick={onStartSession} 
+                    disabled={isLoading}
+                    className="btn btn--start full-width-btn"
+                >
+                    {isLoading ? "Generating..." : milestone_summary.current_step === "unit_test_ready" ? "🏆 START GRADUATION TEST" : "🚀 START PRACTICE SESSION"}
+                </button>
+            </div>
+        </div>
+    );
+}
 
 export default function DuolingoStyleQuestions() {
-    const [questions, setQuestions]           = useState([]);
-    const [currentIndex, setCurrentIndex]     = useState(0);
-    const [userAnswer, setUserAnswer]         = useState("");
-    const [lastUserAnswer, setLastUserAnswer] = useState("");
+    const [questions, setQuestions]               = useState([]);
+    const [currentIndex, setCurrentIndex]         = useState(0);
+    const [userAnswer, setUserAnswer]             = useState("");
+    const [lastUserAnswer, setLastUserAnswer]     = useState("");
     const [isSessionStarted, setIsSessionStarted] = useState(false);
-    const [isLoading, setIsLoading]           = useState(false);
-    const [score, setScore]                   = useState(0);
-    const [answerLog, setAnswerLog]           = useState([]);
-    const [wordCache, setWordCache]           = useState({});
-    const [isUnitTest, setIsUnitTest]         = useState(false);
+    const [isLoading, setIsLoading]               = useState(false);
+    const [score, setScore]                       = useState(0);
+    const [answerLog, setAnswerLog]               = useState([]);
+    const [wordCache, setWordCache]               = useState({});
+    const [isUnitTest, setIsUnitTest]             = useState(false);
     const [hasSubmitted, setHasSubmitted]     = useState(false);
-    const [isCorrect, setIsCorrect]           = useState(false);
+    const [isCorrect, setIsCorrect]               = useState(false);
+    const [progressData, setProgressData]         = useState(null);
 
-    const currentQuestionObj = questions[currentIndex] ?? null;
+    useEffect(() => {
+        if (!isSessionStarted) {
+            fetchProgress();
+        }
+    }, [isSessionStarted]);
 
-    // Auto-play audio whenever a Korean question appears
+    const fetchProgress = async () => {
+        try {
+            const response = await fetch(`/api/user_progress/${USER_ID}`);
+            const data = await response.json();
+            setProgressData(data);
+        } catch (e) {
+            console.error("Error pulling progress summary:", e);
+        }
+    };
+
     useEffect(() => {
         if (!currentQuestionObj) return;
         if (!isQuestionInKorean(currentQuestionObj.question)) return;
@@ -313,6 +414,8 @@ export default function DuolingoStyleQuestions() {
 
         return () => { cancelled = true; };
     }, [currentIndex, questions]);
+
+    const currentQuestionObj = questions[currentIndex] ?? null;
 
     const playQuestionAudio = async () => {
         if (!currentQuestionObj) return;
@@ -354,12 +457,31 @@ export default function DuolingoStyleQuestions() {
         if (correct && !currentQuestionObj.was_wrong) setScore(s => s + 1);
     };
 
-    const handleContinue = () => {
+    const handleContinue = async () => {
+        let currentLog = [...answerLog, { question_data: currentQuestionObj, is_correct: isCorrect }];
         if (!isUnitTest && !isCorrect) {
             setQuestions(prev => [...prev, { ...currentQuestionObj, was_wrong: true }]);
         }
-        setAnswerLog(prev => [...prev, { question_data: currentQuestionObj, is_correct: isCorrect }]);
-        setCurrentIndex(i => i + 1);
+        setAnswerLog(currentLog);
+        const nextIndex = currentIndex + 1;
+        
+        if (nextIndex >= questions.length) {
+            try {
+                await fetch(`/api/practice/submit_session/${USER_ID}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        list_of_question_data: currentLog.map(item => item.question_data),
+                        is_correct: currentLog.map(item => item.is_correct),
+                        is_unit_test: isUnitTest
+                    })
+                });
+            } catch (error) {
+                console.error("Failed to submit session results", error);
+            }
+        }
+
+        setCurrentIndex(nextIndex);
         setUserAnswer("");
         setLastUserAnswer("");
         setHasSubmitted(false);
@@ -368,21 +490,23 @@ export default function DuolingoStyleQuestions() {
 
     const renderContent = () => {
         if (!isSessionStarted) return (
-            <div className="start-screen">
-                <button onClick={startSession} className="btn btn--start">Start Session</button>
-            </div>
+            <ProgressDashboard 
+                progressData={progressData} 
+                onStartSession={startSession} 
+                isLoading={isLoading} 
+            />
         );
 
-        if (isLoading || questions.length === 0) return (
-            <div className="loading-screen">Loading...</div>
+        if (isLoading && questions.length === 0) return (
+            <div className="loading-screen">Loading Session Setup...</div>
         );
 
         if (currentIndex >= questions.length) return (
             <div className="complete-screen">
-                <h1>Session Complete!</h1>
+                <h1>🎉 Session Complete!</h1>
                 <p>Final Accuracy: {score} / {questions.filter(q => !q.was_wrong).length}</p>
                 <button className="btn btn--start" onClick={() => setIsSessionStarted(false)}>
-                    Back to Menu
+                    Return to Dashboard
                 </button>
             </div>
         );
@@ -410,7 +534,9 @@ export default function DuolingoStyleQuestions() {
     return (
         <div className="website-page">
             <Header />
-            {renderContent()}
+            <div className="content-viewport">
+                {renderContent()}
+            </div>
         </div>
     );
 }

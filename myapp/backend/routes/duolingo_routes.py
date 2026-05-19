@@ -20,6 +20,7 @@ def get_db():
 # --------------------------------- CONSTANTS ---------------------------------
 NUM_OF_UNIT_TEST_QUESTIONS = 20
 PERCENTAGE_TO_PASS_UNIT_TEST = 0.80
+NUM_OF_INTRO_QUESTIONS = 10
 
 # --------------------------------- HELPERS ---------------------------------
 # only get strength scores for tags from a specific unit (inclusive both sides)
@@ -152,6 +153,18 @@ def generate_unit_test(user_id, user_unit):
         question_set=unit_test_questions
     )
 
+def generate_intro_session(user_id, db):
+    user_unit = crud.get_user(db, user_id).current_unit
+
+    # ask questions from those tags
+    return generate_questions(
+        db,
+        user_id,
+        NUM_OF_INTRO_QUESTIONS,
+        current_unit,
+        current_unit
+    )
+
 # --------------------------------- ENDPOINTS ---------------------------------
 @router.patch("/api/practice/submit_session/{user_id}")
 def submit_session(user_id: int, 
@@ -251,3 +264,72 @@ def generate_session(user_id: int, db: Session = Depends(get_db)):
 
     # 4. THE GRADUATION GATE
     return generate_unit_test(user_id, user_unit)
+
+@router.get("/api/user_progress/{user_id}", response_model=ProgressResponse)
+def get_user_progress(user_id: int, db: Session = Depends(get_db)):
+    user = crud.get_user(db, user_id)
+    if not user:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="User not found")
+        
+    user_unit = user.current_unit
+    intro_rounds = user.intro_rounds_completed
+
+    # 1. GENERATE THE KNOWLEDGE GRID FOR THE CURRENT UNIT
+    # Grab all tags tied to the user's current unit
+    current_unit_tags = [tag for tag, unit in tags_to_unit_dict.items() if unit == user_unit]
+    
+    # Get calculated strength records for this unit
+    calculated_stats = get_strength_scores_from_unit_range(db, user_id, user_unit, user_unit)
+    strength_map = {item["tag"]: item["strength"] for item in calculated_stats}
+
+    knowledge_grid = []
+    stable_tags_count = 0
+
+    for tag in current_unit_tags:
+        # If the tag doesn't exist in DB yet, strength is 0.0
+        current_strength = strength_map.get(tag, 0.0)
+        
+        # Categorize health status based on your gateway logic (0.85 threshold)
+        if current_strength >= 0.85:
+            status = "stable"
+            stable_tags_count += 1
+        elif current_strength >= 0.70:
+            status = "cooling"
+        else:
+            status = "weak"
+
+        knowledge_grid.append({
+            "tag": tag,
+            "strength": round(current_strength, 2),
+            "status": status
+        })
+
+    # 2. DETERMINE THE CURRENT MILESTONE STEP
+    if intro_rounds < 2:
+        current_step = "intro_rounds"
+        status_message = f"Complete your introductory material. ({intro_rounds}/2 rounds completed)"
+    else:
+        # Check if they have weak tags remaining
+        has_weak_tags = stable_tags_count < len(current_unit_tags)
+        
+        if has_weak_tags:
+            current_step = "stabilize_tags"
+            status_message = f"Strengthen your weak tags. Get all tags above 85% strength to unlock your Unit Test. ({stable_tags_count}/{len(current_unit_tags)} stable)"
+        else:
+            current_step = "unit_test_ready"
+            status_message = "All concepts are stable! You are ready to take your Graduation Unit Test."
+
+    # 3. BUILD THE STRUCTURED RESPONSE
+    return {
+        "user_id": user_id,
+        "current_unit": user_unit,
+        "milestone_summary": {
+            "current_step": current_step,
+            "status_message": status_message,
+            "intro_rounds_completed": intro_rounds,
+            "total_tags_in_unit": len(current_unit_tags),
+            "stable_tags_in_unit": stable_tags_count
+        },
+        "knowledge_grid": knowledge_grid
+    }
