@@ -18,6 +18,26 @@ const clean = (str) => {
         .trim();
 };
 
+// Map question types to human-readable prompts if level defaults aren't precise enough
+const typeToInstruction = (type, level) => {
+    switch(type) {
+        case "conversation": return "Select the best response:";
+        case "error correction": return "Click on the incorrect word, then type its correction:";
+        case "fill in the blank":
+        case "vocab fill in the blank": return "Fill in the blank:";
+        case "listening":
+        case "listening sentence blocks":
+        case "listening vocab": return "Listen closely and solve:";
+        case "speaking":
+        case "speaking sentence":
+        case "speaking vocab": return "Tap mic and repeat aloud:";
+        case "translate english to korean": return "Translate this to Korean:";
+        case "translate korean to english": return "Translate this to English:";
+        case "vocab define": return "Choose the correct definition:";
+        default: return levelToInstruction(level);
+    }
+};
+
 const levelToInstruction = (level) => {
     if (level === "easy")   return "Insert grammar particle:";
     if (level === "medium") return "Translate to English:";
@@ -167,16 +187,293 @@ function DiffAnswer({ correctAnswer, userAnswer }) {
     );
 }
 
+// ── NEW HELPER COMPONENT FOR MULTIPLE CHOICE UI ──
+function ChoiceSelector({ choices, selectedChoice, onSelect, disabled }) {
+    return (
+        <div className="choices-grid">
+            {choices.map((choice, index) => (
+                <button
+                    key={index}
+                    type="button"
+                    className={`choice-button ${selectedChoice === choice ? 'selected' : ''}`}
+                    onClick={() => !disabled && onSelect(choice)}
+                    disabled={disabled}
+                >
+                    <span className="choice-index">{index + 1}</span>
+                    <span className="choice-text">{choice}</span>
+                </button>
+            ))}
+        </div>
+    );
+}
+
+// ── NEW HELPER COMPONENT FOR WORD/SENTENCE BLOCKS (Duolingo Style UI) ──
+function SentenceBlocksUI({ blocks, value, onChange, disabled }) {
+    const selectedWords = value ? value.split(" ").filter(w => w.length > 0) : [];
+
+    // Tracks available blocks based on how many times a word option is clicked vs remains
+    const handleBlockClick = (word) => {
+        if (disabled) return;
+        const updated = [...selectedWords, word];
+        onChange(updated.join(" "));
+    };
+
+    const handleRemoveWord = (index) => {
+        if (disabled) return;
+        const updated = [...selectedWords];
+        updated.splice(index, 1);
+        onChange(updated.join(" "));
+    };
+
+    return (
+        <div className="sentence-blocks-container">
+            {/* Upper display tray: builds up sentence array output */}
+            <div className="blocks-answer-tray">
+                {selectedWords.map((word, index) => (
+                    <button 
+                        key={index} 
+                        type="button" 
+                        className="block-tile active-tile"
+                        onClick={() => handleRemoveWord(index)}
+                        disabled={disabled}
+                    >
+                        {word}
+                    </button>
+                ))}
+                {selectedWords.length === 0 && <span className="tray-placeholder">Click tokens below to build string</span>}
+            </div>
+
+            {/* Lower choice tray: remaining items array pool selection buttons */}
+            <div className="blocks-pool-tray">
+                {blocks.map((word, index) => {
+                    // Count how many times this precise string appears in options pool vs output selection tray
+                    const occurrencesInPool = blocks.filter(w => w === word).length;
+                    const occurrencesInSelection = selectedWords.filter(w => w === word).length;
+                    const isUsedUp = occurrencesInSelection >= occurrencesInPool;
+
+                    return (
+                        <button
+                            key={index}
+                            type="button"
+                            className={`block-tile ${isUsedUp ? 'tile-disabled' : ''}`}
+                            onClick={() => !isUsedUp && handleBlockClick(word)}
+                            disabled={disabled || isUsedUp}
+                        >
+                            {word}
+                        </button>
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
+
 function Question({
     currentQuestionObj, currentIndex, totalQuestions, userAnswer,
     setUserAnswer, handleSubmit, handleSkip, handleContinue,
     wordCache, setWordCache, hasSubmitted, isCorrect, lastUserAnswer,
     onPlayAudio,
 }) {
-    const words = currentQuestionObj.question.split(" ");
-    const questionIsKorean = isQuestionInKorean(currentQuestionObj.question);
-    const answerNeedsKorean = !questionIsKorean || currentQuestionObj.question_type === "fill in the blank";
-    const isGrammarParticleQuestion = currentQuestionObj.question.includes("___");
+    const qType = currentQuestionObj.question_type;
+    const words = currentQuestionObj.question ? currentQuestionObj.question.split(" ") : [];
+    
+    // Config switches for determining whether to present Hangul standard QWERTY translator script logic engine values
+    const questionIsKorean = isQuestionInKorean(currentQuestionObj.question || "");
+    const answerNeedsKorean = qType === "translate english to korean" || qType === "fill in the blank";
+
+    // ── ERROR CORRECTION LOCAL COMPONENT STATE ──
+    const [selectedErrorWordIndex, setSelectedErrorWordIndex] = useState(null);
+    const [errorWordCorrection, setErrorWordCorrection] = useState("");
+
+    // ── DICTATION SPEAKING STATE ──
+    const [isListeningSpeech, setIsListeningSpeech] = useState(false);
+    const recognitionRef = useRef(null);
+
+    // Sync sub-state variables when index steps onward or rolls backward
+    useEffect(() => {
+        setSelectedErrorWordIndex(null);
+        setErrorWordCorrection("");
+        if (recognitionRef.current) {
+            try { recognitionRef.current.stop(); } catch(e){}
+            setIsListeningSpeech(false);
+        }
+    }, [currentIndex]);
+
+    // Handle interactive click tracking for 'error correction'
+    const handleWordClickErrorCorrection = (word, index) => {
+        if (hasSubmitted) return;
+        setSelectedErrorWordIndex(index);
+        setErrorWordCorrection("");
+        setUserAnswer(`Word index ${index}: `); // Placeholder initial assignment for answer evaluation check logic
+    };
+
+    // Update payload submission string when custom correction item text changes
+    const handleCorrectionTextChange = (newVal) => {
+        setErrorWordCorrection(newVal);
+        // Pack combined data payload token for comparison check
+        const targetedWord = words[selectedErrorWordIndex] || "";
+        setUserAnswer(`${targetedWord} -> ${newVal}`);
+    };
+
+    // ── WEB SPEECH DICTATION HANDLERS (Speaking Question Modes) ──
+    const startSpeechRecognition = () => {
+        if (hasSubmitted) return;
+        
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognition) {
+            alert("Speech recognition is not supported on this browser device framework layout.");
+            return;
+        }
+
+        const recognition = new SpeechRecognition();
+        // Set dictation context language properties dynamically based on targets
+        recognition.lang = (qType === "speaking" || qType === "speaking sentence" || qType === "speaking vocab") ? "ko-KR" : "en-US";
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.onstart = () => setIsListeningSpeech(true);
+        recognition.onerror = (e) => { console.error(e); setIsListeningSpeech(false); };
+        recognition.onend = () => setIsListeningSpeech(false);
+        
+        recognition.onresult = (event) => {
+            const speechResult = event.results[0][0].transcript;
+            setUserAnswer(speechResult);
+        };
+
+        recognitionRef.current = recognition;
+        recognition.start();
+    };
+
+    // ── RENDER DYNAMIC PROMPT ELEMENT (BASED ON TYPE) ──
+    const renderQuestionDisplayPrompt = () => {
+        // Listening type items obscure direct visual output string references
+        const isListeningMode = ["listening", "listening sentence blocks", "listening vocab"].includes(qType);
+        
+        if (isListeningMode) {
+            return (
+                <div className="audio-prompt-container">
+                    <button type="button" className="audio-btn dynamic-audio-hero" onClick={onPlayAudio}>
+                        🔊 Tap to Play Audio
+                    </button>
+                </div>
+            );
+        }
+
+        if (qType === "error correction") {
+            return (
+                <div className="error-sentence-strip">
+                    {words.map((w, i) => {
+                        const isSelected = selectedErrorWordIndex === i;
+                        return (
+                            <span 
+                                key={i} 
+                                className={`interactive-error-token ${isSelected ? 'selected-err-token' : ''}`}
+                                onClick={() => handleWordClickErrorCorrection(w, i)}
+                            >
+                                {w}{" "}
+                            </span>
+                        );
+                    })}
+                </div>
+            );
+        }
+
+        // Default layout displays base words with dictionary tooltip options
+        return (
+            <h1 className="question-h1">
+                {questionIsKorean
+                    ? words.map((w, i) => (
+                        <WordWithTooltip key={i} word={w} wordCache={wordCache} setWordCache={setWordCache} />
+                      ))
+                    : currentQuestionObj.question
+                }
+            </h1>
+        );
+    };
+
+    // ── RENDER DYNAMIC ANSWER INPUT ELEMENT (BASED ON TYPE) ──
+    const renderAnswerInputUI = () => {
+        // 1. Multiple Choice Interfaces
+        if (["conversation", "listening vocab", "vocab define", "vocab fill in the blank"].includes(qType)) {
+            return (
+                <ChoiceSelector 
+                    choices={currentQuestionObj.choices || []}
+                    selectedChoice={userAnswer}
+                    onSelect={setUserAnswer}
+                    disabled={hasSubmitted}
+                />
+            );
+        }
+
+        // 2. Clickable Word Block Interfaces
+        if (qType === "listening sentence blocks") {
+            return (
+                <SentenceBlocksUI 
+                    blocks={currentQuestionObj.blocks || []}
+                    value={userAnswer}
+                    onChange={setUserAnswer}
+                    disabled={hasSubmitted}
+                />
+            );
+        }
+
+        // 3. Error Correction Custom Input Box Override
+        if (qType === "error correction") {
+            return (
+                <div className="error-correction-input-zone">
+                    {selectedErrorWordIndex !== null ? (
+                        <div className="correction-field-box">
+                            <p className="sub-tag">Correcting word: <strong>{words[selectedErrorWordIndex]}</strong></p>
+                            <SmartInput 
+                                value={errorWordCorrection}
+                                onChange={handleCorrectionTextChange}
+                                disabled={hasSubmitted}
+                                isCorrect={isCorrect}
+                                hasSubmitted={hasSubmitted}
+                                needsKorean={isQuestionInKorean(currentQuestionObj.question)}
+                            />
+                        </div>
+                    ) : (
+                        <p className="prompt-fallback-notice">Click on the incorrect word in the sentence display frame above.</p>
+                    )}
+                </div>
+            );
+        }
+
+        // 4. Voice Dictation Interfaces
+        if (["speaking", "speaking sentence", "speaking vocab"].includes(qType)) {
+            return (
+                <div className="speech-dictation-control-panel">
+                    <button 
+                        type="button" 
+                        className={`mic-trigger-btn ${isListeningSpeech ? 'mic-active-pulse' : ''}`}
+                        onClick={startSpeechRecognition}
+                        disabled={hasSubmitted}
+                    >
+                        {isListeningSpeech ? "🎙️ Listening... Speak Now" : "🎤 Tap to Dictate Answer"}
+                    </button>
+                    {userAnswer && (
+                        <div className="speech-transcription-preview">
+                            <p className="preview-label">Detected Transcription:</p>
+                            <p className="preview-string">"{userAnswer}"</p>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        // 5. Default Fallback standard Keyboard Box Inputs
+        return (
+            <SmartInput
+                value={userAnswer}
+                onChange={setUserAnswer}
+                disabled={hasSubmitted}
+                isCorrect={isCorrect}
+                hasSubmitted={hasSubmitted}
+                needsKorean={answerNeedsKorean}
+            />
+        );
+    };
 
     return (
         <div className="question-page">
@@ -185,37 +482,25 @@ function Question({
             )}
 
             <p className="question-counter">Question {currentIndex + 1} of {totalQuestions}</p>
-            <h2 className="question-instruction">{levelToInstruction(currentQuestionObj.level)}</h2>
+            <h2 className="question-instruction">
+                {typeToInstruction(qType, currentQuestionObj.level)}
+            </h2>
 
             <div className="question-text">
-                <h1 className="question-h1">
-                    {questionIsKorean
-                        ? words.map((w, i) => (
-                            <WordWithTooltip key={i} word={w} wordCache={wordCache} setWordCache={setWordCache} />
-                          ))
-                        : currentQuestionObj.question
-                    }
-                </h1>
-                {questionIsKorean && !isGrammarParticleQuestion && (
-                    <button className="audio-btn" onClick={onPlayAudio}>
+                {renderQuestionDisplayPrompt()}
+                {questionIsKorean && !currentQuestionObj.question.includes("___") && !["listening", "listening sentence blocks", "listening vocab"].includes(qType) && (
+                    <button type="button" className="audio-btn" onClick={onPlayAudio}>
                         🔈 Play Audio
                     </button>
                 )}
             </div>
 
             <form onSubmit={handleSubmit} className="answer-form">
-                <SmartInput
-                    value={userAnswer}
-                    onChange={setUserAnswer}
-                    disabled={hasSubmitted}
-                    isCorrect={isCorrect}
-                    hasSubmitted={hasSubmitted}
-                    needsKorean={answerNeedsKorean}
-                />
+                {renderAnswerInputUI()}
 
                 {!hasSubmitted && (
                     <div className="answer-actions">
-                        <button type="submit" className="btn btn--check">CHECK</button>
+                        <button type="submit" className="btn btn--check" disabled={!userAnswer}>CHECK</button>
                         <button type="button" className="btn btn--skip" onClick={handleSkip}>SKIP</button>
                     </div>
                 )}
@@ -246,7 +531,7 @@ function Question({
     );
 }
 
-// ── ProgressDashboard Component (With Histogram Chart) ──
+// ── ProgressDashboard Component (Unchanged) ──
 function ProgressDashboard({ progressData, onStartSession, isLoading }) {
     const [selectedBucket, setSelectedBucket] = useState(null);
 
@@ -261,7 +546,6 @@ function ProgressDashboard({ progressData, onStartSession, isLoading }) {
         progressPercent = (milestone_summary.stable_tags_in_unit / milestone_summary.total_tags_in_unit) * 100;
     }
 
-    // Define 5 clean bucket ranges for strength
     const buckets = [
         { label: "0-20%", min: 0.0, max: 0.2, key: "b1", statusClass: "chart-bar--weak" },
         { label: "21-40%", min: 0.2, max: 0.4, key: "b2", statusClass: "chart-bar--weak" },
@@ -270,23 +554,17 @@ function ProgressDashboard({ progressData, onStartSession, isLoading }) {
         { label: "81-100%", min: 0.8, max: 1.01, key: "b5", statusClass: "chart-bar--stable" }
     ];
 
-    // Distribute tags across buckets
     const bucketData = buckets.map(b => {
         const tagsInBucket = knowledge_grid.filter(item => item.strength >= b.min && item.strength < b.max);
         return { ...b, tags: tagsInBucket, count: tagsInBucket.length };
     });
 
-    // Determine max count to compute relative heights scaling up to 100%
     const maxCount = Math.max(...bucketData.map(b => b.count), 1);
-
     const activeBucketInfo = bucketData.find(b => b.key === selectedBucket);
 
     return (
         <div className="dashboard-container">
-            <div className="unit-badge">
-                📍 Current Unit: {current_unit}
-            </div>
-
+            <div className="unit-badge">📍 Current Unit: {current_unit}</div>
             <div className="milestone-card">
                 <h3 className="objective-title">Current Objective</h3>
                 <p className="objective-text">{milestone_summary.status_message}</p>
@@ -298,16 +576,13 @@ function ProgressDashboard({ progressData, onStartSession, isLoading }) {
                 </div>
             </div>
 
-            {/* Histogram Layout Structure */}
             <div className="chart-section">
                 <h4 className="chart-heading">Concept Mastery Breakdown</h4>
                 <p className="chart-subheading">Click on any bar to inspect underlying tags</p>
-                
                 <div className="histogram-chart">
                     {bucketData.map((b) => {
                         const barHeightPercent = (b.count / maxCount) * 100;
                         const isBarActive = selectedBucket === b.key;
-
                         return (
                             <div 
                                 key={b.key} 
@@ -316,10 +591,7 @@ function ProgressDashboard({ progressData, onStartSession, isLoading }) {
                             >
                                 <div className="chart-value-label">{b.count}</div>
                                 <div className="chart-bar-container">
-                                    <div 
-                                        className={`chart-bar-fill ${b.statusClass}`} 
-                                        style={{ height: `${barHeightPercent}%` }}
-                                    />
+                                    <div className={`chart-bar-fill ${b.statusClass}`} style={{ height: `${barHeightPercent}%` }}/>
                                 </div>
                                 <div className="chart-axis-label">{b.label}</div>
                             </div>
@@ -327,12 +599,9 @@ function ProgressDashboard({ progressData, onStartSession, isLoading }) {
                     })}
                 </div>
 
-                {/* Conditional Inspection List Block */}
                 {activeBucketInfo && (
                     <div className="inspection-panel">
-                        <h5 className="inspection-title">
-                            Tags at {activeBucketInfo.label} Strength ({activeBucketInfo.count})
-                        </h5>
+                        <h5 className="inspection-title">Tags at {activeBucketInfo.label} Strength ({activeBucketInfo.count})</h5>
                         {activeBucketInfo.count === 0 ? (
                             <p className="empty-inspection-text">No tags currently within this range.</p>
                         ) : (
@@ -350,11 +619,7 @@ function ProgressDashboard({ progressData, onStartSession, isLoading }) {
             </div>
 
             <div className="action-wrapper">
-                <button 
-                    onClick={onStartSession} 
-                    disabled={isLoading}
-                    className="btn btn--start full-width-btn"
-                >
+                <button onClick={onStartSession} disabled={isLoading} className="btn btn--start full-width-btn">
                     {isLoading ? "Generating..." : milestone_summary.current_step === "unit_test_ready" ? "🏆 START GRADUATION TEST" : "🚀 START PRACTICE SESSION"}
                 </button>
             </div>
@@ -373,14 +638,12 @@ export default function DuolingoStyleQuestions() {
     const [answerLog, setAnswerLog]               = useState([]);
     const [wordCache, setWordCache]               = useState({});
     const [isUnitTest, setIsUnitTest]             = useState(false);
-    const [hasSubmitted, setHasSubmitted]     = useState(false);
+    const [hasSubmitted, setHasSubmitted]         = useState(false);
     const [isCorrect, setIsCorrect]               = useState(false);
     const [progressData, setProgressData]         = useState(null);
 
     useEffect(() => {
-        if (!isSessionStarted) {
-            fetchProgress();
-        }
+        if (!isSessionStarted) fetchProgress();
     }, [isSessionStarted]);
 
     const fetchProgress = async () => {
@@ -388,24 +651,29 @@ export default function DuolingoStyleQuestions() {
             const response = await fetch(`/api/user_progress/${USER_ID}`);
             const data = await response.json();
             setProgressData(data);
-        } catch (e) {
-            console.error("Error pulling progress summary:", e);
-        }
+        } catch (e) { console.error("Error pulling progress summary:", e); }
     };
 
+    const currentQuestionObj = questions[currentIndex] ?? null;
+
+    // Auto-play audio rule modification
     useEffect(() => {
         if (!currentQuestionObj) return;
-        if (!isQuestionInKorean(currentQuestionObj.question)) return;
-        const isGrammarParticleQuestion = currentQuestionObj.question.includes("___");
-        if (isGrammarParticleQuestion) return;
+        
+        // Auto-triggers for listening variants or standard Korean sentences
+        const isListeningMode = ["listening", "listening sentence blocks", "listening vocab"].includes(currentQuestionObj.question_type);
+        const shouldPlay = isListeningMode || (isQuestionInKorean(currentQuestionObj.question || "") && !currentQuestionObj.question.includes("___"));
+        
+        if (!shouldPlay) return;
 
         let cancelled = false;
         (async () => {
             try {
+                const textToVoice = isListeningMode ? currentQuestionObj.answer : currentQuestionObj.question;
                 const resp = await fetch('/api/audio', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ text: currentQuestionObj.question })
+                    body: JSON.stringify({ text: textToVoice })
                 });
                 if (cancelled) return;
                 new Audio(URL.createObjectURL(await resp.blob())).play();
@@ -415,15 +683,15 @@ export default function DuolingoStyleQuestions() {
         return () => { cancelled = true; };
     }, [currentIndex, questions]);
 
-    const currentQuestionObj = questions[currentIndex] ?? null;
-
     const playQuestionAudio = async () => {
         if (!currentQuestionObj) return;
+        const isListeningMode = ["listening", "listening sentence blocks", "listening vocab"].includes(currentQuestionObj.question_type);
+        const textToVoice = isListeningMode ? currentQuestionObj.answer : currentQuestionObj.question;
         try {
             const resp = await fetch('/api/audio', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text: currentQuestionObj.question })
+                body: JSON.stringify({ text: textToVoice })
             });
             new Audio(URL.createObjectURL(await resp.blob())).play();
         } catch (e) { console.error(e); }
@@ -450,7 +718,16 @@ export default function DuolingoStyleQuestions() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!currentQuestionObj || hasSubmitted) return;
-        const correct = clean(userAnswer) === clean(currentQuestionObj.answer);
+
+        // Custom matching rules based on question structure
+        let correct = false;
+        if (currentQuestionObj.question_type === "error correction") {
+            // Evaluates structured dynamic output payload against explicit solution values 
+            correct = clean(userAnswer) === clean(currentQuestionObj.answer);
+        } else {
+            correct = clean(userAnswer) === clean(currentQuestionObj.answer);
+        }
+
         setLastUserAnswer(userAnswer);
         setIsCorrect(correct);
         setHasSubmitted(true);
@@ -476,9 +753,7 @@ export default function DuolingoStyleQuestions() {
                         is_unit_test: isUnitTest
                     })
                 });
-            } catch (error) {
-                console.error("Failed to submit session results", error);
-            }
+            } catch (error) { console.error("Failed to submit session results", error); }
         }
 
         setCurrentIndex(nextIndex);
@@ -490,24 +765,16 @@ export default function DuolingoStyleQuestions() {
 
     const renderContent = () => {
         if (!isSessionStarted) return (
-            <ProgressDashboard 
-                progressData={progressData} 
-                onStartSession={startSession} 
-                isLoading={isLoading} 
-            />
+            <ProgressDashboard progressData={progressData} onStartSession={startSession} isLoading={isLoading} />
         );
-
         if (isLoading && questions.length === 0) return (
             <div className="loading-screen">Loading Session Setup...</div>
         );
-
         if (currentIndex >= questions.length) return (
             <div className="complete-screen">
                 <h1>🎉 Session Complete!</h1>
                 <p>Final Accuracy: {score} / {questions.filter(q => !q.was_wrong).length}</p>
-                <button className="btn btn--start" onClick={() => setIsSessionStarted(false)}>
-                    Return to Dashboard
-                </button>
+                <button className="btn btn--start" onClick={() => setIsSessionStarted(false)}>Return to Dashboard</button>
             </div>
         );
 
@@ -534,9 +801,7 @@ export default function DuolingoStyleQuestions() {
     return (
         <div className="website-page">
             <Header />
-            <div className="content-viewport">
-                {renderContent()}
-            </div>
+            <div className="content-viewport">{renderContent()}</div>
         </div>
     );
 }

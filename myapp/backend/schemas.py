@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import List, Dict, Optional
+from enum import Enum
 
 # A schema for the individual question data
 class QuestionBase(BaseModel):
@@ -14,11 +15,18 @@ class SessionSubmission(BaseModel):
     is_correct: List[bool]
     is_unit_test: bool
 
+# the schema for the type of session you can have
+class SessionType(str, Enum):
+    INTRO = "intro"
+    PRACTICE_CURRENT_UNIT = "practice_current_unit"
+    PRACTICE_OLD_UNITS = "practice_old_units"
+    UNIT_TEST = "unit_test"
+
 # The schema for what the API returns to the frontend
 class SessionResponse(BaseModel):
     user_id: int
     question_set: List[Dict]
-    session_type: str
+    session_type: SessionType
 
 class GridItem(BaseModel):
     tag: str

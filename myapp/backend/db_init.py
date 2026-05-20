@@ -14,16 +14,15 @@ from datetime import date
 # the SQL parts are here: strength table and user table (#1,#5)
 
 # ----------------------------- TAG-QUESTION DICT -----------------------------
-DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = './SejongKorean2022_Questions_DB/questions.json'
-
+JSON_FOLDER_FILEPATH = 'Old_Sejong_Korean_Questions/'
+DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH = JSON_FOLDER_FILEPATH + 'review_questions.json'
 try:
     with open(DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH, 'r', encoding='utf-8') as file:
         # json.load() parses the file directly into a Python list or dictionary
+        # Format: { "1": [ {question}, ... ], "2": [ ... ], ... }
         data = json.load(file)
-        
+
     print("Data loaded successfully!")
-    # Example: Access the first category
-    print(f"First Category: {data[0]['category']}")
 
 except FileNotFoundError:
     print(f"Error: The file {DUOLINGO_STYLE_QUESTIONS_JSON_FILEPATH} was not found.")
@@ -44,20 +43,19 @@ unique_tags = set()
 # Use a counter to assign a unique ID to every single question
 q_id_counter = 0
 
-for category_item in data:
-    category = category_item['category']
-    for level in category_item['levels']:
-        difficulty = level['difficulty']
-        for q in level['questions']:
-            q_id_counter += 1
-            question_id = f"q_{q_id_counter}"
+# New format: data is a dict keyed by unit number string e.g. "1", "2", ...
+# Each value is a flat list of question objects
+for unit_str, questions in data.items():
+    for q in questions:
+        q_id_counter += 1
+        question_id = f"q_{q_id_counter}"
 
-            tags_for_this_question = q['tags']
-            for tag in tags_for_this_question:
-                unique_tags.add(tag)
-                if tag not in inverted_index:
-                    inverted_index[tag] = []
-                inverted_index[tag].append(question_id)
+        tags_for_this_question = q['tags']
+        for tag in tags_for_this_question:
+            unique_tags.add(tag)
+            if tag not in inverted_index:
+                inverted_index[tag] = []
+            inverted_index[tag].append(question_id)
 
 # ----------------------------- STRENGTH TABLE -----------------------------
 conn = sqlite3.connect('duolingo_style_db.db')
@@ -77,7 +75,7 @@ cursor.execute('''
 
 # Insert unique tags into the SQL table
 for tag in unique_tags:
-    # INSERT OR IGNORE ensures that if a tag already exists for this user, 
+    # INSERT OR IGNORE ensures that if a tag already exists for this user,
     # it won't overwrite their current strength progress. It only adds new ones.
     cursor.execute('''
         INSERT OR IGNORE INTO strength_table (tag, user_id, stability, last_practice)
