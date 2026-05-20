@@ -3,7 +3,7 @@
     {
       "id": "u1_vocab_01_define",
       "question_type": "vocab define",
-      "question": "What does 👋 안녕하세요 mean?",
+      "question": "안녕하세요",
       "answer": "Hello / Hi",
       "choices": [
         "Goodbye",
@@ -54,7 +54,7 @@
     {
       "id": "u1_vocab_02_define",
       "question_type": "vocab define",
-      "question": "What does 🙋 저 mean?",
+      "question": "저",
       "answer": "I / me (formal)",
       "choices": [
         "You (formal)",
@@ -105,10 +105,10 @@
     {
       "id": "u1_vocab_03_define",
       "question_type": "vocab define",
-      "question": "What does 📌 는/은 mean?",
+      "question": "는/은",
       "answer": "Topic particle (은 after consonant, 는 after vowel)",
       "choices": [
-        "Topic particle",
+        "Topic particle (은 after consonant, 는 after vowel)",
         "Subject particle",
         "Direction particle",
         "Object particle"
@@ -174,10 +174,10 @@
     {
       "id": "u1_vocab_04_define",
       "question_type": "vocab define",
-      "question": "What does ✅ 이에요/예요 mean?",
+      "question": "이에요/예요",
       "answer": "Am/Is/Are (이에요 after consonant, 예요 after vowel)",
       "choices": [
-        "Am/Is/Are",
+        "Am/Is/Are (이에요 after consonant, 예요 after vowel)",
         "Was/Were",
         "Will be",
         "Want to be"
@@ -243,10 +243,10 @@
     {
       "id": "u1_vocab_05_define",
       "question_type": "vocab define",
-      "question": "What does 🪪 씨 mean?",
+      "question": "씨",
       "answer": "Mr./Ms. (honorific title after name)",
       "choices": [
-        "Mr./Ms. (honorific)",
+        "Mr./Ms. (honorific title after name)",
         "Friend (informal)",
         "Teacher",
         "Doctor"
@@ -294,7 +294,7 @@
     {
       "id": "u1_vocab_06_define",
       "question_type": "vocab define",
-      "question": "What does 👤 사람 mean?",
+      "question": "사람",
       "answer": "Person / people",
       "choices": [
         "Person / people",
@@ -345,7 +345,7 @@
     {
       "id": "u1_vocab_07_define",
       "question_type": "vocab define",
-      "question": "What does 🇰🇷 한국 mean?",
+      "question": "한국",
       "answer": "Korea",
       "choices": [
         "Vietnam",
@@ -396,7 +396,7 @@
     {
       "id": "u1_vocab_08_define",
       "question_type": "vocab define",
-      "question": "What does 🇨🇳 중국 mean?",
+      "question": "중국",
       "answer": "China",
       "choices": [
         "China",
@@ -447,7 +447,7 @@
     {
       "id": "u1_vocab_09_define",
       "question_type": "vocab define",
-      "question": "What does 🇯🇵 일본 mean?",
+      "question": "일본",
       "answer": "Japan",
       "choices": [
         "Korea",
@@ -498,7 +498,7 @@
     {
       "id": "u1_vocab_10_define",
       "question_type": "vocab define",
-      "question": "What does 🇹🇭 태국 mean?",
+      "question": "태국",
       "answer": "Thailand",
       "choices": [
         "China",
@@ -549,7 +549,7 @@
     {
       "id": "u1_vocab_11_define",
       "question_type": "vocab define",
-      "question": "What does 🇻🇳 베트남 mean?",
+      "question": "베트남",
       "answer": "Vietnam",
       "choices": [
         "Vietnam",
@@ -600,7 +600,7 @@
     {
       "id": "u1_vocab_12_define",
       "question_type": "vocab define",
-      "question": "What does 🎒 학생 mean?",
+      "question": "학생",
       "answer": "Student",
       "choices": [
         "Teacher",
@@ -669,7 +669,7 @@
     {
       "id": "u1_vocab_13_define",
       "question_type": "vocab define",
-      "question": "What does 💼 회사원 mean?",
+      "question": "회사원",
       "answer": "Office worker",
       "choices": [
         "Teacher",
@@ -738,7 +738,7 @@
     {
       "id": "u1_vocab_14_define",
       "question_type": "vocab define",
-      "question": "What does 👩‍🏫 선생님 mean?",
+      "question": "선생님",
       "answer": "Teacher",
       "choices": [
         "Student",
@@ -807,7 +807,7 @@
     {
       "id": "u1_vocab_15_define",
       "question_type": "vocab define",
-      "question": "What does 👨‍⚕️ 의사 mean?",
+      "question": "의사",
       "answer": "Doctor",
       "choices": [
         "Doctor",
@@ -876,7 +876,7 @@
     {
       "id": "u1_vocab_16_define",
       "question_type": "vocab define",
-      "question": "What does ✔️ 네 mean?",
+      "question": "네",
       "answer": "Yes",
       "choices": [
         "Thank you",
@@ -945,7 +945,7 @@
     {
       "id": "u1_vocab_17_define",
       "question_type": "vocab define",
-      "question": "What does ❌ 아니요 mean?",
+      "question": "아니요",
       "answer": "No",
       "choices": [
         "No",
@@ -1014,7 +1014,7 @@
     {
       "id": "u1_vocab_18_define",
       "question_type": "vocab define",
-      "question": "What does 🏷️ 이름 mean?",
+      "question": "이름",
       "answer": "Name",
       "choices": [
         "Job",
@@ -1065,12 +1065,12 @@
     {
       "id": "u1_vocab_19_define",
       "question_type": "vocab define",
-      "question": "What does ❓ 무엇 mean?",
+      "question": "무엇",
       "answer": "What",
       "choices": [
         "Where",
         "What (formal)",
-        "Who",
+        "What",
         "How much"
       ],
       "tags": [
@@ -1116,7 +1116,7 @@
     {
       "id": "u1_vocab_20_define",
       "question_type": "vocab define",
-      "question": "What does 📞 전화번호 mean?",
+      "question": "전화번호",
       "answer": "Phone number",
       "choices": [
         "Address",
@@ -1545,7 +1545,7 @@
     {
       "id": "u2_vocab_01_define",
       "question_type": "vocab define",
-      "question": "What does ⚡ 하다 mean?",
+      "question": "하다",
       "answer": "To do",
       "choices": [
         "To do",
@@ -1596,11 +1596,11 @@
     {
       "id": "u2_vocab_02_define",
       "question_type": "vocab define",
-      "question": "What does 🔄 해요 mean?",
+      "question": "해요",
       "answer": "Do / Does (present tense of 하다)",
       "choices": [
         "Is eating",
-        "Do / Does",
+        "Do / Does (present tense of 하다)",
         "Will do",
         "Went / Came"
       ],
@@ -1665,7 +1665,7 @@
     {
       "id": "u2_vocab_03_define",
       "question_type": "vocab define",
-      "question": "What does 🚶 가다 mean?",
+      "question": "가다",
       "answer": "To go",
       "choices": [
         "To come",
@@ -1716,7 +1716,7 @@
     {
       "id": "u2_vocab_04_define",
       "question_type": "vocab define",
-      "question": "What does 🚶‍♀️ 오다 mean?",
+      "question": "오다",
       "answer": "To come",
       "choices": [
         "To talk",
@@ -1767,7 +1767,7 @@
     {
       "id": "u2_vocab_05_define",
       "question_type": "vocab define",
-      "question": "What does 📚 공부하다 mean?",
+      "question": "공부하다",
       "answer": "To study",
       "choices": [
         "To eat",
@@ -1836,10 +1836,10 @@
     {
       "id": "u2_vocab_06_define",
       "question_type": "vocab define",
-      "question": "What does 🏃 운동하다 mean?",
+      "question": "운동하다",
       "answer": "To exercise / work out",
       "choices": [
-        "To exercise",
+        "To exercise / work out",
         "To study",
         "To rest",
         "To talk"
@@ -1905,7 +1905,7 @@
     {
       "id": "u2_vocab_07_define",
       "question_type": "vocab define",
-      "question": "What does 💪 일하다 mean?",
+      "question": "일하다",
       "answer": "To work",
       "choices": [
         "To work",
@@ -1956,7 +1956,7 @@
     {
       "id": "u2_vocab_08_define",
       "question_type": "vocab define",
-      "question": "What does 😴 쉬다 mean?",
+      "question": "쉬다",
       "answer": "To rest",
       "choices": [
         "To work",
@@ -2025,7 +2025,7 @@
     {
       "id": "u2_vocab_09_define",
       "question_type": "vocab define",
-      "question": "What does 🍚 먹다 mean?",
+      "question": "먹다",
       "answer": "To eat",
       "choices": [
         "To cook",
@@ -2094,7 +2094,7 @@
     {
       "id": "u2_vocab_10_define",
       "question_type": "vocab define",
-      "question": "What does 🤝 만나다 mean?",
+      "question": "만나다",
       "answer": "To meet",
       "choices": [
         "To go",
@@ -2163,7 +2163,7 @@
     {
       "id": "u2_vocab_11_define",
       "question_type": "vocab define",
-      "question": "What does 💬 이야기하다 mean?",
+      "question": "이야기하다",
       "answer": "To talk / chat",
       "choices": [
         "To work",
@@ -2214,7 +2214,7 @@
     {
       "id": "u2_vocab_12_define",
       "question_type": "vocab define",
-      "question": "What does 📱 전화하다 mean?",
+      "question": "전화하다",
       "answer": "To make a phone call",
       "choices": [
         "To meet",
@@ -2265,7 +2265,7 @@
     {
       "id": "u2_vocab_13_define",
       "question_type": "vocab define",
-      "question": "What does 🛒 사다 mean?",
+      "question": "사다",
       "answer": "To buy",
       "choices": [
         "To meet",
@@ -2334,11 +2334,11 @@
     {
       "id": "u2_vocab_14_define",
       "question_type": "vocab define",
-      "question": "What does 📍 에 mean?",
+      "question": "에",
       "answer": "To / At (location/direction particle)",
       "choices": [
         "With (companion)",
-        "To / At (direction)",
+        "To / At (location/direction particle)",
         "From (origin)",
         "But"
       ],
@@ -2403,10 +2403,10 @@
     {
       "id": "u2_vocab_15_define",
       "question_type": "vocab define",
-      "question": "What does 🏠 에서 mean?",
+      "question": "에서",
       "answer": "At / In (action location particle)",
       "choices": [
-        "At / In (action location)",
+        "At / In (action location particle)",
         "With",
         "From (origin)",
         "To (direction)"
@@ -2472,11 +2472,11 @@
     {
       "id": "u2_vocab_16_define",
       "question_type": "vocab define",
-      "question": "What does ➡️ 에게 mean?",
+      "question": "에게",
       "answer": "To (person — give/call/send)",
       "choices": [
         "From (person)",
-        "To (person)",
+        "To (person — give/call/send)",
         "With (person)",
         "About (person)"
       ],
@@ -2541,7 +2541,7 @@
     {
       "id": "u2_vocab_17_define",
       "question_type": "vocab define",
-      "question": "What does ⏰ 지금 mean?",
+      "question": "지금",
       "answer": "Now",
       "choices": [
         "Tomorrow",
@@ -2592,7 +2592,7 @@
     {
       "id": "u2_vocab_18_define",
       "question_type": "vocab define",
-      "question": "What does 📅 오늘 mean?",
+      "question": "오늘",
       "answer": "Today",
       "choices": [
         "Now",
@@ -2643,7 +2643,7 @@
     {
       "id": "u2_vocab_19_define",
       "question_type": "vocab define",
-      "question": "What does 📍 어디 mean?",
+      "question": "어디",
       "answer": "Where",
       "choices": [
         "Where",
@@ -2694,7 +2694,7 @@
     {
       "id": "u2_vocab_20_define",
       "question_type": "vocab define",
-      "question": "What does ❓ 뭐 mean?",
+      "question": "뭐",
       "answer": "What (casual)",
       "choices": [
         "Who",
@@ -2745,7 +2745,7 @@
     {
       "id": "u2_vocab_21_define",
       "question_type": "vocab define",
-      "question": "What does 🏫 학교 mean?",
+      "question": "학교",
       "answer": "School",
       "choices": [
         "Home",
@@ -2796,7 +2796,7 @@
     {
       "id": "u2_vocab_22_define",
       "question_type": "vocab define",
-      "question": "What does 🏢 회사 mean?",
+      "question": "회사",
       "answer": "Office / Company",
       "choices": [
         "School",
@@ -2847,7 +2847,7 @@
     {
       "id": "u2_vocab_23_define",
       "question_type": "vocab define",
-      "question": "What does 🏠 집 mean?",
+      "question": "집",
       "answer": "Home / House",
       "choices": [
         "Home / House",
@@ -2898,7 +2898,7 @@
     {
       "id": "u2_vocab_24_define",
       "question_type": "vocab define",
-      "question": "What does 🛍️ 시장 mean?",
+      "question": "시장",
       "answer": "Market",
       "choices": [
         "Park",
@@ -2949,7 +2949,7 @@
     {
       "id": "u2_vocab_25_define",
       "question_type": "vocab define",
-      "question": "What does 🌳 공원 mean?",
+      "question": "공원",
       "answer": "Park",
       "choices": [
         "Coffee shop",
@@ -3000,7 +3000,7 @@
     {
       "id": "u2_vocab_26_define",
       "question_type": "vocab define",
-      "question": "What does ☕ 커피숍 mean?",
+      "question": "커피숍",
       "answer": "Coffee shop",
       "choices": [
         "Coffee shop",
@@ -3051,7 +3051,7 @@
     {
       "id": "u2_vocab_27_define",
       "question_type": "vocab define",
-      "question": "What does 🍽️ 식당 mean?",
+      "question": "식당",
       "answer": "Restaurant",
       "choices": [
         "Coffee shop",
@@ -3102,7 +3102,7 @@
     {
       "id": "u2_vocab_28_define",
       "question_type": "vocab define",
-      "question": "What does 👫 친구 mean?",
+      "question": "친구",
       "answer": "Friend",
       "choices": [
         "Student",
@@ -3153,7 +3153,7 @@
     {
       "id": "u2_vocab_29_define",
       "question_type": "vocab define",
-      "question": "What does 🍚 밥 mean?",
+      "question": "밥",
       "answer": "Rice / meal",
       "choices": [
         "Rice / meal",
@@ -3592,12 +3592,12 @@
     {
       "id": "u3_vocab_01_define",
       "question_type": "vocab define",
-      "question": "What does ✅ 있다 mean?",
+      "question": "있다",
       "answer": "To exist / to have (있어요 = exists/there is)",
       "choices": [
         "To not exist",
         "To come",
-        "To exist / have",
+        "To exist / to have (있어요 = exists/there is)",
         "To go"
       ],
       "tags": [
@@ -3661,12 +3661,12 @@
     {
       "id": "u3_vocab_02_define",
       "question_type": "vocab define",
-      "question": "What does ❌ 없다 mean?",
+      "question": "없다",
       "answer": "To not exist / to not have (없어요 = doesn't exist)",
       "choices": [
         "To exist",
         "To come",
-        "To not exist / not have",
+        "To not exist / to not have (없어요 = doesn't exist)",
         "To go"
       ],
       "tags": [
@@ -3730,10 +3730,10 @@
     {
       "id": "u3_vocab_03_define",
       "question_type": "vocab define",
-      "question": "What does 🔵 이/가 mean?",
+      "question": "이/가",
       "answer": "Subject particle (이 after consonant, 가 after vowel)",
       "choices": [
-        "Subject particle",
+        "Subject particle (이 after consonant, 가 after vowel)",
         "Location particle",
         "Object particle",
         "Topic particle"
@@ -3799,7 +3799,7 @@
     {
       "id": "u3_vocab_04_define",
       "question_type": "vocab define",
-      "question": "What does ⬆️ 위 mean?",
+      "question": "위",
       "answer": "On top of / above",
       "choices": [
         "Under / below",
@@ -3868,7 +3868,7 @@
     {
       "id": "u3_vocab_05_define",
       "question_type": "vocab define",
-      "question": "What does ⬇️ 밑 mean?",
+      "question": "밑",
       "answer": "Under / below",
       "choices": [
         "Behind",
@@ -3937,7 +3937,7 @@
     {
       "id": "u3_vocab_06_define",
       "question_type": "vocab define",
-      "question": "What does ⏩ 앞 mean?",
+      "question": "앞",
       "answer": "In front of",
       "choices": [
         "On top of",
@@ -4006,7 +4006,7 @@
     {
       "id": "u3_vocab_07_define",
       "question_type": "vocab define",
-      "question": "What does ↔️ 옆 mean?",
+      "question": "옆",
       "answer": "Next to / beside",
       "choices": [
         "On top of",
@@ -4075,7 +4075,7 @@
     {
       "id": "u3_vocab_08_define",
       "question_type": "vocab define",
-      "question": "What does 🪑 책상 mean?",
+      "question": "책상",
       "answer": "Desk",
       "choices": [
         "Desk",
@@ -4126,7 +4126,7 @@
     {
       "id": "u3_vocab_09_define",
       "question_type": "vocab define",
-      "question": "What does 🪑 의자 mean?",
+      "question": "의자",
       "answer": "Chair",
       "choices": [
         "Pen",
@@ -4177,7 +4177,7 @@
     {
       "id": "u3_vocab_10_define",
       "question_type": "vocab define",
-      "question": "What does 👜 가방 mean?",
+      "question": "가방",
       "answer": "Bag",
       "choices": [
         "Chair",
@@ -4228,7 +4228,7 @@
     {
       "id": "u3_vocab_11_define",
       "question_type": "vocab define",
-      "question": "What does 🖊️ 펜 mean?",
+      "question": "펜",
       "answer": "Pen",
       "choices": [
         "Bag",
@@ -4279,7 +4279,7 @@
     {
       "id": "u3_vocab_12_define",
       "question_type": "vocab define",
-      "question": "What does 📖 책 mean?",
+      "question": "책",
       "answer": "Book",
       "choices": [
         "Book",
@@ -4330,7 +4330,7 @@
     {
       "id": "u3_vocab_13_define",
       "question_type": "vocab define",
-      "question": "What does 💻 컴퓨터 mean?",
+      "question": "컴퓨터",
       "answer": "Computer",
       "choices": [
         "Book",
@@ -4381,7 +4381,7 @@
     {
       "id": "u3_vocab_14_define",
       "question_type": "vocab define",
-      "question": "What does 🛏️ 침대 mean?",
+      "question": "침대",
       "answer": "Bed",
       "choices": [
         "Computer",
@@ -4432,7 +4432,7 @@
     {
       "id": "u3_vocab_15_define",
       "question_type": "vocab define",
-      "question": "What does ☎️ 전화기 mean?",
+      "question": "전화기",
       "answer": "Telephone / phone",
       "choices": [
         "Computer",
@@ -4483,7 +4483,7 @@
     {
       "id": "u3_vocab_16_define",
       "question_type": "vocab define",
-      "question": "What does 🚪 방 mean?",
+      "question": "방",
       "answer": "Room",
       "choices": [
         "Desk",
@@ -4534,7 +4534,7 @@
     {
       "id": "u3_vocab_17_define",
       "question_type": "vocab define",
-      "question": "What does 📍 어디 mean?",
+      "question": "어디",
       "answer": "Where",
       "choices": [
         "When",
@@ -4963,11 +4963,11 @@
     {
       "id": "u4_vocab_01_define",
       "question_type": "vocab define",
-      "question": "What does 🎯 을/를 mean?",
+      "question": "을/를",
       "answer": "Object particle (을 after consonant, 를 after vowel)",
       "choices": [
         "Location particle",
-        "Object particle",
+        "Object particle (을 after consonant, 를 after vowel)",
         "Subject particle",
         "Topic particle"
       ],
@@ -5032,10 +5032,10 @@
     {
       "id": "u4_vocab_02_define",
       "question_type": "vocab define",
-      "question": "What does 🙏 -(으)세요 mean?",
+      "question": "-(으)세요",
       "answer": "Please do... (polite request/command)",
       "choices": [
-        "Please do... (polite request)",
+        "Please do... (polite request/command)",
         "Will do",
         "Did / Past tense",
         "Can do"
@@ -5101,7 +5101,7 @@
     {
       "id": "u4_vocab_03_define",
       "question_type": "vocab define",
-      "question": "What does 🤲 주세요 mean?",
+      "question": "주세요",
       "answer": "Please give me",
       "choices": [
         "Please go",
@@ -5170,7 +5170,7 @@
     {
       "id": "u4_vocab_04_define",
       "question_type": "vocab define",
-      "question": "What does 💰 얼마 mean?",
+      "question": "얼마",
       "answer": "How much",
       "choices": [
         "How many",
@@ -5239,7 +5239,7 @@
     {
       "id": "u4_vocab_05_define",
       "question_type": "vocab define",
-      "question": "What does ❓ 무엇 mean?",
+      "question": "무엇",
       "answer": "What (formal)",
       "choices": [
         "What (formal)",
@@ -5290,7 +5290,7 @@
     {
       "id": "u4_vocab_06_define",
       "question_type": "vocab define",
-      "question": "What does 🍎 사과 mean?",
+      "question": "사과",
       "answer": "Apple",
       "choices": [
         "Milk",
@@ -5341,7 +5341,7 @@
     {
       "id": "u4_vocab_07_define",
       "question_type": "vocab define",
-      "question": "What does 🍊 오렌지 mean?",
+      "question": "오렌지",
       "answer": "Orange",
       "choices": [
         "Orange",
@@ -5392,7 +5392,7 @@
     {
       "id": "u4_vocab_08_define",
       "question_type": "vocab define",
-      "question": "What does 🍞 빵 mean?",
+      "question": "빵",
       "answer": "Bread",
       "choices": [
         "Rice",
@@ -5443,7 +5443,7 @@
     {
       "id": "u4_vocab_09_define",
       "question_type": "vocab define",
-      "question": "What does 🥛 우유 mean?",
+      "question": "우유",
       "answer": "Milk",
       "choices": [
         "Water",
@@ -5494,7 +5494,7 @@
     {
       "id": "u4_vocab_10_define",
       "question_type": "vocab define",
-      "question": "What does 💧 물 mean?",
+      "question": "물",
       "answer": "Water",
       "choices": [
         "Milk",
@@ -5545,7 +5545,7 @@
     {
       "id": "u4_vocab_11_define",
       "question_type": "vocab define",
-      "question": "What does 🧃 주스 mean?",
+      "question": "주스",
       "answer": "Juice",
       "choices": [
         "Water",
@@ -5596,11 +5596,11 @@
     {
       "id": "u4_vocab_12_define",
       "question_type": "vocab define",
-      "question": "What does 🔢 개 mean?",
+      "question": "개",
       "answer": "Counter for items (things)",
       "choices": [
         "Counter for books",
-        "Counter for items",
+        "Counter for items (things)",
         "Counter for people",
         "Counter for sheets"
       ],
@@ -5665,7 +5665,7 @@
     {
       "id": "u4_vocab_13_define",
       "question_type": "vocab define",
-      "question": "What does 💴 원 mean?",
+      "question": "원",
       "answer": "Korean Won (currency)",
       "choices": [
         "Japanese Yen",
@@ -5716,12 +5716,12 @@
     {
       "id": "u4_vocab_14_define",
       "question_type": "vocab define",
-      "question": "What does 1️⃣ 한 mean?",
+      "question": "한",
       "answer": "One (native Korean number)",
       "choices": [
         "Three",
         "Four",
-        "One",
+        "One (native Korean number)",
         "Two"
       ],
       "tags": [
@@ -5767,12 +5767,12 @@
     {
       "id": "u4_vocab_15_define",
       "question_type": "vocab define",
-      "question": "What does 2️⃣ 두 mean?",
+      "question": "두",
       "answer": "Two (native Korean number)",
       "choices": [
         "One",
         "Five",
-        "Three",
+        "Two (native Korean number)",
         "Two"
       ],
       "tags": [
@@ -5818,13 +5818,13 @@
     {
       "id": "u4_vocab_16_define",
       "question_type": "vocab define",
-      "question": "What does 3️⃣ 세 mean?",
+      "question": "세",
       "answer": "Three (native Korean number)",
       "choices": [
         "Two",
         "Five",
         "Four",
-        "Three"
+        "Three (native Korean number)"
       ],
       "tags": [
         "어휘 정의",
@@ -5869,13 +5869,13 @@
     {
       "id": "u4_vocab_17_define",
       "question_type": "vocab define",
-      "question": "What does 🏷️ 싸다 mean?",
+      "question": "싸다",
       "answer": "To be cheap (싸요 = is cheap)",
       "choices": [
         "To be big",
         "To be expensive",
         "To be small",
-        "To be cheap"
+        "To be cheap (싸요 = is cheap)"
       ],
       "tags": [
         "어휘 정의",
@@ -5938,7 +5938,7 @@
     {
       "id": "u4_vocab_18_define",
       "question_type": "vocab define",
-      "question": "What does 🛍️ 시장 mean?",
+      "question": "시장",
       "answer": "Market",
       "choices": [
         "Coffee shop",
@@ -5989,12 +5989,12 @@
     {
       "id": "u4_vocab_19_define",
       "question_type": "vocab define",
-      "question": "What does 👨 아저씨 mean?",
+      "question": "아저씨",
       "answer": "Mister / middle-aged man (address term)",
       "choices": [
         "Teacher",
         "Doctor",
-        "Mister / middle-aged man",
+        "Mister / middle-aged man (address term)",
         "Friend"
       ],
       "tags": [
@@ -6040,7 +6040,7 @@
     {
       "id": "u4_vocab_20_define",
       "question_type": "vocab define",
-      "question": "What does 🙏 감사합니다 mean?",
+      "question": "감사합니다",
       "answer": "Thank you (formal)",
       "choices": [
         "Hello",
@@ -6091,7 +6091,7 @@
     {
       "id": "u4_vocab_21_define",
       "question_type": "vocab define",
-      "question": "What does 🧾 합계 mean?",
+      "question": "합계",
       "answer": "Total / sum",
       "choices": [
         "Total / sum",
