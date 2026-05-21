@@ -76,9 +76,8 @@ def generate_questions(
         tag = item["tag"]
 
         questions = question_dict.get(tag, [])
-
-        questions = [q for q in questions if unit_min <= q.get("unit") and q.get("unit") <= unit_max]
-
+        print("tag", tag)
+        print(question_dict.get(tag,[]))
         available = [q for q in questions if q["id"] not in used_ids]
 
         if available: 
@@ -163,6 +162,7 @@ def submit_session(user_id: int,
     ):
 
     # if user did an intro session, increase their "intro_rounds_completed" attribute
+    print("session type ", session_type)
     if session_type == SessionType.INTRO:
         user = crud.get_user(db, user_id)
         crud.increase_intro_rounds_completed(db, user_id)
@@ -231,6 +231,7 @@ def generate_session(user_id: int, db: Session = Depends(get_db)):
     # ----------- HANDLE USERS IN UNIT 1 SEPARATELY -----------------
     if user_unit == 1: # check if they need review sesh or unit test
         if len(weak_current_tags) > 0:
+            print("unit 1 + review question set")
             # PRACTICE UNIT 1
             question_set = generate_questions(db, user_id, 10, 1, 1, "all", inverted_index)
             session_type = SessionType.PRACTICE_CURRENT_UNIT

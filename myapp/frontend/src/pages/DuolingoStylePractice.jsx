@@ -18,6 +18,25 @@ const clean = (str) => {
         .trim();
 };
 
+const speechContainsAnswer = (transcript, correctAnswer) => {
+    if (!transcript || !correctAnswer) return false;
+
+    const normalize = (str) => clean(str).replace(/\s+/g, "").trim();
+    const cleanTranscript = normalize(transcript);
+    const cleanAnswer = normalize(correctAnswer);
+
+    if (cleanTranscript.includes(cleanAnswer)) return true;
+
+    const transcriptJamo = Hangul.disassemble(cleanTranscript);
+    const answerJamo = Hangul.disassemble(cleanAnswer);
+
+    let aIdx = 0;
+    for (let tIdx = 0; tIdx < transcriptJamo.length && aIdx < answerJamo.length; tIdx++) {
+        if (transcriptJamo[tIdx] === answerJamo[aIdx]) aIdx++;
+    }
+    return aIdx === answerJamo.length;
+};
+
 // Map question types to human-readable prompts if level defaults aren't precise enough
 const typeToInstruction = (type, level) => {
     switch(type) {
@@ -316,6 +335,8 @@ function Question({
     };
 
     // ── WEB SPEECH DICTATION HANDLERS (Speaking Question Modes) ──
+    const latestTranscriptRef = useRef("");
+
     const startSpeechRecognition = () => {
         if (hasSubmitted) return;
         
@@ -325,25 +346,49 @@ function Question({
             return;
         }
 
+        if (recognitionRef.current) {
+            try { recognitionRef.current.stop(); } catch(e) {}
+        }
+
+        latestTranscriptRef.current = "";
+
         const recognition = new SpeechRecognition();
-        // Set dictation context language properties dynamically based on targets
         recognition.lang = (qType === "speaking" || qType === "speaking sentence" || qType === "speaking vocab") ? "ko-KR" : "en-US";
-        recognition.interimResults = false;
+        recognition.interimResults = true;
         recognition.maxAlternatives = 1;
+        recognition.continuous = true;
 
         recognition.onstart = () => setIsListeningSpeech(true);
         recognition.onerror = (e) => { console.error(e); setIsListeningSpeech(false); };
-        recognition.onend = () => setIsListeningSpeech(false);
-        
+
         recognition.onresult = (event) => {
-            const speechResult = event.results[0][0].transcript;
-            setUserAnswer(speechResult);
+            let fullTranscript = "";
+            for (let i = 0; i < event.results.length; i++) {
+                fullTranscript += event.results[i][0].transcript;
+            }
+            latestTranscriptRef.current = fullTranscript.trim();
+            setUserAnswer(fullTranscript.trim());
+        };
+
+        // onend is the reliable place to commit — always fires after stop()
+        recognition.onend = () => {
+            setIsListeningSpeech(false);
+            if (latestTranscriptRef.current) {
+                setUserAnswer(latestTranscriptRef.current);
+            }
         };
 
         recognitionRef.current = recognition;
         recognition.start();
     };
 
+    const stopSpeechRecognition = () => {
+        if (recognitionRef.current) {
+            try { recognitionRef.current.stop(); } catch(e) {}
+            // Don't set isListeningSpeech(false) here — let onend handle it
+            // so the transcript is committed first
+        }
+    };
     // ── RENDER DYNAMIC PROMPT ELEMENT (BASED ON TYPE) ──
     const renderQuestionDisplayPrompt = () => {
         // Listening type items obscure direct visual output string references
@@ -447,16 +492,23 @@ function Question({
                     <button 
                         type="button" 
                         className={`mic-trigger-btn ${isListeningSpeech ? 'mic-active-pulse' : ''}`}
-                        onClick={startSpeechRecognition}
+                        onClick={isListeningSpeech ? stopSpeechRecognition : startSpeechRecognition}
                         disabled={hasSubmitted}
                     >
-                        {isListeningSpeech ? "🎙️ Listening... Speak Now" : "🎤 Tap to Dictate Answer"}
+                        {isListeningSpeech ? "⏹ Stop Recording" : (userAnswer ? "🔄 Re-record" : "🎤 Tap to Speak")}
                     </button>
+
                     {userAnswer && (
                         <div className="speech-transcription-preview">
-                            <p className="preview-label">Detected Transcription:</p>
+                            <p className="preview-label">{isListeningSpeech ? "🎙️ Listening..." : "Detected Transcription:"}</p>
                             <p className="preview-string">"{userAnswer}"</p>
                         </div>
+                    )}
+
+                    {userAnswer && !hasSubmitted && !isListeningSpeech && (
+                        <button type="submit" className="btn btn--check speech-submit-btn">
+                            ✓ Submit Answer
+                        </button>
                     )}
                 </div>
             );
@@ -500,7 +552,9 @@ function Question({
 
                 {!hasSubmitted && (
                     <div className="answer-actions">
-                        <button type="submit" className="btn btn--check" disabled={!userAnswer}>CHECK</button>
+                        {!["speaking", "speaking sentence", "speaking vocab"].includes(qType) && (
+                            <button type="submit" className="btn btn--check" disabled={!userAnswer}>CHECK</button>
+                        )}
                         <button type="button" className="btn btn--skip" onClick={handleSkip}>SKIP</button>
                     </div>
                 )}
@@ -641,6 +695,7 @@ export default function DuolingoStyleQuestions() {
     const [hasSubmitted, setHasSubmitted]         = useState(false);
     const [isCorrect, setIsCorrect]               = useState(false);
     const [progressData, setProgressData]         = useState(null);
+    const [sessionType, setSessionType]           = useState("");
 
     useEffect(() => {
         if (!isSessionStarted) fetchProgress();
@@ -711,6 +766,7 @@ export default function DuolingoStyleQuestions() {
             setLastUserAnswer("");
             setHasSubmitted(false);
             setIsSessionStarted(true);
+            setSessionType(data.session_type);
         } catch (error) { console.error(error); }
         finally { setIsLoading(false); }
     };
@@ -720,14 +776,18 @@ export default function DuolingoStyleQuestions() {
         if (!currentQuestionObj || hasSubmitted) return;
 
         // Custom matching rules based on question structure
+        const isSpeakingType = ["speaking", "speaking sentence", "speaking vocab"].includes(currentQuestionObj.question_type);
+
         let correct = false;
-        if (currentQuestionObj.question_type === "error correction") {
+        if (isSpeakingType) {
+            correct = speechContainsAnswer(userAnswer, currentQuestionObj.answer);
+        } else if (currentQuestionObj.question_type === "error correction") {
             // Evaluates structured dynamic output payload against explicit solution values 
             correct = clean(userAnswer) === clean(currentQuestionObj.answer);
         } else {
             correct = clean(userAnswer) === clean(currentQuestionObj.answer);
         }
-
+        
         setLastUserAnswer(userAnswer);
         setIsCorrect(correct);
         setHasSubmitted(true);
@@ -750,7 +810,7 @@ export default function DuolingoStyleQuestions() {
                     body: JSON.stringify({
                         list_of_question_data: currentLog.map(item => item.question_data),
                         is_correct: currentLog.map(item => item.is_correct),
-                        is_unit_test: isUnitTest
+                        session_type: sessionType,
                     })
                 });
             } catch (error) { console.error("Failed to submit session results", error); }
@@ -786,7 +846,12 @@ export default function DuolingoStyleQuestions() {
                 userAnswer={userAnswer}
                 setUserAnswer={setUserAnswer}
                 handleSubmit={handleSubmit}
-                handleSkip={() => { setLastUserAnswer(userAnswer); setIsCorrect(false); setHasSubmitted(true); }}
+                handleSkip={() => {
+                    const isSpeakingType = ["speaking", "speaking sentence", "speaking vocab"].includes(currentQuestionObj.question_type);
+                    setLastUserAnswer(userAnswer);
+                    setIsCorrect(isSpeakingType);
+                    setHasSubmitted(true);
+                }}
                 handleContinue={handleContinue}
                 hasSubmitted={hasSubmitted}
                 isCorrect={isCorrect}

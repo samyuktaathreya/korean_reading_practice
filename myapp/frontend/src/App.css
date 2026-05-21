@@ -685,3 +685,96 @@
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==========================================================================
+   ChoiceSelector Component Styles
+   ========================================================================== */
+
+/* Grid container for the choices */
+.choices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+/* Base button styling */
+.choice-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a202c;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+/* Hover & Focus states for active buttons */
+.choice-button:not(:disabled):hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.choice-button:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Selected state */
+.choice-button.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+  color: #1e40af;
+}
+
+/* Number/Index circle styling */
+.choice-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Update index badge when selected */
+.choice-button.selected .choice-index {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Main text container */
+.choice-text {
+  flex-grow: 1;
+  line-height: 1.4;
+}
+
+/* Disabled state */
+.choice-button:disabled {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.choice-button:disabled .choice-index {
+  background-color: #cbd5e1;
+  color: #94a3b8;
+}
