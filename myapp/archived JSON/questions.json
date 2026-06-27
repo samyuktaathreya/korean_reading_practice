@@ -1,0 +1,1266 @@
+[
+  {
+    "category": "unit1_greetings_and_introductions",
+    "unit": 1,
+    "title": "Hi, I'm Anna",
+    "topic": "Introducing Yourself",
+    "vocabulary": ["나라", "직업", "네", "아니요", "저", "씨", "이름", "제", "친구", "이 사람"],
+    "grammar_points": ["이에요/예요", "은/는"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u1_easy_1",
+            "question_type": "fill in the blank",
+            "question": "저는 안나___.",
+            "hint": "I am Anna. (use 예요 because 나 ends in a vowel)",
+            "answer": "예요",
+            "tags": ["저", "는", "이름", "이에요/예요", "자기소개"]
+          },
+          {
+            "id": "u1_easy_2",
+            "question_type": "fill in the blank",
+            "question": "저는 주노___.",
+            "hint": "I am Juno. (use 예요 because 노 ends in a vowel)",
+            "answer": "예요",
+            "tags": ["저", "는", "이름", "예요", "이에요/예요", "자기소개"]
+          },
+          {
+            "id": "u1_easy_3",
+            "question_type": "fill in the blank",
+            "question": "저는 회사원___.",
+            "hint": "I am a company employee. (원 ends in a consonant)",
+            "answer": "이에요",
+            "tags": ["저", "는", "회사원", "이에요", "이에요/예요", "직업"]
+          },
+          {
+            "id": "u1_easy_4",
+            "question_type": "fill in the blank",
+            "question": "저는 의사___.",
+            "hint": "I am a doctor. (사 ends in a vowel)",
+            "answer": "예요",
+            "tags": ["저", "는", "의사", "예요", "이에요/예요", "직업"]
+          },
+          {
+            "id": "u1_easy_5",
+            "question_type": "fill in the blank",
+            "question": "저는 한국 사람___.",
+            "hint": "I am Korean. (람 ends in a consonant)",
+            "answer": "이에요",
+            "tags": ["저", "는", "한국", "사람", "이에요", "이에요/예요", "나라"]
+          },
+          {
+            "id": "u1_easy_6",
+            "question_type": "fill in the blank",
+            "question": "아버지___ 요리사예요.",
+            "hint": "My father is a chef. (topic particle after vowel)",
+            "answer": "는",
+            "tags": ["아버지", "는", "은/는", "요리사", "예요", "직업"]
+          },
+          {
+            "id": "u1_easy_7",
+            "question_type": "fill in the blank",
+            "question": "동생___ 대학생이에요.",
+            "hint": "My younger sibling is a university student. (topic particle after consonant)",
+            "answer": "은",
+            "tags": ["동생", "은", "은/는", "대학생", "이에요", "직업"]
+          },
+          {
+            "id": "u1_easy_8",
+            "question_type": "fill in the blank",
+            "question": "마리 씨___ 회사원이에요.",
+            "hint": "Mari is a company employee. (topic particle after vowel)",
+            "answer": "는",
+            "tags": ["마리", "씨", "는", "은/는", "회사원", "이에요", "직업"]
+          },
+          {
+            "id": "u1_easy_conv_1",
+            "question_type": "conversation",
+            "question": "안녕하세요? 학생이에요?",
+            "easy_choices": ["네, 학생이에요.", "저는 한국이에요.", "아버지예요."],
+            "easy_answer": "네, 학생이에요.",
+            "medium_choices": "네, ____.",
+            "medium_answer": "네, 학생이에요.",
+            "tags": ["안녕하세요", "인사", "학생", "이에요", "이에요/예요", "네", "직업"]
+          },
+          {
+            "id": "u1_easy_conv_2",
+            "question_type": "conversation",
+            "question": "선생님이에요?",
+            "easy_choices": ["아니요, 요리사예요.", "네, 한국 사람이에요.", "저는 친구예요."],
+            "easy_answer": "아니요, 요리사예요.",
+            "medium_choices": "아니요, ____.",
+            "medium_answer": "아니요, 요리사예요.",
+            "tags": ["선생님", "이에요", "이에요/예요", "아니요", "요리사", "예요", "직업"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "u1_medium_1",
+            "question_type": "translate to english",
+            "question": "안녕하세요? 저는 안나예요.",
+            "answer": "Hello! I am Anna.",
+            "tags": ["안녕하세요", "저", "는", "이름", "예요", "인사", "자기소개"]
+          },
+          {
+            "id": "u1_medium_2",
+            "question_type": "translate to english",
+            "question": "안나 씨는 학생이에요?",
+            "answer": "Is Anna a student?",
+            "tags": ["안나", "씨", "는", "학생", "이에요", "의문문", "직업"]
+          },
+          {
+            "id": "u1_medium_3",
+            "question_type": "translate to english",
+            "question": "네, 학생이에요.",
+            "answer": "Yes, I am a student.",
+            "tags": ["네", "학생", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_4",
+            "question_type": "translate to english",
+            "question": "주노 씨는 회사원이에요.",
+            "answer": "Juno is a company employee.",
+            "tags": ["주노", "씨", "는", "회사원", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_5",
+            "question_type": "translate to english",
+            "question": "저는 중국 사람이에요.",
+            "answer": "I am Chinese.",
+            "tags": ["저", "는", "중국", "사람", "이에요", "나라"]
+          },
+          {
+            "id": "u1_medium_6",
+            "question_type": "translate to english",
+            "question": "이 사람은 누구예요?",
+            "answer": "Who is this person?",
+            "tags": ["이", "사람", "은", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u1_medium_7",
+            "question_type": "translate to english",
+            "question": "제 동생은 대학생이에요.",
+            "answer": "My younger sibling is a university student.",
+            "tags": ["제", "동생", "은", "대학생", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_8",
+            "question_type": "translate to english",
+            "question": "아니요, 저는 일본 사람이에요.",
+            "answer": "No, I am Japanese.",
+            "tags": ["아니요", "저", "는", "일본", "사람", "이에요", "나라"]
+          },
+          {
+            "id": "u1_medium_1_listening",
+            "question_type": "listening",
+            "question": "안녕하세요? 저는 안나예요.",
+            "answer": "Hello! I am Anna.",
+            "tags": ["안녕하세요", "저", "는", "이름", "예요", "인사", "자기소개"]
+          },
+          {
+            "id": "u1_medium_2_listening",
+            "question_type": "listening",
+            "question": "안나 씨는 학생이에요?",
+            "answer": "Is Anna a student?",
+            "tags": ["안나", "씨", "는", "학생", "이에요", "의문문", "직업"]
+          },
+          {
+            "id": "u1_medium_3_listening",
+            "question_type": "listening",
+            "question": "네, 학생이에요.",
+            "answer": "Yes, I am a student.",
+            "tags": ["네", "학생", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_4_listening",
+            "question_type": "listening",
+            "question": "주노 씨는 회사원이에요.",
+            "answer": "Juno is a company employee.",
+            "tags": ["주노", "씨", "는", "회사원", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_5_listening",
+            "question_type": "listening",
+            "question": "저는 중국 사람이에요.",
+            "answer": "I am Chinese.",
+            "tags": ["저", "는", "중국", "사람", "이에요", "나라"]
+          },
+          {
+            "id": "u1_medium_6_listening",
+            "question_type": "listening",
+            "question": "이 사람은 누구예요?",
+            "answer": "Who is this person?",
+            "tags": ["이", "사람", "은", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u1_medium_7_listening",
+            "question_type": "listening",
+            "question": "제 동생은 대학생이에요.",
+            "answer": "My younger sibling is a university student.",
+            "tags": ["제", "동생", "은", "대학생", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_8_listening",
+            "question_type": "listening",
+            "question": "아니요, 저는 일본 사람이에요.",
+            "answer": "No, I am Japanese.",
+            "tags": ["아니요", "저", "는", "일본", "사람", "이에요", "나라"]
+          },
+          {
+            "id": "u1_medium_conv_1",
+            "question_type": "conversation",
+            "question": "마크 씨는 의사예요?",
+            "easy_choices": ["아니요, 회사원이에요.", "네, 한국 사람이에요.", "저는 선생님이에요."],
+            "easy_answer": "아니요, 회사원이에요.",
+            "medium_choices": "아니요, ____.",
+            "medium_answer": "아니요, 회사원이에요.",
+            "tags": ["마크", "씨", "는", "의사", "예요", "이에요/예요", "아니요", "회사원", "이에요", "직업"]
+          },
+          {
+            "id": "u1_medium_conv_2",
+            "question_type": "conversation",
+            "question": "유키 씨는 한국 사람이에요?",
+            "easy_choices": ["아니요, 일본 사람이에요.", "네, 경찰이에요.", "저는 선생님이에요."],
+            "easy_answer": "아니요, 일본 사람이에요.",
+            "medium_choices": "아니요, ____ 사람이에요.",
+            "medium_answer": "아니요, 일본 사람이에요.",
+            "tags": ["유키", "씨", "는", "한국", "사람", "이에요", "아니요", "일본", "이에요/예요", "국적"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "u1_hard_1",
+            "question_type": "translate to korean",
+            "question": "Hello, I am Juno.",
+            "answer": "안녕하세요, 저는 주노예요.",
+            "tags": ["안녕하세요", "저", "는", "이름", "예요", "인사"]
+          },
+          {
+            "id": "u1_hard_2",
+            "question_type": "translate to korean",
+            "question": "I am a chef.",
+            "answer": "저는 요리사예요.",
+            "tags": ["저", "는", "요리사", "예요", "직업"]
+          },
+          {
+            "id": "u1_hard_3",
+            "question_type": "translate to korean",
+            "question": "Are you a singer?",
+            "answer": "가수예요?",
+            "tags": ["가수", "예요", "의문문", "직업"]
+          },
+          {
+            "id": "u1_hard_4",
+            "question_type": "translate to korean",
+            "question": "No, I am a doctor.",
+            "answer": "아니요, 저는 의사예요.",
+            "tags": ["아니요", "저", "는", "의사", "예요", "직업"]
+          },
+          {
+            "id": "u1_hard_5",
+            "question_type": "translate to korean",
+            "question": "I am from Canada.",
+            "answer": "저는 캐나다 사람이에요.",
+            "tags": ["저", "는", "캐나다", "사람", "이에요", "나라"]
+          },
+          {
+            "id": "u1_hard_6",
+            "question_type": "translate to korean",
+            "question": "Is Yuna Korean?",
+            "answer": "유나 씨는 한국 사람이에요?",
+            "tags": ["유나", "씨", "는", "한국", "사람", "이에요", "의문문", "나라"]
+          },
+          {
+            "id": "u1_hard_7",
+            "question_type": "translate to korean",
+            "question": "This is my friend Mari.",
+            "answer": "이 사람은 제 친구 마리 씨예요.",
+            "tags": ["이", "사람", "은", "제", "친구", "마리", "씨", "예요"]
+          },
+          {
+            "id": "u1_hard_8",
+            "question_type": "translate to korean",
+            "question": "My father is a police officer.",
+            "answer": "아버지는 경찰이에요.",
+            "tags": ["아버지", "는", "경찰", "이에요", "직업"]
+          },
+          {
+            "id": "u1_hard_9",
+            "question_type": "translate to korean",
+            "question": "Wei is from China and is a chef.",
+            "answer": "웨이 씨는 중국 사람이에요. 요리사예요.",
+            "tags": ["웨이", "씨", "는", "중국", "사람", "이에요", "요리사", "예요", "나라", "직업"]
+          },
+          {
+            "id": "u1_hard_10",
+            "question_type": "translate to korean",
+            "question": "Are you Vietnamese?",
+            "answer": "베트남 사람이에요?",
+            "tags": ["베트남", "사람", "이에요", "의문문", "나라"]
+          },
+          {
+            "id": "u1_hard_conv_1",
+            "question_type": "conversation",
+            "question": "이 사람은 누구예요?",
+            "easy_choices": ["제 친구예요.", "책상이에요.", "네, 학생이에요."],
+            "easy_answer": "제 친구예요.",
+            "medium_choices": "제 ____예요.",
+            "medium_answer": "제 친구예요.",
+            "tags": ["이", "사람", "은", "누구", "예요", "제", "친구", "이에요/예요"]
+          },
+          {
+            "id": "u1_hard_conv_2",
+            "question_type": "conversation",
+            "question": "저는 태국 사람이에요. 타완 씨는요?",
+            "easy_choices": ["저는 중국 사람이에요.", "네, 태국이에요.", "아버지는 경찰이에요."],
+            "easy_answer": "저는 중국 사람이에요.",
+            "medium_choices": "저는 ____ 사람이에요.",
+            "medium_answer": "저는 중국 사람이에요.",
+            "tags": ["저", "는", "태국", "사람", "이에요", "타완", "씨", "은/는", "중국", "국적", "이에요/예요"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "unit2_numbers_and_phone",
+    "unit": 2,
+    "title": "Can I have your phone number?",
+    "topic": "Introducing Yourself",
+    "vocabulary": ["전화번호", "한자어 수", "층", "월", "번", "호", "원", "쪽", "이름", "카페", "식당", "영화관", "노래방", "PC방"],
+    "grammar_points": ["이/가", "이/가 아니에요"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u2_easy_1",
+            "question_type": "fill in the blank",
+            "question": "이름___ 뭐예요?",
+            "hint": "What is (your) name? (subject particle after consonant)",
+            "answer": "이",
+            "tags": ["이름", "이", "이/가", "주격조사", "의문문"]
+          },
+          {
+            "id": "u2_easy_2",
+            "question_type": "fill in the blank",
+            "question": "전화번호___ 뭐예요?",
+            "hint": "What is (your) phone number? (subject particle after vowel)",
+            "answer": "가",
+            "tags": ["전화번호", "가", "이/가", "주격조사", "의문문"]
+          },
+          {
+            "id": "u2_easy_3",
+            "question_type": "fill in the blank",
+            "question": "카페___ 어디에요?",
+            "hint": "Where is the café? (subject particle after vowel)",
+            "answer": "가",
+            "tags": ["카페", "가", "이/가", "주격조사", "의문문"]
+          },
+          {
+            "id": "u2_easy_4",
+            "question_type": "fill in the blank",
+            "question": "저는 마리___.",
+            "hint": "I am not Mari. (use 이/가 아니에요 — 리 ends in vowel)",
+            "answer": "가 아니에요",
+            "tags": ["저", "는", "마리", "가 아니에요", "이/가 아니에요", "부정"]
+          },
+          {
+            "id": "u2_easy_5",
+            "question_type": "fill in the blank",
+            "question": "동생___ 아니에요, 형이에요.",
+            "hint": "It's not my younger sibling, it's my older brother. (이/가 아니에요 — 생 ends in consonant)",
+            "answer": "이",
+            "tags": ["동생", "이", "이/가 아니에요", "부정"]
+          },
+          {
+            "id": "u2_easy_6",
+            "question_type": "fill in the blank",
+            "question": "카페가 몇 ___이에요?",
+            "hint": "Which floor is the café on?",
+            "answer": "층",
+            "tags": ["카페", "가", "몇", "층", "한자어 수", "위치"]
+          },
+          {
+            "id": "u2_easy_conv_1",
+            "question_type": "conversation",
+            "question": "이름이 뭐예요?",
+            "easy_choices": ["저는 안나예요.", "전화번호예요.", "삼 층이에요."],
+            "easy_answer": "저는 안나예요.",
+            "medium_choices": "저는 ____예요.",
+            "medium_answer": "저는 안나예요.",
+            "tags": ["이름", "이", "이/가", "주격_조사", "뭐", "예요", "저", "는", "안나", "이에요/예요", "자기소개"]
+          },
+          {
+            "id": "u2_easy_conv_2",
+            "question_type": "conversation",
+            "question": "식당이 몇 층이에요?",
+            "easy_choices": ["삼 층이에요.", "안나 씨예요.", "010이에요."],
+            "easy_answer": "삼 층이에요.",
+            "medium_choices": "____ 층이에요.",
+            "medium_answer": "삼 층이에요.",
+            "tags": ["식당", "이", "이/가", "주격_조사", "몇", "층", "이에요", "삼", "한자어_수"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "u2_medium_1",
+            "question_type": "translate to english",
+            "question": "전화번호가 뭐예요?",
+            "answer": "What is the phone number?",
+            "tags": ["전화번호", "가", "뭐", "예요", "의문문"]
+          },
+          {
+            "id": "u2_medium_2",
+            "question_type": "translate to english",
+            "question": "010-1213-7505예요.",
+            "answer": "It is 010-1213-7505.",
+            "tags": ["전화번호", "예요", "한자어 수"]
+          },
+          {
+            "id": "u2_medium_3",
+            "question_type": "translate to english",
+            "question": "동생이 아니에요. 형이에요.",
+            "answer": "It is not my younger sibling. It is my older brother.",
+            "tags": ["동생", "이", "이/가 아니에요", "형", "이에요", "부정"]
+          },
+          {
+            "id": "u2_medium_4",
+            "question_type": "translate to english",
+            "question": "카페가 4층이에요.",
+            "answer": "The café is on the 4th floor.",
+            "tags": ["카페", "가", "사", "층", "이에요", "위치"]
+          },
+          {
+            "id": "u2_medium_5",
+            "question_type": "translate to english",
+            "question": "안나 씨가 누구예요?",
+            "answer": "Who is Anna?",
+            "tags": ["안나", "씨", "가", "이/가", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u2_medium_6",
+            "question_type": "translate to english",
+            "question": "제가 안나예요.",
+            "answer": "I am Anna.",
+            "tags": ["제", "가", "이/가", "안나", "예요", "자기소개"]
+          },
+          {
+            "id": "u2_medium_1_listening",
+            "question_type": "listening",
+            "question": "전화번호가 뭐예요?",
+            "answer": "What is the phone number?",
+            "tags": ["전화번호", "가", "뭐", "예요", "의문문"]
+          },
+          {
+            "id": "u2_medium_2_listening",
+            "question_type": "listening",
+            "question": "010-1213-7505예요.",
+            "answer": "It is 010-1213-7505.",
+            "tags": ["전화번호", "예요", "한자어 수"]
+          },
+          {
+            "id": "u2_medium_3_listening",
+            "question_type": "listening",
+            "question": "동생이 아니에요. 형이에요.",
+            "answer": "It is not my younger sibling. It is my older brother.",
+            "tags": ["동생", "이", "이/가 아니에요", "형", "이에요", "부정"]
+          },
+          {
+            "id": "u2_medium_4_listening",
+            "question_type": "listening",
+            "question": "카페가 4층이에요.",
+            "answer": "The café is on the 4th floor.",
+            "tags": ["카페", "가", "사", "층", "이에요", "위치"]
+          },
+          {
+            "id": "u2_medium_5_listening",
+            "question_type": "listening",
+            "question": "안나 씨가 누구예요?",
+            "answer": "Who is Anna?",
+            "tags": ["안나", "씨", "가", "이/가", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u2_medium_6_listening",
+            "question_type": "listening",
+            "question": "제가 안나예요.",
+            "answer": "I am Anna.",
+            "tags": ["제", "가", "이/가", "안나", "예요", "자기소개"]
+          },
+          {
+            "id": "u2_medium_conv_1",
+            "question_type": "conversation",
+            "question": "전화번호가 뭐예요?",
+            "easy_choices": ["010-5512-3390이에요.", "삼 층이에요.", "안나 씨예요."],
+            "easy_answer": "010-5512-3390이에요.",
+            "medium_choices": "____이에요.",
+            "medium_answer": "010-5512-3390이에요.",
+            "tags": ["전화번호", "가", "이/가", "주격_조사", "뭐", "예요", "이에요", "한자어_수"]
+          },
+          {
+            "id": "u2_medium_conv_2",
+            "question_type": "conversation",
+            "question": "영화관이 오 층이에요?",
+            "easy_choices": ["아니요, 육 층이에요.", "네, 안나 씨예요.", "저는 의사예요."],
+            "easy_answer": "아니요, 육 층이에요.",
+            "medium_choices": "아니요, ____ 층이에요.",
+            "medium_answer": "아니요, 육 층이에요.",
+            "tags": ["영화관", "이", "이/가", "주격_조사", "오", "층", "이에요", "아니요", "육", "한자어_수"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "u2_hard_1",
+            "question_type": "translate to korean",
+            "question": "What is your name?",
+            "answer": "이름이 뭐예요?",
+            "tags": ["이름", "이", "이/가", "뭐", "예요", "의문문"]
+          },
+          {
+            "id": "u2_hard_2",
+            "question_type": "translate to korean",
+            "question": "Can I have your phone number?",
+            "answer": "전화번호가 뭐예요?",
+            "tags": ["전화번호", "가", "이/가", "뭐", "예요", "의문문"]
+          },
+          {
+            "id": "u2_hard_3",
+            "question_type": "translate to korean",
+            "question": "I am not a student. I am a company employee.",
+            "answer": "학생이 아니에요. 회사원이에요.",
+            "tags": ["학생", "이", "이/가 아니에요", "회사원", "이에요", "부정", "직업"]
+          },
+          {
+            "id": "u2_hard_4",
+            "question_type": "translate to korean",
+            "question": "She is not Mari. She is Anna.",
+            "answer": "마리 씨가 아니에요. 안나 씨예요.",
+            "tags": ["마리", "씨", "가", "이/가 아니에요", "안나", "씨", "예요", "부정"]
+          },
+          {
+            "id": "u2_hard_5",
+            "question_type": "translate to korean",
+            "question": "Which floor is the restaurant on?",
+            "answer": "식당이 몇 층이에요?",
+            "tags": ["식당", "이", "이/가", "몇", "층", "이에요", "의문문"]
+          },
+          {
+            "id": "u2_hard_6",
+            "question_type": "translate to korean",
+            "question": "It is on the 8th floor.",
+            "answer": "팔 층이에요.",
+            "tags": ["팔", "층", "이에요", "한자어 수"]
+          },
+          {
+            "id": "u2_hard_7",
+            "question_type": "translate to korean",
+            "question": "My phone number is 010-5512-3390.",
+            "answer": "전화번호가 공일공-오오일이-삼삼구공이에요.",
+            "tags": ["전화번호", "가", "이/가", "한자어 수"]
+          },
+          {
+            "id": "u2_hard_8",
+            "question_type": "translate to korean",
+            "question": "Who is Juno?",
+            "answer": "주노 씨가 누구예요?",
+            "tags": ["주노", "씨", "가", "이/가", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u2_hard_9",
+            "question_type": "translate to korean",
+            "question": "The cinema is not on the 3rd floor. It is on the 5th floor.",
+            "answer": "영화관이 삼 층이 아니에요. 오 층이에요.",
+            "tags": ["영화관", "이", "이/가 아니에요", "삼", "오", "층", "이에요", "부정"]
+          },
+          {
+            "id": "u2_hard_conv_1",
+            "question_type": "conversation",
+            "question": "이 사람이 마리 씨예요?",
+            "easy_choices": ["아니요, 마리 씨가 아니에요. 안나 씨예요.", "네, 삼 층이에요.", "저는 회사원이에요."],
+            "easy_answer": "아니요, 마리 씨가 아니에요. 안나 씨예요.",
+            "medium_choices": "아니요, 마리 씨가 아니에요. ____ 씨예요.",
+            "medium_answer": "아니요, 마리 씨가 아니에요. 안나 씨예요.",
+            "tags": ["이", "지시사", "사람", "이", "이/가", "주격_조사", "마리", "씨", "예요", "아니요", "이/가 아니에요", "아니에요", "부정", "안나"]
+          },
+          {
+            "id": "u2_hard_conv_2",
+            "question_type": "conversation",
+            "question": "주노 씨가 의사예요?",
+            "easy_choices": ["아니요, 의사가 아니에요. 회사원이에요.", "네, 오 층이에요.", "전화번호가 뭐예요?"],
+            "easy_answer": "아니요, 의사가 아니에요. 회사원이에요.",
+            "medium_choices": "아니요, 의사가 아니에요. ____이에요.",
+            "medium_answer": "아니요, 의사가 아니에요. 회사원이에요.",
+            "tags": ["주노", "씨", "가", "이/가", "주격_조사", "의사", "예요", "아니요", "이/가 아니에요", "아니에요", "부정", "회사원", "이에요", "직업"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "unit3_objects_and_locations",
+    "unit": 3,
+    "title": "My bag is next to the desk",
+    "topic": "Objects and Movements",
+    "vocabulary": ["책", "책상", "의자", "가방", "필통", "시계", "핸드폰", "앞", "뒤", "위", "아래/밑", "옆", "사이", "안", "밖"],
+    "grammar_points": ["이, 그, 저", "에 있다/없다"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u3_easy_1",
+            "question_type": "fill in the blank",
+            "question": "___ 사람은 누구예요? (near the speaker)",
+            "hint": "THIS person — demonstrative for something near you",
+            "answer": "이",
+            "tags": ["이", "이 그 저", "지시사", "사람", "은", "누구", "예요"]
+          },
+          {
+            "id": "u3_easy_2",
+            "question_type": "fill in the blank",
+            "question": "___ 핸드폰은 주노 씨 핸드폰이에요? (far from both speaker and listener)",
+            "hint": "THAT phone over there — demonstrative for something far from both",
+            "answer": "저",
+            "tags": ["저", "이 그 저", "지시사", "핸드폰", "은"]
+          },
+          {
+            "id": "u3_easy_3",
+            "question_type": "fill in the blank",
+            "question": "필통이 책상 위에 ___.",
+            "hint": "The pencil case IS on the desk.",
+            "answer": "있어요",
+            "tags": ["필통", "이", "책상", "위", "에", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_easy_4",
+            "question_type": "fill in the blank",
+            "question": "시계가 가방 안에 ___.",
+            "hint": "The clock is NOT in the bag.",
+            "answer": "없어요",
+            "tags": ["시계", "가", "가방", "안", "에", "없어요", "없다", "위치"]
+          },
+          {
+            "id": "u3_easy_5",
+            "question_type": "fill in the blank",
+            "question": "가방이 의자 ___ 에 있어요.",
+            "hint": "The bag is NEXT TO the chair.",
+            "answer": "옆",
+            "tags": ["가방", "이", "의자", "옆", "에", "있어요", "위치명사"]
+          },
+          {
+            "id": "u3_easy_6",
+            "question_type": "fill in the blank",
+            "question": "책이 책상 ___ 에 있어요.",
+            "hint": "The book is ON TOP OF the desk.",
+            "answer": "위",
+            "tags": ["책", "이", "책상", "위", "에", "있어요", "위치명사"]
+          },
+          {
+            "id": "u3_easy_7",
+            "question_type": "fill in the blank",
+            "question": "안나 씨가 어디에 ___?",
+            "hint": "Where IS Anna?",
+            "answer": "있어요",
+            "tags": ["안나", "씨", "가", "이/가", "어디", "에", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "u3_easy_conv_1",
+            "question_type": "conversation",
+            "question": "교실에 책상이 있어요?",
+            "easy_choices": ["네, 있어요.", "아니요, 선생님이에요.", "가방 안이에요."],
+            "easy_answer": "네, 있어요.",
+            "medium_choices": "네, ____.",
+            "medium_answer": "네, 있어요.",
+            "tags": ["교실", "에", "책상", "이", "이/가", "주격_조사", "있어요", "있다", "네"]
+          },
+          {
+            "id": "u3_easy_conv_2",
+            "question_type": "conversation",
+            "question": "가방이 어디에 있어요?",
+            "easy_choices": ["책상 위에 있어요.", "네, 있어요.", "필통이에요."],
+            "easy_answer": "책상 위에 있어요.",
+            "medium_choices": "책상 ____에 있어요.",
+            "medium_answer": "책상 위에 있어요.",
+            "tags": ["가방", "이", "이/가", "주격_조사", "어디", "에", "있어요", "있다", "책상", "위", "위치_명사"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "u3_medium_1",
+            "question_type": "translate to english",
+            "question": "이 사람은 누구예요?",
+            "answer": "Who is this person?",
+            "tags": ["이", "지시사", "사람", "은", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u3_medium_2",
+            "question_type": "translate to english",
+            "question": "제 동생이에요.",
+            "answer": "It is my younger sibling.",
+            "tags": ["제", "동생", "이에요", "이에요/예요"]
+          },
+          {
+            "id": "u3_medium_3",
+            "question_type": "translate to english",
+            "question": "필통이 어디에 있어요?",
+            "answer": "Where is the pencil case?",
+            "tags": ["필통", "이", "어디", "에", "있어요", "있다", "의문문", "위치"]
+          },
+          {
+            "id": "u3_medium_4",
+            "question_type": "translate to english",
+            "question": "책상 위에 있어요.",
+            "answer": "It is on the desk.",
+            "tags": ["책상", "위", "에", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_medium_5",
+            "question_type": "translate to english",
+            "question": "교실에 무엇이 있어요?",
+            "answer": "What is in the classroom?",
+            "tags": ["교실", "에", "무엇", "이", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "u3_medium_6",
+            "question_type": "translate to english",
+            "question": "의자 옆에 가방이 있어요.",
+            "answer": "There is a bag next to the chair.",
+            "tags": ["의자", "옆", "에", "가방", "이", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_medium_7",
+            "question_type": "translate to english",
+            "question": "저 가방은 누구 가방이에요?",
+            "answer": "Whose bag is that (over there)?",
+            "tags": ["저", "지시사", "가방", "은", "누구", "가방", "이에요", "의문문"]
+          },
+          {
+            "id": "u3_medium_8",
+            "question_type": "translate to english",
+            "question": "주노 씨가 교실에 없어요.",
+            "answer": "Juno is not in the classroom.",
+            "tags": ["주노", "씨", "가", "이/가", "교실", "에", "없어요", "없다"]
+          },
+          {
+            "id": "u3_medium_1_listening",
+            "question_type": "listening",
+            "question": "이 사람은 누구예요?",
+            "answer": "Who is this person?",
+            "tags": ["이", "지시사", "사람", "은", "누구", "예요", "의문문"]
+          },
+          {
+            "id": "u3_medium_2_listening",
+            "question_type": "listening",
+            "question": "제 동생이에요.",
+            "answer": "It is my younger sibling.",
+            "tags": ["제", "동생", "이에요", "이에요/예요"]
+          },
+          {
+            "id": "u3_medium_3_listening",
+            "question_type": "listening",
+            "question": "필통이 어디에 있어요?",
+            "answer": "Where is the pencil case?",
+            "tags": ["필통", "이", "어디", "에", "있어요", "있다", "의문문", "위치"]
+          },
+          {
+            "id": "u3_medium_4_listening",
+            "question_type": "listening",
+            "question": "책상 위에 있어요.",
+            "answer": "It is on the desk.",
+            "tags": ["책상", "위", "에", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_medium_5_listening",
+            "question_type": "listening",
+            "question": "교실에 무엇이 있어요?",
+            "answer": "What is in the classroom?",
+            "tags": ["교실", "에", "무엇", "이", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "u3_medium_6_listening",
+            "question_type": "listening",
+            "question": "의자 옆에 가방이 있어요.",
+            "answer": "There is a bag next to the chair.",
+            "tags": ["의자", "옆", "에", "가방", "이", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_medium_7_listening",
+            "question_type": "listening",
+            "question": "저 가방은 누구 가방이에요?",
+            "answer": "Whose bag is that (over there)?",
+            "tags": ["저", "지시사", "가방", "은", "누구", "가방", "이에요", "의문문"]
+          },
+          {
+            "id": "u3_medium_8_listening",
+            "question_type": "listening",
+            "question": "주노 씨가 교실에 없어요.",
+            "answer": "Juno is not in the classroom.",
+            "tags": ["주노", "씨", "가", "이/가", "교실", "에", "없어요", "없다"]
+          },
+          {
+            "id": "u3_medium_conv_1",
+            "question_type": "conversation",
+            "question": "필통이 가방 안에 있어요?",
+            "easy_choices": ["아니요, 책상 위에 있어요.", "네, 안나 씨예요.", "저는 학생이에요."],
+            "easy_answer": "아니요, 책상 위에 있어요.",
+            "medium_choices": "아니요, 책상 ____에 있어요.",
+            "medium_answer": "아니요, 책상 위에 있어요.",
+            "tags": ["필통", "이", "이/가", "주격_조사", "가방", "안", "에", "있어요", "있다", "아니요", "책상", "위", "위치_명사"]
+          },
+          {
+            "id": "u3_medium_conv_2",
+            "question_type": "conversation",
+            "question": "이 핸드폰은 누구 핸드폰이에요?",
+            "easy_choices": ["제 핸드폰이에요.", "책상 위에 있어요.", "안나 씨가 있어요."],
+            "easy_answer": "제 핸드폰이에요.",
+            "medium_choices": "제 ____이에요.",
+            "medium_answer": "제 핸드폰이에요.",
+            "tags": ["이", "이/그/저", "지시사", "핸드폰", "은", "누구", "이에요", "제", "이에요/예요"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "u3_hard_1",
+            "question_type": "translate to korean",
+            "question": "Where is the book?",
+            "answer": "책이 어디에 있어요?",
+            "tags": ["책", "이", "이/가", "어디", "에", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "u3_hard_2",
+            "question_type": "translate to korean",
+            "question": "It is inside the bag.",
+            "answer": "가방 안에 있어요.",
+            "tags": ["가방", "안", "에", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_hard_3",
+            "question_type": "translate to korean",
+            "question": "The clock is not on the desk. It is next to the chair.",
+            "answer": "시계가 책상 위에 없어요. 의자 옆에 있어요.",
+            "tags": ["시계", "가", "책상", "위", "에", "없어요", "없다", "의자", "옆", "있어요", "있다"]
+          },
+          {
+            "id": "u3_hard_4",
+            "question_type": "translate to korean",
+            "question": "Is the pencil case in the bag?",
+            "answer": "필통이 가방 안에 있어요?",
+            "tags": ["필통", "이", "이/가", "가방", "안", "에", "있어요", "있다", "의문문"]
+          },
+          {
+            "id": "u3_hard_5",
+            "question_type": "translate to korean",
+            "question": "Whose phone is that (near the listener)?",
+            "answer": "그 핸드폰은 누구 핸드폰이에요?",
+            "tags": ["그", "지시사", "핸드폰", "은", "누구", "이에요", "의문문"]
+          },
+          {
+            "id": "u3_hard_6",
+            "question_type": "translate to korean",
+            "question": "The bag is between the desk and the chair.",
+            "answer": "가방이 책상과 의자 사이에 있어요.",
+            "tags": ["가방", "이", "이/가", "책상", "의자", "사이", "에", "있어요", "있다", "위치"]
+          },
+          {
+            "id": "u3_hard_7",
+            "question_type": "translate to korean",
+            "question": "This is my pencil case.",
+            "answer": "이 필통은 제 필통이에요.",
+            "tags": ["이", "지시사", "필통", "은", "제", "이에요"]
+          },
+          {
+            "id": "u3_hard_8",
+            "question_type": "translate to korean",
+            "question": "Anna is outside the classroom.",
+            "answer": "안나 씨가 교실 밖에 있어요.",
+            "tags": ["안나", "씨", "가", "이/가", "교실", "밖", "에", "있어요", "있다"]
+          },
+          {
+            "id": "u3_hard_9",
+            "question_type": "translate to korean",
+            "question": "The chair is in front of the desk.",
+            "answer": "의자가 책상 앞에 있어요.",
+            "tags": ["의자", "가", "이/가", "책상", "앞", "에", "있어요", "있다"]
+          },
+          {
+            "id": "u3_hard_10",
+            "question_type": "translate to korean",
+            "question": "No, the clock is not inside the bag. It is on top of the bag.",
+            "answer": "아니요, 시계가 가방 안에 없어요. 가방 위에 있어요.",
+            "tags": ["아니요", "시계", "가", "가방", "안", "에", "없어요", "없다", "위", "있어요", "있다"]
+          },
+          {
+            "id": "u3_hard_conv_1",
+            "question_type": "conversation",
+            "question": "안나 씨가 교실에 있어요?",
+            "easy_choices": ["아니요, 교실에 없어요.", "네, 책상 위에 있어요.", "저는 의사예요."],
+            "easy_answer": "아니요, 교실에 없어요.",
+            "medium_choices": "아니요, 교실에 ____.",
+            "medium_answer": "아니요, 교실에 없어요.",
+            "tags": ["안나", "씨", "가", "이/가", "주격_조사", "교실", "에", "있어요", "있다", "아니요", "없어요", "없다"]
+          },
+          {
+            "id": "u3_hard_conv_2",
+            "question_type": "conversation",
+            "question": "저 가방은 누구 가방이에요?",
+            "easy_choices": ["제 가방이에요.", "책상 옆에 있어요.", "안나 씨예요."],
+            "easy_answer": "제 가방이에요.",
+            "medium_choices": "제 ____이에요.",
+            "medium_answer": "제 가방이에요.",
+            "tags": ["저", "이/그/저", "지시사", "가방", "은", "누구", "이에요", "제", "이에요/예요"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "unit4_daily_activities",
+    "unit": 4,
+    "title": "I'm studying Korean",
+    "topic": "Objects and Movements",
+    "vocabulary": ["먹어요", "읽어요", "봐요", "마셔요", "들어요", "만나요", "자요", "일해요", "요리해요", "공부해요", "영화", "한국어", "친구", "오늘", "지금", "불고기", "피자", "텔레비전"],
+    "grammar_points": ["-아요/어요 (verb endings)", "을/를 (object particle)"],
+    "levels": [
+      {
+        "difficulty": "easy",
+        "questions": [
+          {
+            "id": "u4_easy_1",
+            "question_type": "fill in the blank",
+            "question": "지금 무엇을 해요? / 피자 ___.",
+            "hint": "I am eating pizza. (먹다 → stem 먹 + 어요)",
+            "answer": "먹어요",
+            "tags": ["피자", "먹어요", "먹다", "아요/어요", "현재"]
+          },
+          {
+            "id": "u4_easy_2",
+            "question_type": "fill in the blank",
+            "question": "오늘 무엇을 해요? / 영화 ___.",
+            "hint": "I am watching a movie. (보다 → 봐요)",
+            "answer": "봐요",
+            "tags": ["영화", "봐요", "보다", "아요/어요", "현재"]
+          },
+          {
+            "id": "u4_easy_3",
+            "question_type": "fill in the blank",
+            "question": "오늘 친구 ___.",
+            "hint": "I am meeting a friend. (만나다 → 만나요)",
+            "answer": "만나요",
+            "tags": ["친구", "만나요", "만나다", "아요/어요", "현재"]
+          },
+          {
+            "id": "u4_easy_4",
+            "question_type": "fill in the blank",
+            "question": "지금 한국어 ___.",
+            "hint": "I am studying Korean now. (공부하다 → 공부해요)",
+            "answer": "공부해요",
+            "tags": ["한국어", "공부해요", "공부하다", "아요/어요", "현재"]
+          },
+          {
+            "id": "u4_easy_5",
+            "question_type": "fill in the blank",
+            "question": "오늘 무엇 ___ 해요?",
+            "hint": "What are you doing today? (object particle after 엇)",
+            "answer": "을",
+            "tags": ["무엇", "을", "을/를", "목적격조사", "의문문"]
+          },
+          {
+            "id": "u4_easy_6",
+            "question_type": "fill in the blank",
+            "question": "책 ___ 읽어요.",
+            "hint": "I am reading a book. (object particle after consonant)",
+            "answer": "을",
+            "tags": ["책", "을", "을/를", "목적격조사", "읽어요", "읽다"]
+          },
+          {
+            "id": "u4_easy_7",
+            "question_type": "fill in the blank",
+            "question": "영화 ___ 봐요.",
+            "hint": "I am watching a movie. (object particle after vowel)",
+            "answer": "를",
+            "tags": ["영화", "를", "을/를", "목적격조사", "봐요", "보다"]
+          },
+          {
+            "id": "u4_easy_conv_1",
+            "question_type": "conversation",
+            "question": "지금 무엇을 해요?",
+            "easy_choices": ["책을 읽어요.", "네, 학생이에요.", "책상 위에 있어요."],
+            "easy_answer": "책을 읽어요.",
+            "medium_choices": "책을 ____.",
+            "medium_answer": "책을 읽어요.",
+            "tags": ["지금", "무엇", "을", "을/를", "목적격_조사", "해요", "하다", "책", "읽어요", "읽다", "아요/어요"]
+          },
+          {
+            "id": "u4_easy_conv_2",
+            "question_type": "conversation",
+            "question": "오늘 무엇을 해요?",
+            "easy_choices": ["친구를 만나요.", "네, 있어요.", "저는 의사예요."],
+            "easy_answer": "친구를 만나요.",
+            "medium_choices": "친구를 ____.",
+            "medium_answer": "친구를 만나요.",
+            "tags": ["오늘", "무엇", "을", "을/를", "목적격_조사", "해요", "하다", "친구", "를", "만나요", "만나다", "아요/어요"]
+          }
+        ]
+      },
+      {
+        "difficulty": "medium",
+        "questions": [
+          {
+            "id": "u4_medium_1",
+            "question_type": "translate to english",
+            "question": "지금 무엇을 해요?",
+            "answer": "What are you doing now?",
+            "tags": ["지금", "무엇", "을", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "u4_medium_2",
+            "question_type": "translate to english",
+            "question": "오늘 친구를 만나요.",
+            "answer": "Today I am meeting a friend.",
+            "tags": ["오늘", "친구", "를", "만나요", "만나다", "현재"]
+          },
+          {
+            "id": "u4_medium_3",
+            "question_type": "translate to english",
+            "question": "주노 씨, 불고기 맛있어요?",
+            "answer": "Juno, is the bulgogi delicious?",
+            "tags": ["주노", "씨", "불고기", "맛있어요", "맛있다", "의문문"]
+          },
+          {
+            "id": "u4_medium_4",
+            "question_type": "translate to english",
+            "question": "네. 정말 맛있어요.",
+            "answer": "Yes, it is really delicious.",
+            "tags": ["네", "정말", "맛있어요", "맛있다"]
+          },
+          {
+            "id": "u4_medium_5",
+            "question_type": "translate to english",
+            "question": "지금 공부해요?",
+            "answer": "Are you studying now?",
+            "tags": ["지금", "공부해요", "공부하다", "의문문"]
+          },
+          {
+            "id": "u4_medium_6",
+            "question_type": "translate to english",
+            "question": "아니요. 텔레비전을 봐요.",
+            "answer": "No. I am watching TV.",
+            "tags": ["아니요", "텔레비전", "을", "봐요", "보다"]
+          },
+          {
+            "id": "u4_medium_7",
+            "question_type": "translate to english",
+            "question": "안나 씨는 오늘 무엇을 해요?",
+            "answer": "What is Anna doing today?",
+            "tags": ["안나", "씨", "는", "오늘", "무엇", "을", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "u4_medium_8",
+            "question_type": "translate to english",
+            "question": "유진 씨는 지금 일해요.",
+            "answer": "Yujin is working right now.",
+            "tags": ["유진", "씨", "는", "지금", "일해요", "일하다"]
+          },
+          {
+            "id": "u4_medium_1_listening",
+            "question_type": "listening",
+            "question": "지금 무엇을 해요?",
+            "answer": "What are you doing now?",
+            "tags": ["지금", "무엇", "을", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "u4_medium_2_listening",
+            "question_type": "listening",
+            "question": "오늘 친구를 만나요.",
+            "answer": "Today I am meeting a friend.",
+            "tags": ["오늘", "친구", "를", "만나요", "만나다", "현재"]
+          },
+          {
+            "id": "u4_medium_3_listening",
+            "question_type": "listening",
+            "question": "주노 씨, 불고기 맛있어요?",
+            "answer": "Juno, is the bulgogi delicious?",
+            "tags": ["주노", "씨", "불고기", "맛있어요", "맛있다", "의문문"]
+          },
+          {
+            "id": "u4_medium_4_listening",
+            "question_type": "listening",
+            "question": "네. 정말 맛있어요.",
+            "answer": "Yes, it is really delicious.",
+            "tags": ["네", "정말", "맛있어요", "맛있다"]
+          },
+          {
+            "id": "u4_medium_5_listening",
+            "question_type": "listening",
+            "question": "지금 공부해요?",
+            "answer": "Are you studying now?",
+            "tags": ["지금", "공부해요", "공부하다", "의문문"]
+          },
+          {
+            "id": "u4_medium_6_listening",
+            "question_type": "listening",
+            "question": "아니요. 텔레비전을 봐요.",
+            "answer": "No. I am watching TV.",
+            "tags": ["아니요", "텔레비전", "을", "봐요", "보다"]
+          },
+          {
+            "id": "u4_medium_7_listening",
+            "question_type": "listening",
+            "question": "안나 씨는 오늘 무엇을 해요?",
+            "answer": "What is Anna doing today?",
+            "tags": ["안나", "씨", "는", "오늘", "무엇", "을", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "u4_medium_8_listening",
+            "question_type": "listening",
+            "question": "유진 씨는 지금 일해요.",
+            "answer": "Yujin is working right now.",
+            "tags": ["유진", "씨", "는", "지금", "일해요", "일하다"]
+          },
+          {
+            "id": "u4_medium_conv_1",
+            "question_type": "conversation",
+            "question": "지금 공부해요?",
+            "easy_choices": ["아니요, 영화를 봐요.", "네, 책상이에요.", "저는 학생이에요."],
+            "easy_answer": "아니요, 영화를 봐요.",
+            "medium_choices": "아니요, 영화를 ____.",
+            "medium_answer": "아니요, 영화를 봐요.",
+            "tags": ["지금", "공부해요", "공부하다", "아요/어요", "아니요", "영화", "를", "을/를", "목적격_조사", "봐요", "보다"]
+          },
+          {
+            "id": "u4_medium_conv_2",
+            "question_type": "conversation",
+            "question": "불고기 맛있어요?",
+            "easy_choices": ["네, 정말 맛있어요.", "아니요, 책상 위에 있어요.", "저는 회사원이에요."],
+            "easy_answer": "네, 정말 맛있어요.",
+            "medium_choices": "네, 정말 ____.",
+            "medium_answer": "네, 정말 맛있어요.",
+            "tags": ["불고기", "맛있어요", "맛있다", "아요/어요", "네", "정말"]
+          }
+        ]
+      },
+      {
+        "difficulty": "hard",
+        "questions": [
+          {
+            "id": "u4_hard_1",
+            "question_type": "translate to korean",
+            "question": "What are you doing today?",
+            "answer": "오늘 무엇을 해요?",
+            "tags": ["오늘", "무엇", "을", "해요", "하다", "의문문"]
+          },
+          {
+            "id": "u4_hard_2",
+            "question_type": "translate to korean",
+            "question": "I am reading a book.",
+            "answer": "책을 읽어요.",
+            "tags": ["책", "을", "읽어요", "읽다"]
+          },
+          {
+            "id": "u4_hard_3",
+            "question_type": "translate to korean",
+            "question": "Are you eating now?",
+            "answer": "지금 먹어요?",
+            "tags": ["지금", "먹어요", "먹다", "의문문"]
+          },
+          {
+            "id": "u4_hard_4",
+            "question_type": "translate to korean",
+            "question": "No, I am cooking.",
+            "answer": "아니요. 요리해요.",
+            "tags": ["아니요", "요리해요", "요리하다"]
+          },
+          {
+            "id": "u4_hard_5",
+            "question_type": "translate to korean",
+            "question": "Juno is studying Korean today.",
+            "answer": "주노 씨는 오늘 한국어를 공부해요.",
+            "tags": ["주노", "씨", "는", "오늘", "한국어", "를", "공부해요", "공부하다"]
+          },
+          {
+            "id": "u4_hard_6",
+            "question_type": "translate to korean",
+            "question": "I am listening to music.",
+            "answer": "음악을 들어요.",
+            "tags": ["음악", "을", "들어요", "듣다", "아요/어요"]
+          },
+          {
+            "id": "u4_hard_7",
+            "question_type": "translate to korean",
+            "question": "Anna is meeting a friend today.",
+            "answer": "안나 씨는 오늘 친구를 만나요.",
+            "tags": ["안나", "씨", "는", "오늘", "친구", "를", "만나요", "만나다"]
+          },
+          {
+            "id": "u4_hard_8",
+            "question_type": "translate to korean",
+            "question": "Is the pizza delicious?",
+            "answer": "피자가 맛있어요?",
+            "tags": ["피자", "가", "이/가", "맛있어요", "맛있다", "의문문"]
+          },
+          {
+            "id": "u4_hard_9",
+            "question_type": "translate to korean",
+            "question": "I am drinking coffee now.",
+            "answer": "지금 커피를 마셔요.",
+            "tags": ["지금", "커피", "를", "마셔요", "마시다"]
+          },
+          {
+            "id": "u4_hard_10",
+            "question_type": "translate to korean",
+            "question": "What is Anna doing? She is sleeping.",
+            "answer": "안나 씨는 무엇을 해요? 자요.",
+            "tags": ["안나", "씨", "는", "무엇", "을", "해요", "하다", "자요", "자다"]
+          },
+          {
+            "id": "u4_hard_11",
+            "question_type": "translate to korean",
+            "question": "Yujin is watching a movie with a friend.",
+            "answer": "유진 씨는 친구를 만나요. 영화를 봐요.",
+            "tags": ["유진", "씨", "는", "친구", "를", "만나요", "만나다", "영화", "봐요", "보다"]
+          },
+          {
+            "id": "u4_hard_conv_1",
+            "question_type": "conversation",
+            "question": "안나 씨는 지금 뭐 해요?",
+            "easy_choices": ["커피를 마셔요.", "네, 책상이에요.", "저는 선생님이에요."],
+            "easy_answer": "커피를 마셔요.",
+            "medium_choices": "커피를 ____.",
+            "medium_answer": "커피를 마셔요.",
+            "tags": ["안나", "씨", "는", "지금", "뭐", "해요", "하다", "의문문", "커피", "를", "을/를", "목적격_조사", "마셔요", "마시다", "아요/어요"]
+          },
+          {
+            "id": "u4_hard_conv_2",
+            "question_type": "conversation",
+            "question": "오늘 한국어를 공부해요?",
+            "easy_choices": ["네, 공부해요.", "아니요, 책상 옆에 있어요.", "저는 캐나다 사람이에요."],
+            "easy_answer": "네, 공부해요.",
+            "medium_choices": "네, ____.",
+            "medium_answer": "네, 공부해요.",
+            "tags": ["오늘", "한국어", "를", "을/를", "목적격_조사", "공부해요", "공부하다", "아요/어요", "네"]
+          }
+        ]
+      }
+    ]
+  }
+]

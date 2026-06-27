@@ -1,0 +1,16 @@
+not code, just for personal note 
+[
+  "conversation",
+  "error correction",
+  "fill in the blank",
+  "listening",
+  "listening sentence blocks",
+  "listening vocab",
+  "speaking",
+  "speaking sentence",
+  "speaking vocab",
+  "translate english to korean",
+  "translate korean to english",
+  "vocab define",
+  "vocab fill in the blank"
+]

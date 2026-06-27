@@ -1,0 +1,2595 @@
+{
+  "1": [
+    {
+      "id": "u1_vocab_01_define",
+      "question_type": "vocab define",
+      "question": "안녕하세요",
+      "answer": "Hello / Hi",
+      "choices": ["Goodbye", "Thank you", "Excuse me", "Hello / Hi"],
+      "tags": ["안녕하세요", "인사"]
+    },
+    {
+      "id": "u1_vocab_01_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "안녕하세요",
+      "answer": "안녕하세요",
+      "choices": ["아니요", "이름", "안녕하세요", "이에요"],
+      "tags": ["안녕하세요", "인사"]
+    },
+    {
+      "id": "u1_vocab_01_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "안녕하세요",
+      "answer": "안녕하세요",
+      "tags": ["안녕하세요", "인사"]
+    },
+    {
+      "id": "u1_vocab_02_define",
+      "question_type": "vocab define",
+      "question": "저",
+      "answer": "I / me (formal)",
+      "choices": ["You (formal)", "We", "I / me (formal)", "He / She"],
+      "tags": ["저"]
+    },
+    {
+      "id": "u1_vocab_02_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "저",
+      "answer": "저",
+      "choices": ["이름", "안녕하세요", "네", "저"],
+      "tags": ["저"]
+    },
+    {
+      "id": "u1_vocab_02_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "저",
+      "answer": "저",
+      "tags": ["저"]
+    },
+    {
+      "id": "u1_vocab_03_define",
+      "question_type": "vocab define",
+      "question": "는/은",
+      "answer": "Topic particle (은 after consonant, 는 after vowel)",
+      "choices": ["Topic particle (은 after consonant, 는 after vowel)", "Subject particle", "Direction particle", "Object particle"],
+      "tags": ["는/은"]
+    },
+    {
+      "id": "u1_vocab_03_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "수진 씨___ 한국 사람이에요?",
+      "answer": "는",
+      "choices": ["이", "는", "가", "은"],
+      "tags": ["는/은", "씨", "한국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_03_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "는",
+      "answer": "는",
+      "choices": ["네", "는", "안녕하세요", "학생"],
+      "tags": ["는/은"]
+    },
+    {
+      "id": "u1_vocab_03_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "는",
+      "answer": "는",
+      "tags": ["는/은"]
+    },
+    {
+      "id": "u1_vocab_04_define",
+      "question_type": "vocab define",
+      "question": "이에요/예요",
+      "answer": "Am/Is/Are (이에요 after consonant, 예요 after vowel)",
+      "choices": ["Am/Is/Are (이에요 after consonant, 예요 after vowel)", "Was/Were", "Will be", "Want to be"],
+      "tags": ["이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_04_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "저는 타완___.",
+      "answer": "이에요",
+      "choices": ["예요", "이에요", "에요", "이에요?"],
+      "tags": ["이에요/예요", "저", "는/은"]
+    },
+    {
+      "id": "u1_vocab_04_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "이에요",
+      "answer": "이에요",
+      "choices": ["전화번호", "안녕하세요", "이에요", "는"],
+      "tags": ["이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_04_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "이에요",
+      "answer": "이에요",
+      "tags": ["이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_05_define",
+      "question_type": "vocab define",
+      "question": "씨",
+      "answer": "Mr./Ms. (honorific title after name)",
+      "choices": ["Mr./Ms. (honorific title after name)", "Friend (informal)", "Teacher", "Doctor"],
+      "tags": ["씨"]
+    },
+    {
+      "id": "u1_vocab_05_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "씨",
+      "answer": "씨",
+      "choices": ["의사", "베트남", "무엇", "씨"],
+      "tags": ["씨"]
+    },
+    {
+      "id": "u1_vocab_05_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "씨",
+      "answer": "씨",
+      "tags": ["씨"]
+    },
+    {
+      "id": "u1_vocab_06_define",
+      "question_type": "vocab define",
+      "question": "사람",
+      "answer": "Person / people",
+      "choices": ["Person / people", "Name", "Phone number", "Country"],
+      "tags": ["사람"]
+    },
+    {
+      "id": "u1_vocab_06_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "사람",
+      "answer": "사람",
+      "choices": ["이름", "사람", "전화번호", "학생"],
+      "tags": ["사람"]
+    },
+    {
+      "id": "u1_vocab_06_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "사람",
+      "answer": "사람",
+      "tags": ["사람"]
+    },
+    {
+      "id": "u1_vocab_07_define",
+      "question_type": "vocab define",
+      "question": "한국",
+      "answer": "Korea",
+      "choices": ["Vietnam", "Korea", "China", "Japan"],
+      "tags": ["한국"]
+    },
+    {
+      "id": "u1_vocab_07_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "한국",
+      "answer": "한국",
+      "choices": ["씨", "한국", "선생님", "네"],
+      "tags": ["한국"]
+    },
+    {
+      "id": "u1_vocab_07_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "한국",
+      "answer": "한국",
+      "tags": ["한국"]
+    },
+    {
+      "id": "u1_vocab_08_define",
+      "question_type": "vocab define",
+      "question": "중국",
+      "answer": "China",
+      "choices": ["China", "Vietnam", "Korea", "Thailand"],
+      "tags": ["중국"]
+    },
+    {
+      "id": "u1_vocab_08_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "중국",
+      "answer": "중국",
+      "choices": ["는", "일본", "중국", "회사원"],
+      "tags": ["중국"]
+    },
+    {
+      "id": "u1_vocab_08_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "중국",
+      "answer": "중국",
+      "tags": ["중국"]
+    },
+    {
+      "id": "u1_vocab_09_define",
+      "question_type": "vocab define",
+      "question": "일본",
+      "answer": "Japan",
+      "choices": ["Korea", "Thailand", "Japan", "China"],
+      "tags": ["일본"]
+    },
+    {
+      "id": "u1_vocab_09_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "일본",
+      "answer": "일본",
+      "choices": ["사람", "일본", "무엇", "저"],
+      "tags": ["일본"]
+    },
+    {
+      "id": "u1_vocab_09_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "일본",
+      "answer": "일본",
+      "tags": ["일본"]
+    },
+    {
+      "id": "u1_vocab_10_define",
+      "question_type": "vocab define",
+      "question": "태국",
+      "answer": "Thailand",
+      "choices": ["China", "Vietnam", "Japan", "Thailand"],
+      "tags": ["태국"]
+    },
+    {
+      "id": "u1_vocab_10_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "태국",
+      "answer": "태국",
+      "choices": ["전화번호", "베트남", "의사", "태국"],
+      "tags": ["태국"]
+    },
+    {
+      "id": "u1_vocab_10_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "태국",
+      "answer": "태국",
+      "tags": ["태국"]
+    },
+    {
+      "id": "u1_vocab_11_define",
+      "question_type": "vocab define",
+      "question": "베트남",
+      "answer": "Vietnam",
+      "choices": ["Vietnam", "Korea", "Thailand", "Japan"],
+      "tags": ["베트남"]
+    },
+    {
+      "id": "u1_vocab_11_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "베트남",
+      "answer": "베트남",
+      "choices": ["이에요", "의사", "베트남", "태국"],
+      "tags": ["베트남"]
+    },
+    {
+      "id": "u1_vocab_11_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "베트남",
+      "answer": "베트남",
+      "tags": ["베트남"]
+    },
+    {
+      "id": "u1_vocab_12_define",
+      "question_type": "vocab define",
+      "question": "학생",
+      "answer": "Student",
+      "choices": ["Teacher", "Student", "Doctor", "Office worker"],
+      "tags": ["학생"]
+    },
+    {
+      "id": "u1_vocab_12_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "타완 씨는 선생님이에요? 아니요, ___이에요.",
+      "answer": "학생",
+      "choices": ["선생님", "회사원", "의사", "학생"],
+      "tags": ["학생", "씨", "는/은", "선생님", "아니요", "이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_12_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "학생",
+      "answer": "학생",
+      "choices": ["아니요", "네", "학생", "일본"],
+      "tags": ["학생"]
+    },
+    {
+      "id": "u1_vocab_12_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "학생",
+      "answer": "학생",
+      "tags": ["학생"]
+    },
+    {
+      "id": "u1_vocab_13_define",
+      "question_type": "vocab define",
+      "question": "회사원",
+      "answer": "Office worker",
+      "choices": ["Teacher", "Student", "Office worker", "Doctor"],
+      "tags": ["회사원"]
+    },
+    {
+      "id": "u1_vocab_13_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "마크 씨는 학생이에요? 아니요, ___이에요.",
+      "answer": "회사원",
+      "choices": ["의사", "회사원", "학생", "선생님"],
+      "tags": ["회사원", "씨", "는/은", "학생", "아니요", "이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_13_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "회사원",
+      "answer": "회사원",
+      "choices": ["태국", "전화번호", "학생", "회사원"],
+      "tags": ["회사원"]
+    },
+    {
+      "id": "u1_vocab_13_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "회사원",
+      "answer": "회사원",
+      "tags": ["회사원"]
+    },
+    {
+      "id": "u1_vocab_14_define",
+      "question_type": "vocab define",
+      "question": "선생님",
+      "answer": "Teacher",
+      "choices": ["Student", "Doctor", "Office worker", "Teacher"],
+      "tags": ["선생님"]
+    },
+    {
+      "id": "u1_vocab_14_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "선생님",
+      "answer": "선생님",
+      "choices": ["이름", "저", "선생님", "회사원"],
+      "tags": ["선생님"]
+    },
+    {
+      "id": "u1_vocab_14_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "선생님",
+      "answer": "선생님",
+      "tags": ["선생님"]
+    },
+    {
+      "id": "u1_vocab_15_define",
+      "question_type": "vocab define",
+      "question": "의사",
+      "answer": "Doctor",
+      "choices": ["Doctor", "Teacher", "Office worker", "Student"],
+      "tags": ["의사"]
+    },
+    {
+      "id": "u1_vocab_15_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "아니요, 저는 ___예요.",
+      "answer": "의사",
+      "choices": ["학생", "의사", "선생님", "회사원"],
+      "tags": ["의사", "아니요", "저", "는/은", "이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_15_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "의사",
+      "answer": "의사",
+      "choices": ["이름", "전화번호", "아니요", "의사"],
+      "tags": ["의사"]
+    },
+    {
+      "id": "u1_vocab_15_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "의사",
+      "answer": "의사",
+      "tags": ["의사"]
+    },
+    {
+      "id": "u1_vocab_16_define",
+      "question_type": "vocab define",
+      "question": "네",
+      "answer": "Yes",
+      "choices": ["Thank you", "Hello", "Yes", "No"],
+      "tags": ["네"]
+    },
+    {
+      "id": "u1_vocab_16_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "타완 씨는 태국 사람이에요? ___, 태국 사람이에요.",
+      "answer": "네",
+      "choices": ["저는", "네", "씨는", "아니요"],
+      "tags": ["네", "씨", "는/은", "태국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_16_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "네",
+      "answer": "네",
+      "choices": ["전화번호", "일본", "네", "의사"],
+      "tags": ["네"]
+    },
+    {
+      "id": "u1_vocab_16_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "네",
+      "answer": "네",
+      "tags": ["네"]
+    },
+    {
+      "id": "u1_vocab_17_define",
+      "question_type": "vocab define",
+      "question": "아니요",
+      "answer": "No",
+      "choices": ["No", "Excuse me", "Yes", "Sorry"],
+      "tags": ["아니요"]
+    },
+    {
+      "id": "u1_vocab_17_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "타완 씨는 선생님이에요? ___, 학생이에요.",
+      "answer": "아니요",
+      "choices": ["씨는", "저는", "네", "아니요"],
+      "tags": ["아니요", "씨", "는/은", "선생님", "학생", "이에요/예요"]
+    },
+    {
+      "id": "u1_vocab_17_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "아니요",
+      "answer": "아니요",
+      "choices": ["일본", "아니요", "학생", "전화번호"],
+      "tags": ["아니요"]
+    },
+    {
+      "id": "u1_vocab_17_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "아니요",
+      "answer": "아니요",
+      "tags": ["아니요"]
+    },
+    {
+      "id": "u1_vocab_18_define",
+      "question_type": "vocab define",
+      "question": "이름",
+      "answer": "Name",
+      "choices": ["Job", "Phone number", "Name", "Country"],
+      "tags": ["이름"]
+    },
+    {
+      "id": "u1_vocab_18_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "이름",
+      "answer": "이름",
+      "choices": ["의사", "일본", "이름", "전화번호"],
+      "tags": ["이름"]
+    },
+    {
+      "id": "u1_vocab_18_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "이름",
+      "answer": "이름",
+      "tags": ["이름"]
+    },
+    {
+      "id": "u1_vocab_20_define",
+      "question_type": "vocab define",
+      "question": "전화번호",
+      "answer": "Phone number",
+      "choices": ["Address", "Name", "Job", "Phone number"],
+      "tags": ["전화번호"]
+    },
+    {
+      "id": "u1_vocab_20_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "전화번호",
+      "answer": "전화번호",
+      "choices": ["베트남", "전화번호", "의사", "는"],
+      "tags": ["전화번호"]
+    },
+    {
+      "id": "u1_vocab_20_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "전화번호",
+      "answer": "전화번호",
+      "tags": ["전화번호"]
+    },
+    {
+      "id": "u1_listen_sentence_01",
+      "question_type": "listening sentence blocks",
+      "question": "안녕하세요?",
+      "answer": "안녕하세요?",
+      "blocks": ["이에요", "학생", "저는", "안녕하세요?"],
+      "correct_order": ["안녕하세요?"],
+      "tags": ["안녕하세요"]
+    },
+    {
+      "id": "u1_listen_sentence_02",
+      "question_type": "listening sentence blocks",
+      "question": "저는 타완이에요.",
+      "answer": "저는 타완이에요.",
+      "blocks": ["선생님", "안녕하세요?", "저는", "학생", "타완이에요."],
+      "correct_order": ["저는", "타완이에요."],
+      "tags": ["저", "는/은", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_03",
+      "question_type": "listening sentence blocks",
+      "question": "태국 사람이에요?",
+      "answer": "태국 사람이에요?",
+      "blocks": ["한국", "사람이에요?", "학생", "중국", "태국"],
+      "correct_order": ["태국", "사람이에요?"],
+      "tags": ["태국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_04",
+      "question_type": "listening sentence blocks",
+      "question": "네, 태국 사람이에요.",
+      "answer": "네, 태국 사람이에요.",
+      "blocks": ["네,", "아니요,", "태국", "사람이에요.", "한국", "학생"],
+      "correct_order": ["네,", "태국", "사람이에요."],
+      "tags": ["네", "태국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_05",
+      "question_type": "listening sentence blocks",
+      "question": "안녕하세요? 저는 김민수예요.",
+      "answer": "안녕하세요? 저는 김민수예요.",
+      "blocks": ["안녕하세요?", "이에요", "김민수예요.", "저는", "타완이에요.", "학생"],
+      "correct_order": ["안녕하세요?", "저는", "김민수예요."],
+      "tags": ["안녕하세요", "저", "는/은", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_06",
+      "question_type": "listening sentence blocks",
+      "question": "안녕하세요? 저는 왕치엔이에요.",
+      "answer": "안녕하세요? 저는 왕치엔이에요.",
+      "blocks": ["안녕하세요?", "선생님", "학생", "저는", "왕치엔이에요.", "유키예요."],
+      "correct_order": ["안녕하세요?", "저는", "왕치엔이에요."],
+      "tags": ["안녕하세요", "저", "는/은", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_07",
+      "question_type": "listening sentence blocks",
+      "question": "치엔 씨는 중국 사람이에요?",
+      "answer": "치엔 씨는 중국 사람이에요?",
+      "blocks": ["치엔", "중국", "태국", "씨는", "사람이에요?", "한국", "학생"],
+      "correct_order": ["치엔", "씨는", "중국", "사람이에요?"],
+      "tags": ["씨", "는/은", "중국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_08",
+      "question_type": "listening sentence blocks",
+      "question": "네, 중국 사람이에요.",
+      "answer": "네, 중국 사람이에요.",
+      "blocks": ["태국", "한국", "아니요,", "중국", "사람이에요.", "네,"],
+      "correct_order": ["네,", "중국", "사람이에요."],
+      "tags": ["네", "중국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_09",
+      "question_type": "listening sentence blocks",
+      "question": "민수 씨는 한국 사람이에요?",
+      "answer": "민수 씨는 한국 사람이에요?",
+      "blocks": ["사람이에요?", "학생", "일본", "씨는", "민수", "중국", "한국"],
+      "correct_order": ["민수", "씨는", "한국", "사람이에요?"],
+      "tags": ["씨", "는/은", "한국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_listen_sentence_10",
+      "question_type": "listening sentence blocks",
+      "question": "네, 한국 사람이에요.",
+      "answer": "네, 한국 사람이에요.",
+      "blocks": ["사람이에요.", "일본", "네,", "중국", "한국", "아니요,"],
+      "correct_order": ["네,", "한국", "사람이에요."],
+      "tags": ["네", "한국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_01",
+      "question_type": "speaking sentence",
+      "question": "안녕하세요?",
+      "answer": "안녕하세요?",
+      "tags": ["안녕하세요"]
+    },
+    {
+      "id": "u1_speak_sentence_02",
+      "question_type": "speaking sentence",
+      "question": "저는 타완이에요.",
+      "answer": "저는 타완이에요.",
+      "tags": ["저", "는/은", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_03",
+      "question_type": "speaking sentence",
+      "question": "태국 사람이에요?",
+      "answer": "태국 사람이에요?",
+      "tags": ["태국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_04",
+      "question_type": "speaking sentence",
+      "question": "네, 태국 사람이에요.",
+      "answer": "네, 태국 사람이에요.",
+      "tags": ["네", "태국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_05",
+      "question_type": "speaking sentence",
+      "question": "저는 유키예요.",
+      "answer": "저는 유키예요.",
+      "tags": ["저", "는/은", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_06",
+      "question_type": "speaking sentence",
+      "question": "치엔 씨는 중국 사람이에요?",
+      "answer": "치엔 씨는 중국 사람이에요?",
+      "tags": ["씨", "는/은", "중국", "사람", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_07",
+      "question_type": "speaking sentence",
+      "question": "마크 씨는 회사원이에요?",
+      "answer": "마크 씨는 회사원이에요?",
+      "tags": ["씨", "는/은", "회사원", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_08",
+      "question_type": "speaking sentence",
+      "question": "아니요, 학생이에요.",
+      "answer": "아니요, 학생이에요.",
+      "tags": ["아니요", "학생", "이에요/예요"]
+    },
+    {
+      "id": "u1_speak_sentence_10",
+      "question_type": "speaking sentence",
+      "question": "아니요, 저는 의사예요.",
+      "answer": "아니요, 저는 의사예요.",
+      "tags": ["아니요", "저", "는/은", "의사", "이에요/예요"]
+    }
+  ],
+  "2": [
+    {
+      "id": "u2_fill_in_the_blank_1",
+      "question_type": "fill in the blank",
+      "question": "수진 씨는 뭐 ___?",
+      "answer": "해요",
+      "tags": ["뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_2",
+      "question_type": "fill in the blank",
+      "question": "저는 지금 공부___. 마크 씨는 뭐 해요?",
+      "answer": "해요",
+      "tags": ["공부하다", "해요", "지금", "뭐"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_3",
+      "question_type": "fill in the blank",
+      "question": "타완 씨는 회사___ 가요.",
+      "answer": "에",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_4",
+      "question_type": "fill in the blank",
+      "question": "민수 씨는 학교에 가요. 거기에서 공부___.",
+      "answer": "해요",
+      "tags": ["학교", "에", "공부하다", "가다"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_5",
+      "question_type": "fill in the blank",
+      "question": "치엔 씨는 지금 집___ 와요.",
+      "answer": "에",
+      "tags": ["집", "에", "오다", "지금"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_6",
+      "question_type": "fill in the blank",
+      "question": "투이 씨는 시장에서 사과를 ___.",
+      "answer": "사요",
+      "tags": ["사다", "시장", "에서"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_7",
+      "question_type": "fill in the blank",
+      "question": "유키 씨는 공원에서 ___.",
+      "answer": "운동해요",
+      "tags": ["운동하다", "공원", "에서"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_8",
+      "question_type": "fill in the blank",
+      "question": "마크 씨는 식당에서 밥을 ___.",
+      "answer": "먹어요",
+      "tags": ["먹다", "식당", "에서", "밥"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_9",
+      "question_type": "fill in the blank",
+      "question": "로라 씨는 친구하고 ___.",
+      "answer": "이야기해요",
+      "tags": ["친구", "이야기하다"]
+    },
+    {
+      "id": "u2_fill_in_the_blank_10",
+      "question_type": "fill in the blank",
+      "question": "지금 친구에게 전화___.",
+      "answer": "해요",
+      "tags": ["전화하다", "해요", "지금", "에게"]
+    },
+    {
+      "id": "u2_listening_1",
+      "question_type": "listening",
+      "question": "수진 씨는 뭐 해요?",
+      "answer": "수진 씨는 뭐 해요?",
+      "tags": ["뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_listening_2",
+      "question_type": "listening",
+      "question": "운동해요. 마크 씨는 뭐 해요?",
+      "answer": "운동해요. 마크 씨는 뭐 해요?",
+      "tags": ["운동하다", "뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_listening_3",
+      "question_type": "listening",
+      "question": "저는 공부해요.",
+      "answer": "저는 공부해요.",
+      "tags": ["저", "공부하다"]
+    },
+    {
+      "id": "u2_listening_4",
+      "question_type": "listening",
+      "question": "타완 씨는 어디에 가요?",
+      "answer": "타완 씨는 어디에 가요?",
+      "tags": ["어디", "에", "가다"]
+    },
+    {
+      "id": "u2_listening_5",
+      "question_type": "listening",
+      "question": "회사에 가요.",
+      "answer": "회사에 가요.",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_listening_6",
+      "question_type": "listening",
+      "question": "민수 씨는 학교에 가요. 공부해요.",
+      "answer": "민수 씨는 학교에 가요. 공부해요.",
+      "tags": ["학교", "에", "가다", "공부하다"]
+    },
+    {
+      "id": "u2_listening_7",
+      "question_type": "listening",
+      "question": "로라 씨는 지금 집에서 쉬어요.",
+      "answer": "로라 씨는 지금 집에서 쉬어요.",
+      "tags": ["지금", "집", "에서", "쉬다"]
+    },
+    {
+      "id": "u2_listening_8",
+      "question_type": "listening",
+      "question": "마크 씨는 오늘 시장에 가요.",
+      "answer": "마크 씨는 오늘 시장에 가요.",
+      "tags": ["오늘", "시장", "에", "가다"]
+    },
+    {
+      "id": "u2_listening_9",
+      "question_type": "listening",
+      "question": "커피숍에서 친구를 만나요.",
+      "answer": "커피숍에서 친구를 만나요.",
+      "tags": ["커피숍", "에서", "친구", "만나다"]
+    },
+    {
+      "id": "u2_listening_10",
+      "question_type": "listening",
+      "question": "10시에 투이 씨에게 전화해요.",
+      "answer": "10시에 투이 씨에게 전화해요.",
+      "tags": ["에게", "전화하다"]
+    },
+    {
+      "id": "u2_translate_en_ko_1",
+      "question_type": "translate english to korean",
+      "question": "What is Sujin doing?",
+      "answer": "수진 씨는 뭐 해요?",
+      "tags": ["뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_translate_en_ko_2",
+      "question_type": "translate english to korean",
+      "question": "I am studying.",
+      "answer": "저는 공부해요.",
+      "tags": ["저", "공부하다"]
+    },
+    {
+      "id": "u2_translate_en_ko_3",
+      "question_type": "translate english to korean",
+      "question": "Where is Tawan going?",
+      "answer": "타완 씨는 어디에 가요?",
+      "tags": ["어디", "에", "가다"]
+    },
+    {
+      "id": "u2_translate_en_ko_4",
+      "question_type": "translate english to korean",
+      "question": "I am going to the office.",
+      "answer": "회사에 가요.",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_translate_en_ko_5",
+      "question_type": "translate english to korean",
+      "question": "Minsoo goes to school.",
+      "answer": "민수 씨는 학교에 가요.",
+      "tags": ["학교", "에", "가다"]
+    },
+    {
+      "id": "u2_translate_en_ko_6",
+      "question_type": "translate english to korean",
+      "question": "Does Mark make a phone call?",
+      "answer": "마크 씨는 전화해요?",
+      "tags": ["전화하다"]
+    },
+    {
+      "id": "u2_translate_en_ko_7",
+      "question_type": "translate english to korean",
+      "question": "I exercise at the park.",
+      "answer": "공원에서 운동해요.",
+      "tags": ["공원", "에서", "운동하다"]
+    },
+    {
+      "id": "u2_translate_en_ko_8",
+      "question_type": "translate english to korean",
+      "question": "I meet a friend at a coffee shop.",
+      "answer": "커피숍에서 친구를 만나요.",
+      "tags": ["커피숍", "에서", "친구", "만나다"]
+    },
+    {
+      "id": "u2_translate_en_ko_9",
+      "question_type": "translate english to korean",
+      "question": "What are you doing today?",
+      "answer": "오늘 뭐 해요?",
+      "tags": ["오늘", "뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_translate_en_ko_10",
+      "question_type": "translate english to korean",
+      "question": "I rest at home.",
+      "answer": "집에서 쉬어요.",
+      "tags": ["집", "에서", "쉬다"]
+    },
+    {
+      "id": "u2_translate_ko_en_1",
+      "question_type": "translate korean to english",
+      "question": "수진 씨는 뭐 해요?",
+      "answer": "What is Sujin doing?",
+      "tags": ["뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_translate_ko_en_2",
+      "question_type": "translate korean to english",
+      "question": "운동해요. 마크 씨는 뭐 해요?",
+      "answer": "I'm working out. What are you doing, Mark?",
+      "tags": ["운동하다", "뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_translate_ko_en_3",
+      "question_type": "translate korean to english",
+      "question": "저는 공부해요.",
+      "answer": "I am studying.",
+      "tags": ["저", "공부하다"]
+    },
+    {
+      "id": "u2_translate_ko_en_4",
+      "question_type": "translate korean to english",
+      "question": "타완 씨는 회사원이에요. 회사에 가요.",
+      "answer": "Tawan is an office worker. He goes to the office.",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_translate_ko_en_5",
+      "question_type": "translate korean to english",
+      "question": "민수 씨는 학생이에요. 학교에 가요.",
+      "answer": "Minsoo is a student. He goes to school.",
+      "tags": ["학교", "에", "가다"]
+    },
+    {
+      "id": "u2_translate_ko_en_6",
+      "question_type": "translate korean to english",
+      "question": "마크 씨는 어디에 가요?",
+      "answer": "Where is Mark going?",
+      "tags": ["어디", "에", "가다"]
+    },
+    {
+      "id": "u2_translate_ko_en_7",
+      "question_type": "translate korean to english",
+      "question": "15:00 시장",
+      "answer": "15:00 Market",
+      "tags": ["시장"]
+    },
+    {
+      "id": "u2_translate_ko_en_8",
+      "question_type": "translate korean to english",
+      "question": "민수 씨는 일해요.",
+      "answer": "Minsoo works.",
+      "tags": ["일하다"]
+    },
+    {
+      "id": "u2_translate_ko_en_9",
+      "question_type": "translate korean to english",
+      "question": "공부해요.",
+      "answer": "I am studying. / He studies.",
+      "tags": ["공부하다"]
+    },
+    {
+      "id": "u2_translate_ko_en_10",
+      "question_type": "translate korean to english",
+      "question": "집에 가요.",
+      "answer": "I'm going home.",
+      "tags": ["집", "에", "가다"]
+    },
+    {
+      "id": "u2_conversation_1",
+      "question_type": "conversation",
+      "question": "수진 씨는 뭐 해요?",
+      "answer": "운동해요.",
+      "choices": ["공부해요.", "운동해요.", "집에 가요.", "회사에 가요."],
+      "tags": ["뭐", "해요", "하다", "운동하다"]
+    },
+    {
+      "id": "u2_conversation_2",
+      "question_type": "conversation",
+      "question": "마크 씨는 뭐 해요?",
+      "answer": "저는 공부해요.",
+      "choices": ["저는 운동해요.", "저는 공부해요.", "저는 시장에 가요.", "저는 쉬어요."],
+      "tags": ["뭐", "해요", "하다", "공부하다"]
+    },
+    {
+      "id": "u2_conversation_3",
+      "question_type": "conversation",
+      "question": "타완 씨는 어디에 가요?",
+      "answer": "회사에 가요.",
+      "choices": ["학교에 가요.", "시장에 가요.", "회사에 가요.", "집에 가요."],
+      "tags": ["어디", "에", "가다", "회사"]
+    },
+    {
+      "id": "u2_conversation_4",
+      "question_type": "conversation",
+      "question": "마크 씨는 전화해요?",
+      "answer": "네, 투이 씨에게 전화해요.",
+      "choices": ["아니요, 공부해요.", "네, 투이 씨에게 전화해요.", "아니요, 운동해요.", "네, 학교에 가요."],
+      "tags": ["전화하다", "에게"]
+    },
+    {
+      "id": "u2_conversation_5",
+      "question_type": "conversation",
+      "question": "민수 씨는 학교에서 뭐 해요?",
+      "answer": "공부해요.",
+      "choices": ["운동해요.", "일해요.", "공부해요.", "쉬어요."],
+      "tags": ["학교", "에서", "뭐", "해요", "공부하다"]
+    },
+    {
+      "id": "u2_conversation_6",
+      "question_type": "conversation",
+      "question": "오늘 어디에 가요?",
+      "answer": "시장에 가요.",
+      "choices": ["커피숍에 가요.", "학교에 가요.", "시장에 가요.", "공원에 가요."],
+      "tags": ["오늘", "어디", "에", "가다", "시장"]
+    },
+    {
+      "id": "u2_conversation_7",
+      "question_type": "conversation",
+      "question": "타완 씨는 일해요?",
+      "answer": "네, 회사에서 일해요.",
+      "choices": ["아니요, 학교에 가요.", "네, 회사에서 일해요.", "아니요, 공부해요.", "네, 시장에 가요."],
+      "tags": ["일하다", "회사", "에서"]
+    },
+    {
+      "id": "u2_conversation_8",
+      "question_type": "conversation",
+      "question": "민수 씨는 일해요?",
+      "answer": "아니요, 공부해요. 학생이에요.",
+      "choices": ["네, 회사에 가요.", "아니요, 공부해요. 학생이에요.", "네, 운동해요.", "아니요, 시장에 가요."],
+      "tags": ["일하다", "공부하다"]
+    },
+    {
+      "id": "u2_conversation_9",
+      "question_type": "conversation",
+      "question": "로라 씨는 지금 뭐 해요?",
+      "answer": "집에서 쉬어요.",
+      "choices": ["공원에서 운동해요.", "커피숍에서 이야기해요.", "집에서 쉬어요.", "학교에서 공부해요."],
+      "tags": ["지금", "뭐", "해요", "하다", "집", "에서", "쉬다"]
+    },
+    {
+      "id": "u2_conversation_10",
+      "question_type": "conversation",
+      "question": "커피숍에서 무엇을 해요?",
+      "answer": "친구를 만나요.",
+      "choices": ["공부해요.", "운동해요.", "친구를 만나요.", "이야기해요."],
+      "tags": ["커피숍", "에서", "만나다", "친구"]
+    },
+    {
+      "id": "u2_speaking_1",
+      "question_type": "speaking",
+      "question": "수진 씨는 뭐 해요?",
+      "answer": "수진 씨는 뭐 해요?",
+      "tags": ["뭐", "해요", "하다"]
+    },
+    {
+      "id": "u2_speaking_2",
+      "question_type": "speaking",
+      "question": "운동해요.",
+      "answer": "운동해요.",
+      "tags": ["운동하다"]
+    },
+    {
+      "id": "u2_speaking_3",
+      "question_type": "speaking",
+      "question": "저는 공부해요.",
+      "answer": "저는 공부해요.",
+      "tags": ["저", "공부하다"]
+    },
+    {
+      "id": "u2_speaking_4",
+      "question_type": "speaking",
+      "question": "타완 씨는 어디에 가요?",
+      "answer": "타완 씨는 어디에 가요?",
+      "tags": ["어디", "에", "가다"]
+    },
+    {
+      "id": "u2_speaking_5",
+      "question_type": "speaking",
+      "question": "회사에 가요.",
+      "answer": "회사에 가요.",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_speaking_6",
+      "question_type": "speaking",
+      "question": "학교에 가요. 공부해요.",
+      "answer": "학교에 가요. 공부해요.",
+      "tags": ["학교", "에", "가다", "공부하다"]
+    },
+    {
+      "id": "u2_speaking_7",
+      "question_type": "speaking",
+      "question": "마크 씨는 전화해요?",
+      "answer": "마크 씨는 전화해요?",
+      "tags": ["전화하다"]
+    },
+    {
+      "id": "u2_speaking_8",
+      "question_type": "speaking",
+      "question": "회사원이에요. 회사에 가요.",
+      "answer": "회사원이에요. 회사에 가요.",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_speaking_9",
+      "question_type": "speaking",
+      "question": "오늘 어디에 가요?",
+      "answer": "오늘 어디에 가요?",
+      "tags": ["오늘", "어디", "에", "가다"]
+    },
+    {
+      "id": "u2_speaking_10",
+      "question_type": "speaking",
+      "question": "집에서 공부해요.",
+      "answer": "집에서 공부해요.",
+      "tags": ["집", "에서", "공부하다"]
+    },
+    {
+      "id": "u2_error_correction_1",
+      "question_type": "error correction",
+      "question": "저는 공부하여.",
+      "answer": "저는 공부해요.",
+      "tags": ["공부하다", "해요"]
+    },
+    {
+      "id": "u2_error_correction_2",
+      "question_type": "error correction",
+      "question": "수진 씨는 뭐 하요?",
+      "answer": "수진 씨는 뭐 해요?",
+      "tags": ["해요", "하다", "뭐"]
+    },
+    {
+      "id": "u2_error_correction_3",
+      "question_type": "error correction",
+      "question": "타완 씨는 어디 가요?",
+      "answer": "타완 씨는 어디에 가요?",
+      "tags": ["어디", "에", "가다"]
+    },
+    {
+      "id": "u2_error_correction_4",
+      "question_type": "error correction",
+      "question": "회사애 가요.",
+      "answer": "회사에 가요.",
+      "tags": ["회사", "에", "가다"]
+    },
+    {
+      "id": "u2_error_correction_5",
+      "question_type": "error correction",
+      "question": "학교에 가요 공부해요.",
+      "answer": "학교에 가요. 공부해요.",
+      "tags": ["학교", "에", "가다", "공부하다"]
+    },
+    {
+      "id": "u2_error_correction_6",
+      "question_type": "error correction",
+      "question": "민수 씨는 운동해서.",
+      "answer": "민수 씨는 운동해요.",
+      "tags": ["운동하다"]
+    },
+    {
+      "id": "u2_error_correction_7",
+      "question_type": "error correction",
+      "question": "저는 시장에가요.",
+      "answer": "저는 시장에 가요.",
+      "tags": ["시장", "에", "가다"]
+    },
+    {
+      "id": "u2_error_correction_8",
+      "question_type": "error correction",
+      "question": "커피숍에 서 친구를 만나요.",
+      "answer": "커피숍에서 친구를 만나요.",
+      "tags": ["커피숍", "에서", "친구", "만나다"]
+    },
+    {
+      "id": "u2_error_correction_9",
+      "question_type": "error correction",
+      "question": "마크 씨는 전하해요?",
+      "answer": "마크 씨는 전화해요?",
+      "tags": ["전화하다"]
+    },
+    {
+      "id": "u2_error_correction_10",
+      "question_type": "error correction",
+      "question": "집에서 쉬요.",
+      "answer": "집에서 쉬어요.",
+      "tags": ["집", "에서", "쉬다"]
+    }
+  ],
+  "3": [
+    {
+      "id": "u3_vocab_01_define",
+      "question_type": "vocab define",
+      "question": "있다",
+      "answer": "To exist / to have (있어요 = exists/there is)",
+      "choices": ["To not exist", "To come", "To exist / to have (있어요 = exists/there is)", "To go"],
+      "tags": ["있다"]
+    },
+    {
+      "id": "u3_vocab_01_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "가방이 어디에 있어요? 책상 옆에 ___.",
+      "answer": "있어요",
+      "choices": ["있어요", "해요", "없어요", "가요"],
+      "tags": ["있다", "가방", "어디", "책상", "옆"]
+    },
+    {
+      "id": "u3_vocab_01_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "있다",
+      "answer": "있다",
+      "choices": ["의자", "밑", "있다", "침대"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["있다"]
+    },
+    {
+      "id": "u3_vocab_01_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "있다",
+      "answer": "있다",
+      "instruction": "Say this word aloud",
+      "tags": ["있다"]
+    },
+    {
+      "id": "u3_vocab_02_define",
+      "question_type": "vocab define",
+      "question": "없다",
+      "answer": "To not exist / to not have (없어요 = doesn't exist)",
+      "choices": ["To exist", "To come", "To not exist / to not have (없어요 = doesn't exist)", "To go"],
+      "tags": ["없다"]
+    },
+    {
+      "id": "u3_vocab_02_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "방에 컴퓨터가 있어요? 아니요, 책상 위에 ___.",
+      "answer": "없어요",
+      "choices": ["해요", "없어요", "있어요", "가요"],
+      "tags": ["없다", "방", "컴퓨터", "이/가", "책상", "위"]
+    },
+    {
+      "id": "u3_vocab_02_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "없다",
+      "answer": "없다",
+      "choices": ["책상", "밑", "없다", "어디"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["없다"]
+    },
+    {
+      "id": "u3_vocab_02_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "없다",
+      "answer": "없다",
+      "instruction": "Say this word aloud",
+      "tags": ["없다"]
+    },
+    {
+      "id": "u3_vocab_03_define",
+      "question_type": "vocab define",
+      "question": "이/가",
+      "answer": "Subject particle (이 after consonant, 가 after vowel)",
+      "choices": ["Subject particle (이 after consonant, 가 after vowel)", "Location particle", "Object particle", "Topic particle"],
+      "tags": ["이/가"]
+    },
+    {
+      "id": "u3_vocab_03_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "책상___ 있어요?",
+      "answer": "이",
+      "choices": ["을", "는", "가", "이"],
+      "tags": ["이/가", "책상", "있다"]
+    },
+    {
+      "id": "u3_vocab_03_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "이",
+      "answer": "이",
+      "choices": ["이", "침대", "있다", "옆"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["이/가"]
+    },
+    {
+      "id": "u3_vocab_03_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "이",
+      "answer": "이",
+      "instruction": "Say this word aloud",
+      "tags": ["이/가"]
+    },
+    {
+      "id": "u3_vocab_04_define",
+      "question_type": "vocab define",
+      "question": "위",
+      "answer": "On top of / above",
+      "choices": ["Under / below", "In front of", "On top of / above", "Next to"],
+      "tags": ["위"]
+    },
+    {
+      "id": "u3_vocab_04_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "펜이 책상 ___에 있어요.",
+      "answer": "위",
+      "choices": ["앞", "위", "옆", "밑"],
+      "tags": ["위", "펜", "이/가", "책상", "있다"]
+    },
+    {
+      "id": "u3_vocab_04_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "위",
+      "answer": "위",
+      "choices": ["방", "있다", "위", "책"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["위"]
+    },
+    {
+      "id": "u3_vocab_04_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "위",
+      "answer": "위",
+      "instruction": "Say this word aloud",
+      "tags": ["위"]
+    },
+    {
+      "id": "u3_vocab_05_define",
+      "question_type": "vocab define",
+      "question": "밑",
+      "answer": "Under / below",
+      "choices": ["Behind", "Under / below", "On top of", "Next to"],
+      "tags": ["밑"]
+    },
+    {
+      "id": "u3_vocab_05_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "가방이 침대 ___에 있어요.",
+      "answer": "밑",
+      "choices": ["앞", "위", "밑", "옆"],
+      "tags": ["밑", "가방", "이/가", "침대", "있다"]
+    },
+    {
+      "id": "u3_vocab_05_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "밑",
+      "answer": "밑",
+      "choices": ["펜", "밑", "책", "앞"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["밑"]
+    },
+    {
+      "id": "u3_vocab_05_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "밑",
+      "answer": "밑",
+      "instruction": "Say this word aloud",
+      "tags": ["밑"]
+    },
+    {
+      "id": "u3_vocab_06_define",
+      "question_type": "vocab define",
+      "question": "앞",
+      "answer": "In front of",
+      "choices": ["On top of", "In front of", "Behind", "Next to"],
+      "tags": ["앞"]
+    },
+    {
+      "id": "u3_vocab_06_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "의자가 책상 ___에 있어요.",
+      "answer": "앞",
+      "choices": ["앞", "위", "옆", "밑"],
+      "tags": ["앞", "의자", "이/가", "책상", "있다"]
+    },
+    {
+      "id": "u3_vocab_06_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "앞",
+      "answer": "앞",
+      "choices": ["앞", "위", "있다", "밑"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["앞"]
+    },
+    {
+      "id": "u3_vocab_06_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "앞",
+      "answer": "앞",
+      "instruction": "Say this word aloud",
+      "tags": ["앞"]
+    },
+    {
+      "id": "u3_vocab_07_define",
+      "question_type": "vocab define",
+      "question": "옆",
+      "answer": "Next to / beside",
+      "choices": ["On top of", "In front of", "Under", "Next to / beside"],
+      "tags": ["옆"]
+    },
+    {
+      "id": "u3_vocab_07_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "전화기가 책상 ___에 있어요.",
+      "answer": "옆",
+      "choices": ["앞", "위", "옆", "밑"],
+      "tags": ["옆", "전화기", "이/가", "책상", "있다"]
+    },
+    {
+      "id": "u3_vocab_07_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "옆",
+      "answer": "옆",
+      "choices": ["컴퓨터", "옆", "없다", "방"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["옆"]
+    },
+    {
+      "id": "u3_vocab_07_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "옆",
+      "answer": "옆",
+      "instruction": "Say this word aloud",
+      "tags": ["옆"]
+    },
+    {
+      "id": "u3_vocab_08_define",
+      "question_type": "vocab define",
+      "question": "책상",
+      "answer": "Desk",
+      "choices": ["Desk", "Bed", "Chair", "Computer"],
+      "tags": ["책상"]
+    },
+    {
+      "id": "u3_vocab_08_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "책상",
+      "answer": "책상",
+      "choices": ["책상", "펜", "옆", "책"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["책상"]
+    },
+    {
+      "id": "u3_vocab_08_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "책상",
+      "answer": "책상",
+      "instruction": "Say this word aloud",
+      "tags": ["책상"]
+    },
+    {
+      "id": "u3_vocab_09_define",
+      "question_type": "vocab define",
+      "question": "의자",
+      "answer": "Chair",
+      "choices": ["Pen", "Bag", "Chair", "Desk"],
+      "tags": ["의자"]
+    },
+    {
+      "id": "u3_vocab_09_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "의자",
+      "answer": "의자",
+      "choices": ["의자", "펜", "없다", "이"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["의자"]
+    },
+    {
+      "id": "u3_vocab_09_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "의자",
+      "answer": "의자",
+      "instruction": "Say this word aloud",
+      "tags": ["의자"]
+    },
+    {
+      "id": "u3_vocab_10_define",
+      "question_type": "vocab define",
+      "question": "가방",
+      "answer": "Bag",
+      "choices": ["Chair", "Pen", "Book", "Bag"],
+      "tags": ["가방"]
+    },
+    {
+      "id": "u3_vocab_10_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "가방",
+      "answer": "가방",
+      "choices": ["밑", "있다", "어디", "가방"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["가방"]
+    },
+    {
+      "id": "u3_vocab_10_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "가방",
+      "answer": "가방",
+      "instruction": "Say this word aloud",
+      "tags": ["가방"]
+    },
+    {
+      "id": "u3_vocab_11_define",
+      "question_type": "vocab define",
+      "question": "펜",
+      "answer": "Pen",
+      "choices": ["Bag", "Computer", "Book", "Pen"],
+      "tags": ["펜"]
+    },
+    {
+      "id": "u3_vocab_11_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "펜",
+      "answer": "펜",
+      "choices": ["이", "펜", "있다", "옆"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["펜"]
+    },
+    {
+      "id": "u3_vocab_11_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "펜",
+      "answer": "펜",
+      "instruction": "Say this word aloud",
+      "tags": ["펜"]
+    },
+    {
+      "id": "u3_vocab_12_define",
+      "question_type": "vocab define",
+      "question": "책",
+      "answer": "Book",
+      "choices": ["Book", "Pen", "Computer", "Bag"],
+      "tags": ["책"]
+    },
+    {
+      "id": "u3_vocab_12_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "책",
+      "answer": "책",
+      "choices": ["책상", "어디", "가방", "책"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["책"]
+    },
+    {
+      "id": "u3_vocab_12_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "책",
+      "answer": "책",
+      "instruction": "Say this word aloud",
+      "tags": ["책"]
+    },
+    {
+      "id": "u3_vocab_13_define",
+      "question_type": "vocab define",
+      "question": "컴퓨터",
+      "answer": "Computer",
+      "choices": ["Book", "Computer", "Telephone", "Desk"],
+      "tags": ["컴퓨터"]
+    },
+    {
+      "id": "u3_vocab_13_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "컴퓨터",
+      "answer": "컴퓨터",
+      "choices": ["컴퓨터", "어디", "있다", "옆"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["컴퓨터"]
+    },
+    {
+      "id": "u3_vocab_13_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "컴퓨터",
+      "answer": "컴퓨터",
+      "instruction": "Say this word aloud",
+      "tags": ["컴퓨터"]
+    },
+    {
+      "id": "u3_vocab_14_define",
+      "question_type": "vocab define",
+      "question": "침대",
+      "answer": "Bed",
+      "choices": ["Computer", "Desk", "Chair", "Bed"],
+      "tags": ["침대"]
+    },
+    {
+      "id": "u3_vocab_14_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "침대",
+      "answer": "침대",
+      "choices": ["펜", "앞", "컴퓨터", "침대"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["침대"]
+    },
+    {
+      "id": "u3_vocab_14_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "침대",
+      "answer": "침대",
+      "instruction": "Say this word aloud",
+      "tags": ["침대"]
+    },
+    {
+      "id": "u3_vocab_15_define",
+      "question_type": "vocab define",
+      "question": "전화기",
+      "answer": "Telephone / phone",
+      "choices": ["Computer", "Telephone / phone", "Book", "Pen"],
+      "tags": ["전화기"]
+    },
+    {
+      "id": "u3_vocab_15_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "전화기",
+      "answer": "전화기",
+      "choices": ["전화기", "어디", "책상", "옆"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["전화기"]
+    },
+    {
+      "id": "u3_vocab_15_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "전화기",
+      "answer": "전화기",
+      "instruction": "Say this word aloud",
+      "tags": ["전화기"]
+    },
+    {
+      "id": "u3_vocab_16_define",
+      "question_type": "vocab define",
+      "question": "방",
+      "answer": "Room",
+      "choices": ["Desk", "Room", "Market", "School"],
+      "tags": ["방"]
+    },
+    {
+      "id": "u3_vocab_16_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "방",
+      "answer": "방",
+      "choices": ["방", "앞", "어디", "위"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["방"]
+    },
+    {
+      "id": "u3_vocab_16_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "방",
+      "answer": "방",
+      "instruction": "Say this word aloud",
+      "tags": ["방"]
+    },
+    {
+      "id": "u3_vocab_17_define",
+      "question_type": "vocab define",
+      "question": "어디",
+      "answer": "Where",
+      "choices": ["When", "Where", "Who", "What"],
+      "tags": ["어디"]
+    },
+    {
+      "id": "u3_vocab_17_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "어디",
+      "answer": "어디",
+      "choices": ["펜", "위", "컴퓨터", "어디"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["어디"]
+    },
+    {
+      "id": "u3_vocab_17_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "어디",
+      "answer": "어디",
+      "instruction": "Say this word aloud",
+      "tags": ["어디"]
+    },
+    {
+      "id": "u3_vocab_18_define",
+      "question_type": "vocab define",
+      "question": "무엇",
+      "answer": "What (formal)",
+      "choices": ["What (formal)", "Who", "What", "How much"],
+      "tags": ["무엇"]
+    },
+    {
+      "id": "u3_vocab_18_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "무엇",
+      "answer": "무엇",
+      "choices": ["는", "네", "선생님", "무엇"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["무엇"]
+    },
+    {
+      "id": "u3_vocab_18_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "무엇",
+      "answer": "무엇",
+      "instruction": "Say this word aloud",
+      "tags": ["무엇"]
+    },
+    {
+      "id": "u3_listen_sentence_01",
+      "question_type": "listening sentence blocks",
+      "question": "책상이 있어요?",
+      "answer": "책상이 있어요?",
+      "blocks": ["없어요.", "있어요?", "책상이", "의자가", "펜이"],
+      "correct_order": ["책상이", "있어요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["책상", "이/가", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_02",
+      "question_type": "listening sentence blocks",
+      "question": "네, 책상이 있어요.",
+      "answer": "네, 책상이 있어요.",
+      "blocks": ["책상이", "아니요,", "있어요.", "네,", "없어요.", "의자가"],
+      "correct_order": ["네,", "책상이", "있어요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["네", "책상", "이/가", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_03",
+      "question_type": "listening sentence blocks",
+      "question": "의자가 있어요?",
+      "answer": "의자가 있어요?",
+      "blocks": ["책상이", "없어요.", "의자가", "있어요?", "펜이"],
+      "correct_order": ["의자가", "있어요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["의자", "이/가", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_04",
+      "question_type": "listening sentence blocks",
+      "question": "펜이 있어요?",
+      "answer": "펜이 있어요?",
+      "blocks": ["있어요?", "의자가", "책상이", "펜이", "없어요."],
+      "correct_order": ["펜이", "있어요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["펜", "이/가", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_05",
+      "question_type": "listening sentence blocks",
+      "question": "네, 펜이 있어요.",
+      "answer": "네, 펜이 있어요.",
+      "blocks": ["펜이", "없어요.", "아니요,", "있어요.", "책상이", "네,"],
+      "correct_order": ["네,", "펜이", "있어요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["네", "펜", "이/가", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_06",
+      "question_type": "listening sentence blocks",
+      "question": "유키 씨가 있어요?",
+      "answer": "유키 씨가 있어요?",
+      "blocks": ["어디에", "있어요?", "씨가", "유키", "없어요.", "책상이"],
+      "correct_order": ["유키", "씨가", "있어요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["씨", "이/가", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_07",
+      "question_type": "listening sentence blocks",
+      "question": "책이 어디에 있어요?",
+      "answer": "책이 어디에 있어요?",
+      "blocks": ["책상이", "어디에", "책이", "가방이", "있어요?", "없어요."],
+      "correct_order": ["책이", "어디에", "있어요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["책", "이/가", "어디", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_08",
+      "question_type": "listening sentence blocks",
+      "question": "책상 위에 있어요.",
+      "answer": "책상 위에 있어요.",
+      "blocks": ["위에", "앞에", "없어요.", "책상", "밑에", "있어요."],
+      "correct_order": ["책상", "위에", "있어요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["책상", "위", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_09",
+      "question_type": "listening sentence blocks",
+      "question": "가방은 침대 밑에 있어요.",
+      "answer": "가방은 침대 밑에 있어요.",
+      "blocks": ["밑에", "가방은", "없어요.", "책상", "위에", "있어요.", "침대"],
+      "correct_order": ["가방은", "침대", "밑에", "있어요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["가방", "는/은", "침대", "밑", "있다"]
+    },
+    {
+      "id": "u3_listen_sentence_10",
+      "question_type": "listening sentence blocks",
+      "question": "방에 책상이 있어요.",
+      "answer": "방에 책상이 있어요.",
+      "blocks": ["방에", "의자가", "없어요.", "책상이", "침대가", "있어요."],
+      "correct_order": ["방에", "책상이", "있어요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["방", "책상", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_01",
+      "question_type": "speaking sentence",
+      "question": "책상이 있어요?",
+      "answer": "책상이 있어요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["책상", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_02",
+      "question_type": "speaking sentence",
+      "question": "네, 책상이 있어요.",
+      "answer": "네, 책상이 있어요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["네", "책상", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_03",
+      "question_type": "speaking sentence",
+      "question": "의자가 있어요?",
+      "answer": "의자가 있어요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["의자", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_04",
+      "question_type": "speaking sentence",
+      "question": "펜이 있어요?",
+      "answer": "펜이 있어요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["펜", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_05",
+      "question_type": "speaking sentence",
+      "question": "책이 어디에 있어요?",
+      "answer": "책이 어디에 있어요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["책", "이/가", "어디", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_06",
+      "question_type": "speaking sentence",
+      "question": "책상 위에 있어요.",
+      "answer": "책상 위에 있어요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["책상", "위", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_07",
+      "question_type": "speaking sentence",
+      "question": "방에 책상이 있어요.",
+      "answer": "방에 책상이 있어요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["방", "책상", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_08",
+      "question_type": "speaking sentence",
+      "question": "책상 앞에 의자가 있어요.",
+      "answer": "책상 앞에 의자가 있어요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["책상", "앞", "의자", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_09",
+      "question_type": "speaking sentence",
+      "question": "책상 옆에 가방이 있어요.",
+      "answer": "책상 옆에 가방이 있어요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["책상", "옆", "가방", "이/가", "있다"]
+    },
+    {
+      "id": "u3_speak_sentence_10",
+      "question_type": "speaking sentence",
+      "question": "책상 위에 책이 있어요.",
+      "answer": "책상 위에 책이 있어요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["책상", "위", "책", "이/가", "있다"]
+    }
+  ],
+  "4": [
+    {
+      "id": "u4_vocab_01_define",
+      "question_type": "vocab define",
+      "question": "을/를",
+      "answer": "Object particle (을 after consonant, 를 after vowel)",
+      "choices": ["Location particle", "Object particle (을 after consonant, 를 after vowel)", "Subject particle", "Topic particle"],
+      "tags": ["을/를"]
+    },
+    {
+      "id": "u4_vocab_01_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "저는 시장에서 사과___ 사요.",
+      "answer": "를",
+      "choices": ["을", "를", "가", "이"],
+      "tags": ["을/를", "시장", "에서", "사과", "사다"]
+    },
+    {
+      "id": "u4_vocab_01_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "을",
+      "answer": "을",
+      "choices": ["을", "오렌지", "두", "합계"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["을/를"]
+    },
+    {
+      "id": "u4_vocab_01_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "을",
+      "answer": "을",
+      "instruction": "Say this word aloud",
+      "tags": ["을/를"]
+    },
+    {
+      "id": "u4_vocab_02_define",
+      "question_type": "vocab define",
+      "question": "-(으)세요",
+      "answer": "Please do... (polite request/command)",
+      "choices": ["Please do... (polite request/command)", "Will do", "Did / Past tense", "Can do"],
+      "tags": ["-(으)세요"]
+    },
+    {
+      "id": "u4_vocab_02_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "밥을 먹___.",
+      "answer": "으세요",
+      "choices": ["어요", "세요", "해요", "으세요"],
+      "tags": ["-(으)세요", "밥", "을/를", "먹다"]
+    },
+    {
+      "id": "u4_vocab_02_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "-(으)세요",
+      "answer": "-(으)세요",
+      "choices": ["얼마", "-(으)세요", "오렌지", "물"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["-(으)세요"]
+    },
+    {
+      "id": "u4_vocab_02_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "-(으)세요",
+      "answer": "-(으)세요",
+      "instruction": "Say this word aloud",
+      "tags": ["-(으)세요"]
+    },
+    {
+      "id": "u4_vocab_03_define",
+      "question_type": "vocab define",
+      "question": "주세요",
+      "answer": "Please give me",
+      "choices": ["Please go", "Please come", "Please give me", "Thank you"],
+      "tags": ["주세요"]
+    },
+    {
+      "id": "u4_vocab_03_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "오렌지 세 개 ___.",
+      "answer": "주세요",
+      "choices": ["주세요", "사세요", "오세요", "가세요"],
+      "tags": ["주세요", "오렌지", "세", "개"]
+    },
+    {
+      "id": "u4_vocab_03_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "주세요",
+      "answer": "주세요",
+      "choices": ["싸다", "주세요", "무엇", "을"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["주세요"]
+    },
+    {
+      "id": "u4_vocab_03_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "주세요",
+      "answer": "주세요",
+      "instruction": "Say this word aloud",
+      "tags": ["주세요"]
+    },
+    {
+      "id": "u4_vocab_04_define",
+      "question_type": "vocab define",
+      "question": "얼마",
+      "answer": "How much",
+      "choices": ["How many", "How far", "How long", "How much"],
+      "tags": ["얼마"]
+    },
+    {
+      "id": "u4_vocab_04_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "이 오렌지 ___예요?",
+      "answer": "얼마",
+      "choices": ["얼마", "누구", "무엇", "어디"],
+      "tags": ["얼마", "오렌지", "이에요/예요"]
+    },
+    {
+      "id": "u4_vocab_04_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "얼마",
+      "answer": "얼마",
+      "choices": ["두", "얼마", "을", "-(으)세요"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["얼마"]
+    },
+    {
+      "id": "u4_vocab_04_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "얼마",
+      "answer": "얼마",
+      "instruction": "Say this word aloud",
+      "tags": ["얼마"]
+    },
+    {
+      "id": "u4_vocab_05_define",
+      "question_type": "vocab define",
+      "question": "무엇",
+      "answer": "What (formal)",
+      "choices": ["What (formal)", "Where", "Who", "How much"],
+      "tags": ["무엇"]
+    },
+    {
+      "id": "u4_vocab_05_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "무엇",
+      "answer": "무엇",
+      "choices": ["얼마", "두", "무엇", "사과"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["무엇"]
+    },
+    {
+      "id": "u4_vocab_05_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "무엇",
+      "answer": "무엇",
+      "instruction": "Say this word aloud",
+      "tags": ["무엇"]
+    },
+    {
+      "id": "u4_vocab_06_define",
+      "question_type": "vocab define",
+      "question": "사과",
+      "answer": "Apple",
+      "choices": ["Milk", "Apple", "Orange", "Bread"],
+      "tags": ["사과"]
+    },
+    {
+      "id": "u4_vocab_06_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "사과",
+      "answer": "사과",
+      "choices": ["사과", "오렌지", "개", "-(으)세요"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["사과"]
+    },
+    {
+      "id": "u4_vocab_06_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "사과",
+      "answer": "사과",
+      "instruction": "Say this word aloud",
+      "tags": ["사과"]
+    },
+    {
+      "id": "u4_vocab_07_define",
+      "question_type": "vocab define",
+      "question": "오렌지",
+      "answer": "Orange",
+      "choices": ["Orange", "Apple", "Water", "Juice"],
+      "tags": ["오렌지"]
+    },
+    {
+      "id": "u4_vocab_07_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "오렌지",
+      "answer": "오렌지",
+      "choices": ["오렌지", "을", "아저씨", "-(으)세요"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["오렌지"]
+    },
+    {
+      "id": "u4_vocab_07_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "오렌지",
+      "answer": "오렌지",
+      "instruction": "Say this word aloud",
+      "tags": ["오렌지"]
+    },
+    {
+      "id": "u4_vocab_08_define",
+      "question_type": "vocab define",
+      "question": "빵",
+      "answer": "Bread",
+      "choices": ["Rice", "Bread", "Milk", "Apple"],
+      "tags": ["빵"]
+    },
+    {
+      "id": "u4_vocab_08_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "빵",
+      "answer": "빵",
+      "choices": ["사과", "빵", "감사합니다", "시장"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["빵"]
+    },
+    {
+      "id": "u4_vocab_08_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "빵",
+      "answer": "빵",
+      "instruction": "Say this word aloud",
+      "tags": ["빵"]
+    },
+    {
+      "id": "u4_vocab_09_define",
+      "question_type": "vocab define",
+      "question": "우유",
+      "answer": "Milk",
+      "choices": ["Water", "Juice", "Bread", "Milk"],
+      "tags": ["우유"]
+    },
+    {
+      "id": "u4_vocab_09_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "우유",
+      "answer": "우유",
+      "choices": ["세", "-(으)세요", "사과", "우유"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["우유"]
+    },
+    {
+      "id": "u4_vocab_09_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "우유",
+      "answer": "우유",
+      "instruction": "Say this word aloud",
+      "tags": ["우유"]
+    },
+    {
+      "id": "u4_vocab_10_define",
+      "question_type": "vocab define",
+      "question": "물",
+      "answer": "Water",
+      "choices": ["Milk", "Orange", "Water", "Juice"],
+      "tags": ["물"]
+    },
+    {
+      "id": "u4_vocab_10_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "물",
+      "answer": "물",
+      "choices": ["합계", "오렌지", "물", "개"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["물"]
+    },
+    {
+      "id": "u4_vocab_10_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "물",
+      "answer": "물",
+      "instruction": "Say this word aloud",
+      "tags": ["물"]
+    },
+    {
+      "id": "u4_vocab_11_define",
+      "question_type": "vocab define",
+      "question": "주스",
+      "answer": "Juice",
+      "choices": ["Water", "Juice", "Apple", "Milk"],
+      "tags": ["주스"]
+    },
+    {
+      "id": "u4_vocab_11_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "주스",
+      "answer": "주스",
+      "choices": ["주세요", "무엇", "주스", "한"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["주스"]
+    },
+    {
+      "id": "u4_vocab_11_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "주스",
+      "answer": "주스",
+      "instruction": "Say this word aloud",
+      "tags": ["주스"]
+    },
+    {
+      "id": "u4_vocab_12_define",
+      "question_type": "vocab define",
+      "question": "개",
+      "answer": "Counter for items (things)",
+      "choices": ["Counter for books", "Counter for items (things)", "Counter for people", "Counter for sheets"],
+      "tags": ["개"]
+    },
+    {
+      "id": "u4_vocab_12_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "오렌지 세 ___ 주세요.",
+      "answer": "개",
+      "choices": ["개", "번", "원", "명"],
+      "tags": ["개", "오렌지", "세", "주세요"]
+    },
+    {
+      "id": "u4_vocab_12_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "개",
+      "answer": "개",
+      "choices": ["오렌지", "개", "세", "한"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["개"]
+    },
+    {
+      "id": "u4_vocab_12_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "개",
+      "answer": "개",
+      "instruction": "Say this word aloud",
+      "tags": ["개"]
+    },
+    {
+      "id": "u4_vocab_13_define",
+      "question_type": "vocab define",
+      "question": "원",
+      "answer": "Korean Won (currency)",
+      "choices": ["Japanese Yen", "Chinese Yuan", "Korean Won (currency)", "Dollar"],
+      "tags": ["원"]
+    },
+    {
+      "id": "u4_vocab_13_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "원",
+      "answer": "원",
+      "choices": ["시장", "오렌지", "물", "원"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["원"]
+    },
+    {
+      "id": "u4_vocab_13_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "원",
+      "answer": "원",
+      "instruction": "Say this word aloud",
+      "tags": ["원"]
+    },
+    {
+      "id": "u4_vocab_14_define",
+      "question_type": "vocab define",
+      "question": "한",
+      "answer": "One (native Korean number)",
+      "choices": ["Three", "Four", "One (native Korean number)", "Two"],
+      "tags": ["한"]
+    },
+    {
+      "id": "u4_vocab_14_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "한",
+      "answer": "한",
+      "choices": ["물", "감사합니다", "사과", "한"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["한"]
+    },
+    {
+      "id": "u4_vocab_14_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "한",
+      "answer": "한",
+      "instruction": "Say this word aloud",
+      "tags": ["한"]
+    },
+    {
+      "id": "u4_vocab_15_define",
+      "question_type": "vocab define",
+      "question": "두",
+      "answer": "Two (native Korean number)",
+      "choices": ["One", "Five", "Two (native Korean number)", "Two"],
+      "tags": ["두"]
+    },
+    {
+      "id": "u4_vocab_15_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "두",
+      "answer": "두",
+      "choices": ["두", "합계", "원", "물"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["두"]
+    },
+    {
+      "id": "u4_vocab_15_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "두",
+      "answer": "두",
+      "instruction": "Say this word aloud",
+      "tags": ["두"]
+    },
+    {
+      "id": "u4_vocab_16_define",
+      "question_type": "vocab define",
+      "question": "세",
+      "answer": "Three (native Korean number)",
+      "choices": ["Two", "Five", "Four", "Three (native Korean number)"],
+      "tags": ["세"]
+    },
+    {
+      "id": "u4_vocab_16_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "세",
+      "answer": "세",
+      "choices": ["주세요", "세", "아저씨", "두"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["세"]
+    },
+    {
+      "id": "u4_vocab_16_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "세",
+      "answer": "세",
+      "instruction": "Say this word aloud",
+      "tags": ["세"]
+    },
+    {
+      "id": "u4_vocab_17_define",
+      "question_type": "vocab define",
+      "question": "싸다",
+      "answer": "To be cheap (싸요 = is cheap)",
+      "choices": ["To be big", "To be expensive", "To be small", "To be cheap (싸요 = is cheap)"],
+      "tags": ["싸다"]
+    },
+    {
+      "id": "u4_vocab_17_fib",
+      "question_type": "vocab fill in the blank",
+      "question": "오늘 사과가 오백 원이에요. 사과가 ___.",
+      "answer": "싸요",
+      "choices": ["비싸요", "있어요", "없어요", "싸요"],
+      "tags": ["싸다", "오늘", "사과", "이/가", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_vocab_17_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "싸다",
+      "answer": "싸다",
+      "choices": ["사과", "주스", "싸다", "무엇"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["싸다"]
+    },
+    {
+      "id": "u4_vocab_17_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "싸다",
+      "answer": "싸다",
+      "instruction": "Say this word aloud",
+      "tags": ["싸다"]
+    },
+    {
+      "id": "u4_vocab_18_define",
+      "question_type": "vocab define",
+      "question": "시장",
+      "answer": "Market",
+      "choices": ["Coffee shop", "Market", "Park", "School"],
+      "tags": ["시장"]
+    },
+    {
+      "id": "u4_vocab_18_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "시장",
+      "answer": "시장",
+      "choices": ["싸다", "시장", "개", "감사합니다"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["시장"]
+    },
+    {
+      "id": "u4_vocab_18_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "시장",
+      "answer": "시장",
+      "instruction": "Say this word aloud",
+      "tags": ["시장"]
+    },
+    {
+      "id": "u4_vocab_19_define",
+      "question_type": "vocab define",
+      "question": "아저씨",
+      "answer": "Mister / middle-aged man (address term)",
+      "choices": ["Teacher", "Doctor", "Mister / middle-aged man (address term)", "Friend"],
+      "tags": ["아저씨"]
+    },
+    {
+      "id": "u4_vocab_19_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "아저씨",
+      "answer": "아저씨",
+      "choices": ["원", "싸다", "아저씨", "주스"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["아저씨"]
+    },
+    {
+      "id": "u4_vocab_19_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "아저씨",
+      "answer": "아저씨",
+      "instruction": "Say this word aloud",
+      "tags": ["아저씨"]
+    },
+    {
+      "id": "u4_vocab_20_define",
+      "question_type": "vocab define",
+      "question": "감사합니다",
+      "answer": "Thank you (formal)",
+      "choices": ["Hello", "Thank you (formal)", "Sorry", "Goodbye"],
+      "tags": ["감사합니다"]
+    },
+    {
+      "id": "u4_vocab_20_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "감사합니다",
+      "answer": "감사합니다",
+      "choices": ["감사합니다", "싸다", "합계", "주스"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["감사합니다"]
+    },
+    {
+      "id": "u4_vocab_20_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "감사합니다",
+      "answer": "감사합니다",
+      "instruction": "Say this word aloud",
+      "tags": ["감사합니다"]
+    },
+    {
+      "id": "u4_vocab_21_define",
+      "question_type": "vocab define",
+      "question": "합계",
+      "answer": "Total / sum",
+      "choices": ["Total / sum", "Price per item", "Change", "Receipt"],
+      "tags": ["합계"]
+    },
+    {
+      "id": "u4_vocab_21_listen_vocab",
+      "question_type": "listening vocab",
+      "question": "합계",
+      "answer": "합계",
+      "choices": ["오렌지", "무엇", "주스", "합계"],
+      "instruction": "Listen and select the word you hear",
+      "tags": ["합계"]
+    },
+    {
+      "id": "u4_vocab_21_speak_vocab",
+      "question_type": "speaking vocab",
+      "question": "합계",
+      "answer": "합계",
+      "instruction": "Say this word aloud",
+      "tags": ["합계"]
+    },
+    {
+      "id": "u4_listen_sentence_01",
+      "question_type": "listening sentence blocks",
+      "question": "민수 씨, 어디 가요?",
+      "answer": "민수 씨, 어디 가요?",
+      "blocks": ["가요?", "무엇을", "민수", "얼마예요?", "사요?", "씨,", "어디"],
+      "correct_order": ["민수", "씨,", "어디", "가요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["씨", "어디", "가다"]
+    },
+    {
+      "id": "u4_listen_sentence_02",
+      "question_type": "listening sentence blocks",
+      "question": "시장에 가요.",
+      "answer": "시장에 가요.",
+      "blocks": ["시장에", "학교에", "무엇을", "가요.", "사요."],
+      "correct_order": ["시장에", "가요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["시장", "에", "가다"]
+    },
+    {
+      "id": "u4_listen_sentence_03",
+      "question_type": "listening sentence blocks",
+      "question": "무엇을 사요?",
+      "answer": "무엇을 사요?",
+      "blocks": ["무엇을", "사요?", "주세요.", "어디", "얼마예요?"],
+      "correct_order": ["무엇을", "사요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["무엇", "을/를", "사다"]
+    },
+    {
+      "id": "u4_listen_sentence_04",
+      "question_type": "listening sentence blocks",
+      "question": "사과를 사요.",
+      "answer": "사과를 사요.",
+      "blocks": ["사과를", "빵을", "오렌지를", "사요.", "우유를"],
+      "correct_order": ["사과를", "사요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["사과", "을/를", "사다"]
+    },
+    {
+      "id": "u4_listen_sentence_05",
+      "question_type": "listening sentence blocks",
+      "question": "이 오렌지 얼마예요?",
+      "answer": "이 오렌지 얼마예요?",
+      "blocks": ["무엇을", "얼마예요?", "이", "사과", "주세요.", "오렌지"],
+      "correct_order": ["이", "오렌지", "얼마예요?"],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["오렌지", "얼마", "이에요/예요"]
+    },
+    {
+      "id": "u4_listen_sentence_06",
+      "question_type": "listening sentence blocks",
+      "question": "한 개에 구백 원이에요.",
+      "answer": "한 개에 구백 원이에요.",
+      "blocks": ["구백", "개에", "원이에요.", "이천칠백", "오백", "한", "세"],
+      "correct_order": ["한", "개에", "구백", "원이에요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["한", "개", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_listen_sentence_07",
+      "question_type": "listening sentence blocks",
+      "question": "오렌지 세 개 주세요.",
+      "answer": "오렌지 세 개 주세요.",
+      "blocks": ["사과", "주세요.", "개", "오렌지", "두", "한", "세"],
+      "correct_order": ["오렌지", "세", "개", "주세요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["오렌지", "세", "개", "주세요"]
+    },
+    {
+      "id": "u4_listen_sentence_08",
+      "question_type": "listening sentence blocks",
+      "question": "여기 있어요. 이천칠백 원이에요.",
+      "answer": "여기 있어요. 이천칠백 원이에요.",
+      "blocks": ["이천칠백", "오백", "구백", "원이에요.", "없어요.", "있어요.", "여기"],
+      "correct_order": ["여기", "있어요.", "이천칠백", "원이에요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["있다", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_listen_sentence_09",
+      "question_type": "listening sentence blocks",
+      "question": "오늘 사과가 싸요. 오백 원이에요.",
+      "answer": "오늘 사과가 싸요. 오백 원이에요.",
+      "blocks": ["구백", "사과가", "싸요.", "원이에요.", "오늘", "오백", "비싸요.", "이천칠백"],
+      "correct_order": ["오늘", "사과가", "싸요.", "오백", "원이에요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["오늘", "사과", "이/가", "싸다", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_listen_sentence_10",
+      "question_type": "listening sentence blocks",
+      "question": "빵은 천삼백 원이에요.",
+      "answer": "빵은 천삼백 원이에요.",
+      "blocks": ["오백", "천삼백", "우유는", "원이에요.", "구백", "빵은"],
+      "correct_order": ["빵은", "천삼백", "원이에요."],
+      "instruction": "Listen and arrange the blocks in the correct order",
+      "tags": ["빵", "는/은", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_speak_sentence_01",
+      "question_type": "speaking sentence",
+      "question": "민수 씨, 어디 가요?",
+      "answer": "민수 씨, 어디 가요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["씨", "어디", "가다"]
+    },
+    {
+      "id": "u4_speak_sentence_02",
+      "question_type": "speaking sentence",
+      "question": "시장에 가요.",
+      "answer": "시장에 가요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["시장", "에", "가다"]
+    },
+    {
+      "id": "u4_speak_sentence_03",
+      "question_type": "speaking sentence",
+      "question": "무엇을 사요?",
+      "answer": "무엇을 사요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["무엇", "을/를", "사다"]
+    },
+    {
+      "id": "u4_speak_sentence_04",
+      "question_type": "speaking sentence",
+      "question": "사과를 사요.",
+      "answer": "사과를 사요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["사과", "을/를", "사다"]
+    },
+    {
+      "id": "u4_speak_sentence_05",
+      "question_type": "speaking sentence",
+      "question": "이 오렌지 얼마예요?",
+      "answer": "이 오렌지 얼마예요?",
+      "instruction": "Read this sentence aloud",
+      "tags": ["오렌지", "얼마", "이에요/예요"]
+    },
+    {
+      "id": "u4_speak_sentence_06",
+      "question_type": "speaking sentence",
+      "question": "한 개에 구백 원이에요.",
+      "answer": "한 개에 구백 원이에요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["한", "개", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_speak_sentence_07",
+      "question_type": "speaking sentence",
+      "question": "오렌지 세 개 주세요.",
+      "answer": "오렌지 세 개 주세요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["오렌지", "세", "개", "주세요"]
+    },
+    {
+      "id": "u4_speak_sentence_08",
+      "question_type": "speaking sentence",
+      "question": "여기 있어요. 이천칠백 원이에요.",
+      "answer": "여기 있어요. 이천칠백 원이에요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["있다", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_speak_sentence_09",
+      "question_type": "speaking sentence",
+      "question": "오늘 사과가 싸요. 오백 원이에요.",
+      "answer": "오늘 사과가 싸요. 오백 원이에요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["오늘", "사과", "이/가", "싸다", "원", "이에요/예요"]
+    },
+    {
+      "id": "u4_speak_sentence_10",
+      "question_type": "speaking sentence",
+      "question": "빵을 사세요.",
+      "answer": "빵을 사세요.",
+      "instruction": "Read this sentence aloud",
+      "tags": ["빵", "을/를", "사다", "-(으)세요"]
+    }
+  ]
+}

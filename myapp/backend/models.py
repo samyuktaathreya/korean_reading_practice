@@ -20,4 +20,6 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     current_unit = Column(Integer, default=1)
+    intro_rounds_completed = Column(Integer, default=0) # Tracks 0, 1, or 2
+    
     
